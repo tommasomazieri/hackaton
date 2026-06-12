@@ -1,135 +1,204 @@
 # Stakeholder Map — DC Siting Intelligence Tool
 
+---
+
+## Adoption Path
+
+The sale runs through Jordan. There is no direct vendor-to-buyer path.
+
+```
+  [VENDOR] → convince Jordan first
+                    │
+                    Jordan pitches tool to CEO + CFO
+                    │           │
+                    CEO         CFO
+                    (approves)  (co-approves + validates financial output)
+                         │
+                    Tool purchased → Jordan uses it
+                         │
+                    Tool output reviewed by:
+                    ESG Officer · Infra PM · Legal
+                         │
+                    Output informs decision cleared by:
+                    IC Partner · Board / LP
+```
+
+**Jordan is the gate.** If Jordan is not convinced, no pitch reaches CEO or CFO. Jordan must be won first — on time saving, output quality, and explainability — before they will champion the tool upward.
+
+---
+
 ## Influence / Interest Grid
 
 ```
-INFLUENCE
-   5 │ Board/LP          │ IC Partner
-     │ Legal/Compliance  │ CFO/CIO
-     │                   │ Head of DC Dev
-   3 │                   │ ESG Officer
-     │                   │
-   1 │                   │ Infrastructure PM
-     └───────────────────┴──────────────────
-              LOW            HIGH
+  INFLUENCE
+     5 │  Board/LP      │  IC Partner
+       │                │  CEO
+     4 │                │  CFO · Jordan
+       │                │
+     3 │  ESG Officer   │
+       │  Legal         │
+     2 │                │  Infra PM
+       │                │
+     1 └────────────────┴──────────────
+                LOW          HIGH
                           INTEREST
 ```
 
-Formal quadrant placement:
-
-| Quadrant           | Stakeholders                                      |
-|--------------------|---------------------------------------------------|
-| **Manage Closely** | IC Partner · CFO/CIO · Head of DC Development    |
-| **Keep Satisfied** | Board/LP · Legal/Compliance                       |
-| **Keep Informed**  | ESG Officer · Infrastructure PM                  |
-| **Monitor**        | *(none at current scope)*                         |
+| Quadrant           | Stakeholders                              |
+|--------------------|-------------------------------------------|
+| **Manage Closely** | Jordan · CFO                              |
+| **Keep Satisfied** | CEO · IC Partner · Board / LP             |
+| **Keep Informed**  | ESG Officer · Infrastructure PM           |
+| **Monitor**        | Legal / Regulatory Counsel                |
 
 ---
 
-## Stakeholder Profiles
+## Layer 1 — Main (Adoption Triad)
 
-### SH-001 — IC Partner
-**Quadrant:** Manage Closely (Influence 5 / Interest 4)
-
-**Role:** Ultimate deal approver on Investment Committee. Signs capital allocation for new DC builds. Reads deal memos — not dashboards.
-
-**Needs from DC siting:** IRR-accretive site selection with quantified downside. Carbon narrative for LP reporting. Proof the team ran a rigorous, repeatable process — not consultant intuition. Fast enough to not lose competitive deals.
-
-**Approval trigger:** NPV positive with sensitivity bounds. Carbon intensity below LP mandate ceiling. Site ranked #1 vs peer regions on cost-adjusted basis. Supply mix hedges long-term energy price exposure.
-
-**Block trigger:** Unquantified regulatory or grid-connection risk. Carbon liability in jurisdiction. Black-box methodology with no defensible reasoning. Competitor already locked preferred site.
+The three people who determine whether the tool gets bought and used.
 
 ---
 
-### SH-002 — CFO / CIO
+### SH-001 — Jordan
+**Sales role:** Champion — must be convinced first; pitches to CEO and CFO
 **Quadrant:** Manage Closely (Influence 4 / Interest 5)
 
-**Role:** Owns capital budget and major capex sign-off. Also owns the OpEx envelope for energy — the largest operating line in a DC. May be same person or joint sign-off depending on firm structure.
+**Role:** Head of DC Development / Infrastructure Strategy Analyst / DC Investment Analyst. Owns the analysis. Presents directly to CEO. The tool adoption path runs entirely through Jordan — no Jordan buy-in, no sale.
 
-**Needs from DC siting:** Precise LCOE per site with sensitivity range. Grid vs PPA vs on-site mix that reduces energy price volatility. Capex by region benchmarked against market. Annual cost delta between top 3 sites in a CFO-legible table.
+**Needs from the tool:** Ranked EU zones with per-dimension scores, zone-level carbon data, supply mix (grid/PPA/on-site), and energy cost differential — in one structured output the CEO can act on and the CFO can plug into their model. No reformatting. Re-runnable instantly.
 
-**Approval trigger:** NPV positive within budget envelope. Blended LCOE competitive vs market benchmark. PPA option available to hedge spot exposure. Sensitivity shows NPV survives +20% energy cost shock.
+**Why Jordan must be won first:** Jordan runs the analysis. If the tool does not save them hours and produce IC-ready output, they will not advocate upward. CEO and CFO trust Jordan's recommendation of the tool — not a vendor pitch. Jordan is the credibility bridge.
 
-**Block trigger:** Energy cost assumptions unsourced. No PPA pathway for volatile markets. Capex estimate too wide. OpEx blowout risk from grid congestion not quantified.
+**Approval trigger:** Tool returns ≥3 ranked sites in <30s citing auditable sources (PyPSA-Eur, Ember, OSM). One output serves both CEO narrative and CFO cost delta without extra work. Jordan can walk into the CEO meeting knowing CFO has already seen consistent numbers from the same output.
+
+**Block trigger:** Carbon data country-averaged — cannot answer ESG Officer's zone-level questions. Output requires manual reformatting before the meeting. Jordan cannot explain the scoring methodology if the CEO asks. Too slow or brittle under IC deadline pressure.
 
 ---
 
-### SH-003 — Head of DC Development *(Jordan's manager)*
-**Quadrant:** Manage Closely (Influence 4 / Interest 5)
+### SH-002 — CEO / C-Suite
+**Sales role:** Buyer — approves purchase after Jordan pitches; approves the siting decision the tool informs
+**Quadrant:** Keep Satisfied (Influence 5 / Interest 3)
 
-**Role:** Accountable for pre-feasibility process quality and IC deck credibility. Owns the siting mandate top-down. Must present to IC and field teams simultaneously — technical and commercial credibility both required.
+**Role:** Chief Executive Officer / Chief Strategy Officer / VP Infrastructure. Decision maker. Jordan presents to them — both the tool pitch and the eventual DC siting recommendation. Does not run the tool. Approves the budget.
 
-**Needs from DC siting:** Defensible shortlist of ≥3 sites with per-dimension scores they can interrogate. Supply mix per site. Tool fast enough to iterate during IC prep. Audit trail for IC Q&A without rebuilding the analysis.
+**How Jordan pitches to them:** Jordan demos the output in <30s. The pitch is a capability investment: faster pre-feasibility, defensible IC memos, no more waiting weeks for a consultant. CEO approves when the time saving is obvious and Jordan + CFO are already aligned on the figures.
 
-**Approval trigger:** Tool returns ranked sites in <30s with explainable scores. Supply mix cites real data. Output is IC-presentable without manual reformatting. Jordan's team operates it independently.
+**Needs from the siting decision:** Clear winner with plain rationale. Carbon compliance as gCO₂/kWh vs. stated RE100 / net-zero target. Cost advantage in €, not rank. Top risk bounded as a range. Jordan and CFO walk in already aligned.
 
-**Block trigger:** Data reliability concerns (are Ember/PyPSA numbers current?). Tool too complex under time pressure. No methodology section for IC Q&A. Results change unpredictably between runs.
+**Approval trigger:** Jordan demo shows IC-presentable output in <30s. Speed advantage vs. consultant process is explicit. CFO has already seen the cost-differential section and is aligned. ESG narrative is citable against the stated target.
+
+**Block trigger:** Output looks like a dashboard they won't read. Jordan and CFO present different figures. No clear winner surfaced — trade-offs buried. Carbon compliance stated as a colour, not a number.
+
+---
+
+### SH-003 — CFO
+**Sales role:** Buyer — co-approves purchase with CEO; validates financial output from the tool
+**Quadrant:** Manage Closely (Influence 4 / Interest 4)
+
+**Role:** Chief Financial Officer / IC Member / Head of Real Estate Finance. Pulled in by Jordan — not a direct user. Advises CEO on whether the financial case holds. Co-approves the purchase when Jordan shows the cost-differential output is directly pluggable into their model.
+
+**How Jordan pitches to them:** Jordan shows the cost-differential section: "this is what you currently ask me to calculate manually — now it's in every query, already in the format you plug into the model." CFO approves when the numbers are pluggable and correctly scoped as differential only.
+
+**Needs from the siting decision:** Energy cost differential in €/MWh annualised at target MW. NPV of location choice over 15–25 yr. PPA discount vs. day-ahead spot in €/MWh — quantified, not flagged. Carbon cost delta as €/yr. Congestion risk as ±€/MWh opex variance range.
+
+**Approval trigger:** Location choice expressed as a € value over asset life. PPA discount quantified and sourced. Carbon delta in €/yr, pluggable directly. Output explicitly scoped as additive differential — no total cost claimed. Figures consistent with Jordan's narrative.
+
+**Block trigger:** PPA flagged but not priced. Congestion risk labelled, not numbered. Tool did not eliminate the coordination step — CFO still has to call Jordan to get the number they need.
+
+---
+
+## Layer 2 — Peripheral (Output Validators)
+
+These stakeholders do not approve the tool purchase. They review specific dimensions of the tool's output after purchase and can block the siting decision if their dimension is not satisfied. Win them as internal validators — they pre-clear objections before IC.
 
 ---
 
 ### SH-004 — ESG Officer
+**Sales role:** Output validator — reviews carbon output; growing veto power on siting decision
 **Quadrant:** Keep Informed (Influence 3 / Interest 5)
 
-**Role:** Owns Scope 2 carbon commitments, LP ESG reporting, and RE100/SBTi targets. Reviews major infrastructure decisions for carbon exposure. Growing veto power as LP mandates tighten.
+**Role:** Owns Scope 2 carbon commitments, LP ESG reporting, RE100/SBTi targets. Does not approve the tool purchase. Can block the siting decision if carbon claims are not audit-ready for LP reporting.
 
-**Needs from DC siting:** Auditable carbon intensity per site (gCO₂/kWh). Clear PPA / Guarantee of Origin pathway to net-zero Scope 2. Curtailment-zone PPA opportunity flagged — generator additionality story matters for Scope 2 claims.
+**Needs from the siting output:** Carbon intensity per site in gCO₂/kWh — Ember, datestamped, zone-level not country-average. PPA / Guarantee of Origin pathway for Scope 2 matching. Curtailment-zone PPA with physical additionality argument. Audit trail for LP carbon reporting.
 
-**Approval trigger:** Site carbon intensity below LP mandate ceiling. PPA with Guarantee of Origin available in-region. Supply mix shows credible path to 100% renewable matching. Carbon data source cited and methodology documented.
+**Approval trigger:** Carbon below LP mandate ceiling. Ember data cited with date. Zone-level granularity. PPA with Guarantee of Origin in-region. Supply mix shows credible 100% renewable matching with additionality.
 
-**Block trigger:** Site above threshold with no viable PPA alternative. Greenwashing risk — PPA supplier in different bidding zone, no physical additionality. Carbon data stale or unsourced.
+**Block trigger:** PPA in different bidding zone — greenwashing risk. Carbon data country-averaged and not audit-ready. No citation trail in output.
 
 ---
 
-### SH-005 — Board / LP
+### SH-005 — Infrastructure PM
+**Sales role:** Output validator — executes against tool output; flags if connectivity / substation data is unreliable
+**Quadrant:** Keep Informed (Influence 2 / Interest 4)
+
+**Role:** Executes the build post-decision. Focused on delivery risk: grid connection timelines, substation capacity, land title, planning probability. No influence over purchase or siting decision.
+
+**Needs from the siting output:** Substation density and HV grid connection capacity near shortlisted sites. Fiber backhaul availability. Land parcel availability at required footprint. Realistic grid connection timelines by region.
+
+**Approval trigger:** OSM substation data reflects actual HV capacity. Connectivity distinguishes fiber-dense from greenfield. Congestion score flags single-point-of-failure topology. Land availability tied to footprint input.
+
+**Block trigger:** Tool scores zone high but TSO grid connection backlog is 24+ months. Substation density from OSM outdated. Land availability is a regional proxy — actual parcel not confirmed.
+
+---
+
+### SH-006 — Legal / Regulatory Counsel
+**Sales role:** Output validator — reviews jurisdiction flags; can escalate risk opinion to IC
+**Quadrant:** Monitor (Influence 3 / Interest 2)
+
+**Role:** Reviews regulatory exposure in target jurisdictions: DC permitting law, grid connection contracts, PPA enforceability, data residency. Can delay or block siting decisions through formal risk opinion to IC.
+
+**Needs from the siting output:** Jurisdiction-level regulatory flag per shortlisted site. PPA structure locally enforceable. Data residency / sovereignty requirements per country. Grid connection commitment type — formally reserved vs. indicative.
+
+**Approval trigger:** No active permitting moratorium or grid freeze in shortlisted zones. PPA structure locally enforceable. Data residency requirements identified. Carbon claims audit-ready.
+
+**Block trigger:** Active grid connection moratoriums in shortlisted zones. PPA structure unenforceable locally. Tool implies regulatory clean without flagging jurisdiction-specific constraints.
+
+---
+
+## Layer 3 — Institutional / Macro (Constraint-Setters)
+
+Never interact with the tool. Set the envelope — carbon ceiling, geography scope, return hurdle, ESG covenants — that Jordan's output must satisfy. The tool's hard filters enforce their constraints automatically. They check for compliance with their mandate, not site quality.
+
+---
+
+### SH-007 — Investment Committee / IC Partner
+**Sales role:** Mandate-setter — defines analytical rigour standard Jordan's output must clear; never sees the tool
 **Quadrant:** Keep Satisfied (Influence 5 / Interest 2)
 
-**Role:** Board members and Limited Partners providing capital. Shape mandate constraints (carbon ceiling, geography, return hurdle) that filter the decision space upstream. Receive quarterly reporting, not deal dashboards.
+**Role:** Formal capital approval body. In PE/infrastructure fund: IC Partner who chairs deal approval. In corporate: exec committee equivalent. Reads Jordan's IC memo — produced using the tool. Sets the bar.
 
-**Needs from DC siting:** Confirmation the deal fits fund mandate: IRR above hurdle, carbon within LP ceiling, geography in scope. One-paragraph narrative for board memo. Not interested in methodology — outcome confidence only.
+**Needs from the decision:** IRR-accretive site selection with quantified downside. Methodology reproducible and citable. Carbon consistent with LP mandate. Deal timeline competitive — not lost to competitors during analysis.
 
-**Approval trigger:** Deal hits IRR hurdle. Carbon within LP ESG covenant. Site in approved geography. IC Partner already endorsed.
+**Approval trigger:** NPV of location choice positive with sensitivity range. Carbon within LP ceiling, cited. Jordan and CFO memo sections consistent — same figures. Methodology defensible under IC questioning.
 
-**Block trigger:** Carbon exposure violating LP ESG covenant. Jurisdiction outside approved geographies. Deal speed too slow — LP optionality window closes. Regulatory risk not surfaced at memo stage.
-
----
-
-### SH-006 — Infrastructure PM
-**Quadrant:** Keep Informed (Influence 2 / Interest 5)
-
-**Role:** Executes the build once site is selected. Focused on delivery risk: grid connection timelines, substation capacity, land title, planning probability. Highly interested in operational data; low organizational influence over siting decision.
-
-**Needs from DC siting:** Substation density and grid connection capacity per site. Fiber availability for backhaul. Land parcel availability at required footprint. Realistic grid connection lead times — not averages, actual bottleneck data.
-
-**Approval trigger:** OSM substation count confirms HV capacity within 5km. Land footprint achievable in zone. Connectivity score above threshold. Congestion risk flagged with mitigation options.
-
-**Block trigger:** Grid connection timeline >24 months not reflected in score. Substation density high but single-point-of-failure topology. Land availability from sparse data — real parcel not confirmed.
+**Block trigger:** Methodology undocumented. Carbon exposure not quantified vs. LP mandate. Jordan and CFO inconsistent. Competitor transacted during analysis delay.
 
 ---
 
-### SH-007 — Legal / Compliance
-**Quadrant:** Keep Satisfied (Influence 4 / Interest 2)
+### SH-008 — Board / LP
+**Sales role:** Constraint-setter — their ESG covenants and geography mandates define what the tool's hard filters must enforce
+**Quadrant:** Keep Satisfied (Influence 5 / Interest 1)
 
-**Role:** Reviews regulatory exposure in target jurisdictions: planning law, grid connection contracts, PPA enforceability, data residency for DC operations. Can escalate risk opinions to IC and delay or block transactions.
+**Role:** Board members and Limited Partners. Set the mandate constraints the entire decision must satisfy: carbon ceiling, geography scope, minimum return hurdle, ESG covenants. Never interact with the tool. Shape the filter Jordan must satisfy.
 
-**Needs from DC siting:** Jurisdiction-level regulatory flag per shortlisted site. PPA structure compatible with local law. Data residency / sovereignty requirements. Grid connection commitment type — formally reserved vs indicative score.
+**Needs from the decision:** Confirmation deal satisfies fund mandate: IRR above hurdle, carbon within LP ESG covenant, geography within approved scope. One-paragraph board memo. ESG compliance documented for LP audit trail.
 
-**Approval trigger:** No active permitting moratorium in jurisdiction. PPA counterparty creditworthy, contract enforceable locally. Grid connection formally committed. Data residency requirements met.
+**Approval trigger:** Return hurdle met. Carbon within LP ESG covenant — documented with source. Geography in scope. IC endorsed. Board memo is one clear paragraph.
 
-**Block trigger:** Jurisdictions with active grid connection moratoriums (e.g., Ireland 2022-era constraints). PPA structure unenforceable locally. Carbon offset claims not audit-ready. Unresolved GDPR / data sovereignty exposure in DC operating model.
+**Block trigger:** Carbon breach of LP ESG covenant. Geography outside approved scope. Material risk not disclosed early — surfaces as a surprise at board level.
 
 ---
 
-## Narrative: Pitch Implications
+## Pitch Implications
 
-The stakeholder map reveals three things that should shape pitch framing:
+**The sale is a two-step relay, not a direct pitch.**
+Convince Jordan that the tool saves them hours and produces IC-ready output. Jordan then sells it upward. CEO approves on capability + speed advantage. CFO approves on financial output quality. Neither CEO nor CFO will evaluate the tool on their own — they rely on Jordan's endorsement.
 
-**1. The IC Partner is the gatekeeper, but the CFO/Head of DC Dev are the daily users.**
-Our pitch must clear IC Partner scrutiny (methodology rigor, NPV defensibility, LP carbon narrative) while being genuinely useful to the people who run the analysis (Head of DC Dev, Jordan). These are different audiences — the pitch deck speaks to IC; the demo speaks to Jordan's team.
+**The tool must serve two masters simultaneously.**
+Jordan uses one query. CEO reads the ranked winner and ESG story. CFO reads the cost differential and NPV delta. If the output structure forces Jordan to reformat for either audience — the sale fails. The tool's value prop is the unified output, not the analysis.
 
-**2. Board/LP and Legal operate as constraint-setters, not evaluators.**
-They don't evaluate site quality — they set the envelope (carbon ceiling, geography, return hurdle, regulatory clean). The tool should surface compliance with those constraints early in results (carbon ceiling pass/fail, jurisdiction flag) so these stakeholders are satisfied without needing to engage with methodology.
+**Peripheral validators are pre-clearance infrastructure.**
+ESG Officer, Infra PM, and Legal do not buy — but they can block the siting decision downstream. Win them by making their dimension explicit, cited, and auditable in every output. ESG gets Ember datestamped zone-level data. Infra PM gets substation and connectivity with source. Legal gets jurisdiction flags. They become advocates, not reviewers.
 
-**3. ESG Officer and Infrastructure PM are high-interest validators — win them and they become internal champions.**
-ESG Officer needs to trust the carbon data provenance (Ember citation, Guarantee of Origin pathway). Infrastructure PM needs to trust the connectivity scores reflect real substation data. Winning both converts them from reviewers to advocates who pre-clear objections before IC.
-
-**Key insight for product:** The tool's explainability requirement — citing Ember, PyPSA/GridSFM, and OSM data sources per dimension — is not just a technical constraint. It is the primary mechanism by which Board/LP mandates are confirmed, Legal risk flags are surfaced, and ESG claims are made audit-ready. Explainability IS the stakeholder management layer.
+**Institutional stakeholders set the hard filter, not the analysis.**
+Board/LP and IC never see the tool. Their constraints — carbon ceiling, geography, return hurdle — must be enforced automatically by the tool's hard filters. When Jordan's output lands on the IC desk, it must already be compliant with the mandate. The tool's explainability layer is what makes that demonstrable.
