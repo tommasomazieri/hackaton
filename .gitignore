@@ -17,8 +17,7 @@ build/
 .ruff_cache/
 
 # Data (large files — cache locally, don't commit)
-data/raw/
-data/cache/
+data/
 *.parquet
 *.h5
 *.nc
