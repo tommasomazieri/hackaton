@@ -18,6 +18,7 @@ build/
 
 # Data (large files — cache locally, don't commit)
 data/
+GridSFM/
 *.parquet
 *.h5
 *.nc
