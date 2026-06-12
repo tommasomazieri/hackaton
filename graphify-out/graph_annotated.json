@@ -136,14 +136,113 @@
       "codemapper": {}
     },
     {
-      "label": "files",
+      "label": "src/data_ingestion/download_datasets.py",
       "file_type": "code",
       "source_file": ".codemapper_cache.json",
       "source_location": "L5",
       "_origin": "ast",
+      "id": "codemapper_cache_mtimes_src_data_ingestion_download_datasets_py",
+      "community": 5,
+      "norm_label": "src/data_ingestion/download_datasets.py",
+      "codemapper": {}
+    },
+    {
+      "label": "files",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L7",
+      "_origin": "ast",
       "id": "codemapper_cache_files",
       "community": 5,
       "norm_label": "files",
+      "codemapper": {}
+    },
+    {
+      "label": "src/data_ingestion/download_datasets.py",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "codemapper_cache_files_src_data_ingestion_download_datasets_py",
+      "community": 5,
+      "norm_label": "src/data_ingestion/download_datasets.py",
+      "codemapper": {}
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_ingestion_download_datasets_py_path",
+      "community": 5,
+      "norm_label": "path",
+      "codemapper": {}
+    },
+    {
+      "label": "module_doc",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_ingestion_download_datasets_py_module_doc",
+      "community": 5,
+      "norm_label": "module_doc",
+      "codemapper": {}
+    },
+    {
+      "label": "imports",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_ingestion_download_datasets_py_imports",
+      "community": 5,
+      "norm_label": "imports",
+      "codemapper": {}
+    },
+    {
+      "label": "symbols",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_ingestion_download_datasets_py_symbols",
+      "community": 5,
+      "norm_label": "symbols",
+      "codemapper": {}
+    },
+    {
+      "label": "module_doc_full",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L75",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_ingestion_download_datasets_py_module_doc_full",
+      "community": 5,
+      "norm_label": "module_doc_full",
+      "codemapper": {}
+    },
+    {
+      "label": "doc_start_line",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_ingestion_download_datasets_py_doc_start_line",
+      "community": 5,
+      "norm_label": "doc_start_line",
+      "codemapper": {}
+    },
+    {
+      "label": "doc_end_line",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_ingestion_download_datasets_py_doc_end_line",
+      "community": 5,
+      "norm_label": "doc_end_line",
       "codemapper": {}
     },
     {
@@ -200,6 +299,28 @@
       "id": "env_var_codemapper_root",
       "community": 3,
       "norm_label": "codemapper_root",
+      "codemapper": {}
+    },
+    {
+      "label": "personas.json",
+      "file_type": "code",
+      "source_file": "artifacts/personas.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "artifacts_personas_json_artifacts_personas",
+      "community": 22,
+      "norm_label": "personas.json",
+      "codemapper": {}
+    },
+    {
+      "label": "stakeholder-map.json",
+      "file_type": "code",
+      "source_file": "artifacts/stakeholder-map.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "artifacts_stakeholder_map_json_artifacts_stakeholder_map",
+      "community": 23,
+      "norm_label": "stakeholder-map.json",
       "codemapper": {}
     },
     {
@@ -426,7 +547,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "project_management_project_wip_limits",
-      "community": 7,
+      "community": 4,
       "norm_label": "wip_limits",
       "codemapper": {}
     },
@@ -437,7 +558,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "project_management_project_wip_limits_in_progress",
-      "community": 7,
+      "community": 4,
       "norm_label": "in_progress",
       "codemapper": {}
     },
@@ -448,7 +569,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "project_management_project_wip_limits_in_review",
-      "community": 7,
+      "community": 4,
       "norm_label": "in_review",
       "codemapper": {}
     },
@@ -552,6 +673,154 @@
       "codemapper": {}
     },
     {
+      "label": "download_datasets.py",
+      "file_type": "code",
+      "source_file": "src/data_ingestion/download_datasets.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_ingestion_download_datasets",
+      "community": 18,
+      "norm_label": "download_datasets.py",
+      "codemapper": {
+        "dead_file": true,
+        "stale_docstring": true
+      }
+    },
+    {
+      "label": "create_folders()",
+      "file_type": "code",
+      "source_file": "src/data_ingestion/download_datasets.py",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "data_ingestion_download_datasets_create_folders",
+      "community": 18,
+      "norm_label": "create_folders()",
+      "codemapper": {}
+    },
+    {
+      "label": "download_file()",
+      "file_type": "code",
+      "source_file": "src/data_ingestion/download_datasets.py",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "data_ingestion_download_datasets_download_file",
+      "community": 18,
+      "norm_label": "download_file()",
+      "codemapper": {
+        "complexity": 7
+      }
+    },
+    {
+      "label": "fetch_osm_power_grid()",
+      "file_type": "code",
+      "source_file": "src/data_ingestion/download_datasets.py",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "data_ingestion_download_datasets_fetch_osm_power_grid",
+      "community": 18,
+      "norm_label": "fetch_osm_power_grid()",
+      "codemapper": {}
+    },
+    {
+      "label": "create_iea_ai_reference()",
+      "file_type": "code",
+      "source_file": "src/data_ingestion/download_datasets.py",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "data_ingestion_download_datasets_create_iea_ai_reference",
+      "community": 18,
+      "norm_label": "create_iea_ai_reference()",
+      "codemapper": {}
+    },
+    {
+      "label": "SKILL.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/analytical-siting-evaluator/SKILL.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "analytical_siting_evaluator_skill",
+      "community": 16,
+      "norm_label": "skill.md",
+      "codemapper": {}
+    },
+    {
+      "label": "Analytical Siting Evaluator",
+      "file_type": "document",
+      "source_file": ".agents/skills/analytical-siting-evaluator/SKILL.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "analytical_siting_evaluator_skill_analytical_siting_evaluator",
+      "community": 16,
+      "norm_label": "analytical siting evaluator",
+      "codemapper": {}
+    },
+    {
+      "label": "Overview",
+      "file_type": "document",
+      "source_file": ".agents/skills/analytical-siting-evaluator/SKILL.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "analytical_siting_evaluator_skill_overview",
+      "community": 16,
+      "norm_label": "overview",
+      "codemapper": {}
+    },
+    {
+      "label": "Regole di Comportamento (Behavioral Rules)",
+      "file_type": "document",
+      "source_file": ".agents/skills/analytical-siting-evaluator/SKILL.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "analytical_siting_evaluator_skill_regole_di_comportamento_behavioral_rules",
+      "community": 16,
+      "norm_label": "regole di comportamento (behavioral rules)",
+      "codemapper": {}
+    },
+    {
+      "label": "Workflow (Procedura di Analisi)",
+      "file_type": "document",
+      "source_file": ".agents/skills/analytical-siting-evaluator/SKILL.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "analytical_siting_evaluator_skill_workflow_procedura_di_analisi",
+      "community": 16,
+      "norm_label": "workflow (procedura di analisi)",
+      "codemapper": {}
+    },
+    {
+      "label": "1. Valutazione Multicriterio (MCDA)",
+      "file_type": "document",
+      "source_file": ".agents/skills/analytical-siting-evaluator/SKILL.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "analytical_siting_evaluator_skill_1_valutazione_multicriterio_mcda",
+      "community": 16,
+      "norm_label": "1. valutazione multicriterio (mcda)",
+      "codemapper": {}
+    },
+    {
+      "label": "2. Tabella dei Dati di Sintesi",
+      "file_type": "document",
+      "source_file": ".agents/skills/analytical-siting-evaluator/SKILL.md",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "analytical_siting_evaluator_skill_2_tabella_dei_dati_di_sintesi",
+      "community": 16,
+      "norm_label": "2. tabella dei dati di sintesi",
+      "codemapper": {}
+    },
+    {
+      "label": "Errori Comuni da Evitare",
+      "file_type": "document",
+      "source_file": ".agents/skills/analytical-siting-evaluator/SKILL.md",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "analytical_siting_evaluator_skill_errori_comuni_da_evitare",
+      "community": 16,
+      "norm_label": "errori comuni da evitare",
+      "codemapper": {}
+    },
+    {
       "label": "CLAUDE.md",
       "file_type": "document",
       "source_file": "CLAUDE.md",
@@ -610,7 +879,7 @@
       "label": "Dev Commands",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L29",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "claude_dev_commands",
       "community": 1,
@@ -621,11 +890,385 @@
       "label": "Important",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L33",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "claude_important",
       "community": 1,
       "norm_label": "important",
+      "codemapper": {}
+    },
+    {
+      "label": "persona.md",
+      "file_type": "document",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "artifacts_persona",
+      "community": 7,
+      "norm_label": "persona.md",
+      "codemapper": {}
+    },
+    {
+      "label": "Persona: DC Infrastructure Decision-Maker",
+      "file_type": "document",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "artifacts_persona_persona_dc_infrastructure_decision_maker",
+      "community": 7,
+      "norm_label": "persona: dc infrastructure decision-maker",
+      "codemapper": {}
+    },
+    {
+      "label": "Profile",
+      "file_type": "document",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "artifacts_persona_profile",
+      "community": 7,
+      "norm_label": "profile",
+      "codemapper": {}
+    },
+    {
+      "label": "The Core Problem",
+      "file_type": "document",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "artifacts_persona_the_core_problem",
+      "community": 7,
+      "norm_label": "the core problem",
+      "codemapper": {}
+    },
+    {
+      "label": "Primary Goal",
+      "file_type": "document",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "artifacts_persona_primary_goal",
+      "community": 7,
+      "norm_label": "primary goal",
+      "codemapper": {}
+    },
+    {
+      "label": "Secondary Goals",
+      "file_type": "document",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "artifacts_persona_secondary_goals",
+      "community": 7,
+      "norm_label": "secondary goals",
+      "codemapper": {}
+    },
+    {
+      "label": "Current Pain (Before Tool)",
+      "file_type": "document",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "artifacts_persona_current_pain_before_tool",
+      "community": 7,
+      "norm_label": "current pain (before tool)",
+      "codemapper": {}
+    },
+    {
+      "label": "Frustrations",
+      "file_type": "document",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "artifacts_persona_frustrations",
+      "community": 7,
+      "norm_label": "frustrations",
+      "codemapper": {}
+    },
+    {
+      "label": "Tools Used Today",
+      "file_type": "document",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "artifacts_persona_tools_used_today",
+      "community": 7,
+      "norm_label": "tools used today",
+      "codemapper": {}
+    },
+    {
+      "label": "Decision Criteria for Buying This Tool",
+      "file_type": "document",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "artifacts_persona_decision_criteria_for_buying_this_tool",
+      "community": 7,
+      "norm_label": "decision criteria for buying this tool",
+      "codemapper": {}
+    },
+    {
+      "label": "Buyer (who approves the purchase)",
+      "file_type": "document",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "artifacts_persona_buyer_who_approves_the_purchase",
+      "community": 7,
+      "norm_label": "buyer (who approves the purchase)",
+      "codemapper": {}
+    },
+    {
+      "label": "Key Quote",
+      "file_type": "document",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L99",
+      "_origin": "ast",
+      "id": "artifacts_persona_key_quote",
+      "community": 7,
+      "norm_label": "key quote",
+      "codemapper": {}
+    },
+    {
+      "label": "personas.md",
+      "file_type": "document",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "artifacts_personas_md_artifacts_personas",
+      "community": 21,
+      "norm_label": "personas.md",
+      "codemapper": {}
+    },
+    {
+      "label": "DC Siting Intelligence Tool \u2014 User Personas",
+      "file_type": "document",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "artifacts_personas_dc_siting_intelligence_tool_user_personas",
+      "community": 21,
+      "norm_label": "dc siting intelligence tool \u2014 user personas",
+      "codemapper": {}
+    },
+    {
+      "label": "Jordan \u2014 The Analyst Who Has to Find the Answer",
+      "file_type": "document",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "artifacts_personas_jordan_the_analyst_who_has_to_find_the_answer",
+      "community": 21,
+      "norm_label": "jordan \u2014 the analyst who has to find the answer",
+      "codemapper": {}
+    },
+    {
+      "label": "Goals",
+      "file_type": "document",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "artifacts_personas_goals",
+      "community": 21,
+      "norm_label": "goals",
+      "codemapper": {}
+    },
+    {
+      "label": "Current Pain",
+      "file_type": "document",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "artifacts_personas_current_pain",
+      "community": 21,
+      "norm_label": "current pain",
+      "codemapper": {}
+    },
+    {
+      "label": "What Makes Jordan Buy",
+      "file_type": "document",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "artifacts_personas_what_makes_jordan_buy",
+      "community": 21,
+      "norm_label": "what makes jordan buy",
+      "codemapper": {}
+    },
+    {
+      "label": "IC / CFO \u2014 The Person Who Approves",
+      "file_type": "document",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "artifacts_personas_ic_cfo_the_person_who_approves",
+      "community": 21,
+      "norm_label": "ic / cfo \u2014 the person who approves",
+      "codemapper": {}
+    },
+    {
+      "label": "What They Read",
+      "file_type": "document",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "artifacts_personas_what_they_read",
+      "community": 21,
+      "norm_label": "what they read",
+      "codemapper": {}
+    },
+    {
+      "label": "What Makes Them Approve",
+      "file_type": "document",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "artifacts_personas_what_makes_them_approve",
+      "community": 21,
+      "norm_label": "what makes them approve",
+      "codemapper": {}
+    },
+    {
+      "label": "Persona Summary Table",
+      "file_type": "document",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "artifacts_personas_persona_summary_table",
+      "community": 21,
+      "norm_label": "persona summary table",
+      "codemapper": {}
+    },
+    {
+      "label": "stakeholder-map.md",
+      "file_type": "document",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "artifacts_stakeholder_map_md_artifacts_stakeholder_map",
+      "community": 20,
+      "norm_label": "stakeholder-map.md",
+      "codemapper": {}
+    },
+    {
+      "label": "Stakeholder Map \u2014 DC Siting Intelligence Tool",
+      "file_type": "document",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
+      "community": 20,
+      "norm_label": "stakeholder map \u2014 dc siting intelligence tool",
+      "codemapper": {}
+    },
+    {
+      "label": "Influence / Interest Grid",
+      "file_type": "document",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "artifacts_stakeholder_map_influence_interest_grid",
+      "community": 20,
+      "norm_label": "influence / interest grid",
+      "codemapper": {}
+    },
+    {
+      "label": "Stakeholder Profiles",
+      "file_type": "document",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "artifacts_stakeholder_map_stakeholder_profiles",
+      "community": 20,
+      "norm_label": "stakeholder profiles",
+      "codemapper": {}
+    },
+    {
+      "label": "SH-001 \u2014 IC Partner",
+      "file_type": "document",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "artifacts_stakeholder_map_sh_001_ic_partner",
+      "community": 20,
+      "norm_label": "sh-001 \u2014 ic partner",
+      "codemapper": {}
+    },
+    {
+      "label": "SH-002 \u2014 CFO / CIO",
+      "file_type": "document",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "artifacts_stakeholder_map_sh_002_cfo_cio",
+      "community": 20,
+      "norm_label": "sh-002 \u2014 cfo / cio",
+      "codemapper": {}
+    },
+    {
+      "label": "SH-003 \u2014 Head of DC Development *(Jordan's manager)*",
+      "file_type": "document",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "artifacts_stakeholder_map_sh_003_head_of_dc_development_jordan_s_manager",
+      "community": 20,
+      "norm_label": "sh-003 \u2014 head of dc development *(jordan's manager)*",
+      "codemapper": {}
+    },
+    {
+      "label": "SH-004 \u2014 ESG Officer",
+      "file_type": "document",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "artifacts_stakeholder_map_sh_004_esg_officer",
+      "community": 20,
+      "norm_label": "sh-004 \u2014 esg officer",
+      "codemapper": {}
+    },
+    {
+      "label": "SH-005 \u2014 Board / LP",
+      "file_type": "document",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "artifacts_stakeholder_map_sh_005_board_lp",
+      "community": 20,
+      "norm_label": "sh-005 \u2014 board / lp",
+      "codemapper": {}
+    },
+    {
+      "label": "SH-006 \u2014 Infrastructure PM",
+      "file_type": "document",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "artifacts_stakeholder_map_sh_006_infrastructure_pm",
+      "community": 20,
+      "norm_label": "sh-006 \u2014 infrastructure pm",
+      "codemapper": {}
+    },
+    {
+      "label": "SH-007 \u2014 Legal / Compliance",
+      "file_type": "document",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L109",
+      "_origin": "ast",
+      "id": "artifacts_stakeholder_map_sh_007_legal_compliance",
+      "community": 20,
+      "norm_label": "sh-007 \u2014 legal / compliance",
+      "codemapper": {}
+    },
+    {
+      "label": "Narrative: Pitch Implications",
+      "file_type": "document",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L122",
+      "_origin": "ast",
+      "id": "artifacts_stakeholder_map_narrative_pitch_implications",
+      "community": 20,
+      "norm_label": "narrative: pitch implications",
       "codemapper": {}
     },
     {
@@ -759,6 +1402,402 @@
       "community": 0,
       "norm_label": "out of scope",
       "codemapper": {}
+    },
+    {
+      "label": "challenge_it.md",
+      "file_type": "document",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_challenge_it",
+      "community": 14,
+      "norm_label": "challenge_it.md",
+      "codemapper": {}
+    },
+    {
+      "label": "Invertix: Data-Center Siting & Power",
+      "file_type": "document",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_challenge_it_invertix_data_center_siting_power",
+      "community": 14,
+      "norm_label": "invertix: data-center siting & power",
+      "codemapper": {}
+    },
+    {
+      "label": "1. Challenge Statement",
+      "file_type": "document",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "docs_challenge_it_1_challenge_statement",
+      "community": 14,
+      "norm_label": "1. challenge statement",
+      "codemapper": {}
+    },
+    {
+      "label": "2. Obiettivi Chiave (Worth Exploring)",
+      "file_type": "document",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "docs_challenge_it_2_obiettivi_chiave_worth_exploring",
+      "community": 14,
+      "norm_label": "2. obiettivi chiave (worth exploring)",
+      "codemapper": {}
+    },
+    {
+      "label": "3. Risorse e Data Source Principali",
+      "file_type": "document",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "docs_challenge_it_3_risorse_e_data_source_principali",
+      "community": 14,
+      "norm_label": "3. risorse e data source principali",
+      "codemapper": {}
+    },
+    {
+      "label": "A. PyPSA-Eur",
+      "file_type": "document",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "docs_challenge_it_a_pypsa_eur",
+      "community": 14,
+      "norm_label": "a. pypsa-eur",
+      "codemapper": {}
+    },
+    {
+      "label": "B. Ember Data",
+      "file_type": "document",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "docs_challenge_it_b_ember_data",
+      "community": 14,
+      "norm_label": "b. ember data",
+      "codemapper": {}
+    },
+    {
+      "label": "C. OpenStreetMap (OSM)",
+      "file_type": "document",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "docs_challenge_it_c_openstreetmap_osm",
+      "community": 14,
+      "norm_label": "c. openstreetmap (osm)",
+      "codemapper": {}
+    },
+    {
+      "label": "D. IEA Energy & AI",
+      "file_type": "document",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "docs_challenge_it_d_iea_energy_ai",
+      "community": 14,
+      "norm_label": "d. iea energy & ai",
+      "codemapper": {}
+    },
+    {
+      "label": "E. Google AlphaEarth",
+      "file_type": "document",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "docs_challenge_it_e_google_alphaearth",
+      "community": 14,
+      "norm_label": "e. google alphaearth",
+      "codemapper": {}
+    },
+    {
+      "label": "4. Architettura Concettuale della Soluzione",
+      "file_type": "document",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "docs_challenge_it_4_architettura_concettuale_della_soluzione",
+      "community": 14,
+      "norm_label": "4. architettura concettuale della soluzione",
+      "codemapper": {}
+    },
+    {
+      "label": "e0-commands.md",
+      "file_type": "document",
+      "source_file": "docs/e0-commands.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_e0_commands",
+      "community": 19,
+      "norm_label": "e0-commands.md",
+      "codemapper": {}
+    },
+    {
+      "label": "E0 Task Commands \u2014 run each in its own terminal",
+      "file_type": "document",
+      "source_file": "docs/e0-commands.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_e0_commands_e0_task_commands_run_each_in_its_own_terminal",
+      "community": 19,
+      "norm_label": "e0 task commands \u2014 run each in its own terminal",
+      "codemapper": {}
+    },
+    {
+      "label": "TASK-001 \u2014 Personas",
+      "file_type": "document",
+      "source_file": "docs/e0-commands.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_e0_commands_task_001_personas",
+      "community": 19,
+      "norm_label": "task-001 \u2014 personas",
+      "codemapper": {}
+    },
+    {
+      "label": "TASK-002 \u2014 Customer Journey: Before",
+      "file_type": "document",
+      "source_file": "docs/e0-commands.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "docs_e0_commands_task_002_customer_journey_before",
+      "community": 19,
+      "norm_label": "task-002 \u2014 customer journey: before",
+      "codemapper": {}
+    },
+    {
+      "label": "TASK-004 \u2014 JTBD Framework",
+      "file_type": "document",
+      "source_file": "docs/e0-commands.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "docs_e0_commands_task_004_jtbd_framework",
+      "community": 19,
+      "norm_label": "task-004 \u2014 jtbd framework",
+      "codemapper": {}
+    },
+    {
+      "label": "TASK-005 \u2014 Market Viability",
+      "file_type": "document",
+      "source_file": "docs/e0-commands.md",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "docs_e0_commands_task_005_market_viability",
+      "community": 19,
+      "norm_label": "task-005 \u2014 market viability",
+      "codemapper": {}
+    },
+    {
+      "label": "TASK-046 \u2014 Stakeholder Map",
+      "file_type": "document",
+      "source_file": "docs/e0-commands.md",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "docs_e0_commands_task_046_stakeholder_map",
+      "community": 19,
+      "norm_label": "task-046 \u2014 stakeholder map",
+      "codemapper": {}
+    },
+    {
+      "label": "tasks-draft.md",
+      "file_type": "document",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_tasks_draft",
+      "community": 17,
+      "norm_label": "tasks-draft.md",
+      "codemapper": {}
+    },
+    {
+      "label": "PoC Task Draft \u2014 DC Siting Intelligence Map",
+      "file_type": "document",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_tasks_draft_poc_task_draft_dc_siting_intelligence_map",
+      "community": 17,
+      "norm_label": "poc task draft \u2014 dc siting intelligence map",
+      "codemapper": {}
+    },
+    {
+      "label": "Product Direction: Option 3 \u2014 Intelligence Map",
+      "file_type": "document",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "docs_tasks_draft_product_direction_option_3_intelligence_map",
+      "community": 17,
+      "norm_label": "product direction: option 3 \u2014 intelligence map",
+      "codemapper": {}
+    },
+    {
+      "label": "Decision Engine \u2014 Dual Signal + Confluence",
+      "file_type": "document",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "docs_tasks_draft_decision_engine_dual_signal_confluence",
+      "community": 17,
+      "norm_label": "decision engine \u2014 dual signal + confluence",
+      "codemapper": {}
+    },
+    {
+      "label": "Architecture",
+      "file_type": "document",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "docs_tasks_draft_architecture",
+      "community": 17,
+      "norm_label": "architecture",
+      "codemapper": {}
+    },
+    {
+      "label": "Epics & Tasks",
+      "file_type": "document",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "docs_tasks_draft_epics_tasks",
+      "community": 15,
+      "norm_label": "epics & tasks",
+      "codemapper": {}
+    },
+    {
+      "label": "Epic E0 \u2014 Desirability & Viability (12 SP) \u2190 DO FIRST",
+      "file_type": "document",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L80",
+      "_origin": "ast",
+      "id": "docs_tasks_draft_epic_e0_desirability_viability_12_sp_do_first",
+      "community": 15,
+      "norm_label": "epic e0 \u2014 desirability & viability (12 sp) \u2190 do first",
+      "codemapper": {}
+    },
+    {
+      "label": "Epic E1 \u2014 Project Scaffold (4 SP)",
+      "file_type": "document",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L95",
+      "_origin": "ast",
+      "id": "docs_tasks_draft_epic_e1_project_scaffold_4_sp",
+      "community": 15,
+      "norm_label": "epic e1 \u2014 project scaffold (4 sp)",
+      "codemapper": {}
+    },
+    {
+      "label": "Epic E2 \u2014 Data Layer (16 SP)",
+      "file_type": "document",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L106",
+      "_origin": "ast",
+      "id": "docs_tasks_draft_epic_e2_data_layer_16_sp",
+      "community": 15,
+      "norm_label": "epic e2 \u2014 data layer (16 sp)",
+      "codemapper": {}
+    },
+    {
+      "label": "Epic E3 \u2014 Rule-Based Scoring Engine (13 SP)",
+      "file_type": "document",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L123",
+      "_origin": "ast",
+      "id": "docs_tasks_draft_epic_e3_rule_based_scoring_engine_13_sp",
+      "community": 15,
+      "norm_label": "epic e3 \u2014 rule-based scoring engine (13 sp)",
+      "codemapper": {}
+    },
+    {
+      "label": "Epic E3b \u2014 NPV Model (8 SP)",
+      "file_type": "document",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L139",
+      "_origin": "ast",
+      "id": "docs_tasks_draft_epic_e3b_npv_model_8_sp",
+      "community": 15,
+      "norm_label": "epic e3b \u2014 npv model (8 sp)",
+      "codemapper": {}
+    },
+    {
+      "label": "Epic E3c \u2014 ML Signal Layer (10 SP)",
+      "file_type": "document",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L160",
+      "_origin": "ast",
+      "id": "docs_tasks_draft_epic_e3c_ml_signal_layer_10_sp",
+      "community": 15,
+      "norm_label": "epic e3c \u2014 ml signal layer (10 sp)",
+      "codemapper": {}
+    },
+    {
+      "label": "Epic E4 \u2014 Supply Mix Engine (7 SP)",
+      "file_type": "document",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L175",
+      "_origin": "ast",
+      "id": "docs_tasks_draft_epic_e4_supply_mix_engine_7_sp",
+      "community": 15,
+      "norm_label": "epic e4 \u2014 supply mix engine (7 sp)",
+      "codemapper": {}
+    },
+    {
+      "label": "Epic E5 \u2014 Map & UI (12 SP)",
+      "file_type": "document",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L191",
+      "_origin": "ast",
+      "id": "docs_tasks_draft_epic_e5_map_ui_12_sp",
+      "community": 15,
+      "norm_label": "epic e5 \u2014 map & ui (12 sp)",
+      "codemapper": {}
+    },
+    {
+      "label": "Epic E6 \u2014 Integration & Demo (6 SP)",
+      "file_type": "document",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L203",
+      "_origin": "ast",
+      "id": "docs_tasks_draft_epic_e6_integration_demo_6_sp",
+      "community": 15,
+      "norm_label": "epic e6 \u2014 integration & demo (6 sp)",
+      "codemapper": {}
+    },
+    {
+      "label": "Total: 98 SP",
+      "file_type": "document",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L214",
+      "_origin": "ast",
+      "id": "docs_tasks_draft_total_98_sp",
+      "community": 17,
+      "norm_label": "total: 98 sp",
+      "codemapper": {}
+    },
+    {
+      "label": "24h Critical Path",
+      "file_type": "document",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L230",
+      "_origin": "ast",
+      "id": "docs_tasks_draft_24h_critical_path",
+      "community": 17,
+      "norm_label": "24h critical path",
+      "codemapper": {}
+    },
+    {
+      "label": "Open Decisions",
+      "file_type": "document",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L250",
+      "_origin": "ast",
+      "id": "docs_tasks_draft_open_decisions",
+      "community": 17,
+      "norm_label": "open decisions",
+      "codemapper": {}
     }
   ],
   "links": [
@@ -828,9 +1867,9 @@
       "source_file": ".claude/settings.json",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_settings_hooks",
-      "target": "claude_settings_hooks_stop",
-      "confidence_score": 1.0
+      "target": "claude_settings_hooks_stop"
     },
     {
       "relation": "contains",
@@ -838,9 +1877,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "codemapper_cache",
-      "target": "codemapper_cache_files",
-      "confidence_score": 1.0
+      "target": "codemapper_cache_files"
     },
     {
       "relation": "contains",
@@ -848,9 +1887,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "codemapper_cache",
-      "target": "codemapper_cache_mtimes",
-      "confidence_score": 1.0
+      "target": "codemapper_cache_mtimes"
     },
     {
       "relation": "contains",
@@ -858,9 +1897,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "codemapper_cache",
-      "target": "codemapper_cache_root",
-      "confidence_score": 1.0
+      "target": "codemapper_cache_root"
     },
     {
       "relation": "contains",
@@ -868,9 +1907,99 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "codemapper_cache",
-      "target": "codemapper_cache_version",
-      "confidence_score": 1.0
+      "target": "codemapper_cache_version"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codemapper_cache_mtimes",
+      "target": "codemapper_cache_mtimes_src_data_ingestion_download_datasets_py"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codemapper_cache_files",
+      "target": "codemapper_cache_files_src_data_ingestion_download_datasets_py"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L77",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codemapper_cache_files_src_data_ingestion_download_datasets_py",
+      "target": "codemapper_cache_src_data_ingestion_download_datasets_py_doc_end_line"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codemapper_cache_files_src_data_ingestion_download_datasets_py",
+      "target": "codemapper_cache_src_data_ingestion_download_datasets_py_doc_start_line"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codemapper_cache_files_src_data_ingestion_download_datasets_py",
+      "target": "codemapper_cache_src_data_ingestion_download_datasets_py_imports"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codemapper_cache_files_src_data_ingestion_download_datasets_py",
+      "target": "codemapper_cache_src_data_ingestion_download_datasets_py_module_doc"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L75",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codemapper_cache_files_src_data_ingestion_download_datasets_py",
+      "target": "codemapper_cache_src_data_ingestion_download_datasets_py_module_doc_full"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codemapper_cache_files_src_data_ingestion_download_datasets_py",
+      "target": "codemapper_cache_src_data_ingestion_download_datasets_py_path"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codemapper_cache_files_src_data_ingestion_download_datasets_py",
+      "target": "codemapper_cache_src_data_ingestion_download_datasets_py_symbols"
     },
     {
       "relation": "contains",
@@ -909,9 +2038,9 @@
       "source_file": "project-management/kanban.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_kanban",
-      "target": "project_management_kanban_columns",
-      "confidence_score": 1.0
+      "target": "project_management_kanban_columns"
     },
     {
       "relation": "contains",
@@ -919,9 +2048,9 @@
       "source_file": "project-management/kanban.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_kanban",
-      "target": "project_management_kanban_wip_limits",
-      "confidence_score": 1.0
+      "target": "project_management_kanban_wip_limits"
     },
     {
       "relation": "contains",
@@ -929,9 +2058,9 @@
       "source_file": "project-management/kanban.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_kanban_wip_limits",
-      "target": "project_management_kanban_wip_limits_in_progress",
-      "confidence_score": 1.0
+      "target": "project_management_kanban_wip_limits_in_progress"
     },
     {
       "relation": "contains",
@@ -939,9 +2068,9 @@
       "source_file": "project-management/kanban.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_kanban_wip_limits",
-      "target": "project_management_kanban_wip_limits_in_review",
-      "confidence_score": 1.0
+      "target": "project_management_kanban_wip_limits_in_review"
     },
     {
       "relation": "contains",
@@ -949,9 +2078,9 @@
       "source_file": "project-management/open-pm.sh",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_open_pm",
-      "target": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_project_management_open_pm_sh__entry",
-      "confidence_score": 1.0
+      "target": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_project_management_open_pm_sh__entry"
     },
     {
       "relation": "contains",
@@ -959,9 +2088,9 @@
       "source_file": "project-management/project.json",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_project",
-      "target": "project_management_project_active_sprint_id",
-      "confidence_score": 1.0
+      "target": "project_management_project_active_sprint_id"
     },
     {
       "relation": "contains",
@@ -969,9 +2098,9 @@
       "source_file": "project-management/project.json",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_project",
-      "target": "project_management_project_cc_plans_path",
-      "confidence_score": 1.0
+      "target": "project_management_project_cc_plans_path"
     },
     {
       "relation": "contains",
@@ -979,9 +2108,9 @@
       "source_file": "project-management/project.json",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_project",
-      "target": "project_management_project_cc_transcripts_path",
-      "confidence_score": 1.0
+      "target": "project_management_project_cc_transcripts_path"
     },
     {
       "relation": "contains",
@@ -989,9 +2118,9 @@
       "source_file": "project-management/project.json",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_project",
-      "target": "project_management_project_cc_usage_raw_path",
-      "confidence_score": 1.0
+      "target": "project_management_project_cc_usage_raw_path"
     },
     {
       "relation": "contains",
@@ -999,9 +2128,9 @@
       "source_file": "project-management/project.json",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_project",
-      "target": "project_management_project_ccusage_ledger_path",
-      "confidence_score": 1.0
+      "target": "project_management_project_ccusage_ledger_path"
     },
     {
       "relation": "contains",
@@ -1009,9 +2138,9 @@
       "source_file": "project-management/project.json",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_project",
-      "target": "project_management_project_created_at",
-      "confidence_score": 1.0
+      "target": "project_management_project_created_at"
     },
     {
       "relation": "contains",
@@ -1019,9 +2148,9 @@
       "source_file": "project-management/project.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_project",
-      "target": "project_management_project_default_model",
-      "confidence_score": 1.0
+      "target": "project_management_project_default_model"
     },
     {
       "relation": "contains",
@@ -1029,9 +2158,9 @@
       "source_file": "project-management/project.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_project",
-      "target": "project_management_project_description",
-      "confidence_score": 1.0
+      "target": "project_management_project_description"
     },
     {
       "relation": "contains",
@@ -1039,9 +2168,9 @@
       "source_file": "project-management/project.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_project",
-      "target": "project_management_project_estimation_scale",
-      "confidence_score": 1.0
+      "target": "project_management_project_estimation_scale"
     },
     {
       "relation": "contains",
@@ -1049,9 +2178,9 @@
       "source_file": "project-management/project.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_project",
-      "target": "project_management_project_methodology",
-      "confidence_score": 1.0
+      "target": "project_management_project_methodology"
     },
     {
       "relation": "contains",
@@ -1059,9 +2188,9 @@
       "source_file": "project-management/project.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_project",
-      "target": "project_management_project_name",
-      "confidence_score": 1.0
+      "target": "project_management_project_name"
     },
     {
       "relation": "contains",
@@ -1069,9 +2198,9 @@
       "source_file": "project-management/project.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_project",
-      "target": "project_management_project_project_id",
-      "confidence_score": 1.0
+      "target": "project_management_project_project_id"
     },
     {
       "relation": "contains",
@@ -1079,9 +2208,9 @@
       "source_file": "project-management/project.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_project",
-      "target": "project_management_project_root_path",
-      "confidence_score": 1.0
+      "target": "project_management_project_root_path"
     },
     {
       "relation": "contains",
@@ -1089,9 +2218,9 @@
       "source_file": "project-management/project.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_project",
-      "target": "project_management_project_sprint_length_days",
-      "confidence_score": 1.0
+      "target": "project_management_project_sprint_length_days"
     },
     {
       "relation": "contains",
@@ -1099,9 +2228,9 @@
       "source_file": "project-management/project.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_project",
-      "target": "project_management_project_team",
-      "confidence_score": 1.0
+      "target": "project_management_project_team"
     },
     {
       "relation": "contains",
@@ -1109,9 +2238,9 @@
       "source_file": "project-management/project.json",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_project",
-      "target": "project_management_project_wip_limits",
-      "confidence_score": 1.0
+      "target": "project_management_project_wip_limits"
     },
     {
       "relation": "contains",
@@ -1119,9 +2248,9 @@
       "source_file": "project-management/project.json",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_project_wip_limits",
-      "target": "project_management_project_wip_limits_in_progress",
-      "confidence_score": 1.0
+      "target": "project_management_project_wip_limits_in_progress"
     },
     {
       "relation": "contains",
@@ -1129,9 +2258,119 @@
       "source_file": "project-management/project.json",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_project_wip_limits",
-      "target": "project_management_project_wip_limits_in_review",
-      "confidence_score": 1.0
+      "target": "project_management_project_wip_limits_in_review"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_ingestion/download_datasets.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_ingestion_download_datasets",
+      "target": "data_ingestion_download_datasets_create_folders"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_ingestion/download_datasets.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_ingestion_download_datasets",
+      "target": "data_ingestion_download_datasets_create_iea_ai_reference"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_ingestion/download_datasets.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_ingestion_download_datasets",
+      "target": "data_ingestion_download_datasets_download_file"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_ingestion/download_datasets.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_ingestion_download_datasets",
+      "target": "data_ingestion_download_datasets_fetch_osm_power_grid"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/analytical-siting-evaluator/SKILL.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "analytical_siting_evaluator_skill",
+      "target": "analytical_siting_evaluator_skill_analytical_siting_evaluator"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/analytical-siting-evaluator/SKILL.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "analytical_siting_evaluator_skill_analytical_siting_evaluator",
+      "target": "analytical_siting_evaluator_skill_errori_comuni_da_evitare"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/analytical-siting-evaluator/SKILL.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "analytical_siting_evaluator_skill_analytical_siting_evaluator",
+      "target": "analytical_siting_evaluator_skill_overview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/analytical-siting-evaluator/SKILL.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "analytical_siting_evaluator_skill_analytical_siting_evaluator",
+      "target": "analytical_siting_evaluator_skill_regole_di_comportamento_behavioral_rules"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/analytical-siting-evaluator/SKILL.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "analytical_siting_evaluator_skill_analytical_siting_evaluator",
+      "target": "analytical_siting_evaluator_skill_workflow_procedura_di_analisi"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/analytical-siting-evaluator/SKILL.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "analytical_siting_evaluator_skill_workflow_procedura_di_analisi",
+      "target": "analytical_siting_evaluator_skill_1_valutazione_multicriterio_mcda"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/analytical-siting-evaluator/SKILL.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "analytical_siting_evaluator_skill_workflow_procedura_di_analisi",
+      "target": "analytical_siting_evaluator_skill_2_tabella_dei_dati_di_sintesi"
     },
     {
       "relation": "contains",
@@ -1192,6 +2431,316 @@
       "confidence_score": 1.0,
       "source": "claude_dc_siting_intelligence_tool_hackathon",
       "target": "claude_project_layout"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "artifacts_persona",
+      "target": "artifacts_persona_persona_dc_infrastructure_decision_maker"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L91",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "artifacts_persona_persona_dc_infrastructure_decision_maker",
+      "target": "artifacts_persona_buyer_who_approves_the_purchase"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "artifacts_persona_persona_dc_infrastructure_decision_maker",
+      "target": "artifacts_persona_current_pain_before_tool"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "artifacts_persona_persona_dc_infrastructure_decision_maker",
+      "target": "artifacts_persona_decision_criteria_for_buying_this_tool"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "artifacts_persona_persona_dc_infrastructure_decision_maker",
+      "target": "artifacts_persona_frustrations"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L99",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "artifacts_persona_persona_dc_infrastructure_decision_maker",
+      "target": "artifacts_persona_key_quote"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "artifacts_persona_persona_dc_infrastructure_decision_maker",
+      "target": "artifacts_persona_primary_goal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "artifacts_persona_persona_dc_infrastructure_decision_maker",
+      "target": "artifacts_persona_profile"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "artifacts_persona_persona_dc_infrastructure_decision_maker",
+      "target": "artifacts_persona_secondary_goals"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "artifacts_persona_persona_dc_infrastructure_decision_maker",
+      "target": "artifacts_persona_the_core_problem"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/persona.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "artifacts_persona_persona_dc_infrastructure_decision_maker",
+      "target": "artifacts_persona_tools_used_today"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "artifacts_personas_md_artifacts_personas",
+      "target": "artifacts_personas_dc_siting_intelligence_tool_user_personas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "artifacts_personas_dc_siting_intelligence_tool_user_personas",
+      "target": "artifacts_personas_ic_cfo_the_person_who_approves",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "artifacts_personas_dc_siting_intelligence_tool_user_personas",
+      "target": "artifacts_personas_jordan_the_analyst_who_has_to_find_the_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "artifacts_personas_dc_siting_intelligence_tool_user_personas",
+      "target": "artifacts_personas_persona_summary_table",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "artifacts_personas_jordan_the_analyst_who_has_to_find_the_answer",
+      "target": "artifacts_personas_current_pain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "artifacts_personas_jordan_the_analyst_who_has_to_find_the_answer",
+      "target": "artifacts_personas_goals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "artifacts_personas_jordan_the_analyst_who_has_to_find_the_answer",
+      "target": "artifacts_personas_what_makes_jordan_buy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "artifacts_personas_ic_cfo_the_person_who_approves",
+      "target": "artifacts_personas_what_makes_them_approve",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "artifacts_personas_ic_cfo_the_person_who_approves",
+      "target": "artifacts_personas_what_they_read",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "artifacts_stakeholder_map_md_artifacts_stakeholder_map",
+      "target": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
+      "target": "artifacts_stakeholder_map_influence_interest_grid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
+      "target": "artifacts_stakeholder_map_narrative_pitch_implications",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
+      "target": "artifacts_stakeholder_map_stakeholder_profiles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "artifacts_stakeholder_map_stakeholder_profiles",
+      "target": "artifacts_stakeholder_map_sh_001_ic_partner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "artifacts_stakeholder_map_stakeholder_profiles",
+      "target": "artifacts_stakeholder_map_sh_002_cfo_cio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "artifacts_stakeholder_map_stakeholder_profiles",
+      "target": "artifacts_stakeholder_map_sh_003_head_of_dc_development_jordan_s_manager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "artifacts_stakeholder_map_stakeholder_profiles",
+      "target": "artifacts_stakeholder_map_sh_004_esg_officer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "artifacts_stakeholder_map_stakeholder_profiles",
+      "target": "artifacts_stakeholder_map_sh_005_board_lp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "artifacts_stakeholder_map_stakeholder_profiles",
+      "target": "artifacts_stakeholder_map_sh_006_infrastructure_pm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "artifacts_stakeholder_map_stakeholder_profiles",
+      "target": "artifacts_stakeholder_map_sh_007_legal_compliance",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1302,8 +2851,338 @@
       "confidence_score": 1.0,
       "source": "docs_challenge_challenge_data_center_siting_power_invertix",
       "target": "docs_challenge_target_users_jobs_to_be_done"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_it",
+      "target": "docs_challenge_it_invertix_data_center_siting_power"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_it_invertix_data_center_siting_power",
+      "target": "docs_challenge_it_1_challenge_statement"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_it_invertix_data_center_siting_power",
+      "target": "docs_challenge_it_2_obiettivi_chiave_worth_exploring"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_it_invertix_data_center_siting_power",
+      "target": "docs_challenge_it_3_risorse_e_data_source_principali"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_it_invertix_data_center_siting_power",
+      "target": "docs_challenge_it_4_architettura_concettuale_della_soluzione"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_it_3_risorse_e_data_source_principali",
+      "target": "docs_challenge_it_a_pypsa_eur"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_it_3_risorse_e_data_source_principali",
+      "target": "docs_challenge_it_b_ember_data"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_it_3_risorse_e_data_source_principali",
+      "target": "docs_challenge_it_c_openstreetmap_osm"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_it_3_risorse_e_data_source_principali",
+      "target": "docs_challenge_it_d_iea_energy_ai"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge_it.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_it_3_risorse_e_data_source_principali",
+      "target": "docs_challenge_it_e_google_alphaearth"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/e0-commands.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_e0_commands",
+      "target": "docs_e0_commands_e0_task_commands_run_each_in_its_own_terminal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/e0-commands.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_e0_commands_e0_task_commands_run_each_in_its_own_terminal",
+      "target": "docs_e0_commands_task_001_personas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/e0-commands.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_e0_commands_e0_task_commands_run_each_in_its_own_terminal",
+      "target": "docs_e0_commands_task_002_customer_journey_before"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/e0-commands.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_e0_commands_e0_task_commands_run_each_in_its_own_terminal",
+      "target": "docs_e0_commands_task_004_jtbd_framework"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/e0-commands.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_e0_commands_e0_task_commands_run_each_in_its_own_terminal",
+      "target": "docs_e0_commands_task_005_market_viability"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/e0-commands.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_e0_commands_e0_task_commands_run_each_in_its_own_terminal",
+      "target": "docs_e0_commands_task_046_stakeholder_map"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_tasks_draft",
+      "target": "docs_tasks_draft_poc_task_draft_dc_siting_intelligence_map"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L230",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_tasks_draft_poc_task_draft_dc_siting_intelligence_map",
+      "target": "docs_tasks_draft_24h_critical_path"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_tasks_draft_poc_task_draft_dc_siting_intelligence_map",
+      "target": "docs_tasks_draft_architecture"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_tasks_draft_poc_task_draft_dc_siting_intelligence_map",
+      "target": "docs_tasks_draft_decision_engine_dual_signal_confluence"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_tasks_draft_poc_task_draft_dc_siting_intelligence_map",
+      "target": "docs_tasks_draft_epics_tasks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L250",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_tasks_draft_poc_task_draft_dc_siting_intelligence_map",
+      "target": "docs_tasks_draft_open_decisions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_tasks_draft_poc_task_draft_dc_siting_intelligence_map",
+      "target": "docs_tasks_draft_product_direction_option_3_intelligence_map"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L214",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_tasks_draft_poc_task_draft_dc_siting_intelligence_map",
+      "target": "docs_tasks_draft_total_98_sp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L80",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_tasks_draft_epics_tasks",
+      "target": "docs_tasks_draft_epic_e0_desirability_viability_12_sp_do_first"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L95",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_tasks_draft_epics_tasks",
+      "target": "docs_tasks_draft_epic_e1_project_scaffold_4_sp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L106",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_tasks_draft_epics_tasks",
+      "target": "docs_tasks_draft_epic_e2_data_layer_16_sp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L123",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_tasks_draft_epics_tasks",
+      "target": "docs_tasks_draft_epic_e3_rule_based_scoring_engine_13_sp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L139",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_tasks_draft_epics_tasks",
+      "target": "docs_tasks_draft_epic_e3b_npv_model_8_sp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L160",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_tasks_draft_epics_tasks",
+      "target": "docs_tasks_draft_epic_e3c_ml_signal_layer_10_sp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L175",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_tasks_draft_epics_tasks",
+      "target": "docs_tasks_draft_epic_e4_supply_mix_engine_7_sp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L191",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_tasks_draft_epics_tasks",
+      "target": "docs_tasks_draft_epic_e5_map_ui_12_sp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/tasks-draft.md",
+      "source_location": "L203",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_tasks_draft_epics_tasks",
+      "target": "docs_tasks_draft_epic_e6_integration_demo_6_sp"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "c23ca036511b7ac564a56406f30aa5f083036c17"
+  "built_at_commit": "bf4cb2f49752f155ab741ed0441b00907f7d0e6d"
 }

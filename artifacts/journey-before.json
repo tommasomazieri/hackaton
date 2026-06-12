@@ -1,0 +1,220 @@
+{
+  "journey_id": "journey-before",
+  "version": "1.0",
+  "title": "AS-IS: EU Data Center Site Research — Before the Tool",
+  "subtitle": "How Jordan finds and evaluates EU DC locations today",
+  "persona_ref": "persona-jordan",
+  "trigger": "Investment mandate issued — leadership commits to EU expansion at X MW by a defined deadline",
+  "end_state": "IC / board presentation delivered; site recommendation approved or returned for revision",
+  "total_elapsed_calendar_days_range": "15–35",
+  "total_analyst_hours_range": "80–120",
+  "quantified_costs": {
+    "in_house_analyst_cost_eur": "€18,000–€30,000 (€600–€850/day blended rate × 30–35 days; sources: Stafiz 2025, Consultancy.eu 2025, Metrics.biz 2025, Breagh Recruitment 2026)",
+    "external_consultant_alternative_eur": "€40,000–€120,000 per engagement (sources: Aninver feasibility benchmark $20k–$500k; Datarooms.org TDD $75k–$500k; Arcadis 4-DC German contract Nov 2025 implies ~€80k–€240k/engagement)",
+    "decision_risk_lifetime": "€50M–€1.7B over 20-year asset life for 50–200 MW DC. EU wholesale spread: €72–73/MWh Nordic vs Italy (AleaSoft 2024, FfE 2024). 100 MW DC annual electricity cost $41M–$131M depending on location (CNBC May 2026). Energy = 40–67% of DC opex (Epoch AI 2026, NetworkInstallers 2026).",
+    "ember_carbon_data_lag": "1–3 months at source: Ember publishes EU country figures with ~1 month lag, some markets up to 3 months. Updates twice monthly (Ember methodology 2025).",
+    "entso_e_granularity": "Bidding zone level (~30 zones EU-wide). Most major markets = 1 zone per country: Germany, France, Poland, Netherlands, Belgium are each a single zone. Sub-national nodal prices not publicly available (Synertics 2024, ENTSO-E documentation 2024).",
+    "grid_queue_context": "1,700+ GW waiting in EU grid queues as of 2024 (Eurelectric 2025). Typical grid connection reinforcement: 5–10 years (Eurelectric 2024). EU Grid congestion costs: €4.3B in 2024 (IEA 2025).",
+    "re_run_cost": "Each scenario change (different MW or carbon ceiling) requires a full manual rebuild — 1–2 additional analyst days at €600–€850/day"
+  },
+  "stages": [
+    {
+      "stage_id": "S1",
+      "name": "Mandate & Brief",
+      "description": "Leadership issues the directive: EU expansion, known MW target, rough timeline. Jordan receives the brief and scopes the task.",
+      "steps": [
+        "CEO or IC issues EU expansion mandate with MW commitment and deadline",
+        "Jordan receives verbal or email brief — MW is fixed, carbon ceiling often TBD or qualitative",
+        "Jordan scopes the work: which EU markets to screen, what data is needed, who else is involved",
+        "Checks whether any prior analysis exists — rarely reusable; different scope, different format"
+      ],
+      "pain_points": [
+        "Carbon ceiling stated qualitatively ('we need to be green') — no gCO₂/kWh target defined yet",
+        "No structured intake format — scope must be inferred and confirmed through back-and-forth",
+        "Prior analysis from previous deals is not reusable — different geography, different assumptions"
+      ],
+      "time_cost_estimate": "0.5–1 day",
+      "tools_used": ["Email", "Meeting notes"],
+      "emotional_state": "Energized but scope is underspecified — early ambiguity creates downstream rework"
+    },
+    {
+      "stage_id": "S2",
+      "name": "Energy Price Data Sourcing",
+      "description": "Jordan manually pulls wholesale electricity price data from ENTSO-E Transparency Platform, country by country.",
+      "steps": [
+        "Log into ENTSO-E Transparency Platform",
+        "Navigate to day-ahead market prices — separate download per country",
+        "Download CSVs for up to 20+ candidate EU countries",
+        "Clean and normalize: different date formats, units, missing values per country",
+        "Merge into master Excel sheet — country-level averages only"
+      ],
+      "pain_points": [
+        "ENTSO-E organises data by ~30 bidding zones; most major EU markets (Germany, France, Poland, Netherlands) = 1 zone per country — one country-wide average price masks all regional variation",
+        "Sub-national nodal price variation — the signal that matters for regional siting — is not publicly available on ENTSO-E",
+        "Up to 20+ individual zone/country downloads required — no unified bulk EU export",
+        "Format inconsistencies across zones require manual cleaning before any analysis",
+        "No forward curve — static historical snapshot only"
+      ],
+      "time_cost_estimate": "1–2 days",
+      "tools_used": ["ENTSO-E Transparency Platform", "Excel"],
+      "emotional_state": "Mechanical and tedious — high-effort, low-value data wrangling"
+    },
+    {
+      "stage_id": "S3",
+      "name": "Carbon Intensity Data Sourcing",
+      "description": "Jordan looks up grid carbon intensity per country from the Ember Climate website — manually, one country at a time.",
+      "steps": [
+        "Navigate to Ember Climate website",
+        "Look up grid carbon intensity per country — annual or trailing 12-month averages",
+        "Manually transcribe or download — no bulk EU pull available",
+        "Note data vintage: figures often 3–12 months stale",
+        "Map country averages into master Excel sheet"
+      ],
+      "pain_points": [
+        "Carbon data is country-averaged only — no zone or NUTS2-level granularity in Ember's published dataset",
+        "Publication lag: ~1 month for most EU countries; up to 3 months for some markets (Ember methodology 2025)",
+        "Cannot determine which EU zones qualify for a specific gCO₂/kWh ceiling without manual country-by-country filtering",
+        "Sub-national variation invisible: northern Germany (wind-heavy) treated identically to coal-heavy east",
+        "RE100 compliance check is manual: compare each country figure against policy target one by one"
+      ],
+      "time_cost_estimate": "0.5–1 day",
+      "tools_used": ["Ember Climate website", "Excel"],
+      "emotional_state": "Frustrated — knows zone-level variation exists but has no way to access it"
+    },
+    {
+      "stage_id": "S4",
+      "name": "Grid Infrastructure Scoping",
+      "description": "Jordan qualitatively assesses grid infrastructure (substations, fiber) for shortlisted regions using maps and OSM.",
+      "steps": [
+        "Open Google Maps and OpenStreetMap for candidate regions",
+        "Visually locate substation markers near shortlisted areas",
+        "Check for fiber and telecom infrastructure markers",
+        "Qualitatively assess industrial land availability and accessibility",
+        "Note findings in spreadsheet — unstructured, no consistent scoring"
+      ],
+      "pain_points": [
+        "OSM data quality is inconsistent across EU — reliable in DE/NL, sparse in eastern EU",
+        "Substation markers show presence but not capacity, voltage level, or available headroom",
+        "No way to assess grid congestion risk or spare connection capacity from visual inspection",
+        "Fiber coverage proxied by road density — unreliable for DC-grade connectivity decisions",
+        "Assessment is qualitative and non-defensible — hard to justify methodology at IC"
+      ],
+      "time_cost_estimate": "1–2 days",
+      "tools_used": ["Google Maps", "OpenStreetMap", "Excel"],
+      "emotional_state": "Uncertain and uncomfortable — knows the infrastructure check is superficial but has no alternative"
+    },
+    {
+      "stage_id": "S5",
+      "name": "Manual Data Integration & Longlist",
+      "description": "Jordan stitches energy price, carbon, and grid data into a master spreadsheet and builds a longlist of candidate regions.",
+      "steps": [
+        "Merge ENTSO-E energy price tab, Ember carbon tab, and OSM grid notes into a master sheet",
+        "Align geographic levels — country data forced onto regional siting decisions",
+        "Assign rough scores manually per candidate region",
+        "Produce longlist of 8–12 candidate countries or broad regions",
+        "Flag obvious disqualifiers: very high carbon, very high price, known grid issues"
+      ],
+      "pain_points": [
+        "Data lives at country level — cannot screen at zone level where the DC will actually be located",
+        "Manual merge is error-prone: copy-paste mistakes, stale tab versions, unit mismatches",
+        "Geographic mismatch: country price averages do not reflect regional nodal variation",
+        "Scoring is ad hoc — no defensible weighting methodology or audit trail",
+        "Longlist is built on incomplete data — gaps filled by assumption or prior knowledge"
+      ],
+      "time_cost_estimate": "2–3 days",
+      "tools_used": ["Excel / Google Sheets"],
+      "emotional_state": "Overwhelmed — managing inconsistencies across data of different quality, granularity, and vintage"
+    },
+    {
+      "stage_id": "S6",
+      "name": "Supply Mix Analysis",
+      "description": "Jordan builds a power supply mix model (grid / PPA / on-site) for shortlisted regions — in Excel, from scratch, every deal.",
+      "steps": [
+        "For each shortlisted region, research PPA availability and indicative rates",
+        "Reach out to network or PPA brokers for indicative pricing — or use stale benchmarks",
+        "Estimate curtailment zones qualitatively from industry knowledge and old reports",
+        "Build Excel model: grid spot cost, PPA rate, on-site LCOE, blended result per region",
+        "Stress-test assumptions manually, one scenario at a time"
+      ],
+      "pain_points": [
+        "PPA rate data is not public — requires broker network or expensive consultant report",
+        "Curtailment zone intelligence does not exist in one place — assembled from industry contacts and old reports",
+        "Model rebuilt from scratch on every deal — no reusable template, no institutional memory",
+        "LCOE benchmarks used are often 12–24 months stale",
+        "PPA discount cannot be quantified at zone level — can flag the opportunity, cannot price it for the CFO",
+        "Any change to MW or carbon ceiling requires a full manual rebuild of this model"
+      ],
+      "time_cost_estimate": "3–5 days",
+      "tools_used": ["Excel", "PPA broker conversations", "Consultant reports (ad hoc)", "Industry benchmark publications"],
+      "emotional_state": "Frustrated — rebuilding a near-identical model for the third time this year, from memory"
+    },
+    {
+      "stage_id": "S7",
+      "name": "Site Shortlisting & Scoring",
+      "description": "Jordan scores 3–5 final candidate sites across cost, carbon, grid, and connectivity dimensions and produces a ranked output.",
+      "steps": [
+        "Select 3–5 final candidate sites from longlist",
+        "Apply manual weights to each dimension",
+        "Score each site — subjectively, from the assembled data",
+        "Rank sites and produce a comparison table",
+        "Draft rationale for the top recommendation"
+      ],
+      "pain_points": [
+        "Scoring weights are arbitrary — no industry standard, no reproducible methodology",
+        "Rationale is difficult to defend at IC if challenged on data source or recency",
+        "Load estimate change (e.g. 50 MW → 150 MW) requires full scoring rebuild",
+        "No audit trail — cannot show how changing a weight shifts the ranking",
+        "Connectivity and congestion scores are qualitative — weakest part of the analysis"
+      ],
+      "time_cost_estimate": "2–3 days",
+      "tools_used": ["Excel", "PowerPoint (draft ranking table)"],
+      "emotional_state": "Anxious — the ranking is defensible only because Jordan built it, not because the methodology is transparent"
+    },
+    {
+      "stage_id": "S8",
+      "name": "IC / Board Presentation Preparation",
+      "description": "Jordan formats the analysis into two separate outputs: a technical deck for the CEO and a cost delta summary for the CFO. Both must be reconciled.",
+      "steps": [
+        "Build PowerPoint deck: site ranking, technical rationale, carbon compliance, grid assessment",
+        "Build separate Excel cost delta summary for CFO: energy cost differential, PPA opportunity, LCOE per site",
+        "Reconcile numbers between both documents — version mismatch risk",
+        "Write narrative explanations for each site from scratch",
+        "Prepare to defend data sources, recency, and methodology"
+      ],
+      "pain_points": [
+        "Two separate outputs from one analysis — CEO sees narrative, CFO sees numbers, risk of misalignment in the room",
+        "CFO may be working from a different version of the numbers than CEO by meeting day",
+        "Formatting and charting takes as long as the underlying analysis itself",
+        "Narrative written manually — no structure inherited from the scoring output",
+        "Data is 2–4 weeks old by the time the deck is finalized",
+        "Cannot re-run if IC asks for a different scenario during the meeting"
+      ],
+      "time_cost_estimate": "2–3 days",
+      "tools_used": ["PowerPoint", "Excel", "Word (narrative drafts)"],
+      "emotional_state": "Exhausted and deadline-pressured — a formatting sprint after weeks of analysis"
+    },
+    {
+      "stage_id": "S9",
+      "name": "IC Meeting & Follow-up",
+      "description": "Jordan presents to the investment committee or board. Live Q&A surfaces data gaps. Follow-up scenarios must be prepared offline and may trigger a second meeting.",
+      "steps": [
+        "Present ranked sites, rationale, carbon compliance, and cost differential to IC",
+        "Field live questions: 'What is the grid headroom in Poland?', 'What if we go to 200 MW?', 'How recent is this Ember data?'",
+        "Acknowledge gaps in real time — 'I will get back to you on that'",
+        "Prepare follow-up scenarios offline — 1–3 additional analyst days per IC question",
+        "IC approves, defers pending follow-up, or sends back for full rework"
+      ],
+      "pain_points": [
+        "Cannot re-run live — what-if scenarios require offline work and potentially a second meeting",
+        "Data recency challenged in the room — 'this ENTSO-E data is three months old'",
+        "Grid headroom and congestion questions cannot be answered with confidence",
+        "PPA opportunity flagged but not priced — IC cannot make a financial commitment on a flag alone",
+        "If IC requests a different MW or carbon ceiling, the full analysis restarts from S2",
+        "Credibility risk if data is challenged and Jordan cannot defend it in real time"
+      ],
+      "time_cost_estimate": "0.5 days (meeting) + 1–3 days (follow-up scenarios)",
+      "tools_used": ["PowerPoint", "Excel (follow-up scenarios)", "Email"],
+      "emotional_state": "Defensive and stressed — prepared but aware that live challenges will expose data gaps"
+    }
+  ]
+}

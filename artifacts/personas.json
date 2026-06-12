@@ -1,0 +1,129 @@
+[
+  {
+    "id": "persona-jordan",
+    "name": "Jordan",
+    "role": "Infrastructure Strategy Analyst / DC Investment Analyst / Head of DC Development",
+    "archetype": "primary_user",
+    "org_role": "Technical point of contact and CEO's technical advisor on site selection. Direct user of the tool. Owns the recommendation. Tool output is their raw narrative material — structured so the technical case (sites, carbon, grid) and financial case (cost delta, PPA discount) live in the same document, letting Jordan and the CFO build the same story without coordinating.",
+    "archetypes_included": [
+      "Infrastructure Strategy Analyst (hyperscaler expansion team)",
+      "Investment Analyst (energy/infrastructure fund)",
+      "Head of Data Center Development (colo operator / DC developer)"
+    ],
+    "goals": [
+      "Place X MW of capacity in Europe at lowest LCOE within carbon ceiling",
+      "Screen 10+ EU countries in hours, not weeks",
+      "Arm the CEO with a defensible technical recommendation",
+      "Produce CFO-digestible energy cost differentials without rebuilding a separate model",
+      "Identify PPA opportunities in high-curtailment zones for below-market rates",
+      "Re-run instantly when load estimate or carbon constraint changes"
+    ],
+    "frustrations": [
+      "EU grid intelligence is fragmented across 20+ country data sources — no unified zone-level view exists",
+      "Carbon data available at country level only — cannot determine which zones qualify for a specific gCO₂/kWh ceiling",
+      "Every scenario change (different MW or carbon ceiling) requires a full manual rebuild of the analysis",
+      "PPA opportunities exist in high-curtailment zones but cannot be priced at zone level — can be flagged but not quantified for the CFO",
+      "Two separate deliverables required from one analysis: technical narrative for the CEO and financial delta for the CFO — with version-mismatch risk",
+      "External consultants are the only structured alternative — expensive (€40–120k per engagement), static, and not re-runnable"
+    ],
+    "tools_used": [
+      "Excel / Google Sheets",
+      "ENTSO-E Transparency Platform",
+      "Ember Climate website",
+      "Google Maps + OpenStreetMap",
+      "PowerPoint",
+      "Consultant reports (ad hoc)"
+    ],
+    "decision_criteria": [
+      "Saves significant manual analysis time",
+      "Single output serves both CEO (narrative) and CFO (cost delta) without reformatting",
+      "Carbon data is current and zone-level, not country average",
+      "Can re-run instantly for different MW / carbon scenarios",
+      "Shows supply mix (grid / PPA / on-site) and energy cost differential per site",
+      "Sources are trusted and citable (PyPSA-Eur, Ember, OSM)",
+      "Per-query pricing — no annual commitment required"
+    ],
+    "quote": "I need to place 100 MW somewhere in Europe by Q3. Give me the top 3 zones with the numbers — I need something the CEO can decide on and the CFO can plug into the model. I'll take it to both of them on Friday."
+  },
+  {
+    "id": "persona-ceo",
+    "name": "CEO / C-Suite Executive",
+    "role": "Chief Executive Officer / Chief Strategy Officer / VP of Infrastructure",
+    "archetype": "decision_maker",
+    "org_role": "Ultimate decision maker. Informed by Jordan (technical) and CFO (financial). Does not read raw analysis — receives a coherent narrative built by both advisors from the same tool output. Approves when Jordan and CFO walk in already aligned: same site, same numbers, same carbon story.",
+    "archetypes_included": [
+      "CEO (hyperscaler, colo operator, DC developer)",
+      "Chief Strategy Officer",
+      "VP Infrastructure / Head of Expansion"
+    ],
+    "goals": [
+      "Validate EU expansion aligns with corporate growth thesis",
+      "Confirm the recommended region is defensible to board and investors",
+      "Understand geopolitical and regulatory risk by country",
+      "Ensure ESG / RE100 commitments are met — narrative for external stakeholders",
+      "Make the go/no-go call without needing to understand grid physics"
+    ],
+    "frustrations": [
+      "Analyst brings a spreadsheet, not a decision",
+      "No clear winner — trade-offs buried in appendix instead of surfaced",
+      "Carbon compliance stated qualitatively, not as hard numbers vs. policy target",
+      "Competitor moves faster — their team can screen EU in days, ours takes weeks",
+      "Consultant report is 80 pages, answers on page 62"
+    ],
+    "tools_used": [
+      "Executive summary / one-pager",
+      "Board deck",
+      "Verbal briefing from Jordan"
+    ],
+    "decision_criteria": [
+      "Clear ranked winner with plain rationale",
+      "Strategic fit: growth market, talent availability, political stability",
+      "ESG story: carbon intensity vs. public commitment (RE100, net-zero target)",
+      "Speed advantage: can we move faster than competitors using this tool?",
+      "Risk flags per region: permitting risk, grid reliability, geopolitical exposure"
+    ],
+    "quote": "I don't need to understand the grid. I need to know which country we're going into, why it's the right call strategically, and whether we'll be able to say we're running on clean energy."
+  },
+  {
+    "id": "persona-cfo",
+    "name": "CFO",
+    "role": "Chief Financial Officer / Investment Committee Member / Head of Real Estate Finance",
+    "archetype": "financial_advisor",
+    "org_role": "Financial advisor to the CEO. Pulled in by Jordan — not a direct user of the tool. Reads the cost-differential section of Jordan's output and uses it to advise the CEO on the financial case. Because both Jordan and CFO read from the same source, their narratives to the CEO are already consistent. CFO's sign-off enables the CEO to commit.",
+    "archetypes_included": [
+      "CFO (hyperscaler, colo operator, DC developer)",
+      "Investment Committee member (infrastructure fund / PE)",
+      "Head of Real Estate Finance"
+    ],
+    "goals": [
+      "Understand the energy cost differential between candidate sites — all else equal",
+      "Quantify NPV of choosing Site A over Site B driven purely by energy price and carbon",
+      "Know the PPA discount delta vs. grid-only at each location",
+      "Quantify carbon cost exposure difference between sites (EU ETS, offset cost per MWh)",
+      "Assess grid congestion risk as a €/MWh opex variance between options",
+      "Feed differential figures into the existing financial model — not replace it"
+    ],
+    "frustrations": [
+      "Tool outputs a ranking but not the €M value of picking rank-1 over rank-2",
+      "PPA opportunity flagged but discount not quantified vs. spot",
+      "Carbon intensity difference between sites not translated into annual € cost delta",
+      "Congestion risk is a label, not a number — cannot model it",
+      "Analyst says 'Nordics are cheaper' — CFO needs: cheaper by how much, over 15 years, at what load factor"
+    ],
+    "tools_used": [
+      "DCF / NPV model (owns and runs it — plugs our figures in)",
+      "Board deck cost section",
+      "PPA term sheet benchmarks",
+      "Energy cost benchmarks (€/MWh by country)"
+    ],
+    "decision_criteria": [
+      "Energy cost differential between sites stated as €/MWh and annualised at target MW",
+      "NPV of energy cost difference between top 2–3 options over asset life (15–25 yr)",
+      "PPA discount vs. day-ahead spot quantified (€/MWh) — not just flagged",
+      "Carbon cost delta between sites: (intensity_A − intensity_B) × EU ETS price × annual MWh",
+      "Grid congestion risk expressed as opex variance range (€/MWh ± X), not just high/medium/low",
+      "All figures additive above a standard DC opex/capex baseline — differential only, no total cost claimed"
+    ],
+    "quote": "I have the build cost. I don't need you to model the whole project. Tell me: if we go to Site A instead of Site B, what does that decision cost or save us in energy over 20 years? Give me the delta. I'll plug it into the model."
+  }
+]

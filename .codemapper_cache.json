@@ -1,0 +1,80 @@
+{
+  "version": 2,
+  "root": "C:\\Users\\tomin\\OneDrive\\Desktop\\PROGETTI\\operating_proejcts\\hackaton",
+  "mtimes": {
+    "src/data_ingestion/download_datasets.py": 1781293277.7682862
+  },
+  "files": {
+    "src/data_ingestion/download_datasets.py": {
+      "path": "src/data_ingestion/download_datasets.py",
+      "module_doc": null,
+      "imports": [
+        {
+          "module": "os",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 1,
+          "scope": null
+        },
+        {
+          "module": "urllib.request",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 2,
+          "scope": null
+        },
+        {
+          "module": "json",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 3,
+          "scope": null
+        },
+        {
+          "module": "time",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 4,
+          "scope": null
+        }
+      ],
+      "symbols": [
+        {
+          "name": "create_folders",
+          "kind": "function",
+          "line": 6,
+          "signature": "create_folders()",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "download_file",
+          "kind": "function",
+          "line": 12,
+          "signature": "download_file(url, destination_path)",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "fetch_osm_power_grid",
+          "kind": "function",
+          "line": 47,
+          "signature": "fetch_osm_power_grid()",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "create_iea_ai_reference",
+          "kind": "function",
+          "line": 83,
+          "signature": "create_iea_ai_reference()",
+          "parent": null,
+          "decorators": []
+        }
+      ],
+      "module_doc_full": null,
+      "doc_start_line": null,
+      "doc_end_line": null
+    }
+  }
+}

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "SH-001",
+    "name": "IC Partner",
+    "role": "Investment Committee Partner — ultimate deal approver. Signs off on capital allocation for new DC builds and acquisitions. Reads deal memos, not dashboards.",
+    "what_they_need_from_dc_siting": "IRR-accretive site selection with quantified downside. Carbon narrative for LP reporting. Proof the team ran a rigorous, repeatable process — not consultant intuition. Fast enough to not lose competitive deals.",
+    "influence_score": 5,
+    "interest_score": 4,
+    "approval_trigger": "NPV positive with sensitivity bounds shown. Carbon intensity below LP mandate ceiling. Site ranked #1 vs peer regions on cost-adjusted basis. Clear supply mix that hedges long-term energy price exposure.",
+    "block_trigger": "Unquantified regulatory or grid-connection risk. Carbon liability in jurisdiction. No defensible methodology — tool output looks like a black box. Competitor already locked preferred site.",
+    "quadrant": "Manage Closely"
+  },
+  {
+    "id": "SH-002",
+    "name": "CFO / CIO",
+    "role": "Chief Financial Officer / Chief Investment Officer. Owns capital budget and signs major capex. Also owns OpEx envelope for energy — largest operating line in a DC. May be same person or separate with joint sign-off.",
+    "what_they_need_from_dc_siting": "Precise LCOE per site with sensitivity range. Grid vs PPA vs on-site mix that reduces energy price volatility. Capex by region benchmarked against market. Annual cost delta between top 3 sites — clear CFO-legible table.",
+    "influence_score": 4,
+    "interest_score": 5,
+    "approval_trigger": "NPV model shows positive returns within budget envelope. Blended LCOE per site is competitive vs market benchmark. PPA option available to hedge spot exposure. Sensitivity analysis shows NPV stays positive under +20% energy cost.",
+    "block_trigger": "Energy cost assumptions not sourced (looks like guess). No PPA pathway for volatile markets. Capex estimate missing or too wide. OpEx blowout risk from grid congestion not quantified.",
+    "quadrant": "Manage Closely"
+  },
+  {
+    "id": "SH-003",
+    "name": "Head of DC Development",
+    "role": "Jordan's direct manager. Accountable for the pre-feasibility process and IC deck quality. Owns the siting mandate from board level down. Technical credibility matters — presents to IC and field-level teams simultaneously.",
+    "what_they_need_from_dc_siting": "A defensible shortlist of ≥3 sites with per-dimension scores they can interrogate. Supply mix recommendation per site. Tool fast enough to iterate during IC prep. Audit trail so they can answer IC questions without rebuilding the analysis.",
+    "influence_score": 4,
+    "interest_score": 5,
+    "approval_trigger": "Tool returns ranked sites in <30s with explainable scores. Supply mix recommendation cites real data, not defaults. Output is IC-presentable without manual reformatting. Jordan's team can operate it independently.",
+    "block_trigger": "Data reliability concerns — are Ember/PyPSA numbers current? Tool too complex or too slow for the team to use under time pressure. No clear methodology section for IC Q&A. Results change unpredictably between runs.",
+    "quadrant": "Manage Closely"
+  },
+  {
+    "id": "SH-004",
+    "name": "ESG Officer",
+    "role": "Responsible for Scope 2 carbon commitments, LP ESG reporting, and RE100/SBTi targets. Reviews all major infrastructure decisions for carbon exposure. Growing veto power as LP mandates tighten.",
+    "what_they_need_from_dc_siting": "Carbon intensity per site (gCO₂/kWh) sourced and auditable. Clear PPA / Guarantee of Origin pathway to achieve net-zero Scope 2. Curtailment-zone PPA opportunity flagged — generator additionality story for Scope 2 claims.",
+    "influence_score": 3,
+    "interest_score": 5,
+    "approval_trigger": "Site carbon intensity below LP mandate ceiling. PPA with Guarantee of Origin available in-region. Supply mix shows credible path to 100% renewable matching. Carbon data source cited (Ember) and methodology documented.",
+    "block_trigger": "Site carbon intensity above threshold with no viable PPA alternative. Greenwashing risk — PPA supplier in different bidding zone with no physical additionality. Carbon data stale or unsourced. ESG narrative not defensible to LP auditors.",
+    "quadrant": "Keep Informed"
+  },
+  {
+    "id": "SH-005",
+    "name": "Board / LP",
+    "role": "Board members and Limited Partners providing capital. Care about headline IRR, fund strategy coherence, and ESG compliance. Receive quarterly reporting, not deal-level dashboards. Shape mandate constraints (carbon ceiling, geography, minimum return hurdle) that filter the decision space.",
+    "what_they_need_from_dc_siting": "Confirmation the deal fits fund mandate: IRR above hurdle, carbon below LP ceiling, geography within scope. One-paragraph narrative in board memo. Not interested in methodology — just outcome confidence.",
+    "influence_score": 5,
+    "interest_score": 2,
+    "approval_trigger": "Deal hits IRR hurdle. Carbon exposure within LP mandate. Site in approved geography. IC Partner has already endorsed. Board memo narrative is clear and one paragraph.",
+    "block_trigger": "Carbon exposure that violates LP ESG covenant. Jurisdiction outside approved geographies. Deal speed too slow — LP optionality window closes. Regulatory or grid risk not surfaced at memo stage.",
+    "quadrant": "Keep Satisfied"
+  },
+  {
+    "id": "SH-006",
+    "name": "Infrastructure PM",
+    "role": "Project Manager who will execute the build once site is selected. Focused on delivery risk: grid connection timelines, substation capacity, land title, planning permission probability. Highly interested in operational data; low organizational influence over siting decision itself.",
+    "what_they_need_from_dc_siting": "Substation density and grid connection capacity per site. Fiber availability for backhaul. Land parcel availability at required footprint. Realistic grid connection lead times (not averages — actual bottleneck data).",
+    "influence_score": 2,
+    "interest_score": 5,
+    "approval_trigger": "OSM substation count confirms HV capacity within 5km. Land footprint requirement is achievable in zone. Connectivity score above threshold. Congestion risk flagged with mitigation options.",
+    "block_trigger": "Grid connection timeline >24 months not reflected in site score. Substation density score high but single-point-of-failure topology. Land availability score based on sparse data — real parcel not confirmed. Fiber proxy score doesn't match ground truth.",
+    "quadrant": "Keep Informed"
+  },
+  {
+    "id": "SH-007",
+    "name": "Legal / Compliance",
+    "role": "Reviews regulatory exposure in target jurisdictions: planning law, grid connection contracts, PPA enforceability, data residency requirements for DC operations. Can delay or block transactions through risk opinion escalation to IC.",
+    "what_they_need_from_dc_siting": "Jurisdiction-level regulatory flag per shortlisted site. PPA contract structure compatible with local law. Data residency and sovereignty requirements for DC operations. Grid connection contract terms — is headroom legally reserved or just indicative?",
+    "influence_score": 4,
+    "interest_score": 2,
+    "approval_trigger": "No active regulatory moratorium on DC builds in jurisdiction. PPA counterparty creditworthy, contract enforceable under local law. Grid connection capacity is formally committed (not just scored). Data residency requirements met.",
+    "block_trigger": "Jurisdictions with active permitting freezes or grid connection moratoriums (e.g., Ireland 2022-era constraints). PPA structure unenforceable locally. Carbon offset claims not audit-ready. Unresolved GDPR / data sovereignty exposure in DC operating model.",
+    "quadrant": "Keep Satisfied"
+  }
+]

@@ -10,8 +10,8 @@
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1781290499.9613044,
-    "ast_hash": "e10155d176accca5ac743e0d1a612291",
+    "mtime": 1781296942.0611541,
+    "ast_hash": "f54821991242e76ddc57cfb75e19d3cb",
     "semantic_hash": ""
   },
   "docs/challenge.md": {
@@ -20,18 +20,18 @@
     "semantic_hash": ""
   },
   ".codemapper_cache.json": {
-    "mtime": 1781290897.8635337,
-    "ast_hash": "120e7e84ec12e6825a6ea32dad5ce34e",
+    "mtime": 1781296643.3590038,
+    "ast_hash": "4d1dcc54ad535811a14fc2ef0268bd18",
     "semantic_hash": ""
   },
   "project-management/backlog.json": {
-    "mtime": 1781290992.7167518,
-    "ast_hash": "58e0494c51d30eb3494f7c9198986bb9",
+    "mtime": 1781296942.0671542,
+    "ast_hash": "19247822f1a1fee302287638a1d17143",
     "semantic_hash": ""
   },
   "project-management/epics.json": {
-    "mtime": 1781290995.2619457,
-    "ast_hash": "58e0494c51d30eb3494f7c9198986bb9",
+    "mtime": 1781296942.0671542,
+    "ast_hash": "1bd9c0827509a8c38ee4dd6a511a92b3",
     "semantic_hash": ""
   },
   "project-management/kanban.json": {
@@ -62,6 +62,61 @@
   "project-management/wbs.json": {
     "mtime": 1781291003.389249,
     "ast_hash": "8a80554c91d9fca8acb82f023de02f11",
+    "semantic_hash": ""
+  },
+  "src/data_ingestion/download_datasets.py": {
+    "mtime": 1781293277.7682862,
+    "ast_hash": "82dc8328a3cac626be4f5cb5be27967c",
+    "semantic_hash": ""
+  },
+  ".agents/skills/analytical-siting-evaluator/SKILL.md": {
+    "mtime": 1781293005.9274638,
+    "ast_hash": "59156789ee4c7a7ce7843ac1f0b98094",
+    "semantic_hash": ""
+  },
+  "artifacts/persona.md": {
+    "mtime": 1781295023.2275963,
+    "ast_hash": "d55b000bcc06cf837b351a505424a315",
+    "semantic_hash": ""
+  },
+  "docs/challenge_it.md": {
+    "mtime": 1781293005.9274638,
+    "ast_hash": "d62a23e7d6099dfd526e457b0e7e1722",
+    "semantic_hash": ""
+  },
+  "docs/tasks-draft.md": {
+    "mtime": 1781296942.0621674,
+    "ast_hash": "b4a2cb2b25fc3bbf2c12d1567fc7bdfd",
+    "semantic_hash": ""
+  },
+  "challenges/Energy \u00d7 AI Hackathon \u2014 Eight Directionspdf_260612_201927.pdf": {
+    "mtime": 1781288932.9620335,
+    "ast_hash": "1f79014bf2cedd3bd1c769c8c34311c7",
+    "semantic_hash": ""
+  },
+  "docs/e0-commands.md": {
+    "mtime": 1781296551.066319,
+    "ast_hash": "8cecaf65cb05816d6345f7f30620df1c",
+    "semantic_hash": ""
+  },
+  "artifacts/personas.json": {
+    "mtime": 1781296790.8815598,
+    "ast_hash": "19cb0dcb9ddc69f8f34638a1d600b3d4",
+    "semantic_hash": ""
+  },
+  "artifacts/stakeholder-map.json": {
+    "mtime": 1781296786.100711,
+    "ast_hash": "8e3163c432de42fb791349c65df81310",
+    "semantic_hash": ""
+  },
+  "artifacts/personas.md": {
+    "mtime": 1781296817.3033879,
+    "ast_hash": "acb294abdf277da3314827962986953a",
+    "semantic_hash": ""
+  },
+  "artifacts/stakeholder-map.md": {
+    "mtime": 1781296820.8719811,
+    "ast_hash": "01ac94c7ff72fc71130daf7c738dcf29",
     "semantic_hash": ""
   }
 }
