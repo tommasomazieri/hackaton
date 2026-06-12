@@ -32,6 +32,20 @@ This is not a one-off analysis. It is a product other people pay to use.
 | PPA availability vs On-site capex | Cheap wind/solar PPAs where curtailment is high vs on-site gen where grid is weak |
 | Connectivity | Fiber-dense urban areas vs greenfield sites with power but no backhaul |
 
+## Power Supply Mix — Key Concepts
+
+Data centers have three ways to source electricity. Our tool recommends the optimal blend per site:
+
+| Option | What it is | Best when |
+|---|---|---|
+| **Grid** | Buy at spot / day-ahead wholesale market | Grid is already cheap and low-carbon (Nordics, France nuclear) |
+| **PPA** | Long-term contract (10–25 yr) direct with a renewable generator at a fixed €/MWh | High renewable curtailment zones — generator discounts rate for revenue certainty |
+| **On-site generation** | Build own solar, battery, or backup generator on the DC plot | Grid is unreliable, very expensive, or site is remote |
+
+**PPA in detail:** A Power Purchase Agreement is a bilateral contract between the DC operator (buyer/offtaker) and a wind or solar farm (generator). The DC commits to buy X MWh at a fixed price for the contract term. Electrons still flow through the public grid — the PPA is a financial layer on top. In practice: generator sells to grid at spot, DC buys from grid at spot, and the fixed/spot price difference is settled financially (a Contract for Difference). The DC gets price certainty + renewable energy certificates (Guarantees of Origin) to support carbon claims.
+
+**Why PPAs are cheap in curtailment zones:** In regions where wind/solar generation exceeds local grid capacity (e.g., Scottish Highlands, western Ireland, Iberian interior), generators are sometimes forced to switch off despite producing free-fuel electricity. A DC willing to sign a long-term offtake agreement removes that risk for the generator — who then offers a below-market rate. Our tool identifies these zones as high-PPA-opportunity.
+
 ## Product Scope — Hackathon MVP
 
 A web app or AI agent that:
