@@ -5,5 +5,59 @@
       "Read(.env)",
       "Read(.env.*)"
     ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Grep|Glob|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:\\Users\\tomin\\OneDrive\\Desktop\\PROGETTI\\operating_proejcts\\aider for large codebases\\codemapper\\.venv\\Scripts\\python.exe",
+            "args": [
+              "-m",
+              "codemapper.hook"
+            ],
+            "timeout": 5000
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:\\Users\\tomin\\OneDrive\\Desktop\\PROGETTI\\operating_proejcts\\aider for large codebases\\codemapper\\.venv\\Scripts\\python.exe",
+            "args": [
+              "-m",
+              "codemapper.session_start"
+            ],
+            "timeout": 300000,
+            "statusMessage": "Refreshing codemapper2 graph\u2026"
+          },
+          {
+            "type": "command",
+            "command": "git",
+            "args": ["pull", "--rebase", "--autostash"],
+            "async": true,
+            "statusMessage": "Pulling latest changes\u2026"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "git",
+            "args": ["push"],
+            "async": true
+          }
+        ]
+      }
+    ]
   }
 }
