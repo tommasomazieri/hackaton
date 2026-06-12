@@ -5,32 +5,36 @@
 
 ---
 
-## Why JTBD over features
+## What this tool actually does — and does not do
 
-Jordan does not need "a dashboard." Jordan needs to stop losing 2–3 days to ENTSO-E country downloads that mask the zone-level variation where the DC will actually sit. The CFO does not need "a score." The CFO needs the number that goes into the DCF model on Friday. The CEO does not need a 80-page report — he needs one ranked winner he can say yes to.
+**This is a differential, comparative analysis. Not an absolute cost model.**
 
-These four jobs describe what each person is actually trying to make progress on.
+Every data center in Europe has roughly the same steel, concrete, server hardware, and cooling capex. What differs by location is: the energy price at that zone, the carbon intensity of that grid, the congestion headroom, the connectivity density, the land cost. Those spot-specific variables are what we score.
+
+The output is a ranked comparison: *"Site A beats Site B because its energy price is €28/MWh lower, its carbon intensity is 60 gCO₂/kWh cleaner, and its grid congestion risk is lower."*
+
+We do not model total build cost. We do not model total operating cost. We output the **delta** — the location-specific variables that change by site. The CFO already has a financial model. They need us to fill in the location-specific inputs, not replace their model.
 
 ---
 
 ## JTBD-001 — Jordan · Functional
-### Screen Europe in one query instead of 20+ country downloads
+### Compare EU zones on the variables that actually differ by location
 
-> **When** I need to screen EU locations against a specific MW load and gCO₂/kWh ceiling, and today I face 1–2 days on ENTSO-E pulling 20+ country files plus a half-day on Ember — all producing country averages that mask the zone-level variation where the DC will actually sit —  
-> **I want** a single query that applies the carbon ceiling as a hard filter at zone level and ranks EU NUTS2 zones by energy cost, grid headroom, and connectivity in one unified output —  
-> **so I can** produce a defensible shortlist in hours instead of weeks, without stitching mismatched country-level datasets in Excel.
+> **When** I need to compare EU locations against each other on the site-specific variables — energy price, carbon intensity, grid headroom, connectivity — and today I face 1–2 days on ENTSO-E plus a half-day on Ember producing country averages that mask the zone-level differentials that determine which site is actually better —  
+> **I want** a single query that pulls the spot-specific value for each dimension at each EU NUTS2 zone and ranks zones by how they compare against each other —  
+> **so I can** see which zones are comparatively better or worse on the variables that vary by location, in hours instead of weeks.
 
 **Validates:** cost · carbon · congestion · connectivity  
-**Pain anchor:** 8–24 hours of mechanical data wrangling (S2+S3); country-level granularity on decisions worth €100M–€1.7B over asset life.
+**Pain anchor:** Country-level averages mask zone differentials worth up to €72/MWh energy price spread and 50–100 gCO₂/kWh carbon spread across EU — the entire signal is lost before analysis starts.
 
 ---
 
 ## JTBD-002 — Jordan · Emotional
-### Walk into IC with a defensible methodology, not gut-feel Excel
+### Back the ranking with spot-specific differentials, not judgment
 
-> **When** I have built a site ranking with manually assigned weights and no audit trail, and I am about to present to an investment committee who may challenge the data source, recency, or scoring methodology —  
-> **I want** every score to cite a traceable source (PyPSA-Eur, Ember, OSM) with a published weighting methodology and a per-dimension breakdown showing exactly why Site A ranks above Site B —  
-> **so I can** walk in with genuine confidence, defend the recommendation under live challenge, and not have it sent back for rework.
+> **When** I have manually ranked sites with arbitrary weights and no audit trail, and I must present to an investment committee who may ask why Site A ranks above Site B —  
+> **I want** every ranking position backed by the actual spot-specific differential that drove it: "Site A ranks above Site B because its energy price is €28/MWh lower and its carbon intensity is 60 gCO₂/kWh cleaner" — citing traceable sources (PyPSA-Eur, Ember, OSM) —  
+> **so I can** defend the ranking under live IC challenge with numbers, not judgment, and not have the recommendation sent back for rework.
 
 **Validates:** cost · carbon · congestion · connectivity · land  
 **Pain anchor:** IC deferral adds 1–3 analyst days (€600–€1,700) and a 2-week delay; worst case restarts full analysis from S2.
@@ -38,26 +42,26 @@ These four jobs describe what each person is actually trying to make progress on
 ---
 
 ## JTBD-003 — CFO / IC Member · Financial
-### Turn the PPA flag into a €/MWh number for the DCF model
+### Give me the location-specific deltas to plug into our model
 
-> **When** Jordan's analysis flags that a zone has high PPA curtailment opportunity but cannot quantify the discount — PPA prices are bilateral and structurally non-public — so a flag appears in the deck with no number I can model —  
-> **I want** the PPA discount expressed as €/MWh at each flagged zone relative to day-ahead spot, and the NPV of that discount over the contract term at our target MW —  
-> **so I can** quantify the financial value of the PPA-opportunity site over the grid-heavy alternative, plug the delta into our DCF model, and give the CEO a financially grounded recommendation — not a flag the committee cannot act on.
+> **When** Jordan gives me a ranked shortlist but I need to know what choosing Site A over Site B is actually worth — the energy price differential, the carbon cost differential, the PPA discount at this zone versus day-ahead spot —  
+> **I want** spot-specific differentials expressed as €/MWh per site: energy price gap versus EU average, PPA discount at this zone, carbon intensity gap between top candidates — all stated at our target MW —  
+> **so I can** quantify the financial value of choosing one location over another from the site-specific variables alone, plug the deltas into our existing DCF model, and give the CEO a grounded recommendation. We already have the build cost. We need what changes by location.
 
-**Validates:** cost (supply mix / LCOE output)  
-**Pain anchor:** PPA price transparency structurally low (Pexapark 2026); LevelTen Energy built an entire commercial platform to address this exact gap. Without zone-level LCOE, IC cannot distinguish a 15% discount from a marginal one.
+**Validates:** cost (LCOE / supply mix differentials)  
+**Pain anchor:** CFO quote: *"I have the build cost. Tell me: if we go to Site A instead of Site B, what does that decision cost or save us in energy over 20 years? Give me the delta."* PPA discount structurally non-public (Pexapark 2026) — without zone-level differential, IC cannot act on a flag.
 
 ---
 
 ## JTBD-004 — CEO · Social / Decision
-### Receive one ranked winner — not a spreadsheet with the answer on page 62
+### One ranked winner — which location wins on the variables that differ
 
-> **When** my team brings me an EU expansion analysis that is a spreadsheet with trade-offs buried in an appendix, two versions of the numbers that Jordan and the CFO are not yet aligned on, and no clear winner —  
-> **I want** one ranked recommendation with a plain carbon compliance story and a financial delta I can read in five minutes —  
-> **so I can** make the go/no-go call without needing to understand grid physics, walk into the board with a defensible strategic rationale, and know that Jordan and the CFO are citing the same numbers.
+> **When** my team brings me a site comparison where trade-offs are buried in an appendix and there is no clear winner —  
+> **I want** one ranked recommendation that states plainly how the top site differs from the alternatives — cheaper energy, cleaner grid, less congestion risk — without requiring me to understand grid physics —  
+> **so I can** make the go/no-go call on which location wins on the site-specific variables, walk into the board with a defensible trade-off rationale, and know that Jordan and the CFO are citing the same differential numbers.
 
 **Validates:** carbon · cost  
-**Pain anchor:** Current alternative — 80-page consultant report (€40k–€120k, one-time, non-re-runnable) or a misaligned CEO deck + CFO Excel with version-mismatch risk. CEO quote: *"I don't need to understand the grid. I need to know which country we're going into and whether we'll be able to say we're running on clean energy."*
+**Pain anchor:** Current alternative — 80-page consultant report (€40k–€120k, static) or misaligned CEO deck + CFO Excel. CEO quote: *"I don't need to understand the grid. I need to know which country we're going into and whether we'll be able to say we're running on clean energy."*
 
 ---
 
@@ -67,11 +71,11 @@ These four jobs describe what each person is actually trying to make progress on
 |---|---|---|---|---|
 | 001 | Jordan | Functional | S2 · S3 · S5 | cost · carbon · congestion · connectivity |
 | 002 | Jordan | Emotional | S7 · S8 · S9 | all five |
-| 003 | CFO / IC | Financial | S6 · S8 · S9 | cost (LCOE / supply mix) |
+| 003 | CFO / IC | Financial | S6 · S8 · S9 | cost (LCOE differentials) |
 | 004 | CEO | Social / Decision | S8 · S9 | carbon · cost |
 
-**Three non-negotiable product implications:**
+**Three non-negotiable product implications — all differential:**
 
-1. **Carbon hard filter at zone level, not country average.** JTBD-001 fails if the filter runs on country-level Ember data — Jordan's shortlist silently includes coal-heavy zones in a nominally "green" country.
-2. **LCOE and supply mix as first-class outputs, not tooltips.** JTBD-003 fails if the PPA discount is flagged but not priced. The CFO cannot use a flag — only a number plugs into a DCF model.
-3. **Single output that CEO and CFO read from the same source.** JTBD-004 fails if Jordan produces two separate documents that must be manually reconciled — the CEO approves when Jordan and CFO walk in already aligned.
+1. **Every score is a relative position, not an absolute value.** A cost score of 0.9 means "cheapest energy in EU relative to other zones" — not "costs €X to operate." The output is always comparative.
+2. **LCOE output is a delta, not a total.** We output the energy cost differential between the top-ranked zone and the alternatives at the user's target MW. The CFO plugs that delta into their model — we do not replace their model.
+3. **Single shared output for CEO and CFO.** JTBD-004 fails if Jordan produces two separate documents that drift apart. One tool output, one set of differential numbers, two people walk into the room aligned.

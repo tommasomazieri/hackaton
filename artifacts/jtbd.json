@@ -5,11 +5,11 @@
     "persona_id": "persona-jordan",
     "job_type": "functional",
     "journey_stage_ref": ["S2", "S3", "S5"],
-    "situation": "I need to screen EU locations for a data center against a specific MW load and gCO₂/kWh ceiling, and today I face 1–2 days on ENTSO-E pulling 20+ country files plus a half-day on Ember — all producing country averages that mask the zone-level variation where the DC will actually be located",
-    "motivation": "run a single query that applies the carbon ceiling as a hard filter at zone level and ranks EU NUTS2 zones by energy cost, grid headroom, and connectivity in one unified output",
-    "outcome": "produce a defensible shortlist in hours instead of weeks without stitching mismatched country-level datasets in Excel",
+    "situation": "I need to compare EU locations against each other on the variables that differ by site — energy price, carbon intensity, grid headroom, connectivity — and today I face 1–2 days on ENTSO-E plus a half-day on Ember, all producing country averages that mask the zone-level differentials that actually determine which site is better",
+    "motivation": "run a single query that pulls the spot-specific value for each dimension at each EU NUTS2 zone and ranks zones by how they differ from each other — not by absolute build cost, which is the same everywhere",
+    "outcome": "show Jordan which zones are comparatively better or worse on the variables that actually vary by location, in hours instead of weeks",
     "validates_dimension": ["cost", "carbon", "congestion", "connectivity"],
-    "quantified_pain": "8–24 hours mechanical data wrangling (S2+S3 combined); country-level granularity on decisions worth €100M–€1.7B over asset life"
+    "quantified_pain": "8–24 hours mechanical data wrangling (S2+S3 combined); country-level averages mask zone differentials worth up to €72/MWh in energy price spread and 50–100 gCO₂/kWh in carbon intensity across EU zones"
   },
   {
     "id": "JTBD-002",
@@ -17,11 +17,11 @@
     "persona_id": "persona-jordan",
     "job_type": "emotional",
     "journey_stage_ref": ["S7", "S8", "S9"],
-    "situation": "I have built a site ranking with manually assigned weights and no audit trail, and I am about to present it to an investment committee who may challenge the data source, recency, or scoring methodology",
-    "motivation": "have every score cite a traceable source (PyPSA-Eur, Ember, OSM) with a published weighting methodology and a per-dimension breakdown that shows exactly why Site A ranks above Site B",
-    "outcome": "walk into the IC meeting with genuine confidence — not anxiety about being caught defending a spreadsheet built on judgment — and have the recommendation stand without being sent back for rework",
+    "situation": "I have manually ranked sites with arbitrary weights and no audit trail, and I must present to an investment committee who may challenge why Site A ranks above Site B",
+    "motivation": "back every ranking position with the actual spot-specific differential that drove it — 'Site A ranks above Site B because its energy price is €28/MWh lower and its carbon intensity is 60 gCO₂/kWh cleaner' — citing traceable sources (PyPSA-Eur, Ember, OSM)",
+    "outcome": "defend the ranking under live IC challenge with numbers, not judgment — and not have the recommendation sent back for rework",
     "validates_dimension": ["cost", "carbon", "congestion", "connectivity", "land"],
-    "quantified_pain": "IC deferral adds 1–3 analyst days (€600–€1,700) and a 2-week delay; worst case restarts analysis from S2"
+    "quantified_pain": "IC deferral adds 1–3 analyst days (€600–€1,700) and a 2-week delay; worst case restarts from S2"
   },
   {
     "id": "JTBD-003",
@@ -29,11 +29,11 @@
     "persona_id": "persona-cfo",
     "job_type": "financial",
     "journey_stage_ref": ["S6", "S8", "S9"],
-    "situation": "Jordan's analysis flags that a zone has high PPA curtailment opportunity but cannot quantify the discount — PPA prices are bilateral and structurally non-public — so the flag appears in the deck without a number I can model",
-    "motivation": "see the PPA discount expressed as €/MWh at each flagged zone relative to day-ahead spot and the NPV of that discount over the contract term at our target MW",
-    "outcome": "quantify the financial value of the PPA-opportunity site over the grid-heavy alternative, plug the delta into our DCF model, and give the CEO a financially grounded recommendation — not a flag that the committee cannot act on",
+    "situation": "Jordan gives me a ranked shortlist but I need to know what choosing Site A over Site B is actually worth — the energy price differential, the carbon cost differential, the PPA discount differential — so I can plug those deltas into our existing financial model",
+    "motivation": "see spot-specific differentials expressed in €/MWh per site: energy price gap vs EU average, PPA discount at this zone vs day-ahead spot, carbon intensity gap between top candidates — all at our target MW",
+    "outcome": "quantify the financial value of choosing one site over another from the location-specific variables alone, plug the deltas into our DCF model, and give the CEO a financially grounded recommendation — we already have the build cost; we need what changes by location",
     "validates_dimension": ["cost"],
-    "quantified_pain": "PPA price transparency structurally low (Pexapark 2026); without zone-level LCOE output IC cannot distinguish a 15% discount opportunity from a marginal one"
+    "quantified_pain": "CFO quote: 'I have the build cost. Tell me: if we go to Site A instead of Site B, what does that decision cost or save us in energy over 20 years? Give me the delta.' PPA discount structurally non-public (Pexapark 2026) — without zone-level differential, IC cannot act."
   },
   {
     "id": "JTBD-004",
@@ -41,10 +41,10 @@
     "persona_id": "persona-ceo",
     "job_type": "social",
     "journey_stage_ref": ["S8", "S9"],
-    "situation": "My team brings me an EU expansion analysis — but it is a spreadsheet with trade-offs buried in an appendix, two versions of the numbers that Jordan and the CFO are not yet aligned on, and no clear winner",
-    "motivation": "receive one ranked recommendation with a plain carbon compliance story and a financial delta — something I can read in five minutes and act on",
-    "outcome": "make the go/no-go call without needing to understand grid physics, walk into the board with a defensible strategic rationale, and know that Jordan and the CFO are citing the same numbers",
+    "situation": "My team brings me a site comparison where trade-offs are buried in an appendix, Jordan and the CFO are not yet aligned on numbers, and there is no clear winner",
+    "motivation": "receive one ranked recommendation that states plainly how the top site differs from the alternatives — cheaper energy, cleaner grid, less congestion risk — without requiring me to understand grid physics",
+    "outcome": "make the go/no-go call on which location wins on the variables that differ by site, walk into the board with a defensible trade-off rationale, and know Jordan and the CFO are citing the same differential numbers",
     "validates_dimension": ["carbon", "cost"],
-    "quantified_pain": "Current output: 80-page consultant report or a misaligned CEO deck + CFO Excel. CEO quote: 'I don't need to understand the grid. I need to know which country we're going into and whether we'll be able to say we're running on clean energy.'"
+    "quantified_pain": "Current alternative: 80-page consultant report (€40k–€120k, static, non-re-runnable) or misaligned CEO deck + CFO Excel. CEO quote: 'I don't need to understand the grid. I need to know which country we're going into and whether we'll be able to say we're running on clean energy.'"
   }
 ]
