@@ -1,16 +1,16 @@
 # Graph Report - Project_Antigravity  (2026-06-13)
 
 ## Corpus Check
-- 33 files · ~33,932 words
+- 34 files · ~34,939 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 352 nodes · 319 edges · 37 communities (34 shown, 3 thin omitted)
+- 364 nodes · 330 edges · 38 communities (35 shown, 3 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `10ac5a45`
+- Built from commit: `1e3db1b0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -43,6 +43,7 @@
 - [[_COMMUNITY_Community 31|Community 31]]
 - [[_COMMUNITY_Community 32|Community 32]]
 - [[_COMMUNITY_Community 36|Community 36]]
+- [[_COMMUNITY_Community 37|Community 37]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `market_context` - 22 edges
@@ -62,7 +63,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (37 total, 3 thin omitted)
+## Communities (38 total, 3 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.17
@@ -164,8 +165,12 @@ Nodes (6): Data Sources, DC Siting Intelligence Tool — Hackathon, Dev Commands
 Cohesion: 0.25
 Nodes (8): 1. Nodi (Buses), 2. Linee di Trasmissione (Lines) e Link DC (Links), 3. Generatori (Generators), 3. PyPSA-Eur Network Data, 4. Unità di Accumulo (Storage Units & Stores), 5. Trasformatori (Transformers), A. Caratteristiche dei Dati e Struttura delle Componenti, B. Opportunità Applicative e Formule Chiave
 
+### Community 37 - "Community 37"
+Cohesion: 0.17
+Nodes (11): 1. Schema Dati e Contratto API (Pydantic Models), 2. Logica Computazionale e Formule (Backend Backend Siting Engine), 3. Test Unitari per il Controllo Qualità (QA/QC Assertions), 4. UI Guidelines (Streamlit Frontend), A. Classificazione e Obbligo EED, A. Modello di Input (`SitingRequest`), B. Modello di Output di Compliance (`ComplianceScore`), B. Verifica del PUE Limite (Tassonomia e Legge Tedesca EnEfG) (+3 more)
+
 ## Knowledge Gaps
-- **259 isolated node(s):** `$schema`, `deny`, `PreToolUse`, `SessionStart`, `Stop` (+254 more)
+- **267 isolated node(s):** `$schema`, `deny`, `PreToolUse`, `SessionStart`, `Stop` (+262 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -173,13 +178,13 @@ Nodes (8): 1. Nodi (Buses), 2. Linee di Trasmissione (Lines) e Link DC (Links), 
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `market_context` connect `Community 5` to `Community 1`?**
-  _High betweenness centrality (0.021) - this node is a cross-community bridge._
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
 - **Why does `sam_derivation` connect `Community 28` to `Community 1`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **Why does `tam_derivation` connect `Community 29` to `Community 1`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
+- **Why does `tam_derivation` connect `Community 29` to `Community 1`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **What connects `$schema`, `deny`, `PreToolUse` to the rest of the system?**
-  _259 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _267 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**

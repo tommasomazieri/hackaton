@@ -178,5 +178,10 @@
     "mtime": 1781299965.1424944,
     "ast_hash": "4a490bee940a5bdc9cff0db8588ecea1",
     "semantic_hash": ""
+  },
+  "docs/compliance_guide.md": {
+    "mtime": 1781306467.5596585,
+    "ast_hash": "3c49c7c93cb5ab4b31c5624eb5f5b85d",
+    "semantic_hash": ""
   }
 }
