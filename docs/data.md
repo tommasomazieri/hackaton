@@ -18,9 +18,16 @@ Questo documento fornisce un'analisi quantitativa dei database disponibili per i
 ### B. Opportunità Applicative
 1.  **Filtro di Sostenibilità Assoluta (Hard Constraint)**:
     *   Se l'utente specifica un limite di emissioni massimo (es. $\text{Target}_{\text{CO}2} = 150 \text{ gCO}_2/\text{kWh}$), lo script esclude immediatamente dall'analisi tutti i paesi la cui intensità carbonica media di rete supera tale soglia (es. escludendo Polonia con $\approx 600 \text{ gCO}_2/\text{kWh}$ o Germania con $\approx 380 \text{ gCO}_2/\text{kWh}$, promuovendo Svezia, Norvegia e Francia).
-2.  **Calcolo Impronta Carbonica Scope 2**:
+2.  **Calcolo Impronta Carbonica Scope 2 (Compliance & Reporting)**:
     *   Viene utilizzato come base quantitativa per valutare le emissioni del data center allacciato alla rete elettrica (*grid power*):
         $$\text{Emissioni}_{\text{grid}} = P_{\text{DC}} \times 8760 \text{ ore} \times \text{PUE} \times \text{Intensità}_{\text{carbonio}}$$
+3.  **Ottimizzazione del Dimensionamento delle Batterie (BESS)**:
+    *   Un limite rigido di emissioni orarie obbliga a installare sistemi di accumulo a batteria localizzati (BESS) per immagazzinare energia pulita quando l'intensità della griglia è bassa, rilasciandola durante le ore di picco fossile della rete. Il target di emissioni definisce direttamente la capacità di stoccaggio minima (in **MWh**) per garantire la continuità energetica senza violare il vincolo carbonico.
+4.  **Carbon-Aware Load Shifting (Spaziale e Temporale)**:
+    *   Il target $Target_{CO2}$ abilita algoritmi di flessibilizzazione del carico IT. Se l'intensità locale supera la soglia in una certa ora $t$, i carichi computazionali non urgenti (es. training di LLM) vengono posticipati o migrati via cloud in altri nodi geografici europei con rete temporaneamente più verde (es. Svezia):
+        $$\text{Carico}(t) = \begin{cases} P_{\text{max}} & \text{se } \text{Intensity}(t) \le \text{Target}_{\text{CO}2} \\ P_{\text{baseline}} & \text{se } \text{Intensity}(t) > \text{Target}_{\text{CO}2} \end{cases}$$
+5.  **Accesso a Green Financing e Riduzione Carbon Tax**:
+    *   Il rispetto di un target inferiore a **$100\text{ gCO}_2/\text{kWh}$** allinea il data center con i criteri della Tassonomia UE per la Finanza Sostenibile. Questo permette alla società di accedere a finanziamenti agevolati (*Green Bonds*) con una riduzione dei tassi di interesse stimata tra **50 e 150 punti base (0.5% - 1.5%)**, oltre a evitare i costi legati alla tassazione del carbonio (ETS) nei mercati regolamentati.
 
 ---
 
