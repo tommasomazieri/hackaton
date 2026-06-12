@@ -4,62 +4,33 @@ Questo documento funge da guida tecnica per gli sviluppatori di **Invertix**. De
 
 ---
 
-## 1. Schema Dati e Contratto API (Pydantic Models)
+## 1. Cos'è il PUE (Power Usage Effectiveness)?
 
-Il backend deve esporre e validare i seguenti campi per garantire la conformità. 
+Il **PUE (Power Usage Effectiveness)** è la metrica standard globale definita dalla norma *CEN/CENELEC EN 50600-4-2* utilizzata per misurare l'efficienza energetica delle infrastrutture fisiche dei data center. Rappresenta il rapporto tra l'energia totale consumata dall'intera struttura e l'energia consumata esclusivamente dai server e dagli apparati di calcolo IT.
 
-### A. Modello di Input (`SitingRequest`)
-Quando l'utente esegue una query di siting, il payload deve contenere:
-```python
-from pydantic import BaseModel, Field
+### A. Formula Matematica di Calcolo
+$$\text{PUE} = \frac{E_{\text{DC}}}{E_{\text{IT}}}$$
 
-class SitingRequest(BaseModel):
-    pdc_mw: float = Field(
-        ..., 
-        gt=0.0, 
-        description="Potenza nominale dell'infrastruttura IT del data center in MW"
-    )
-    footprint_m2: float = Field(
-        ..., 
-        gt=0.0, 
-        description="Superficie coperta totale della sala computer in metri quadrati"
-    )
-    cooling_type: str = Field(
-        "free-cooling", 
-        description="Tipologia di condizionamento (free-cooling, evaporative, chilled-water)"
-    )
-```
+Dove:
+*   $E_{\text{DC}}$ (**Consumo Energetico Totale** in $kWh$): Tutta l'energia elettrica e di combustibile che attraversa il punto di ingresso del data center. Include i consumi per:
+    *   Sistemi di condizionamento e raffreddamento (chiller, torri evaporative, pompe, ventilatori).
+    *   Perdite dei sistemi di continuità (UPS) e dei trasformatori di potenza.
+    *   Illuminazione, sistemi di sicurezza e uffici di supporto.
+*   $E_{\text{IT}}$ (**Consumo Energetico IT** in $kWh$): L'energia misurata all'uscita degli UPS che alimenta direttamente i server, i sistemi di archiviazione dati (storage) e gli apparati di rete per il calcolo.
 
-### B. Modello di Output di Compliance (`ComplianceScore`)
-Il payload di risposta per ogni sito candidato deve includere il seguente blocco di conformità:
-```python
-from enum import Enum
-from typing import List, Optional
+### B. Interpretazione dei Valori
+*   $\text{PUE} = 1.0$: È il valore ideale teorico (efficienza del $100\%$). Tutta l'energia prelevata dalla rete va direttamente ai server; i sistemi di raffreddamento e distribuzione non consumano nulla.
+*   $\text{PUE} = 1.25$: Rappresenta lo standard moderno per i data center efficienti (hyperscale). Per ogni $10\text{ MW}$ richiesti dai server, la rete deve fornirne $12.5\text{ MW}$ (con un sovraccarico dell'infrastruttura del $25\%$).
+*   $\text{PUE} \ge 1.8$: Indica impianti inefficienti o legacy, dove per raffreddare i server si consuma quasi la stessa energia necessaria per farli calcolare.
 
-class EEDStatus(str, Enum):
-    MANDATORY = "MANDATORY"
-    VOLUNTARY = "VOLUNTARY"
-
-class EUSizeCategory(str, Enum):
-    VERY_SMALL = "Very Small (100-500 kW)"
-    SMALL = "Small (500 kW - 1 MW)"
-    MEDIUM = "Medium (1 - 2 MW)"
-    LARGE = "Large (2 - 10 MW)"
-    VERY_LARGE = "Very Large (> 10 MW)"
-
-class TaxonomyStatus(str, Enum):
-    ALIGNED = "TAXONOMY ALIGNED"
-    NON_ALIGNED = "COMPLIANCE RISK (NON-ALIGNED)"
-
-class ComplianceScore(BaseModel):
-    eed_status: EEDStatus
-    size_category: EUSizeCategory
-    pue_predicted: float
-    wue_predicted: float
-    erf_predicted: float
-    taxonomy_alignment: TaxonomyStatus
-    alerts: List[str]
-```
+### C. Impatto sulle Variabili del Modello
+Nel nostro motore di siting ed ottimizzazione, il PUE agisce come un **moltiplicatore di scala** per tutte le metriche operative:
+1.  **Potenza Richiesta alla Rete ($P_{\text{grid}}$)**: Converte il carico IT inserito dall'utente ($P_{\text{DC}}$) nella potenza fisica che dobbiamo contrattualizzare alla sottostazione elettrica (nodo PyPSA):
+    $$P_{\text{grid}} = P_{\text{DC}} \times \text{PUE} \quad (\text{MW})$$
+2.  **Costo Operativo Energetico (OpEx)**:
+    $$\text{OpEx}_{\text{energia}} = \left( P_{\text{DC}} \times \text{PUE} \right) \times 8760 \text{ ore} \times \text{Costo}_{\text{energia\_medio}} \quad (\text{€/anno})$$
+3.  **Emissioni Orarie Scope 2 ($gCO_2e/h$)**:
+    $$\text{Emissioni}(t) = \left( P_{\text{DC}} \times \text{PUE} \right) \times \text{Intensità}_{\text{carbonica\_locale}}(t) \quad (\text{gCO}_2/h)$$
 
 ---
 

@@ -1,16 +1,16 @@
 # Graph Report - Project_Antigravity  (2026-06-13)
 
 ## Corpus Check
-- 34 files · ~34,939 words
+- 34 files · ~35,080 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 364 nodes · 330 edges · 38 communities (35 shown, 3 thin omitted)
+- 365 nodes · 331 edges · 38 communities (35 shown, 3 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1e3db1b0`
+- Built from commit: `dfad801f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -71,7 +71,7 @@ Nodes (11): Business Framing — What We're Building, Challenge: Data-Center Sit
 
 ### Community 1 - "Community 1"
 Cohesion: 0.06
-Nodes (32): advisory_market, global_dc_advisory_cagr_pct, global_dc_advisory_caveat, global_dc_advisory_source, global_dc_advisory_usd_m_2025, global_dc_advisory_usd_m_2035_forecast, competitors, footnotes (+24 more)
+Nodes (35): advisory_market, global_dc_advisory_cagr_pct, global_dc_advisory_caveat, global_dc_advisory_source, global_dc_advisory_usd_m_2025, global_dc_advisory_usd_m_2035_forecast, competitors, footnotes (+27 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.25
@@ -150,8 +150,8 @@ Cohesion: 0.17
 Nodes (11): Back the ranking with spot-specific differentials, not judgment, Compare EU zones on the variables that actually differ by location, Give me the location-specific deltas to plug into our model, Jobs-To-Be-Done: DC Siting Intelligence Tool, JTBD-001 — Jordan · Functional, JTBD-002 — Jordan · Emotional, JTBD-003 — CFO / IC Member · Financial, JTBD-004 — CEO · Social / Decision (+3 more)
 
 ### Community 28 - "Community 28"
-Cohesion: 0.22
-Nodes (9): sam_derivation, active_siting_decisions_per_year, advisory_spend_per_project_eur, calculation, infra_fund_screening_events_per_year, infra_fund_screening_spend_per_event_eur, method, pre_feasibility_share_of_total_advisory_pct (+1 more)
+Cohesion: 0.33
+Nodes (6): som_derivation, benchmark, sam_capture_year1_pct, sam_capture_year3_pct, year1, year3
 
 ### Community 29 - "Community 29"
 Cohesion: 0.25
@@ -166,11 +166,11 @@ Cohesion: 0.25
 Nodes (8): 1. Nodi (Buses), 2. Linee di Trasmissione (Lines) e Link DC (Links), 3. Generatori (Generators), 3. PyPSA-Eur Network Data, 4. Unità di Accumulo (Storage Units & Stores), 5. Trasformatori (Transformers), A. Caratteristiche dei Dati e Struttura delle Componenti, B. Opportunità Applicative e Formule Chiave
 
 ### Community 37 - "Community 37"
-Cohesion: 0.17
-Nodes (11): 1. Schema Dati e Contratto API (Pydantic Models), 2. Logica Computazionale e Formule (Backend Backend Siting Engine), 3. Test Unitari per il Controllo Qualità (QA/QC Assertions), 4. UI Guidelines (Streamlit Frontend), A. Classificazione e Obbligo EED, A. Modello di Input (`SitingRequest`), B. Modello di Output di Compliance (`ComplianceScore`), B. Verifica del PUE Limite (Tassonomia e Legge Tedesca EnEfG) (+3 more)
+Cohesion: 0.15
+Nodes (12): 1. Cos'è il PUE (Power Usage Effectiveness)?, 2. Logica Computazionale e Formule (Backend Backend Siting Engine), 3. Test Unitari per il Controllo Qualità (QA/QC Assertions), 4. UI Guidelines (Streamlit Frontend), A. Classificazione e Obbligo EED, A. Formula Matematica di Calcolo, B. Interpretazione dei Valori, B. Verifica del PUE Limite (Tassonomia e Legge Tedesca EnEfG) (+4 more)
 
 ## Knowledge Gaps
-- **267 isolated node(s):** `$schema`, `deny`, `PreToolUse`, `SessionStart`, `Stop` (+262 more)
+- **268 isolated node(s):** `$schema`, `deny`, `PreToolUse`, `SessionStart`, `Stop` (+263 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -179,15 +179,15 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `market_context` connect `Community 5` to `Community 1`?**
   _High betweenness centrality (0.019) - this node is a cross-community bridge._
-- **Why does `sam_derivation` connect `Community 28` to `Community 1`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Why does `tam_derivation` connect `Community 29` to `Community 1`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **What connects `$schema`, `deny`, `PreToolUse` to the rest of the system?**
-  _267 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _268 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**
   _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
 - **Should `Community 5` be split into smaller, more focused modules?**
   _Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected._
+- **Should `Community 10` be split into smaller, more focused modules?**
+  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._

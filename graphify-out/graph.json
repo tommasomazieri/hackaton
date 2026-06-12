@@ -942,7 +942,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "artifacts_market_viability_sam_derivation",
-      "community": 28,
+      "community": 1,
       "norm_label": "sam_derivation"
     },
     {
@@ -952,7 +952,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "artifacts_market_viability_sam_derivation_method",
-      "community": 28,
+      "community": 1,
       "norm_label": "method"
     },
     {
@@ -962,7 +962,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "artifacts_market_viability_sam_derivation_active_siting_decisions_per_year",
-      "community": 28,
+      "community": 1,
       "norm_label": "active_siting_decisions_per_year"
     },
     {
@@ -972,7 +972,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "artifacts_market_viability_sam_derivation_advisory_spend_per_project_eur",
-      "community": 28,
+      "community": 1,
       "norm_label": "advisory_spend_per_project_eur"
     },
     {
@@ -982,7 +982,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "artifacts_market_viability_sam_derivation_pre_feasibility_share_of_total_advisory_pct",
-      "community": 28,
+      "community": 1,
       "norm_label": "pre_feasibility_share_of_total_advisory_pct"
     },
     {
@@ -992,7 +992,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "artifacts_market_viability_sam_derivation_infra_fund_screening_events_per_year",
-      "community": 28,
+      "community": 1,
       "norm_label": "infra_fund_screening_events_per_year"
     },
     {
@@ -1002,7 +1002,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "artifacts_market_viability_sam_derivation_infra_fund_screening_spend_per_event_eur",
-      "community": 28,
+      "community": 1,
       "norm_label": "infra_fund_screening_spend_per_event_eur"
     },
     {
@@ -1012,7 +1012,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "artifacts_market_viability_sam_derivation_calculation",
-      "community": 28,
+      "community": 1,
       "norm_label": "calculation"
     },
     {
@@ -1022,7 +1022,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "artifacts_market_viability_sam_derivation_scope_note",
-      "community": 28,
+      "community": 1,
       "norm_label": "scope_note"
     },
     {
@@ -1062,7 +1062,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "artifacts_market_viability_som_derivation",
-      "community": 1,
+      "community": 28,
       "norm_label": "som_derivation"
     },
     {
@@ -1072,7 +1072,7 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "artifacts_market_viability_som_derivation_year1",
-      "community": 1,
+      "community": 28,
       "norm_label": "year1"
     },
     {
@@ -1082,7 +1082,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "artifacts_market_viability_som_derivation_year3",
-      "community": 1,
+      "community": 28,
       "norm_label": "year3"
     },
     {
@@ -1092,7 +1092,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "artifacts_market_viability_som_derivation_sam_capture_year1_pct",
-      "community": 1,
+      "community": 28,
       "norm_label": "sam_capture_year1_pct"
     },
     {
@@ -1102,7 +1102,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "artifacts_market_viability_som_derivation_sam_capture_year3_pct",
-      "community": 1,
+      "community": 28,
       "norm_label": "sam_capture_year3_pct"
     },
     {
@@ -1112,7 +1112,7 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "artifacts_market_viability_som_derivation_benchmark",
-      "community": 1,
+      "community": 28,
       "norm_label": "benchmark"
     },
     {
@@ -2884,40 +2884,50 @@
       "norm_label": "guida di sviluppo: integrazione dei vincoli di conformita ue (eed, tassonomia, enefg)"
     },
     {
-      "label": "1. Schema Dati e Contratto API (Pydantic Models)",
+      "label": "1. Cos'\u00e8 il PUE (Power Usage Effectiveness)?",
       "file_type": "document",
       "source_file": "docs/compliance_guide.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "docs_compliance_guide_1_schema_dati_e_contratto_api_pydantic_models",
+      "id": "docs_compliance_guide_1_cos_\u00e8_il_pue_power_usage_effectiveness",
       "community": 37,
-      "norm_label": "1. schema dati e contratto api (pydantic models)"
+      "norm_label": "1. cos'e il pue (power usage effectiveness)?"
     },
     {
-      "label": "A. Modello di Input (`SitingRequest`)",
+      "label": "A. Formula Matematica di Calcolo",
       "file_type": "document",
       "source_file": "docs/compliance_guide.md",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "docs_compliance_guide_a_modello_di_input_sitingrequest",
+      "id": "docs_compliance_guide_a_formula_matematica_di_calcolo",
       "community": 37,
-      "norm_label": "a. modello di input (`sitingrequest`)"
+      "norm_label": "a. formula matematica di calcolo"
     },
     {
-      "label": "B. Modello di Output di Compliance (`ComplianceScore`)",
+      "label": "B. Interpretazione dei Valori",
       "file_type": "document",
       "source_file": "docs/compliance_guide.md",
-      "source_location": "L33",
+      "source_location": "L21",
       "_origin": "ast",
-      "id": "docs_compliance_guide_b_modello_di_output_di_compliance_compliancescore",
+      "id": "docs_compliance_guide_b_interpretazione_dei_valori",
       "community": 37,
-      "norm_label": "b. modello di output di compliance (`compliancescore`)"
+      "norm_label": "b. interpretazione dei valori"
+    },
+    {
+      "label": "C. Impatto sulle Variabili del Modello",
+      "file_type": "document",
+      "source_file": "docs/compliance_guide.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "docs_compliance_guide_c_impatto_sulle_variabili_del_modello",
+      "community": 37,
+      "norm_label": "c. impatto sulle variabili del modello"
     },
     {
       "label": "2. Logica Computazionale e Formule (Backend Backend Siting Engine)",
       "file_type": "document",
       "source_file": "docs/compliance_guide.md",
-      "source_location": "L66",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "docs_compliance_guide_2_logica_computazionale_e_formule_backend_backend_siting_engine",
       "community": 37,
@@ -2927,7 +2937,7 @@
       "label": "A. Classificazione e Obbligo EED",
       "file_type": "document",
       "source_file": "docs/compliance_guide.md",
-      "source_location": "L70",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "docs_compliance_guide_a_classificazione_e_obbligo_eed",
       "community": 37,
@@ -2937,7 +2947,7 @@
       "label": "B. Verifica del PUE Limite (Tassonomia e Legge Tedesca EnEfG)",
       "file_type": "document",
       "source_file": "docs/compliance_guide.md",
-      "source_location": "L92",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "docs_compliance_guide_b_verifica_del_pue_limite_tassonomia_e_legge_tedesca_enefg",
       "community": 37,
@@ -2947,7 +2957,7 @@
       "label": "C. Analisi Spaziale del Calore di Scarto (ERF - Energy Reuse Factor)",
       "file_type": "document",
       "source_file": "docs/compliance_guide.md",
-      "source_location": "L113",
+      "source_location": "L84",
       "_origin": "ast",
       "id": "docs_compliance_guide_c_analisi_spaziale_del_calore_di_scarto_erf_energy_reuse_factor",
       "community": 37,
@@ -2957,7 +2967,7 @@
       "label": "D. Limitazione del Consumo Idrico (WUE Target)",
       "file_type": "document",
       "source_file": "docs/compliance_guide.md",
-      "source_location": "L137",
+      "source_location": "L108",
       "_origin": "ast",
       "id": "docs_compliance_guide_d_limitazione_del_consumo_idrico_wue_target",
       "community": 37,
@@ -2967,7 +2977,7 @@
       "label": "3. Test Unitari per il Controllo Qualit\u00e0 (QA/QC Assertions)",
       "file_type": "document",
       "source_file": "docs/compliance_guide.md",
-      "source_location": "L152",
+      "source_location": "L123",
       "_origin": "ast",
       "id": "docs_compliance_guide_3_test_unitari_per_il_controllo_qualit\u00e0_qa_qc_assertions",
       "community": 37,
@@ -2977,7 +2987,7 @@
       "label": "4. UI Guidelines (Streamlit Frontend)",
       "file_type": "document",
       "source_file": "docs/compliance_guide.md",
-      "source_location": "L187",
+      "source_location": "L158",
       "_origin": "ast",
       "id": "docs_compliance_guide_4_ui_guidelines_streamlit_frontend",
       "community": 37,
@@ -6222,9 +6232,9 @@
       "source_file": "docs/compliance_guide.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_compliance_guide",
-      "target": "docs_compliance_guide_guida_di_sviluppo_integrazione_dei_vincoli_di_conformit\u00e0_ue_eed_tassonomia_enefg",
-      "confidence_score": 1.0
+      "target": "docs_compliance_guide_guida_di_sviluppo_integrazione_dei_vincoli_di_conformit\u00e0_ue_eed_tassonomia_enefg"
     },
     {
       "relation": "contains",
@@ -6233,7 +6243,7 @@
       "source_location": "L7",
       "weight": 1.0,
       "source": "docs_compliance_guide_guida_di_sviluppo_integrazione_dei_vincoli_di_conformit\u00e0_ue_eed_tassonomia_enefg",
-      "target": "docs_compliance_guide_1_schema_dati_e_contratto_api_pydantic_models",
+      "target": "docs_compliance_guide_1_cos_\u00e8_il_pue_power_usage_effectiveness",
       "confidence_score": 1.0
     },
     {
@@ -6242,9 +6252,9 @@
       "source_file": "docs/compliance_guide.md",
       "source_location": "L66",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_compliance_guide_guida_di_sviluppo_integrazione_dei_vincoli_di_conformit\u00e0_ue_eed_tassonomia_enefg",
-      "target": "docs_compliance_guide_2_logica_computazionale_e_formule_backend_backend_siting_engine",
-      "confidence_score": 1.0
+      "target": "docs_compliance_guide_2_logica_computazionale_e_formule_backend_backend_siting_engine"
     },
     {
       "relation": "contains",
@@ -6252,9 +6262,9 @@
       "source_file": "docs/compliance_guide.md",
       "source_location": "L152",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_compliance_guide_guida_di_sviluppo_integrazione_dei_vincoli_di_conformit\u00e0_ue_eed_tassonomia_enefg",
-      "target": "docs_compliance_guide_3_test_unitari_per_il_controllo_qualit\u00e0_qa_qc_assertions",
-      "confidence_score": 1.0
+      "target": "docs_compliance_guide_3_test_unitari_per_il_controllo_qualit\u00e0_qa_qc_assertions"
     },
     {
       "relation": "contains",
@@ -6262,9 +6272,9 @@
       "source_file": "docs/compliance_guide.md",
       "source_location": "L187",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_compliance_guide_guida_di_sviluppo_integrazione_dei_vincoli_di_conformit\u00e0_ue_eed_tassonomia_enefg",
-      "target": "docs_compliance_guide_4_ui_guidelines_streamlit_frontend",
-      "confidence_score": 1.0
+      "target": "docs_compliance_guide_4_ui_guidelines_streamlit_frontend"
     },
     {
       "relation": "contains",
@@ -6272,18 +6282,28 @@
       "source_file": "docs/compliance_guide.md",
       "source_location": "L11",
       "weight": 1.0,
-      "source": "docs_compliance_guide_1_schema_dati_e_contratto_api_pydantic_models",
-      "target": "docs_compliance_guide_a_modello_di_input_sitingrequest",
+      "source": "docs_compliance_guide_1_cos_\u00e8_il_pue_power_usage_effectiveness",
+      "target": "docs_compliance_guide_a_formula_matematica_di_calcolo",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/compliance_guide.md",
-      "source_location": "L33",
+      "source_location": "L21",
       "weight": 1.0,
-      "source": "docs_compliance_guide_1_schema_dati_e_contratto_api_pydantic_models",
-      "target": "docs_compliance_guide_b_modello_di_output_di_compliance_compliancescore",
+      "source": "docs_compliance_guide_1_cos_\u00e8_il_pue_power_usage_effectiveness",
+      "target": "docs_compliance_guide_b_interpretazione_dei_valori",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/compliance_guide.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "docs_compliance_guide_1_cos_\u00e8_il_pue_power_usage_effectiveness",
+      "target": "docs_compliance_guide_c_impatto_sulle_variabili_del_modello",
       "confidence_score": 1.0
     },
     {
@@ -6292,9 +6312,9 @@
       "source_file": "docs/compliance_guide.md",
       "source_location": "L70",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_compliance_guide_2_logica_computazionale_e_formule_backend_backend_siting_engine",
-      "target": "docs_compliance_guide_a_classificazione_e_obbligo_eed",
-      "confidence_score": 1.0
+      "target": "docs_compliance_guide_a_classificazione_e_obbligo_eed"
     },
     {
       "relation": "contains",
@@ -6302,9 +6322,9 @@
       "source_file": "docs/compliance_guide.md",
       "source_location": "L92",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_compliance_guide_2_logica_computazionale_e_formule_backend_backend_siting_engine",
-      "target": "docs_compliance_guide_b_verifica_del_pue_limite_tassonomia_e_legge_tedesca_enefg",
-      "confidence_score": 1.0
+      "target": "docs_compliance_guide_b_verifica_del_pue_limite_tassonomia_e_legge_tedesca_enefg"
     },
     {
       "relation": "contains",
@@ -6312,9 +6332,9 @@
       "source_file": "docs/compliance_guide.md",
       "source_location": "L113",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_compliance_guide_2_logica_computazionale_e_formule_backend_backend_siting_engine",
-      "target": "docs_compliance_guide_c_analisi_spaziale_del_calore_di_scarto_erf_energy_reuse_factor",
-      "confidence_score": 1.0
+      "target": "docs_compliance_guide_c_analisi_spaziale_del_calore_di_scarto_erf_energy_reuse_factor"
     },
     {
       "relation": "contains",
@@ -6322,9 +6342,9 @@
       "source_file": "docs/compliance_guide.md",
       "source_location": "L137",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_compliance_guide_2_logica_computazionale_e_formule_backend_backend_siting_engine",
-      "target": "docs_compliance_guide_d_limitazione_del_consumo_idrico_wue_target",
-      "confidence_score": 1.0
+      "target": "docs_compliance_guide_d_limitazione_del_consumo_idrico_wue_target"
     },
     {
       "relation": "contains",
@@ -6968,5 +6988,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1e3db1b051ed69deea90d4b4752770c3020d271e"
+  "built_at_commit": "dfad801fb7c3fde0ecae98b4680caf2e6e759e4a"
 }
