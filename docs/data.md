@@ -1,6 +1,6 @@
 # Analisi Dettagliata dei Database e Opportunità Applicative
 
-Questo documento fornisce un'analisi quantitativa dei database disponibili per il progetto **Data-Center Siting & Power (Invertix)**, descrivendo la loro struttura, le informazioni chiave e le opportunità matematiche ed ingegneristiche per integrarle nel nostro motore di siting ed ottimizzazione.
+Questo documento fornisce un'analisi quantitativa dei database disponibili per il progetto **Data-Center Siting & Power (Invertix)**, descrivendo la loro struttura, la granularità spaziale e temporale, le informazioni chiave e le opportunità matematiche ed ingegneristiche per integrarle nel nostro motore di siting ed ottimizzazione.
 
 ---
 
@@ -8,7 +8,9 @@ Questo documento fornisce un'analisi quantitativa dei database disponibili per i
 
 ### A. Caratteristiche dei Dati
 *   **Formato & Dimensione**: CSV locale (`data/owid-energy-data.csv`), **$15.19 \text{ MB}$**.
-*   **Contenuto**: Serie storiche dal 1900 ad oggi (con aggiornamenti annuali e mensili forniti da Ember) su:
+*   **Granularità Spaziale**: **Nazionale** (livello di Paese o singola zona di mercato elettrico per i prezzi).
+*   **Granularità Temporale**: **Annuale e Mensile** (con dati storici aggregati dal 1900 al 2025).
+*   **Contenuto**:
     *   Generazione elettrica per paese (in **TWh**) suddivisa per singola fonte (carbone, gas, solare, eolico, nucleare, idroelettrico).
     *   Intensità di carbonio della rete elettrica nazionale (in **$\text{gCO}_2/\text{kWh}$**).
     *   Domanda e consumi totali di elettricità.
@@ -26,6 +28,8 @@ Questo documento fornisce un'analisi quantitativa dei database disponibili per i
 
 ### A. Caratteristiche dei Dati
 *   **Formato & Dimensione**: JSON locale (`data/osm_power_infrastructure.json`), **$753 \text{ KB}$** (estratto pilota Lussemburgo, contenente **4978 elementi**).
+*   **Granularità Spaziale**: **Sub-metrica / Vettoriale** (coordinate geografiche precise in latitudine e longitudine di nodi e linee).
+*   **Granularità Temporale**: **Statica** (corrisponde all'ultimo snapshot del database al momento del download).
 *   **Contenuto**: Coordinate geografiche lat/lon di:
     *   Linee e cavi di trasmissione elettrica ad alta tensione (`power=line` / `power=cable`) con classi di voltaggio ($\ge 110 \text{ kV}$, $220 \text{ kV}$, $400 \text{ kV}$).
     *   Sottostazioni elettriche di trasformazione (`power=substation`).
@@ -45,6 +49,8 @@ Questo documento fornisce un'analisi quantitativa dei database disponibili per i
 
 ### A. Caratteristiche dei Dati
 *   **Formato**: Modelli e file NetCDF (`.nc`) caricati tramite la libreria Python `pypsa` e `xarray`.
+*   **Granularità Spaziale**: **Nodale (Nodal-level)**. I dati sono associati ai singoli nodi di rete (sottostazioni ad altissima tensione della rete di trasmissione ENTSO-E, solitamente distanziate di **20–80 km**).
+*   **Granularità Temporale**: **Oraria ($1\text{ ora}$)** per un intero anno storico ($8760\text{ ore}$ totali).
 *   **Contenuto**: Topologia dettagliata della rete di trasmissione europea: nodi di borsa elettrica, limiti termici delle linee, e dati storici di congestione ed erogazione.
 
 ### B. Opportunità Applicative
@@ -60,7 +66,9 @@ Questo documento fornisce un'analisi quantitativa dei database disponibili per i
 ## 4. Google AlphaEarth (Satellite Embeddings in GEE)
 
 ### A. Caratteristiche dei Dati
-*   **Formato & Canale**: Dataset `GOOGLE/SATELLITE_EMBEDDING/V1/ANNUAL` in Google Earth Engine. Vettori di embedding a **64 dimensioni** a risoluzione pixel **$10\text{ m}$**.
+*   **Formato & Canale**: Dataset `GOOGLE/SATELLITE_EMBEDDING/V1/ANNUAL` in Google Earth Engine.
+*   **Granularità Spaziale**: **Pixel-level ad altissima risoluzione ($10\text{ m} \times 10\text{ m}$)**.
+*   **Granularità Temporale**: **Annuale** (serie di immagini composte annuali dal 2017 al 2024).
 *   **Contenuto**: Pattern sintetici meteo-climatici, geomorfologici, di temperatura e di irraggiamento solare.
 
 ### B. Opportunità Applicative
@@ -75,6 +83,8 @@ Questo documento fornisce un'analisi quantitativa dei database disponibili per i
 
 ### A. Caratteristiche dei Dati
 *   **Formato & Dimensione**: JSON locale (`data/iea_reference_specs.json`), **$671 \text{ B}$**.
+*   **Granularità Spaziale**: **Nessuna (Globale/Tecnologico)**. I dati rappresentano costanti costruttive e benchmark di settore.
+*   **Granularità Temporale**: **Nessuna (Statica)**. Rappresenta stime medie per il periodo 2025/2026.
 *   **Contenuto**: Costanti tecnologiche certificate per data center ed acceleratori IA (PUE medi, TDP GPU Nvidia H100/B200, percentuali di carico IT).
 
 ### B. Opportunità Applicative
@@ -83,6 +93,41 @@ Questo documento fornisce un'analisi quantitativa dei database disponibili per i
         $$P_{\text{grid}} = P_{\text{compute}} \times \text{PUE}$$
 2.  **Ripartizione dei Consumi per l'Ottimizzazione del Mix**:
     *   Fornisce le baseline di consumo orario orizzontale dei server (carico base al 60%) e dei sistemi di condizionamento (carico termico al 30%, variabile in base alla temperatura esterna fornita da AlphaEarth) per impostare il modello di ottimizzazione lineare (LP) del mix energetico.
+
+---
+
+## 6. Analisi dei Mismatch di Granularità e Impatti sul Progetto
+
+L'integrazione di questi cinque database presenta significative discrepanze di risoluzione spaziale e temporale. Di seguito si analizzano i principali mismatch e le strategie matematiche/ingegneristiche per mitigarne l'impatto.
+
+### A. Mismatch Spaziale (da Nazionale a Pixel-level)
+*   **La Discrepanza**: Ember/OWID fornisce i dati sul carbonio e sul mix energetico a livello **nazionale** (es. l'intera Germania), mentre PyPSA-Eur opera a livello **nodale** (aree di 50 km) e OSM/AlphaEarth scendono a livello **metrico/pixel** ($10\text{ m}$).
+*   **Gli Impatti**:
+    *   *Sottostima delle emissioni locali*: L'intensità di carbonio reale varia significativamente all'interno di una nazione in base alla congestione della rete interna (es. la Germania del Nord ha surplus eolico a basso carbonio, mentre la Germania del Sud brucia più carbone a causa dei limiti di trasmissione nord-sud). Assumere il valore medio nazionale di Ember introduce un errore stimato del **10-30%** sulle emissioni effettive del data center.
+    *   *Complessità Computazionale*: Lo screening geospaziale dell'intera Europa alla risoluzione di $10\text{ m}$ di AlphaEarth è impossibile in tempo reale ($>1.5\text{ miliardi di pixel}$).
+*   **Strategia di Mitigazione (Approccio Gerarchico)**:
+    1.  *Filtro 1 (Nazionale - Ember)*: Escludere nazioni con normative energetiche non idonee o prezzi medi fuori budget.
+    2.  *Filtro 2 (Nodale - PyPSA/OSM)*: Effettuare la simulazione dinamica sui soli nodi di trasmissione superstiti per verificare la capacità termica.
+    3.  *Filtro 3 (Micro-Siting - AlphaEarth)*: Solo per i top 5 nodi consigliati, analizzare un buffer geospaziale di $1\text{ km} \times 1\text{ km}$ a risoluzione di $10\text{ m}$ per ottimizzare il posizionamento esatto dei pannelli solari ed evitare zone a rischio idrogeologico.
+
+### B. Mismatch Temporale (da Statico a Orario)
+*   **La Discrepanza**: I dati di Ember/OWID sono aggregati annualmente o mensilmente. OSM e IEA sono istantanei/statici. PyPSA-Eur, al contrario, necessita di simulazioni **orarie** ($8760\text{ passi}$).
+*   **Gli Impatti**:
+    *   *Errore nel dimensionamento delle batterie (On-site Storage)*: Se ottimizziamo il mix energetico basandoci solo sull'irraggiamento solare annuale o mensile medio, rischiamo di sottostimare la necessità di accumulo. Un data center richiede potenza costante $24/7$, mentre l'energia solare locale crolla a $0\text{ MW}$ di notte. Utilizzare medie temporali aggregate porta a proporre batterie sottodimensionate del **$40\text{-}60\%$**, costringendo il data center ad acquistare energia dalla rete nei picchi di costo.
+*   **Strategia di Mitigazione (Sintesi di Profili Orari)**:
+    *   Utilizziamo i dati storici annuali/mensili di Ember e AlphaEarth come **fattori di scala** per calibrare profili sintetici orari standard generati tramite modelli climatici o librerie come `pvlib`. Ad esempio, normalizziamo il solar capacity factor ricavato da AlphaEarth su un profilo sinusoidale orario giornaliero interpolato con le ore di luce solare storiche della latitudine del sito.
+
+---
+
+## Tabella Sinottica delle Granularità
+
+| Database | Granularità Spaziale | Granularità Temporale | Variabile Chiave Gestita | Rischio di Mismatch |
+|---|---|---|---|---|
+| **Ember/OWID** | Nazionale | Annuale / Mensile | $\text{gCO}_2/\text{kWh}$, Prezzi | Sottostima della variazione locale del carbonio |
+| **OSM** | Vettoriale (Sub-metrica) | Statica | Posizione dei cavi e sottostazioni | Variazioni future della rete non mappate |
+| **PyPSA-Eur** | Nodale ($20\text{-}80\text{ km}$) | Oraria ($1\text{ ora}$) | Flusso di carico (MW), Prezzo zonale | Complessità di calcolo per simulazioni di massa |
+| **AlphaEarth** | Pixel ($10\text{ m}$) | Annuale (Composita) | Temperatura locale, Irraggiamento | Assenza di andamenti meteorologici orari estremi |
+| **IEA Specs** | Globale | Statica | Costanti PUE, TDP hardware | Rapida obsolescenza tecnologica dell'hardware |
 
 ---
 
