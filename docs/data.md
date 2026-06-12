@@ -126,10 +126,17 @@ L'integrazione di questi cinque database presenta significative discrepanze di r
 *   **Gli Impatti**:
     *   *Sottostima delle emissioni locali*: L'intensità di carbonio reale varia significativamente all'interno di una nazione in base alla congestione della rete interna (es. la Germania del Nord ha surplus eolico a basso carbonio, mentre la Germania del Sud brucia più carbone a causa dei limiti di trasmissione nord-sud). Assumere il valore medio nazionale di Ember introduce un errore stimato del **10-30%** sulle emissioni effettive del data center.
     *   *Complessità Computazionale*: Lo screening geospaziale dell'intera Europa alla risoluzione di $10\text{ m}$ di AlphaEarth è impossibile in tempo reale ($>1.5\text{ miliardi di pixel}$).
-*   **Strategia di Mitigazione (Approccio Gerarchico)**:
-    1.  *Filtro 1 (Nazionale - Ember)*: Escludere nazioni con normative energetiche non idonee o prezzi medi fuori budget.
-    2.  *Filtro 2 (Nodale - PyPSA/OSM)*: Effettuare la simulazione dinamica sui soli nodi di trasmissione superstiti per verificare la capacità termica.
-    3.  *Filtro 3 (Micro-Siting - AlphaEarth)*: Solo per i top 5 nodi consigliati, analizzare un buffer geospaziale di $1\text{ km} \times 1\text{ km}$ a risoluzione di $10\text{ m}$ per ottimizzare il posizionamento esatto dei pannelli solari ed evitare zone a rischio idrogeologico.
+*   **Strategia di Mitigazione (Approccio Gerarchico ed Algoritmi di Raccordo)**:
+    Per connettere i dati nazionali di Ember con la griglia nodale di PyPSA-Eur e OSM, si applicano due livelli di raccordo:
+    1.  *Mappatura Spaziale Diretta via Codici Nazionali (Approccio Baseline)*: Ciascun nodo $n$ viene mappato geograficamente al rispettivo codice paese (NUTS0). Al nodo viene assegnata l'intensità di carbonio oraria media nazionale di Ember:
+        $$\text{Intensity}_{\text{grid}}(n, t) = \text{Intensity}_{\text{Ember}}(\text{Country}(n), t)$$
+    2.  *Carbon Flow Tracking (Approccio Fisico Avanzato)*: Calibrazione dei singoli generatori locali di PyPSA-Eur con i mix di Ember ed esecuzione di un algoritmo di tracciamento basato sulle leggi dei flussi di rete di Kirchhoff per stimare la reale impronta di carbonio al consumo (inclusiva delle importazioni dai nodi vicini):
+        $$\text{CI}_n(t) = \frac{\sum_{g \in \text{Gen}} G_{g,n}(t) \cdot EF_g + \sum_{m \in \text{Vicini}} F_{mn}(t) \cdot \text{CI}_m(t)}{\sum_{g \in \text{Gen}} G_{g,n}(t) + \sum_{m \in \text{Vicini}} F_{mn}(t)}$$
+        Dove $G_{g,n}$ è la generazione locale al nodo $n$, $EF_g$ è il fattore di emissione tecnologico e $F_{mn}$ è il flusso di importazione dal nodo vicino $m$.
+    3.  *Approccio Gerarchico Multicriterio*:
+        *   *Filtro 1 (Nazionale - Ember)*: Escludere nazioni con normative energetiche non idonee o prezzi medi fuori budget.
+        *   *Filtro 2 (Nodale - PyPSA/OSM)*: Effettuare la simulazione dinamica sui soli nodi di trasmissione superstiti per verificare la capacità termica (e calcolare l'intensità carbonica con il metodo del Carbon Flow Tracking sopra definito).
+        *   *Filtro 3 (Micro-Siting - AlphaEarth)*: Solo per i top 5 nodi consigliati, analizzare un buffer geospaziale di $1\text{ km} \times 1\text{ km}$ a risoluzione di $10\text{ m}$ per ottimizzare il posizionamento esatto dei pannelli solari ed evitare zone a rischio idrogeologico.
 
 ### B. Mismatch Temporale (da Statico a Orario)
 *   **La Discrepanza**: I dati di Ember/OWID sono aggregati annualmente o mensilmente. OSM e IEA sono istantanei/statici. PyPSA-Eur, al contrario, necessita di simulazioni **orarie** ($8760\text{ passi}$).
