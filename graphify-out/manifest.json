@@ -1,0 +1,67 @@
+{
+  ".claude/settings.json": {
+    "mtime": 1781291125.5607598,
+    "ast_hash": "e21ce3288c675dbc07b0a96634c651b1",
+    "semantic_hash": ""
+  },
+  ".mcp.json": {
+    "mtime": 1781290897.208778,
+    "ast_hash": "cf21d63a83450d4c4a5584b7bcdf80c8",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1781290499.9613044,
+    "ast_hash": "e10155d176accca5ac743e0d1a612291",
+    "semantic_hash": ""
+  },
+  "docs/challenge.md": {
+    "mtime": 1781290800.1078334,
+    "ast_hash": "6aa2a2e1f76e47f4d1406dd9e6e3d56e",
+    "semantic_hash": ""
+  },
+  ".codemapper_cache.json": {
+    "mtime": 1781290897.8635337,
+    "ast_hash": "120e7e84ec12e6825a6ea32dad5ce34e",
+    "semantic_hash": ""
+  },
+  "project-management/backlog.json": {
+    "mtime": 1781290992.7167518,
+    "ast_hash": "58e0494c51d30eb3494f7c9198986bb9",
+    "semantic_hash": ""
+  },
+  "project-management/epics.json": {
+    "mtime": 1781290995.2619457,
+    "ast_hash": "58e0494c51d30eb3494f7c9198986bb9",
+    "semantic_hash": ""
+  },
+  "project-management/kanban.json": {
+    "mtime": 1781290998.2533548,
+    "ast_hash": "2c02cf33b53e5c144c00b98920ad57c4",
+    "semantic_hash": ""
+  },
+  "project-management/open-pm.sh": {
+    "mtime": 1781291018.1035407,
+    "ast_hash": "2c008192ad91c8bb0cf8e9f61a542ace",
+    "semantic_hash": ""
+  },
+  "project-management/project.json": {
+    "mtime": 1781290990.5165687,
+    "ast_hash": "77e5461e408c04770b2ded0874dcf58b",
+    "semantic_hash": ""
+  },
+  "project-management/risks.json": {
+    "mtime": 1781291000.9921155,
+    "ast_hash": "58e0494c51d30eb3494f7c9198986bb9",
+    "semantic_hash": ""
+  },
+  "project-management/run.ps1": {
+    "mtime": 1781291011.8164988,
+    "ast_hash": "9a2dafb53e2a1141524a2790fe681aeb",
+    "semantic_hash": ""
+  },
+  "project-management/wbs.json": {
+    "mtime": 1781291003.389249,
+    "ast_hash": "8a80554c91d9fca8acb82f023de02f11",
+    "semantic_hash": ""
+  }
+}

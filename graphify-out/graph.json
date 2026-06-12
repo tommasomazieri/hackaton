@@ -1,0 +1,1242 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "settings.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude_settings",
+      "community": 2,
+      "norm_label": "settings.json"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "claude_settings_schema",
+      "community": 2,
+      "norm_label": "$schema"
+    },
+    {
+      "label": "permissions",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "claude_settings_permissions",
+      "community": 2,
+      "norm_label": "permissions"
+    },
+    {
+      "label": "deny",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "claude_settings_permissions_deny",
+      "community": 2,
+      "norm_label": "deny"
+    },
+    {
+      "label": "hooks",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "claude_settings_hooks",
+      "community": 2,
+      "norm_label": "hooks"
+    },
+    {
+      "label": "PreToolUse",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "claude_settings_hooks_pretooluse",
+      "community": 2,
+      "norm_label": "pretooluse"
+    },
+    {
+      "label": "SessionStart",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "claude_settings_hooks_sessionstart",
+      "community": 2,
+      "norm_label": "sessionstart"
+    },
+    {
+      "label": "Stop",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "claude_settings_hooks_stop",
+      "community": 2,
+      "norm_label": "stop"
+    },
+    {
+      "label": ".codemapper_cache.json",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "codemapper_cache",
+      "community": 5,
+      "norm_label": ".codemapper_cache.json"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "codemapper_cache_version",
+      "community": 5,
+      "norm_label": "version"
+    },
+    {
+      "label": "root",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "codemapper_cache_root",
+      "community": 5,
+      "norm_label": "root"
+    },
+    {
+      "label": "mtimes",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "codemapper_cache_mtimes",
+      "community": 5,
+      "norm_label": "mtimes"
+    },
+    {
+      "label": "files",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "codemapper_cache_files",
+      "community": 5,
+      "norm_label": "files"
+    },
+    {
+      "label": ".mcp.json",
+      "file_type": "code",
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "metadata": {
+        "mcp_kind": "mcp_config_file"
+      },
+      "_origin": "ast",
+      "id": "mcp",
+      "community": 3,
+      "norm_label": ".mcp.json"
+    },
+    {
+      "label": "codemapper2",
+      "file_type": "code",
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "metadata": {
+        "mcp_kind": "mcp_server"
+      },
+      "_origin": "ast",
+      "id": "mcp_mcp_server_codemapper2",
+      "community": 3,
+      "norm_label": "codemapper2"
+    },
+    {
+      "label": "C:\\Users\\tomin\\OneDrive\\Desktop\\PROGETTI\\operating_proejcts\\aider for large codebases\\codemapper\\.venv\\Scripts\\python.exe",
+      "file_type": "code",
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "metadata": {
+        "mcp_kind": "mcp_command"
+      },
+      "_origin": "ast",
+      "id": "mcp_command_c_users_tomin_onedrive_desktop_progetti_operating_proejcts_aider_for_large_codebases_codemapper_venv_scripts_python_exe",
+      "community": 3,
+      "norm_label": "c:\\users\\tomin\\onedrive\\desktop\\progetti\\operating_proejcts\\aider for large codebases\\codemapper\\.venv\\scripts\\python.exe"
+    },
+    {
+      "label": "CODEMAPPER_ROOT",
+      "file_type": "code",
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "metadata": {
+        "mcp_kind": "env_var"
+      },
+      "_origin": "ast",
+      "id": "env_var_codemapper_root",
+      "community": 3,
+      "norm_label": "codemapper_root"
+    },
+    {
+      "label": "backlog.json",
+      "file_type": "code",
+      "source_file": "project-management/backlog.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "project_management_backlog",
+      "community": 9,
+      "norm_label": "backlog.json"
+    },
+    {
+      "label": "epics.json",
+      "file_type": "code",
+      "source_file": "project-management/epics.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "project_management_epics",
+      "community": 10,
+      "norm_label": "epics.json"
+    },
+    {
+      "label": "kanban.json",
+      "file_type": "code",
+      "source_file": "project-management/kanban.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "project_management_kanban",
+      "community": 6,
+      "norm_label": "kanban.json"
+    },
+    {
+      "label": "columns",
+      "file_type": "code",
+      "source_file": "project-management/kanban.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "project_management_kanban_columns",
+      "community": 6,
+      "norm_label": "columns"
+    },
+    {
+      "label": "wip_limits",
+      "file_type": "code",
+      "source_file": "project-management/kanban.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "project_management_kanban_wip_limits",
+      "community": 6,
+      "norm_label": "wip_limits"
+    },
+    {
+      "label": "in_progress",
+      "file_type": "code",
+      "source_file": "project-management/kanban.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "project_management_kanban_wip_limits_in_progress",
+      "community": 6,
+      "norm_label": "in_progress"
+    },
+    {
+      "label": "in_review",
+      "file_type": "code",
+      "source_file": "project-management/kanban.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "project_management_kanban_wip_limits_in_review",
+      "community": 6,
+      "norm_label": "in_review"
+    },
+    {
+      "label": "open-pm.sh",
+      "file_type": "code",
+      "source_file": "project-management/open-pm.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "project_management_open_pm",
+      "community": 8,
+      "norm_label": "open-pm.sh"
+    },
+    {
+      "label": "open-pm.sh script",
+      "file_type": "code",
+      "source_file": "project-management/open-pm.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_project_management_open_pm_sh__entry",
+      "community": 8,
+      "norm_label": "open-pm.sh script"
+    },
+    {
+      "label": "project.json",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "project_management_project",
+      "community": 4,
+      "norm_label": "project.json"
+    },
+    {
+      "label": "project_id",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "project_management_project_project_id",
+      "community": 4,
+      "norm_label": "project_id"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "project_management_project_name",
+      "community": 4,
+      "norm_label": "name"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "project_management_project_description",
+      "community": 4,
+      "norm_label": "description"
+    },
+    {
+      "label": "root_path",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "project_management_project_root_path",
+      "community": 4,
+      "norm_label": "root_path"
+    },
+    {
+      "label": "methodology",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "project_management_project_methodology",
+      "community": 4,
+      "norm_label": "methodology"
+    },
+    {
+      "label": "team",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "project_management_project_team",
+      "community": 4,
+      "norm_label": "team"
+    },
+    {
+      "label": "sprint_length_days",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "project_management_project_sprint_length_days",
+      "community": 4,
+      "norm_label": "sprint_length_days"
+    },
+    {
+      "label": "estimation_scale",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "project_management_project_estimation_scale",
+      "community": 4,
+      "norm_label": "estimation_scale"
+    },
+    {
+      "label": "default_model",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "project_management_project_default_model",
+      "community": 4,
+      "norm_label": "default_model"
+    },
+    {
+      "label": "wip_limits",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "project_management_project_wip_limits",
+      "community": 7,
+      "norm_label": "wip_limits"
+    },
+    {
+      "label": "in_progress",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "project_management_project_wip_limits_in_progress",
+      "community": 7,
+      "norm_label": "in_progress"
+    },
+    {
+      "label": "in_review",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "project_management_project_wip_limits_in_review",
+      "community": 7,
+      "norm_label": "in_review"
+    },
+    {
+      "label": "created_at",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "project_management_project_created_at",
+      "community": 4,
+      "norm_label": "created_at"
+    },
+    {
+      "label": "active_sprint_id",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "project_management_project_active_sprint_id",
+      "community": 4,
+      "norm_label": "active_sprint_id"
+    },
+    {
+      "label": "ccusage_ledger_path",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "project_management_project_ccusage_ledger_path",
+      "community": 4,
+      "norm_label": "ccusage_ledger_path"
+    },
+    {
+      "label": "cc_usage_raw_path",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "project_management_project_cc_usage_raw_path",
+      "community": 4,
+      "norm_label": "cc_usage_raw_path"
+    },
+    {
+      "label": "cc_transcripts_path",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "project_management_project_cc_transcripts_path",
+      "community": 4,
+      "norm_label": "cc_transcripts_path"
+    },
+    {
+      "label": "cc_plans_path",
+      "file_type": "code",
+      "source_file": "project-management/project.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "project_management_project_cc_plans_path",
+      "community": 4,
+      "norm_label": "cc_plans_path"
+    },
+    {
+      "label": "risks.json",
+      "file_type": "code",
+      "source_file": "project-management/risks.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "project_management_risks",
+      "community": 11,
+      "norm_label": "risks.json"
+    },
+    {
+      "label": "run.ps1",
+      "file_type": "code",
+      "source_file": "project-management/run.ps1",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "project_management_run",
+      "community": 12,
+      "norm_label": "run.ps1"
+    },
+    {
+      "label": "wbs.json",
+      "file_type": "code",
+      "source_file": "project-management/wbs.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "project_management_wbs",
+      "community": 13,
+      "norm_label": "wbs.json"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude",
+      "community": 1,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "DC Siting Intelligence Tool \u2014 Hackathon",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude_dc_siting_intelligence_tool_hackathon",
+      "community": 1,
+      "norm_label": "dc siting intelligence tool \u2014 hackathon"
+    },
+    {
+      "label": "Project Layout",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "claude_project_layout",
+      "community": 1,
+      "norm_label": "project layout"
+    },
+    {
+      "label": "Key Constraints",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "claude_key_constraints",
+      "community": 1,
+      "norm_label": "key constraints"
+    },
+    {
+      "label": "Data Sources",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "claude_data_sources",
+      "community": 1,
+      "norm_label": "data sources"
+    },
+    {
+      "label": "Dev Commands",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "claude_dev_commands",
+      "community": 1,
+      "norm_label": "dev commands"
+    },
+    {
+      "label": "Important",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "claude_important",
+      "community": 1,
+      "norm_label": "important"
+    },
+    {
+      "label": "challenge.md",
+      "file_type": "document",
+      "source_file": "docs/challenge.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_challenge",
+      "community": 0,
+      "norm_label": "challenge.md"
+    },
+    {
+      "label": "Challenge: Data-Center Siting & Power (Invertix)",
+      "file_type": "document",
+      "source_file": "docs/challenge.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_challenge_challenge_data_center_siting_power_invertix",
+      "community": 0,
+      "norm_label": "challenge: data-center siting & power (invertix)"
+    },
+    {
+      "label": "Problem Statement",
+      "file_type": "document",
+      "source_file": "docs/challenge.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "docs_challenge_problem_statement",
+      "community": 0,
+      "norm_label": "problem statement"
+    },
+    {
+      "label": "Business Framing \u2014 What We're Building",
+      "file_type": "document",
+      "source_file": "docs/challenge.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_challenge_business_framing_what_we_re_building",
+      "community": 0,
+      "norm_label": "business framing \u2014 what we're building"
+    },
+    {
+      "label": "Target Users & Jobs-to-be-Done",
+      "file_type": "document",
+      "source_file": "docs/challenge.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "docs_challenge_target_users_jobs_to_be_done",
+      "community": 0,
+      "norm_label": "target users & jobs-to-be-done"
+    },
+    {
+      "label": "Core Trade-offs the Tool Resolves",
+      "file_type": "document",
+      "source_file": "docs/challenge.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "docs_challenge_core_trade_offs_the_tool_resolves",
+      "community": 0,
+      "norm_label": "core trade-offs the tool resolves"
+    },
+    {
+      "label": "Power Supply Mix \u2014 Key Concepts",
+      "file_type": "document",
+      "source_file": "docs/challenge.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "docs_challenge_power_supply_mix_key_concepts",
+      "community": 0,
+      "norm_label": "power supply mix \u2014 key concepts"
+    },
+    {
+      "label": "Product Scope \u2014 Hackathon MVP",
+      "file_type": "document",
+      "source_file": "docs/challenge.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "docs_challenge_product_scope_hackathon_mvp",
+      "community": 0,
+      "norm_label": "product scope \u2014 hackathon mvp"
+    },
+    {
+      "label": "Key Input \u2192 Output Contract",
+      "file_type": "document",
+      "source_file": "docs/challenge.md",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "docs_challenge_key_input_output_contract",
+      "community": 0,
+      "norm_label": "key input \u2192 output contract"
+    },
+    {
+      "label": "Data & Tools Available",
+      "file_type": "document",
+      "source_file": "docs/challenge.md",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "docs_challenge_data_tools_available",
+      "community": 0,
+      "norm_label": "data & tools available"
+    },
+    {
+      "label": "Success Criteria",
+      "file_type": "document",
+      "source_file": "docs/challenge.md",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "docs_challenge_success_criteria",
+      "community": 0,
+      "norm_label": "success criteria"
+    },
+    {
+      "label": "Out of Scope",
+      "file_type": "document",
+      "source_file": "docs/challenge.md",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "docs_challenge_out_of_scope",
+      "community": 0,
+      "norm_label": "out of scope"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_settings",
+      "target": "claude_settings_hooks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_settings",
+      "target": "claude_settings_permissions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_settings",
+      "target": "claude_settings_schema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_settings_permissions",
+      "target": "claude_settings_permissions_deny"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_settings_hooks",
+      "target": "claude_settings_hooks_pretooluse"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_settings_hooks",
+      "target": "claude_settings_hooks_sessionstart"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.json",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "claude_settings_hooks",
+      "target": "claude_settings_hooks_stop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "codemapper_cache",
+      "target": "codemapper_cache_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "codemapper_cache",
+      "target": "codemapper_cache_mtimes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "codemapper_cache",
+      "target": "codemapper_cache_root",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "codemapper_cache",
+      "target": "codemapper_cache_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "mcp",
+      "target": "mcp_mcp_server_codemapper2"
+    },
+    {
+      "relation": "requires_env",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "mcp_mcp_server_codemapper2",
+      "target": "env_var_codemapper_root"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "command",
+      "source": "mcp_mcp_server_codemapper2",
+      "target": "mcp_command_c_users_tomin_onedrive_desktop_progetti_operating_proejcts_aider_for_large_codebases_codemapper_venv_scripts_python_exe"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/kanban.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "project_management_kanban",
+      "target": "project_management_kanban_columns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/kanban.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "project_management_kanban",
+      "target": "project_management_kanban_wip_limits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/kanban.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "project_management_kanban_wip_limits",
+      "target": "project_management_kanban_wip_limits_in_progress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/kanban.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "project_management_kanban_wip_limits",
+      "target": "project_management_kanban_wip_limits_in_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/open-pm.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "project_management_open_pm",
+      "target": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_project_management_open_pm_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/project.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "project_management_project",
+      "target": "project_management_project_active_sprint_id",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/project.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "project_management_project",
+      "target": "project_management_project_cc_plans_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/project.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "project_management_project",
+      "target": "project_management_project_cc_transcripts_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/project.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "project_management_project",
+      "target": "project_management_project_cc_usage_raw_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/project.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "project_management_project",
+      "target": "project_management_project_ccusage_ledger_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/project.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "project_management_project",
+      "target": "project_management_project_created_at",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/project.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "project_management_project",
+      "target": "project_management_project_default_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/project.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "project_management_project",
+      "target": "project_management_project_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/project.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "project_management_project",
+      "target": "project_management_project_estimation_scale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/project.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "project_management_project",
+      "target": "project_management_project_methodology",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/project.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "project_management_project",
+      "target": "project_management_project_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/project.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "project_management_project",
+      "target": "project_management_project_project_id",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/project.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "project_management_project",
+      "target": "project_management_project_root_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/project.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "project_management_project",
+      "target": "project_management_project_sprint_length_days",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/project.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "project_management_project",
+      "target": "project_management_project_team",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/project.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "project_management_project",
+      "target": "project_management_project_wip_limits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/project.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "project_management_project_wip_limits",
+      "target": "project_management_project_wip_limits_in_progress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project-management/project.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "project_management_project_wip_limits",
+      "target": "project_management_project_wip_limits_in_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude",
+      "target": "claude_dc_siting_intelligence_tool_hackathon"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_dc_siting_intelligence_tool_hackathon",
+      "target": "claude_data_sources"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_dc_siting_intelligence_tool_hackathon",
+      "target": "claude_dev_commands"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_dc_siting_intelligence_tool_hackathon",
+      "target": "claude_important"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_dc_siting_intelligence_tool_hackathon",
+      "target": "claude_key_constraints"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_dc_siting_intelligence_tool_hackathon",
+      "target": "claude_project_layout"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge",
+      "target": "docs_challenge_challenge_data_center_siting_power_invertix"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_challenge_data_center_siting_power_invertix",
+      "target": "docs_challenge_business_framing_what_we_re_building"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_challenge_data_center_siting_power_invertix",
+      "target": "docs_challenge_core_trade_offs_the_tool_resolves"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_challenge_data_center_siting_power_invertix",
+      "target": "docs_challenge_data_tools_available"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_challenge_data_center_siting_power_invertix",
+      "target": "docs_challenge_key_input_output_contract"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_challenge_data_center_siting_power_invertix",
+      "target": "docs_challenge_out_of_scope"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_challenge_data_center_siting_power_invertix",
+      "target": "docs_challenge_power_supply_mix_key_concepts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_challenge_data_center_siting_power_invertix",
+      "target": "docs_challenge_problem_statement"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_challenge_data_center_siting_power_invertix",
+      "target": "docs_challenge_product_scope_hackathon_mvp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_challenge_data_center_siting_power_invertix",
+      "target": "docs_challenge_success_criteria"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/challenge.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_challenge_challenge_data_center_siting_power_invertix",
+      "target": "docs_challenge_target_users_jobs_to_be_done"
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "c23ca036511b7ac564a56406f30aa5f083036c17"
+}

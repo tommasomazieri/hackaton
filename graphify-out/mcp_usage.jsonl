@@ -1,0 +1,8 @@
+{"event": "hook", "tool": "Glob", "decision": "block", "ts": "2026-06-12T21:12:27.573"}
+{"event": "hook", "tool": "Glob", "decision": "block", "ts": "2026-06-12T21:12:27.688"}
+{"event": "hook", "tool": "Bash", "decision": "pass", "pass_reason": "no nav pattern", "cmd_snippet": "cd \"C:/Users/tomin/OneDrive/Desktop/PROGETTI/operating_proejcts/hackaton\" && git", "ts": "2026-06-12T21:36:26.380"}
+{"event": "hook", "tool": "Bash", "decision": "block", "cmd_snippet": "cd \"C:/Users/tomin/OneDrive/Desktop/PROGETTI/operating_proejcts/hackaton\" && git", "ts": "2026-06-12T21:36:33.585"}
+{"event": "hook", "tool": "Bash", "decision": "pass", "pass_reason": "no nav pattern", "cmd_snippet": "git pull", "ts": "2026-06-12T21:41:16.674"}
+{"event": "hook", "tool": "Bash", "decision": "block", "cmd_snippet": "ls project-management/ 2>/dev/null || echo \"no project-management dir\"", "ts": "2026-06-12T21:41:20.202"}
+{"event": "hook", "tool": "Glob", "decision": "block", "ts": "2026-06-12T21:41:20.467"}
+{"event": "hook", "tool": "Bash", "decision": "block", "cmd_snippet": "ls project-management/ 2>/dev/null || echo \"no dir\"; ls docs/ 2>/dev/null", "ts": "2026-06-12T21:41:23.302"}
