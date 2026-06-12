@@ -1,0 +1,21 @@
+{
+  "project_id": "02505df5-3137-49f1-961c-e04c795eb7d6",
+  "name": "hackaton",
+  "description": "Invertix DC Siting Intelligence Tool — Energy x AI Hackathon",
+  "root_path": "C:\\Users\\tomin\\OneDrive\\Desktop\\PROGETTI\\operating_proejcts\\hackaton",
+  "methodology": "kanban",
+  "team": [],
+  "sprint_length_days": 5,
+  "estimation_scale": "fibonacci",
+  "default_model": "claude-sonnet-4-6",
+  "wip_limits": {
+    "in_progress": 3,
+    "in_review": 2
+  },
+  "created_at": "2026-06-12T19:02:58.507258+00:00",
+  "active_sprint_id": null,
+  "ccusage_ledger_path": "~/.claude/ccusage-sessions.jsonl",
+  "cc_usage_raw_path": "~/.config/claude/projects",
+  "cc_transcripts_path": "~/.claude/projects",
+  "cc_plans_path": "~/.claude/plans"
+}
