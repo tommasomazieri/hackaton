@@ -68,19 +68,98 @@ Questo documento fornisce un'analisi quantitativa dei database disponibili per i
 
 ## 3. PyPSA-Eur Network Data
 
-### A. Caratteristiche dei Dati
-*   **Formato**: Modelli e file NetCDF (`.nc`) caricati tramite la libreria Python `pypsa` e `xarray`.
-*   **Granularità Spaziale**: **Nodale (Nodal-level)**. I dati sono associati ai singoli nodi di rete (sottostazioni ad altissima tensione della rete di trasmissione ENTSO-E, solitamente distanziate di **20–80 km**).
-*   **Granularità Temporale**: **Oraria ($1\text{ ora}$)** per un intero anno storico ($8760\text{ ore}$ totali).
-*   **Contenuto**: Topologia dettagliata della rete di trasmissione europea: nodi di borsa elettrica, limiti termici delle linee, e dati storici di congestione ed erogazione.
+### A. Caratteristiche dei Dati e Struttura delle Componenti
+Il database PyPSA-Eur modella la rete di trasmissione ad alta tensione europea (ENTSO-E) integrando sia parametri fisici (costruttivi/statici) sia dinamici (profili temporali e risultati di simulazioni di flusso ottimo di potenza - OPF). 
 
-### B. Opportunità Applicative
-1.  **Verifica della Capacità di Rete Dinamica (Substation Headroom)**:
-    *   Calcolare se la sottostazione del nodo prescelto ha spazio termico residuo ($H_{\text{sub}}$ in MW) per accogliere il carico del data center ($P_{\text{DC}}$) senza richiedere l'espansione dei trasformatori (che comporterebbe code di allacciamento da **2 a 7 anni**).
-2.  **Analisi Predittiva della Congestione della Rete (Curtailment delle PPA)**:
-    *   Simulare la congestione sulle linee di trasmissione per determinare la percentuale di energia prodotta da parchi eolici/solari in PPA che andrebbe persa per distacchi forzati (*curtailment*):
-        $$\text{Curtailment Rate} = \frac{E_{\text{tagliata}}}{E_{\text{potenziale}}}$$
-        Permette di calcolare con precisione l'energia rinnovabile netta effettivamente erogata al data center.
+I dati si strutturano in **Variabili Statiche (Input Fisici)**, **Variabili Temporali di Input (Time Series)** e **Variabili di Output (Risultati dell'OPF)** su base **oraria ($8760\text{ ore}$)**.
+
+#### 1. Nodi (Buses)
+Rappresentano le sottostazioni elettriche ad altissima tensione ($\ge 110\text{ kV}$).
+*   **Dati Statici**:
+    *   `v_nom`: Tensione nominale della sottostazione (in $\text{kV}$, tipicamente $220\text{ kV}$ o $380\text{ kV}$ in Europa).
+    *   `x`, `y`: Coordinate geografiche (Longitudine, Latitudine) utilizzate per il georeferenziazione e il micro-siting.
+    *   `country`: Codice paese a livello nazionale/NUTS0 (es. `DE`, `FR`, `IT`) utile per l'accoppiamento con i dati di Ember.
+    *   `control`: Tipo di nodo per il flusso di carico (Slack, PV, o PQ).
+*   **Dati Temporali / Output**:
+    *   `marginal_price` (LMP - Locational Marginal Price in $\text{€/MWh}$): Prezzo marginale zonale dell'energia elettrica calcolato orariamente per ciascun nodo. Riflette il costo di generazione orario, le perdite attive di rete e il costo della congestione sulle linee di trasmissione.
+    *   `v_mag_pu`: Magnitudo della tensione in per-unit (adimensionale). Indica la stabilità di tensione del nodo (deve rimanere tra $0.95$ e $1.05\text{ pu}$).
+
+#### 2. Linee di Trasmissione (Lines) e Link DC (Links)
+Rappresentano gli elettrodotti aerei in corrente alternata (AC) e i cavi di interconnessione sottomarini o inter-zonali in corrente continua (HVDC).
+*   **Linee AC (Lines) - Dati Statici**:
+    *   `bus0`, `bus1`: Nodi di origine e destinazione della linea.
+    *   `s_nom`: Capacità di trasporto termico nominale (limite di flusso continuo in $\text{MVA}$).
+    *   `length`: Lunghezza fisica della linea (in $\text{km}$).
+    *   `r`, `x`: Resistenza e reattanza elettrica equivalente (in per-unit o $\Omega$), necessarie per il calcolo delle perdite e dei flussi di rete.
+    *   `num_parallel`: Numero di circuiti paralleli sulla stessa linea fisica.
+*   **Link HVDC (Links) - Dati Statici**:
+    *   `bus0`, `bus1`: Nodi di connessione.
+    *   `p_nom`: Capacità massima di trasporto di potenza attiva (in $\text{MW}$).
+    *   `efficiency`: Efficienza di conversione/trasmissione (adimensionale, es. $0.97$ per considerare il $3\%$ di perdite di conversione AC/DC).
+*   **Dati Temporali / Output (Lines & Links)**:
+    *   `p0`, `p1`: Flussi orari di potenza attiva transitanti sui due terminali della linea (in $\text{MW}$), positivi se fluiscono da `bus0` a `bus1`.
+    *   `q0`, `q1`: Flussi orari di potenza reattiva (in $\text{MVAr}$, solo per linee AC).
+    *   `congestione`: Rapporto percentuale istantaneo tra il flusso reale e la capacità limite termica:
+        $$\text{LoadRate}(t) = \frac{|P(t)|}{S_{\text{nom}}} \times 100\%$$
+
+#### 3. Generatori (Generators)
+Rappresentano gli impianti di produzione di energia allacciati direttamente alla rete di trasmissione.
+*   **Dati Statici**:
+    *   `p_nom`: Capacità nominale installata del generatore (in $\text{MW}$).
+    *   `carrier`: Tecnologia/Vettore energetico. Include: `wind_onshore`, `wind_offshore`, `solar`, `nuclear`, `lignite` (lignite), `coal` (carbon fossile), `gas` (gas naturale), `hydro` (idroelettrico a bacino), `ror` (idroelettrico ad acqua scorrente), `biomass` (biomasse), `oil` (petrolio).
+    *   `marginal_cost`: Costo marginale di produzione (in $\text{€/MWh}$), comprensivo di costi del combustibile, efficienza termica e quote di emissione $CO_2$ (ETS).
+    *   `capital_cost`: Costo annualizzato dell'investimento per unità di potenza (in $\text{€/MW}\cdot\text{anno}$).
+    *   `efficiency`: Efficienza termodinamica del generatore.
+*   **Dati Temporali / Output**:
+    *   `p_max_pu`: Profilo orario normalizzato ($0\text{-}1$) di producibilità per solare ed eolico basato su rianalisi meteorologiche storiche (reali fattori di capacità orari del sito).
+    *   `p`: Generazione elettrica effettiva programmata dall'OPF (in $\text{MW}$).
+
+#### 4. Unità di Accumulo (Storage Units & Stores)
+Rappresentano gli impianti idroelettrici a pompaggio (PHS) e i sistemi di accumulo elettrochimico (batterie BESS).
+*   **Dati Statici**:
+    *   `p_nom`: Potenza nominale del convertitore/inverter (in $\text{MW}$).
+    *   `max_hours`: Durata massima dell'accumulo a piena potenza (in $\text{ore}$). Definisce la capacità energetica nominale:
+        $$E_{\text{nom}} = P_{\text{nom}} \times \text{max\_hours} \quad (\text{MWh})$$
+    *   `efficiency_store` / `efficiency_dispatch`: Rendimento di carica e scarica dell'accumulo (es. $0.90$ per batterie a ioni di litio).
+    *   `standing_loss`: Tasso orario di autoscarica del sistema di accumulo.
+*   **Dati Temporali / Output**:
+    *   `state_of_charge`: Stato di carica istantaneo dell'accumulo (in $\text{MWh}$ per ciascuna delle $8760\text{ ore}$).
+    *   `p`: Potenza attiva scambiata con la rete (positiva in fase di scarica, negativa in fase di carica).
+
+#### 5. Trasformatori (Transformers)
+Componenti che collegano livelli diversi di tensione (es. accoppiamento $380\text{ kV} / 220\text{ kV}$).
+*   **Dati Statici**:
+    *   `s_nom`: Capacità nominale del trasformatore (in $\text{MVA}$).
+    *   `r`, `x`: Parametri di impedenza interna.
+
+---
+
+### B. Opportunità Applicative e Formule Chiave
+
+1.  **Stima Dinamica del Margine di Capacità (Substation & Node Headroom)**:
+    Il posizionamento del data center richiede una sottostazione con sufficiente "headroom" (capacità residua) per evitare costosi e lunghi lavori di potenziamento della griglia (che possono richiedere da $2$ a $7$ anni). Calcoliamo la capacità residua oraria del nodo $n$ all'ora $t$:
+    $$H_n(t) = S_{\text{nom, trasformatore}} - P_{\text{load, } n}(t) \quad (\text{MW})$$
+    Il headroom minimo annuale indica la taglia massima del data center installabile senza modifiche strutturali:
+    $$\text{Headroom}_{\text{static}} = \min_{t} H_n(t)$$
+    Per valutare l'impatto dinamico della congestione sulle linee adiacenti al nodo $n$:
+    $$\text{Headroom}_{\text{linee}}(n, t) = \min_{l \in \text{Lines}(n)} \left( S_{\text{nom}, l} - |P_l(t)| \right) \quad (\text{MW})$$
+    
+2.  **Calcolo del Curtailment Rate per le PPA Rinnovabili**:
+    Un data center che stipula un accordo PPA (Power Purchase Agreement) per energia eolica o solare situata in un nodo distante rischia che parte dell'energia venga persa causa congestione di rete (*curtailment*). PyPSA ci permette di calcolare il tasso orario di curtailment per un impianto:
+    $$\text{Curtailment}(t) = P_{\text{max, pu}}(t) \cdot P_{\text{nom}} - P(t) \quad (\text{MW})$$
+    $$\text{Curtailment Rate} = \frac{\sum_{t=1}^{8760} \left[ P_{\text{max, pu}}(t) \cdot P_{\text{nom}} - P(t) \right]}{\sum_{t=1}^{8760} P_{\text{max, pu}}(t) \cdot P_{\text{nom}}} \times 100\%$$
+    Questo tasso incide direttamente sul costo reale dell'energia PPA, poiché l'energia non consegnata rappresenta un costo netto non compensato.
+
+3.  **Tracciamento Fisico delle Emissioni a Livello Nodale (Carbon Flow Tracking)**:
+    Invece di utilizzare le medie di emissione nazionali statiche di Ember, possiamo sfruttare i flussi orari di potenza di PyPSA per tracciare fisicamente la provenienza degli elettroni consumati al nodo del data center.
+    Sia $\text{CI}_n(t)$ l'intensità di carbonio reale del mix consumato al nodo $n$ all'ora $t$. Questa è definita dal bilancio tra la generazione locale al nodo e i flussi di importazione dai nodi vicini:
+    $$\text{CI}_n(t) = \frac{\sum_{g \in \text{Gen}_n} G_{g,n}(t) \cdot EF_g + \sum_{m \in \text{Neighbors}_n} F_{mn}(t) \cdot \text{CI}_m(t)}{\sum_{g \in \text{Gen}_n} G_{g,n}(t) + \sum_{m \in \text{Neighbors}_n} F_{mn}(t)} \quad \left(\text{gCO}_2/\text{kWh}\right)$$
+    Dove:
+    *   $G_{g,n}(t)$ è la generazione oraria del generatore locale $g$ al nodo $n$ (in $\text{MW}$).
+    *   $EF_g$ è il fattore di emissione di ciclo di vita specifico del vettore del generatore $g$ (es. $EF_{\text{coal}} = 950\text{ g/kWh}$, $EF_{\text{solar}} = 30\text{ g/kWh}$).
+    *   $F_{mn}(t) = \max(0, P_{mn}(t))$ è il flusso di potenza importato dal nodo adiacente $m$ verso il nodo $n$ all'ora $t$.
+    *   $\text{CI}_m(t)$ è l'intensità carbonica del nodo sorgente $m$.
+    Questo sistema di equazioni lineari simultanee viene risolto per ogni ora $t$ per l'intera rete, fornendo un'impronta carbonica Scope 2 dinamica ed estremamente accurata per il micro-siting.
 
 ---
 
