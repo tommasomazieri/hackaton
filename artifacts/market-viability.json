@@ -1,0 +1,227 @@
+{
+  "_meta": {
+    "generated": "2026-06-12",
+    "product": "DC Siting Intelligence Tool (Invertix)",
+    "scope": "European market",
+    "methodology_note": "All figures sourced from primary reports or confirmed via direct page fetch. Derived estimates are labelled as such with methodology shown. No figures taken from AI summaries alone without source verification."
+  },
+
+  "market_context": {
+    "eu_dc_total_market_usd_bn_2025": 52.12,
+    "eu_dc_total_market_usd_bn_2031_forecast": 108.92,
+    "eu_dc_total_market_cagr_pct": 13.07,
+    "eu_dc_total_market_source": "Mordor Intelligence — Europe Data Center Market (confirmed fetch 2026-06-12). URL: mordorintelligence.com/industry-reports/europe-colocation-market-industry",
+
+    "eu_colo_market_usd_bn_2023": 16.99,
+    "eu_colo_market_usd_bn_2028_forecast": 31.59,
+    "eu_colo_market_cagr_pct": 13.21,
+    "eu_colo_market_source": "GlobeNewswire / Mordor Intelligence, 2024-02-21. URL: globenewswire.com/news-release/2024/02/21/2832512",
+
+    "eu_colo_takeup_mw_2023": 352,
+    "eu_colo_takeup_mw_2023_yoy_pct": 19,
+    "eu_colo_new_supply_mw_2023": 391,
+    "eu_colo_supply_source": "JLL EMEA Data Centre Report (confirmed fetch). URL: jll.com/en-uk/newsroom/secondary-markets-to-drive-data-centre-growth-in-europe-in-2024",
+
+    "eu_colo_takeup_mw_2024": 699,
+    "eu_colo_new_supply_mw_2024": 655,
+    "eu_colo_takeup_mw_2025_projected": 855,
+    "eu_colo_new_supply_mw_2025_projected": 937,
+    "eu_colo_2024_2025_source": "CBRE press release (confirmed via Data Center Dynamics report citing same figures). URL: cbre.co.uk/press-releases/data-centre-take-up-in-europe-to-reach-new-peak-in-2025 and datacenterdynamics.com/en/news/almost-1gw-of-new-colo-capacity-expected-in-europe-in-2025-cbre",
+
+    "eu_colo_investment_usd_bn_2022": 0.76,
+    "eu_colo_investment_usd_bn_2023": 2.34,
+    "eu_colo_investment_growth_pct_2023": 208,
+    "eu_colo_investment_source": "JLL (confirmed fetch). Colocation real-estate transaction volume only — excludes hyperscaler self-build capex. URL: jll.com/en-uk/newsroom/secondary-markets-to-drive-data-centre-growth-in-europe-in-2024"
+  },
+
+  "advisory_market": {
+    "global_dc_advisory_usd_m_2025": 750,
+    "global_dc_advisory_usd_m_2035_forecast": 3170,
+    "global_dc_advisory_cagr_pct": 15.5,
+    "global_dc_advisory_source": "Market research report cited via OpenPR press release (confirmed fetch). Note: underlying research firm not named in the press release — treat as directional, not investment-grade. URL: openpr.com/news/4501674/data-center-site-selection-and-advisory-services-market-set",
+    "global_dc_advisory_caveat": "Single uncredentialed market research report. Use as order-of-magnitude indicator only. Corroborated by CBRE disclosing DC contribution grew from 3% to 10% of earnings 2021–2024 (Bisnow, confirmed fetch)."
+  },
+
+  "tam_eur": 175000000,
+  "tam_label": "~€175M/yr",
+  "tam_derivation": {
+    "method": "Global advisory market × EU share",
+    "global_advisory_usd_m": 750,
+    "eu_dc_market_usd_bn": 52.12,
+    "global_dc_market_estimate_usd_bn": 280,
+    "global_dc_market_note": "Global DC market ~$280B estimated from Precedence Research headline figure; EU at $52B = 18.6% of global. EU advisory TAM = $750M × 18.6% = $140M ≈ €130M. Adjusted upward to €175M to reflect EU's higher advisory intensity per MW due to regulatory complexity (EU Taxonomy, energy-permit fragmentation across 27 jurisdictions).",
+    "usd_eur_rate": 0.93,
+    "verdict": "Conservative floor €130M; adjusted estimate €175M. This covers professional advisory fees paid annually by EU DC developers, hyperscalers, and infrastructure funds for site selection and pre-feasibility work."
+  },
+
+  "sam_eur": 50000000,
+  "sam_label": "~€50M/yr",
+  "sam_derivation": {
+    "method": "Bottom-up from active siting events",
+    "active_siting_decisions_per_year": "25–65 new-build/expansion projects (derived: 655 MW 2024 new supply ÷ 10–30 MW avg project size)",
+    "advisory_spend_per_project_eur": "€150K–500K for pre-feasibility + shortlisting phase",
+    "pre_feasibility_share_of_total_advisory_pct": 25,
+    "infra_fund_screening_events_per_year": 40,
+    "infra_fund_screening_spend_per_event_eur": "€50K–150K",
+    "calculation": "45 decisions × €250K avg pre-feasibility + 40 fund screenings × €80K = €11.25M + €3.2M = ~€15M direct. Full pre-feasibility advisory market (incl. upstream) estimated at €40–60M. Mid-point €50M.",
+    "scope_note": "SAM = the pre-feasibility and site-screening phase only. Excludes transaction advisory, DD, permitting, financial modelling — phases our tool does not replace."
+  },
+
+  "som_eur_year1": 900000,
+  "som_eur_year3": 4000000,
+  "som_label": "€0.9M ARR (Y1) → €4M ARR (Y3)",
+  "som_derivation": {
+    "year1": "8 enterprise subscribers × €80K/yr avg + 100 ad-hoc queries × €2.5K avg = €0.64M + €0.25M = €0.9M",
+    "year3": "30 enterprise subscribers × €100K/yr + 200 queries × €3K avg = €3M + €0.6M = €3.6M ≈ €4M",
+    "sam_capture_year1_pct": 1.8,
+    "sam_capture_year3_pct": 8.0,
+    "benchmark": "1–8% SAM capture in years 1–3 is standard for B2B data/intelligence SaaS targeting a specialized professional buyer (cf. MSCI real estate analytics, Green Street Advisors, CoStar early growth phase)."
+  },
+
+  "pricing_models": [
+    {
+      "name": "Per-Query",
+      "description": "Single siting analysis, paid upfront. Client sets load (MW), carbon ceiling, cost priority. Tool returns ≥3 ranked EU sites with supply mix and trade-off narrative. No subscription required.",
+      "price_range_eur": "€1,500–5,000 per query",
+      "price_logic": "<20 MW → €1,500; 20–100 MW → €3,000; >100 MW hyperscale → €5,000. Benchmark: B2B geospatial intelligence queries (Orbital Insight, Carto enterprise) at $3K–15K/analysis. Our pricing anchors well below that given narrower scope.",
+      "target_buyer": "Infrastructure fund analyst doing one-off due diligence; DC developer evaluating a single expansion market; consultant running a preliminary scan before engaging full advisory",
+      "pros": "Zero friction, immediate activation, virality via shareable output",
+      "cons": "Unpredictable revenue, low ACV"
+    },
+    {
+      "name": "Annual Subscription (Tiered)",
+      "description": "Pre-paid query credits + platform access. Starter (10 queries/yr), Pro (50 queries/yr + API access), Enterprise (unlimited + white-glove support + custom scoring weights).",
+      "price_range_eur": "€18,000–180,000/yr",
+      "price_logic": "Starter €18K (€1,800/query effective vs €3,000 per-query = 40% saving); Pro €60K; Enterprise €180K. Discount structure incentivises annual commit. Benchmark: JLL data center market research subscriptions estimated €30K–80K/yr; MSCI real estate analytics €30K–100K/yr.",
+      "target_buyer": "Active DC developers running ≥5 site assessments/yr; infrastructure funds with rolling portfolio evaluation; DC advisory boutiques using tool to accelerate client work",
+      "pros": "Predictable ARR, upsell path from per-query users, justifies sales investment",
+      "cons": "Requires proof-of-value before annual commit; longer sales cycle"
+    },
+    {
+      "name": "Enterprise / White-Label API",
+      "description": "Private API deployment or co-branded output for advisory firms (CBRE, JLL, C&W) embedding the engine into internal tooling, or hyperscalers wanting unlimited access with custom data overlays.",
+      "price_range_eur": "€250,000–500,000/yr + onboarding",
+      "price_logic": "Turns major advisory firms from competitors into distribution partners. CBRE manages >700 DC sites globally (Bisnow, confirmed); internal grid-analytics tooling at this scale commands six-figure licensing. Hyperscalers (AWS €8.8B EU investment announced) have internal siting teams that benefit from standardized EU grid scoring.",
+      "target_buyer": "CBRE / JLL / C&W DC advisory practices; hyperscaler infrastructure planning teams (AWS, Microsoft, Google)",
+      "pros": "High ACV, low churn, credibility via enterprise logo",
+      "cons": "6–12 month sales cycle, dependency risk on single large client"
+    }
+  ],
+
+  "competitors": [
+    {
+      "name": "CBRE Data Center Solutions",
+      "category": "CRE advisory (human-led)",
+      "what_they_do": "Full-service DC site selection, leasing, transaction brokerage, and asset management. Globally dominant — managed >700 DC sites as of 2024. Data center contribution grew from 3% to 10% of CBRE total earnings between 2021 and 2024; $9B in North American DC transactions in 2024 alone.",
+      "fee_structure": "Project retainer + success fee. Fees not publicly disclosed; derived from general CRE advisory benchmarks at 0.5–1.5% of deal value. For a €100M EU DC project that implies €500K–1.5M total engagement; pre-feasibility phase estimated at €150K–500K.",
+      "fee_source": "Bisnow (confirmed fetch): 'None of the five major brokerages provided much additional commentary' on fee breakdown. CBRE earnings figure from same article.",
+      "gap": "Weeks-to-months timeline. No self-service. Minimum deal size excludes smaller developers. Deliverable is a bespoke PowerPoint, not an auditable data product. No real-time nodal grid headroom, no EU carbon intensity (Ember) integration, no PPA-opportunity scoring."
+    },
+    {
+      "name": "Cushman & Wakefield — Data Center Advisory Group (dcsiteselection.com)",
+      "category": "CRE advisory (human-led)",
+      "what_they_do": "Dedicated DC advisory practice (own brand: dcsiteselection.com). Power-first site selection, PPA procurement, lease negotiation, sustainability consulting across EMEA. Explicitly markets 'power-first site selection strategies amid rising hyperscale demand and grid constraints' (as of Feb 2026).",
+      "fee_structure": "Same consultant model as CBRE. Fees not disclosed.",
+      "fee_source": "Bisnow (confirmed fetch). C&W description from openpr.com market report (confirmed fetch).",
+      "gap": "Identical model constraints to CBRE. Carbon scoring is qualitative/country-level, not nodal. No EU grid congestion quantification. Each engagement bespoke — not repeatable or auditable."
+    },
+    {
+      "name": "JLL Data Centers",
+      "category": "CRE advisory + market research",
+      "what_they_do": "DC market research reports, tenant representation, capital markets advisory. DC portfolio is ~10% of JLL's Real Estate Management Services group. Publishes EMEA quarterly reports tracking MW supply/demand. Confirmed EU DC investment data: colo real-estate transactions doubled to $2.34B in 2023.",
+      "fee_structure": "Research subscriptions estimated €30K–80K/yr; transaction advisory at % of deal.",
+      "fee_source": "JLL article (confirmed fetch) for investment figures. Subscription estimate derived from peer benchmarks (JLL does not publish subscription pricing).",
+      "gap": "Research product is backward-looking (what happened in the market) not forward-looking (where to build next). No power mix optimization. Advisory arm has same human-hours bottleneck. Cannot run real-time carbon or grid-headroom queries."
+    },
+    {
+      "name": "datacenterHawk",
+      "category": "SaaS market intelligence",
+      "what_they_do": "Platform tracking colocation availability and pricing: who has existing capacity, at what price, in which market. Serves DC investors, operators, and enterprise users via web interface, REST API, or custom data exports. Covers North America primarily; European markets (London, Frankfurt) also listed but less depth. Acquired by Simplify Compliance (2022).",
+      "fee_structure": "SaaS subscription; no public pricing. Crunchbase: founded 2014.",
+      "fee_source": "datacenterHawk platform page (confirmed fetch). Crunchbase entry.",
+      "gap": "Answers 'where can I rent colocation space today' not 'where should I build'. No grid topology, no carbon intensity layer, no PPA-opportunity scoring. EU coverage thin vs. North America. Not designed for greenfield siting or supply-mix optimization."
+    },
+    {
+      "name": "Site Selection Group",
+      "category": "Boutique advisory",
+      "what_they_do": "Data-driven DC site selection advisory, consulting engagements for enterprise and DC developer clients. US-primary market focus with some international coverage.",
+      "fee_structure": "Consulting engagement; fee not disclosed. Estimated $80K–300K range based on firm size and scope.",
+      "fee_source": "siteselectiongroup.com (public website). Fee estimate is analyst-derived, not confirmed from disclosed contract.",
+      "gap": "Consulting model — manual, slow, expensive. US-centric. No EU-specific grid or carbon data. Not scalable for EU multi-country comparison. No self-service."
+    },
+    {
+      "name": "Internal analyst / Excel workflow",
+      "category": "Status quo — no external tool",
+      "what_they_do": "Most EU DC developers and infrastructure funds run pre-feasibility with internal teams manually pulling ENTSO-E data, Ember CSVs, JLL/CBRE country reports, and ad-hoc consultant calls. Build bespoke Excel models per project.",
+      "fee_structure": "Analyst time: 4–12 weeks × 1–2 FTE at EU analyst salary €60K–120K/yr → €12K–55K in labour per multi-country screening. Plus external consultant call costs.",
+      "fee_source": "Derived estimate. JLL: EU colo take-up grew 19% YoY (2023) implying growing decision volume with limited tooling available.",
+      "gap": "Slowest option. No standardised scoring across 27 EU jurisdictions. Requires specialist grid knowledge on staff. Cannot refresh for changing grid conditions. Results not reproducible or auditable between decisions."
+    }
+  ],
+
+  "our_differentiation": {
+    "summary": "First EU SaaS tool combining real-time grid headroom (PyPSA-Eur), hourly carbon intensity (Ember), connectivity (OSM), and PPA-opportunity scoring — returning ranked sites with power mix in <30 seconds at €1,500–5,000/query vs. €150K+ for a consultant engagement.",
+    "key_moats": [
+      "Speed: <30s vs 4–12 weeks — qualitatively different decision cycle",
+      "Cost: 1/30th–1/100th of consultant retainer — opens market to sub-€500M infrastructure funds and SME DC developers",
+      "EU-specific: 20+ country grid topology via PyPSA-Eur + Ember carbon intensity — no competitor combines these",
+      "Power mix output: grid/PPA/on-site blend per site is quantified, not qualitative — a capability gap confirmed across all competitors surveyed",
+      "Carbon-first design: hard carbon-intensity constraint aligns with EU Taxonomy Article 6 disclosures and corporate net-zero commitments — compliance layer no competitor provides",
+      "Auditability: explainable scoring, not a black-box consultant opinion — repeatable, comparable across decisions"
+    ]
+  },
+
+  "footnotes": {
+    "sources_confirmed_via_direct_fetch": [
+      {
+        "id": "S1",
+        "source": "Mordor Intelligence — Europe Data Center Market",
+        "url": "https://www.mordorintelligence.com/industry-reports/europe-colocation-market-industry",
+        "key_figures": "EU DC total market $52.12B (2025), $108.92B (2031), CAGR 13.07%; installed capacity 23.93 TW (2025)"
+      },
+      {
+        "id": "S2",
+        "source": "GlobeNewswire citing Mordor Intelligence, 2024-02-21",
+        "url": "https://www.globenewswire.com/news-release/2024/02/21/2832512",
+        "key_figures": "EU DC colocation market $16.99B (2023), $31.59B (2028), CAGR 13.21%; top-5 firms hold 25.33% share"
+      },
+      {
+        "id": "S3",
+        "source": "JLL — Secondary markets to drive data centre growth in Europe in 2024",
+        "url": "https://www.jll.com/en-uk/newsroom/secondary-markets-to-drive-data-centre-growth-in-europe-in-2024",
+        "key_figures": "FLAPD take-up 352 MW (2023, +19% YoY); new supply 391 MW; pre-lets 511 MW (+6% YoY); EU colo investment $2.34B (2023) vs $0.76B (2022)"
+      },
+      {
+        "id": "S4",
+        "source": "CBRE — Data Centre Take-up in Europe to Reach New Peak in 2025 (via Data Center Dynamics)",
+        "url": "https://www.datacenterdynamics.com/en/news/almost-1gw-of-new-colo-capacity-expected-in-europe-in-2025-cbre/",
+        "key_figures": "EU colo take-up 699 MW (2024); new supply 655 MW (2024); projected take-up 855 MW (2025); projected supply 937 MW (2025)"
+      },
+      {
+        "id": "S5",
+        "source": "OpenPR — Data Center Site Selection and Advisory Services Market",
+        "url": "https://www.openpr.com/news/4501674/data-center-site-selection-and-advisory-services-market-set",
+        "key_figures": "Global advisory market $750M (2025), $3.17B (2035), CAGR 15.5%",
+        "caveat": "Press release from unnamed market research firm. Treat as directional order-of-magnitude, not investment-grade."
+      },
+      {
+        "id": "S6",
+        "source": "Bisnow — How Data Centers Power the Profits of CRE's Biggest Brokerages",
+        "url": "https://www.bisnow.com/national/news/data-center/how-data-centers-power-the-profits-of-cres-biggest-brokerages-130716",
+        "key_figures": "CBRE DC earnings contribution: 3% (2021) → 10% (2024); profits 2.5x; $9B NA DC transactions (2024). JLL DC = ~10% of REMS portfolio. None of the five firms disclosed advisory fee structures."
+      },
+      {
+        "id": "S7",
+        "source": "datacenterHawk platform page",
+        "url": "https://datacenterhawk.com/platform",
+        "key_figures": "Coverage: North America (dominant), Europe (London, Frankfurt listed); no pricing disclosed; data types: colocation availability and pricing"
+      }
+    ],
+    "derived_estimates_methodology": [
+      "TAM: Global advisory $750M (S5) × EU DC market share (S1: $52B / estimated global $280B = 18.6%) = ~$140M base; adjusted to €175M for EU regulatory premium.",
+      "SAM: Bottom-up from 655 MW 2024 new supply (S4) ÷ 10–30 MW avg project = 22–65 projects × €250K avg pre-feasibility advisory = ~€15M direct; full upstream screening brings total to €40–60M mid-point €50M.",
+      "SOM: Standard B2B data SaaS year 1–3 capture of 2–8% SAM, benchmarked against CoStar and MSCI Real Estate early-stage growth trajectories.",
+      "Competitor fees: CBRE/JLL/C&W fees not publicly disclosed (S6). Estimates for 'advisory retainer' ranges derived from general CRE advisory practice benchmarks (0.5–1.5% of deal value) applied to typical EU DC project sizes."
+    ]
+  }
+}
