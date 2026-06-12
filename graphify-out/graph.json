@@ -2950,7 +2950,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "docs_data_3_pypsa_eur_network_data",
-      "community": 17,
+      "community": 36,
       "norm_label": "3. pypsa-eur network data"
     },
     {
@@ -2960,7 +2960,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "docs_data_a_caratteristiche_dei_dati_e_struttura_delle_componenti",
-      "community": 17,
+      "community": 36,
       "norm_label": "a. caratteristiche dei dati e struttura delle componenti"
     },
     {
@@ -2970,7 +2970,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "docs_data_1_nodi_buses",
-      "community": 17,
+      "community": 36,
       "norm_label": "1. nodi (buses)"
     },
     {
@@ -2980,7 +2980,7 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "docs_data_2_linee_di_trasmissione_lines_e_link_dc_links",
-      "community": 17,
+      "community": 36,
       "norm_label": "2. linee di trasmissione (lines) e link dc (links)"
     },
     {
@@ -2990,7 +2990,7 @@
       "source_location": "L105",
       "_origin": "ast",
       "id": "docs_data_3_generatori_generators",
-      "community": 17,
+      "community": 36,
       "norm_label": "3. generatori (generators)"
     },
     {
@@ -3000,7 +3000,7 @@
       "source_location": "L117",
       "_origin": "ast",
       "id": "docs_data_4_unit\u00e0_di_accumulo_storage_units_stores",
-      "community": 17,
+      "community": 36,
       "norm_label": "4. unita di accumulo (storage units & stores)"
     },
     {
@@ -3010,7 +3010,7 @@
       "source_location": "L129",
       "_origin": "ast",
       "id": "docs_data_5_trasformatori_transformers",
-      "community": 17,
+      "community": 36,
       "norm_label": "5. trasformatori (transformers)"
     },
     {
@@ -3020,7 +3020,7 @@
       "source_location": "L137",
       "_origin": "ast",
       "id": "docs_data_b_opportunit\u00e0_applicative_e_formule_chiave",
-      "community": 17,
+      "community": 36,
       "norm_label": "b. opportunita applicative e formule chiave"
     },
     {
@@ -3132,6 +3132,66 @@
       "id": "docs_data_tabella_sinottica_delle_opportunit\u00e0_di_integrazione",
       "community": 17,
       "norm_label": "tabella sinottica delle opportunita di integrazione"
+    },
+    {
+      "label": "7. Vincoli di Compliance e Limiti Normativi dell'Unione Europea",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L253",
+      "_origin": "ast",
+      "id": "docs_data_7_vincoli_di_compliance_e_limiti_normativi_dell_unione_europea",
+      "community": 17,
+      "norm_label": "7. vincoli di compliance e limiti normativi dell'unione europea"
+    },
+    {
+      "label": "A. Soglia di Obbligo di Reporting (EED Threshold)",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L257",
+      "_origin": "ast",
+      "id": "docs_data_a_soglia_di_obbligo_di_reporting_eed_threshold",
+      "community": 17,
+      "norm_label": "a. soglia di obbligo di reporting (eed threshold)"
+    },
+    {
+      "label": "B. Classificazione Dimensionale Ufficiale UE",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L264",
+      "_origin": "ast",
+      "id": "docs_data_b_classificazione_dimensionale_ufficiale_ue",
+      "community": 17,
+      "norm_label": "b. classificazione dimensionale ufficiale ue"
+    },
+    {
+      "label": "C. Limite Limite PUE (EU Taxonomy & Leggi Nazionali EnEfG)",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L273",
+      "_origin": "ast",
+      "id": "docs_data_c_limite_limite_pue_eu_taxonomy_leggi_nazionali_enefg",
+      "community": 17,
+      "norm_label": "c. limite limite pue (eu taxonomy & leggi nazionali enefg)"
+    },
+    {
+      "label": "D. Obbligo di Recupero Calore (Waste Heat Readiness & ERF)",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L282",
+      "_origin": "ast",
+      "id": "docs_data_d_obbligo_di_recupero_calore_waste_heat_readiness_erf",
+      "community": 17,
+      "norm_label": "d. obbligo di recupero calore (waste heat readiness & erf)"
+    },
+    {
+      "label": "E. Limite di Efficienza Idrica (WUE Target)",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L290",
+      "_origin": "ast",
+      "id": "docs_data_e_limite_di_efficienza_idrica_wue_target",
+      "community": 17,
+      "norm_label": "e. limite di efficienza idrica (wue target)"
     },
     {
       "label": "e0-commands.md",
@@ -3491,9 +3551,9 @@
       "source_file": ".claude/settings.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_claude_settings_json",
-      "target": "claude_settings_hooks",
-      "confidence_score": 1.0
+      "target": "claude_settings_hooks"
     },
     {
       "relation": "contains",
@@ -3501,9 +3561,9 @@
       "source_file": ".claude/settings.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_claude_settings_json",
-      "target": "claude_settings_permissions",
-      "confidence_score": 1.0
+      "target": "claude_settings_permissions"
     },
     {
       "relation": "contains",
@@ -3511,9 +3571,9 @@
       "source_file": ".claude/settings.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_claude_settings_json",
-      "target": "claude_settings_schema",
-      "confidence_score": 1.0
+      "target": "claude_settings_schema"
     },
     {
       "relation": "contains",
@@ -3561,9 +3621,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_codemapper_cache_json",
-      "target": "hackaton_codemapper_cache_files",
-      "confidence_score": 1.0
+      "target": "hackaton_codemapper_cache_files"
     },
     {
       "relation": "contains",
@@ -3571,9 +3631,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_codemapper_cache_json",
-      "target": "hackaton_codemapper_cache_mtimes",
-      "confidence_score": 1.0
+      "target": "hackaton_codemapper_cache_mtimes"
     },
     {
       "relation": "contains",
@@ -3581,9 +3641,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_codemapper_cache_json",
-      "target": "hackaton_codemapper_cache_root",
-      "confidence_score": 1.0
+      "target": "hackaton_codemapper_cache_root"
     },
     {
       "relation": "contains",
@@ -3591,9 +3651,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_codemapper_cache_json",
-      "target": "hackaton_codemapper_cache_version",
-      "confidence_score": 1.0
+      "target": "hackaton_codemapper_cache_version"
     },
     {
       "relation": "contains",
@@ -3601,9 +3661,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hackaton_codemapper_cache_mtimes",
-      "target": "hackaton_codemapper_cache_mtimes_src_data_ingestion_download_datasets_py",
-      "confidence_score": 1.0
+      "target": "hackaton_codemapper_cache_mtimes_src_data_ingestion_download_datasets_py"
     },
     {
       "relation": "contains",
@@ -3611,9 +3671,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hackaton_codemapper_cache_files",
-      "target": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "confidence_score": 1.0
+      "target": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py"
     },
     {
       "relation": "contains",
@@ -3621,9 +3681,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_doc_end_line",
-      "confidence_score": 1.0
+      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_doc_end_line"
     },
     {
       "relation": "contains",
@@ -3631,9 +3691,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_doc_start_line",
-      "confidence_score": 1.0
+      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_doc_start_line"
     },
     {
       "relation": "contains",
@@ -3641,9 +3701,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_imports",
-      "confidence_score": 1.0
+      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_imports"
     },
     {
       "relation": "contains",
@@ -3651,9 +3711,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_module_doc",
-      "confidence_score": 1.0
+      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_module_doc"
     },
     {
       "relation": "contains",
@@ -3661,9 +3721,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L75",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_module_doc_full",
-      "confidence_score": 1.0
+      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_module_doc_full"
     },
     {
       "relation": "contains",
@@ -3671,9 +3731,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_path",
-      "confidence_score": 1.0
+      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_path"
     },
     {
       "relation": "contains",
@@ -3681,9 +3741,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_symbols",
-      "confidence_score": 1.0
+      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_symbols"
     },
     {
       "relation": "contains",
@@ -3722,9 +3782,9 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
-      "target": "artifacts_journey_before_end_state",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_end_state"
     },
     {
       "relation": "contains",
@@ -3732,9 +3792,9 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
-      "target": "artifacts_journey_before_journey_id",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_journey_id"
     },
     {
       "relation": "contains",
@@ -3742,9 +3802,9 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
-      "target": "artifacts_journey_before_persona_ref",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_persona_ref"
     },
     {
       "relation": "contains",
@@ -3752,9 +3812,9 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
-      "target": "artifacts_journey_before_quantified_costs",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_quantified_costs"
     },
     {
       "relation": "contains",
@@ -3762,9 +3822,9 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
-      "target": "artifacts_journey_before_stages",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_stages"
     },
     {
       "relation": "contains",
@@ -3772,9 +3832,9 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
-      "target": "artifacts_journey_before_subtitle",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_subtitle"
     },
     {
       "relation": "contains",
@@ -3782,9 +3842,9 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
-      "target": "artifacts_journey_before_title",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_title"
     },
     {
       "relation": "contains",
@@ -3792,9 +3852,9 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
-      "target": "artifacts_journey_before_total_analyst_hours_range",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_total_analyst_hours_range"
     },
     {
       "relation": "contains",
@@ -3802,9 +3862,9 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
-      "target": "artifacts_journey_before_total_elapsed_calendar_days_range",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_total_elapsed_calendar_days_range"
     },
     {
       "relation": "contains",
@@ -3812,9 +3872,9 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
-      "target": "artifacts_journey_before_trigger",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_trigger"
     },
     {
       "relation": "contains",
@@ -3822,9 +3882,9 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
-      "target": "artifacts_journey_before_version",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_version"
     },
     {
       "relation": "contains",
@@ -3902,9 +3962,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_json_artifacts_market_viability",
-      "target": "artifacts_market_viability_advisory_market",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_advisory_market"
     },
     {
       "relation": "contains",
@@ -3912,9 +3972,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L111",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_json_artifacts_market_viability",
-      "target": "artifacts_market_viability_competitors",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_competitors"
     },
     {
       "relation": "contains",
@@ -3922,9 +3982,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L174",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_json_artifacts_market_viability",
-      "target": "artifacts_market_viability_footnotes",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_footnotes"
     },
     {
       "relation": "contains",
@@ -3932,9 +3992,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_json_artifacts_market_viability",
-      "target": "artifacts_market_viability_market_context",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context"
     },
     {
       "relation": "contains",
@@ -3942,9 +4002,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_json_artifacts_market_viability",
-      "target": "artifacts_market_viability_meta",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_meta"
     },
     {
       "relation": "contains",
@@ -3952,9 +4012,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L162",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_json_artifacts_market_viability",
-      "target": "artifacts_market_viability_our_differentiation",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_our_differentiation"
     },
     {
       "relation": "contains",
@@ -3962,9 +4022,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_json_artifacts_market_viability",
-      "target": "artifacts_market_viability_pricing_models",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_pricing_models"
     },
     {
       "relation": "contains",
@@ -3972,9 +4032,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_json_artifacts_market_viability",
-      "target": "artifacts_market_viability_sam_derivation",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_sam_derivation"
     },
     {
       "relation": "contains",
@@ -3982,9 +4042,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_json_artifacts_market_viability",
-      "target": "artifacts_market_viability_sam_eur",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_sam_eur"
     },
     {
       "relation": "contains",
@@ -3992,9 +4052,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L58",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_json_artifacts_market_viability",
-      "target": "artifacts_market_viability_sam_label",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_sam_label"
     },
     {
       "relation": "contains",
@@ -4002,9 +4062,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_json_artifacts_market_viability",
-      "target": "artifacts_market_viability_som_derivation",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_som_derivation"
     },
     {
       "relation": "contains",
@@ -4012,9 +4072,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L70",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_json_artifacts_market_viability",
-      "target": "artifacts_market_viability_som_eur_year1",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_som_eur_year1"
     },
     {
       "relation": "contains",
@@ -4022,9 +4082,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_json_artifacts_market_viability",
-      "target": "artifacts_market_viability_som_eur_year3",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_som_eur_year3"
     },
     {
       "relation": "contains",
@@ -4032,9 +4092,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L72",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_json_artifacts_market_viability",
-      "target": "artifacts_market_viability_som_label",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_som_label"
     },
     {
       "relation": "contains",
@@ -4042,9 +4102,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_json_artifacts_market_viability",
-      "target": "artifacts_market_viability_tam_derivation",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_tam_derivation"
     },
     {
       "relation": "contains",
@@ -4052,9 +4112,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_json_artifacts_market_viability",
-      "target": "artifacts_market_viability_tam_eur",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_tam_eur"
     },
     {
       "relation": "contains",
@@ -4062,9 +4122,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_json_artifacts_market_viability",
-      "target": "artifacts_market_viability_tam_label",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_tam_label"
     },
     {
       "relation": "contains",
@@ -4072,9 +4132,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_meta",
-      "target": "artifacts_market_viability_meta_generated",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_meta_generated"
     },
     {
       "relation": "contains",
@@ -4082,9 +4142,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_meta",
-      "target": "artifacts_market_viability_meta_methodology_note",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_meta_methodology_note"
     },
     {
       "relation": "contains",
@@ -4092,9 +4152,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_meta",
-      "target": "artifacts_market_viability_meta_product",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_meta_product"
     },
     {
       "relation": "contains",
@@ -4102,9 +4162,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_meta",
-      "target": "artifacts_market_viability_meta_scope",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_meta_scope"
     },
     {
       "relation": "contains",
@@ -4112,9 +4172,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_colo_2024_2025_source",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_colo_2024_2025_source"
     },
     {
       "relation": "contains",
@@ -4122,9 +4182,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_colo_investment_growth_pct_2023",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_colo_investment_growth_pct_2023"
     },
     {
       "relation": "contains",
@@ -4132,9 +4192,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_colo_investment_source",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_colo_investment_source"
     },
     {
       "relation": "contains",
@@ -4142,9 +4202,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_colo_investment_usd_bn_2022",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_colo_investment_usd_bn_2022"
     },
     {
       "relation": "contains",
@@ -4152,9 +4212,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_colo_investment_usd_bn_2023",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_colo_investment_usd_bn_2023"
     },
     {
       "relation": "contains",
@@ -4162,9 +4222,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_colo_market_cagr_pct",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_colo_market_cagr_pct"
     },
     {
       "relation": "contains",
@@ -4172,9 +4232,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_colo_market_source",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_colo_market_source"
     },
     {
       "relation": "contains",
@@ -4182,9 +4242,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_colo_market_usd_bn_2023",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_colo_market_usd_bn_2023"
     },
     {
       "relation": "contains",
@@ -4192,9 +4252,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_colo_market_usd_bn_2028_forecast",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_colo_market_usd_bn_2028_forecast"
     },
     {
       "relation": "contains",
@@ -4202,9 +4262,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_colo_new_supply_mw_2023",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_colo_new_supply_mw_2023"
     },
     {
       "relation": "contains",
@@ -4212,9 +4272,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_colo_new_supply_mw_2024",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_colo_new_supply_mw_2024"
     },
     {
       "relation": "contains",
@@ -4222,9 +4282,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_colo_new_supply_mw_2025_projected",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_colo_new_supply_mw_2025_projected"
     },
     {
       "relation": "contains",
@@ -4232,9 +4292,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_colo_supply_source",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_colo_supply_source"
     },
     {
       "relation": "contains",
@@ -4242,9 +4302,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_colo_takeup_mw_2023",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_colo_takeup_mw_2023"
     },
     {
       "relation": "contains",
@@ -4252,9 +4312,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_colo_takeup_mw_2023_yoy_pct",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_colo_takeup_mw_2023_yoy_pct"
     },
     {
       "relation": "contains",
@@ -4262,9 +4322,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_colo_takeup_mw_2024",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_colo_takeup_mw_2024"
     },
     {
       "relation": "contains",
@@ -4272,9 +4332,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_colo_takeup_mw_2025_projected",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_colo_takeup_mw_2025_projected"
     },
     {
       "relation": "contains",
@@ -4282,9 +4342,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_dc_total_market_cagr_pct",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_dc_total_market_cagr_pct"
     },
     {
       "relation": "contains",
@@ -4292,9 +4352,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_dc_total_market_source",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_dc_total_market_source"
     },
     {
       "relation": "contains",
@@ -4302,9 +4362,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_dc_total_market_usd_bn_2025",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_dc_total_market_usd_bn_2025"
     },
     {
       "relation": "contains",
@@ -4312,9 +4372,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_context",
-      "target": "artifacts_market_viability_market_context_eu_dc_total_market_usd_bn_2031_forecast",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_context_eu_dc_total_market_usd_bn_2031_forecast"
     },
     {
       "relation": "contains",
@@ -4322,9 +4382,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_advisory_market",
-      "target": "artifacts_market_viability_advisory_market_global_dc_advisory_cagr_pct",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_advisory_market_global_dc_advisory_cagr_pct"
     },
     {
       "relation": "contains",
@@ -4332,9 +4392,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_advisory_market",
-      "target": "artifacts_market_viability_advisory_market_global_dc_advisory_caveat",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_advisory_market_global_dc_advisory_caveat"
     },
     {
       "relation": "contains",
@@ -4342,9 +4402,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_advisory_market",
-      "target": "artifacts_market_viability_advisory_market_global_dc_advisory_source",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_advisory_market_global_dc_advisory_source"
     },
     {
       "relation": "contains",
@@ -4352,9 +4412,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_advisory_market",
-      "target": "artifacts_market_viability_advisory_market_global_dc_advisory_usd_m_2025",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_advisory_market_global_dc_advisory_usd_m_2025"
     },
     {
       "relation": "contains",
@@ -4362,9 +4422,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_advisory_market",
-      "target": "artifacts_market_viability_advisory_market_global_dc_advisory_usd_m_2035_forecast",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_advisory_market_global_dc_advisory_usd_m_2035_forecast"
     },
     {
       "relation": "contains",
@@ -4372,9 +4432,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_tam_derivation",
-      "target": "artifacts_market_viability_tam_derivation_eu_dc_market_usd_bn",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_tam_derivation_eu_dc_market_usd_bn"
     },
     {
       "relation": "contains",
@@ -4382,9 +4442,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_tam_derivation",
-      "target": "artifacts_market_viability_tam_derivation_global_advisory_usd_m",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_tam_derivation_global_advisory_usd_m"
     },
     {
       "relation": "contains",
@@ -4392,9 +4452,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_tam_derivation",
-      "target": "artifacts_market_viability_tam_derivation_global_dc_market_estimate_usd_bn",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_tam_derivation_global_dc_market_estimate_usd_bn"
     },
     {
       "relation": "contains",
@@ -4402,9 +4462,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_tam_derivation",
-      "target": "artifacts_market_viability_tam_derivation_global_dc_market_note",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_tam_derivation_global_dc_market_note"
     },
     {
       "relation": "contains",
@@ -4412,9 +4472,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_tam_derivation",
-      "target": "artifacts_market_viability_tam_derivation_method",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_tam_derivation_method"
     },
     {
       "relation": "contains",
@@ -4422,9 +4482,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_tam_derivation",
-      "target": "artifacts_market_viability_tam_derivation_usd_eur_rate",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_tam_derivation_usd_eur_rate"
     },
     {
       "relation": "contains",
@@ -4432,9 +4492,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_tam_derivation",
-      "target": "artifacts_market_viability_tam_derivation_verdict",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_tam_derivation_verdict"
     },
     {
       "relation": "contains",
@@ -4442,9 +4502,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L61",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_sam_derivation",
-      "target": "artifacts_market_viability_sam_derivation_active_siting_decisions_per_year",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_sam_derivation_active_siting_decisions_per_year"
     },
     {
       "relation": "contains",
@@ -4452,9 +4512,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_sam_derivation",
-      "target": "artifacts_market_viability_sam_derivation_advisory_spend_per_project_eur",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_sam_derivation_advisory_spend_per_project_eur"
     },
     {
       "relation": "contains",
@@ -4462,9 +4522,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L66",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_sam_derivation",
-      "target": "artifacts_market_viability_sam_derivation_calculation",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_sam_derivation_calculation"
     },
     {
       "relation": "contains",
@@ -4472,9 +4532,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L64",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_sam_derivation",
-      "target": "artifacts_market_viability_sam_derivation_infra_fund_screening_events_per_year",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_sam_derivation_infra_fund_screening_events_per_year"
     },
     {
       "relation": "contains",
@@ -4482,9 +4542,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L65",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_sam_derivation",
-      "target": "artifacts_market_viability_sam_derivation_infra_fund_screening_spend_per_event_eur",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_sam_derivation_infra_fund_screening_spend_per_event_eur"
     },
     {
       "relation": "contains",
@@ -4492,9 +4552,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L60",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_sam_derivation",
-      "target": "artifacts_market_viability_sam_derivation_method",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_sam_derivation_method"
     },
     {
       "relation": "contains",
@@ -4502,9 +4562,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L63",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_sam_derivation",
-      "target": "artifacts_market_viability_sam_derivation_pre_feasibility_share_of_total_advisory_pct",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_sam_derivation_pre_feasibility_share_of_total_advisory_pct"
     },
     {
       "relation": "contains",
@@ -4512,9 +4572,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L67",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_sam_derivation",
-      "target": "artifacts_market_viability_sam_derivation_scope_note",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_sam_derivation_scope_note"
     },
     {
       "relation": "contains",
@@ -4522,9 +4582,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_som_derivation",
-      "target": "artifacts_market_viability_som_derivation_benchmark",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_som_derivation_benchmark"
     },
     {
       "relation": "contains",
@@ -4532,9 +4592,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_som_derivation",
-      "target": "artifacts_market_viability_som_derivation_sam_capture_year1_pct",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_som_derivation_sam_capture_year1_pct"
     },
     {
       "relation": "contains",
@@ -4542,9 +4602,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_som_derivation",
-      "target": "artifacts_market_viability_som_derivation_sam_capture_year3_pct",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_som_derivation_sam_capture_year3_pct"
     },
     {
       "relation": "contains",
@@ -4552,9 +4612,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_som_derivation",
-      "target": "artifacts_market_viability_som_derivation_year1",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_som_derivation_year1"
     },
     {
       "relation": "contains",
@@ -4562,9 +4622,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L75",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_som_derivation",
-      "target": "artifacts_market_viability_som_derivation_year3",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_som_derivation_year3"
     },
     {
       "relation": "contains",
@@ -4572,9 +4632,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L164",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_our_differentiation",
-      "target": "artifacts_market_viability_our_differentiation_key_moats",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_our_differentiation_key_moats"
     },
     {
       "relation": "contains",
@@ -4582,9 +4642,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L163",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_our_differentiation",
-      "target": "artifacts_market_viability_our_differentiation_summary",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_our_differentiation_summary"
     },
     {
       "relation": "contains",
@@ -4592,9 +4652,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L220",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_footnotes",
-      "target": "artifacts_market_viability_footnotes_derived_estimates_methodology",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_footnotes_derived_estimates_methodology"
     },
     {
       "relation": "contains",
@@ -4602,9 +4662,9 @@
       "source_file": "artifacts/market-viability.json",
       "source_location": "L175",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_footnotes",
-      "target": "artifacts_market_viability_footnotes_sources_confirmed_via_direct_fetch",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_footnotes_sources_confirmed_via_direct_fetch"
     },
     {
       "relation": "contains",
@@ -4652,9 +4712,9 @@
       "source_file": "project-management/open-pm.sh",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "project_management_open_pm",
-      "target": "c_users_gabbo_desktop_hackathon_monaco_project_antigravity_project_management_open_pm_sh__entry",
-      "confidence_score": 1.0
+      "target": "c_users_gabbo_desktop_hackathon_monaco_project_antigravity_project_management_open_pm_sh__entry"
     },
     {
       "relation": "contains",
@@ -4842,9 +4902,9 @@
       "source_file": "src/data_ingestion/download_datasets.py",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_src_data_ingestion_download_datasets_py",
-      "target": "data_ingestion_download_datasets_create_folders",
-      "confidence_score": 1.0
+      "target": "data_ingestion_download_datasets_create_folders"
     },
     {
       "relation": "contains",
@@ -4852,9 +4912,9 @@
       "source_file": "src/data_ingestion/download_datasets.py",
       "source_location": "L83",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_src_data_ingestion_download_datasets_py",
-      "target": "data_ingestion_download_datasets_create_iea_ai_reference",
-      "confidence_score": 1.0
+      "target": "data_ingestion_download_datasets_create_iea_ai_reference"
     },
     {
       "relation": "contains",
@@ -4862,9 +4922,9 @@
       "source_file": "src/data_ingestion/download_datasets.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_src_data_ingestion_download_datasets_py",
-      "target": "data_ingestion_download_datasets_download_file",
-      "confidence_score": 1.0
+      "target": "data_ingestion_download_datasets_download_file"
     },
     {
       "relation": "contains",
@@ -4872,9 +4932,9 @@
       "source_file": "src/data_ingestion/download_datasets.py",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_src_data_ingestion_download_datasets_py",
-      "target": "data_ingestion_download_datasets_fetch_osm_power_grid",
-      "confidence_score": 1.0
+      "target": "data_ingestion_download_datasets_fetch_osm_power_grid"
     },
     {
       "relation": "contains",
@@ -4882,9 +4942,9 @@
       "source_file": ".agents/rules/graphify.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "rules_graphify",
-      "target": "rules_graphify_graphify",
-      "confidence_score": 1.0
+      "target": "rules_graphify_graphify"
     },
     {
       "relation": "contains",
@@ -4962,9 +5022,9 @@
       "source_file": ".agents/workflows/graphify.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_graphify",
-      "target": "workflows_graphify_workflow_graphify",
-      "confidence_score": 1.0
+      "target": "workflows_graphify_workflow_graphify"
     },
     {
       "relation": "contains",
@@ -4972,9 +5032,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_claude_md",
-      "target": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
-      "confidence_score": 1.0
+      "target": "hackaton_claude_dc_siting_intelligence_tool_hackathon"
     },
     {
       "relation": "contains",
@@ -4982,9 +5042,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
-      "target": "hackaton_claude_data_sources",
-      "confidence_score": 1.0
+      "target": "hackaton_claude_data_sources"
     },
     {
       "relation": "contains",
@@ -4992,9 +5052,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
-      "target": "hackaton_claude_dev_commands",
-      "confidence_score": 1.0
+      "target": "hackaton_claude_dev_commands"
     },
     {
       "relation": "contains",
@@ -5002,9 +5062,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
-      "target": "hackaton_claude_important",
-      "confidence_score": 1.0
+      "target": "hackaton_claude_important"
     },
     {
       "relation": "contains",
@@ -5012,9 +5072,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
-      "target": "hackaton_claude_key_constraints",
-      "confidence_score": 1.0
+      "target": "hackaton_claude_key_constraints"
     },
     {
       "relation": "contains",
@@ -5022,9 +5082,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
-      "target": "hackaton_claude_project_layout",
-      "confidence_score": 1.0
+      "target": "hackaton_claude_project_layout"
     },
     {
       "relation": "contains",
@@ -5032,9 +5092,9 @@
       "source_file": "artifacts/journey-before.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_md",
-      "target": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research"
     },
     {
       "relation": "contains",
@@ -5232,9 +5292,9 @@
       "source_file": "artifacts/jtbd.md",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_jtbd_jobs_to_be_done_dc_siting_intelligence_tool",
-      "target": "artifacts_jtbd_what_this_tool_actually_does_and_does_not_do",
-      "confidence_score": 1.0
+      "target": "artifacts_jtbd_what_this_tool_actually_does_and_does_not_do"
     },
     {
       "relation": "contains",
@@ -5242,9 +5302,9 @@
       "source_file": "artifacts/jtbd.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_jtbd_jtbd_001_jordan_functional",
-      "target": "artifacts_jtbd_compare_eu_zones_on_the_variables_that_actually_differ_by_location",
-      "confidence_score": 1.0
+      "target": "artifacts_jtbd_compare_eu_zones_on_the_variables_that_actually_differ_by_location"
     },
     {
       "relation": "contains",
@@ -5252,9 +5312,9 @@
       "source_file": "artifacts/jtbd.md",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_jtbd_jtbd_002_jordan_emotional",
-      "target": "artifacts_jtbd_back_the_ranking_with_spot_specific_differentials_not_judgment",
-      "confidence_score": 1.0
+      "target": "artifacts_jtbd_back_the_ranking_with_spot_specific_differentials_not_judgment"
     },
     {
       "relation": "contains",
@@ -5262,9 +5322,9 @@
       "source_file": "artifacts/jtbd.md",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_jtbd_jtbd_003_cfo_ic_member_financial",
-      "target": "artifacts_jtbd_give_me_the_location_specific_deltas_to_plug_into_our_model",
-      "confidence_score": 1.0
+      "target": "artifacts_jtbd_give_me_the_location_specific_deltas_to_plug_into_our_model"
     },
     {
       "relation": "contains",
@@ -5272,9 +5332,9 @@
       "source_file": "artifacts/jtbd.md",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_jtbd_jtbd_004_ceo_social_decision",
-      "target": "artifacts_jtbd_one_ranked_winner_which_location_wins_on_the_variables_that_differ",
-      "confidence_score": 1.0
+      "target": "artifacts_jtbd_one_ranked_winner_which_location_wins_on_the_variables_that_differ"
     },
     {
       "relation": "contains",
@@ -5282,9 +5342,9 @@
       "source_file": "artifacts/market-viability.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_md_artifacts_market_viability",
-      "target": "artifacts_market_viability_market_viability_dc_siting_intelligence_tool_invertix",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_viability_dc_siting_intelligence_tool_invertix"
     },
     {
       "relation": "contains",
@@ -5292,9 +5352,9 @@
       "source_file": "artifacts/market-viability.md",
       "source_location": "L80",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_viability_dc_siting_intelligence_tool_invertix",
-      "target": "artifacts_market_viability_competitive_landscape",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_competitive_landscape"
     },
     {
       "relation": "contains",
@@ -5302,9 +5362,9 @@
       "source_file": "artifacts/market-viability.md",
       "source_location": "L139",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_viability_dc_siting_intelligence_tool_invertix",
-      "target": "artifacts_market_viability_footnotes_sources",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_footnotes_sources"
     },
     {
       "relation": "contains",
@@ -5312,9 +5372,9 @@
       "source_file": "artifacts/market-viability.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_viability_dc_siting_intelligence_tool_invertix",
-      "target": "artifacts_market_viability_market_sizing",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_market_sizing"
     },
     {
       "relation": "contains",
@@ -5322,9 +5382,9 @@
       "source_file": "artifacts/market-viability.md",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_viability_dc_siting_intelligence_tool_invertix",
-      "target": "artifacts_market_viability_pricing_model",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_pricing_model"
     },
     {
       "relation": "contains",
@@ -5332,9 +5392,9 @@
       "source_file": "artifacts/market-viability.md",
       "source_location": "L124",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_viability_dc_siting_intelligence_tool_invertix",
-      "target": "artifacts_market_viability_summary",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_summary"
     },
     {
       "relation": "contains",
@@ -5342,9 +5402,9 @@
       "source_file": "artifacts/market-viability.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_viability_dc_siting_intelligence_tool_invertix",
-      "target": "artifacts_market_viability_the_market_opportunity",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_the_market_opportunity"
     },
     {
       "relation": "contains",
@@ -5352,9 +5412,9 @@
       "source_file": "artifacts/market-viability.md",
       "source_location": "L115",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_viability_dc_siting_intelligence_tool_invertix",
-      "target": "artifacts_market_viability_why_now",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_why_now"
     },
     {
       "relation": "contains",
@@ -5362,9 +5422,9 @@
       "source_file": "artifacts/market-viability.md",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_sizing",
-      "target": "artifacts_market_viability_sam_serviceable_addressable_market_50m_yr",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_sam_serviceable_addressable_market_50m_yr"
     },
     {
       "relation": "contains",
@@ -5372,9 +5432,9 @@
       "source_file": "artifacts/market-viability.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_sizing",
-      "target": "artifacts_market_viability_som_serviceable_obtainable_market_0_9m_arr_year_1_4m_arr_year_3",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_som_serviceable_obtainable_market_0_9m_arr_year_1_4m_arr_year_3"
     },
     {
       "relation": "contains",
@@ -5382,9 +5442,9 @@
       "source_file": "artifacts/market-viability.md",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_market_sizing",
-      "target": "artifacts_market_viability_tam_total_addressable_market_175m_yr",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_tam_total_addressable_market_175m_yr"
     },
     {
       "relation": "contains",
@@ -5392,9 +5452,9 @@
       "source_file": "artifacts/market-viability.md",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_pricing_model",
-      "target": "artifacts_market_viability_option_1_per_query_1_500_5_000",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_option_1_per_query_1_500_5_000"
     },
     {
       "relation": "contains",
@@ -5402,9 +5462,9 @@
       "source_file": "artifacts/market-viability.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_pricing_model",
-      "target": "artifacts_market_viability_option_2_annual_subscription_18k_180k_yr",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_option_2_annual_subscription_18k_180k_yr"
     },
     {
       "relation": "contains",
@@ -5412,9 +5472,9 @@
       "source_file": "artifacts/market-viability.md",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_pricing_model",
-      "target": "artifacts_market_viability_option_3_white_label_api_250k_500k_yr",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_option_3_white_label_api_250k_500k_yr"
     },
     {
       "relation": "contains",
@@ -5422,9 +5482,9 @@
       "source_file": "artifacts/market-viability.md",
       "source_location": "L93",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_competitive_landscape",
-      "target": "artifacts_market_viability_the_gap_no_one_fills",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_the_gap_no_one_fills"
     },
     {
       "relation": "contains",
@@ -5432,9 +5492,9 @@
       "source_file": "artifacts/market-viability.md",
       "source_location": "L82",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_competitive_landscape",
-      "target": "artifacts_market_viability_what_exists_today_and_where_each_falls_short",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_what_exists_today_and_where_each_falls_short"
     },
     {
       "relation": "contains",
@@ -5442,9 +5502,9 @@
       "source_file": "artifacts/market-viability.md",
       "source_location": "L104",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_market_viability_competitive_landscape",
-      "target": "artifacts_market_viability_why_we_win_against_consultants",
-      "confidence_score": 1.0
+      "target": "artifacts_market_viability_why_we_win_against_consultants"
     },
     {
       "relation": "contains",
@@ -5452,9 +5512,9 @@
       "source_file": "artifacts/persona.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_persona_md",
-      "target": "artifacts_persona_persona_dc_infrastructure_decision_maker",
-      "confidence_score": 1.0
+      "target": "artifacts_persona_persona_dc_infrastructure_decision_maker"
     },
     {
       "relation": "contains",
@@ -5562,9 +5622,9 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_personas_md",
-      "target": "artifacts_personas_dc_siting_intelligence_tool_user_personas",
-      "confidence_score": 1.0
+      "target": "artifacts_personas_dc_siting_intelligence_tool_user_personas"
     },
     {
       "relation": "contains",
@@ -5682,9 +5742,9 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_stakeholder_map_md",
-      "target": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
-      "confidence_score": 1.0
+      "target": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool"
     },
     {
       "relation": "contains",
@@ -6110,6 +6170,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/data.md",
+      "source_location": "L253",
+      "weight": 1.0,
+      "source": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
+      "target": "docs_data_7_vincoli_di_compliance_e_limiti_normativi_dell_unione_europea",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
       "source_location": "L143",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6172,9 +6242,9 @@
       "source_file": "docs/data.md",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_3_pypsa_eur_network_data",
-      "target": "docs_data_a_caratteristiche_dei_dati_e_struttura_delle_componenti",
-      "confidence_score": 1.0
+      "target": "docs_data_a_caratteristiche_dei_dati_e_struttura_delle_componenti"
     },
     {
       "relation": "contains",
@@ -6182,9 +6252,9 @@
       "source_file": "docs/data.md",
       "source_location": "L137",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_3_pypsa_eur_network_data",
-      "target": "docs_data_b_opportunit\u00e0_applicative_e_formule_chiave",
-      "confidence_score": 1.0
+      "target": "docs_data_b_opportunit\u00e0_applicative_e_formule_chiave"
     },
     {
       "relation": "contains",
@@ -6192,9 +6262,9 @@
       "source_file": "docs/data.md",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_a_caratteristiche_dei_dati_e_struttura_delle_componenti",
-      "target": "docs_data_1_nodi_buses",
-      "confidence_score": 1.0
+      "target": "docs_data_1_nodi_buses"
     },
     {
       "relation": "contains",
@@ -6202,9 +6272,9 @@
       "source_file": "docs/data.md",
       "source_location": "L87",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_a_caratteristiche_dei_dati_e_struttura_delle_componenti",
-      "target": "docs_data_2_linee_di_trasmissione_lines_e_link_dc_links",
-      "confidence_score": 1.0
+      "target": "docs_data_2_linee_di_trasmissione_lines_e_link_dc_links"
     },
     {
       "relation": "contains",
@@ -6212,9 +6282,9 @@
       "source_file": "docs/data.md",
       "source_location": "L105",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_a_caratteristiche_dei_dati_e_struttura_delle_componenti",
-      "target": "docs_data_3_generatori_generators",
-      "confidence_score": 1.0
+      "target": "docs_data_3_generatori_generators"
     },
     {
       "relation": "contains",
@@ -6222,9 +6292,9 @@
       "source_file": "docs/data.md",
       "source_location": "L117",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_a_caratteristiche_dei_dati_e_struttura_delle_componenti",
-      "target": "docs_data_4_unit\u00e0_di_accumulo_storage_units_stores",
-      "confidence_score": 1.0
+      "target": "docs_data_4_unit\u00e0_di_accumulo_storage_units_stores"
     },
     {
       "relation": "contains",
@@ -6232,9 +6302,9 @@
       "source_file": "docs/data.md",
       "source_location": "L129",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_a_caratteristiche_dei_dati_e_struttura_delle_componenti",
-      "target": "docs_data_5_trasformatori_transformers",
-      "confidence_score": 1.0
+      "target": "docs_data_5_trasformatori_transformers"
     },
     {
       "relation": "contains",
@@ -6242,9 +6312,9 @@
       "source_file": "docs/data.md",
       "source_location": "L168",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_4_google_alphaearth_satellite_embeddings_in_gee",
-      "target": "docs_data_a_caratteristiche_dei_dati_168",
-      "confidence_score": 1.0
+      "target": "docs_data_a_caratteristiche_dei_dati_168"
     },
     {
       "relation": "contains",
@@ -6252,9 +6322,9 @@
       "source_file": "docs/data.md",
       "source_location": "L174",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_4_google_alphaearth_satellite_embeddings_in_gee",
-      "target": "docs_data_b_opportunit\u00e0_applicative_174",
-      "confidence_score": 1.0
+      "target": "docs_data_b_opportunit\u00e0_applicative_174"
     },
     {
       "relation": "contains",
@@ -6262,9 +6332,9 @@
       "source_file": "docs/data.md",
       "source_location": "L184",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_5_iea_energy_ai_reference_specifications",
-      "target": "docs_data_a_caratteristiche_dei_dati_184",
-      "confidence_score": 1.0
+      "target": "docs_data_a_caratteristiche_dei_dati_184"
     },
     {
       "relation": "contains",
@@ -6272,9 +6342,9 @@
       "source_file": "docs/data.md",
       "source_location": "L190",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_5_iea_energy_ai_reference_specifications",
-      "target": "docs_data_b_opportunit\u00e0_applicative_190",
-      "confidence_score": 1.0
+      "target": "docs_data_b_opportunit\u00e0_applicative_190"
     },
     {
       "relation": "contains",
@@ -6299,12 +6369,62 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L257",
+      "weight": 1.0,
+      "source": "docs_data_7_vincoli_di_compliance_e_limiti_normativi_dell_unione_europea",
+      "target": "docs_data_a_soglia_di_obbligo_di_reporting_eed_threshold",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L264",
+      "weight": 1.0,
+      "source": "docs_data_7_vincoli_di_compliance_e_limiti_normativi_dell_unione_europea",
+      "target": "docs_data_b_classificazione_dimensionale_ufficiale_ue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L273",
+      "weight": 1.0,
+      "source": "docs_data_7_vincoli_di_compliance_e_limiti_normativi_dell_unione_europea",
+      "target": "docs_data_c_limite_limite_pue_eu_taxonomy_leggi_nazionali_enefg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L282",
+      "weight": 1.0,
+      "source": "docs_data_7_vincoli_di_compliance_e_limiti_normativi_dell_unione_europea",
+      "target": "docs_data_d_obbligo_di_recupero_calore_waste_heat_readiness_erf",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L290",
+      "weight": 1.0,
+      "source": "docs_data_7_vincoli_di_compliance_e_limiti_normativi_dell_unione_europea",
+      "target": "docs_data_e_limite_di_efficienza_idrica_wue_target",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/e0-commands.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_docs_e0_commands_md",
-      "target": "docs_e0_commands_e0_task_commands_run_each_in_its_own_terminal",
-      "confidence_score": 1.0
+      "target": "docs_e0_commands_e0_task_commands_run_each_in_its_own_terminal"
     },
     {
       "relation": "contains",
@@ -6362,9 +6482,9 @@
       "source_file": "docs/preliminary-analysis-draft.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_preliminary_analysis_draft",
-      "target": "docs_preliminary_analysis_draft_preliminary_analysis_dc_siting_intelligence_tool",
-      "confidence_score": 1.0
+      "target": "docs_preliminary_analysis_draft_preliminary_analysis_dc_siting_intelligence_tool"
     },
     {
       "relation": "contains",
@@ -6372,9 +6492,9 @@
       "source_file": "docs/preliminary-analysis-draft.md",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_preliminary_analysis_draft_preliminary_analysis_dc_siting_intelligence_tool",
-      "target": "docs_preliminary_analysis_draft_data_design_insights",
-      "confidence_score": 1.0
+      "target": "docs_preliminary_analysis_draft_data_design_insights"
     },
     {
       "relation": "contains",
@@ -6382,9 +6502,9 @@
       "source_file": "docs/preliminary-analysis-draft.md",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_preliminary_analysis_draft_preliminary_analysis_dc_siting_intelligence_tool",
-      "target": "docs_preliminary_analysis_draft_dev_critical_path",
-      "confidence_score": 1.0
+      "target": "docs_preliminary_analysis_draft_dev_critical_path"
     },
     {
       "relation": "contains",
@@ -6392,9 +6512,9 @@
       "source_file": "docs/preliminary-analysis-draft.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_preliminary_analysis_draft_preliminary_analysis_dc_siting_intelligence_tool",
-      "target": "docs_preliminary_analysis_draft_granularity_two_independent_axes",
-      "confidence_score": 1.0
+      "target": "docs_preliminary_analysis_draft_granularity_two_independent_axes"
     },
     {
       "relation": "contains",
@@ -6402,9 +6522,9 @@
       "source_file": "docs/preliminary-analysis-draft.md",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_preliminary_analysis_draft_preliminary_analysis_dc_siting_intelligence_tool",
-      "target": "docs_preliminary_analysis_draft_quantified_pain_pitch_numbers",
-      "confidence_score": 1.0
+      "target": "docs_preliminary_analysis_draft_quantified_pain_pitch_numbers"
     },
     {
       "relation": "contains",
@@ -6412,9 +6532,9 @@
       "source_file": "docs/preliminary-analysis-draft.md",
       "source_location": "L98",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_preliminary_analysis_draft_preliminary_analysis_dc_siting_intelligence_tool",
-      "target": "docs_preliminary_analysis_draft_solution_design_hints",
-      "confidence_score": 1.0
+      "target": "docs_preliminary_analysis_draft_solution_design_hints"
     },
     {
       "relation": "contains",
@@ -6422,9 +6542,9 @@
       "source_file": "docs/preliminary-analysis-draft.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_preliminary_analysis_draft_preliminary_analysis_dc_siting_intelligence_tool",
-      "target": "docs_preliminary_analysis_draft_who_buys_who_uses_what_kills_the_deal",
-      "confidence_score": 1.0
+      "target": "docs_preliminary_analysis_draft_who_buys_who_uses_what_kills_the_deal"
     },
     {
       "relation": "contains",
@@ -6432,9 +6552,9 @@
       "source_file": "docs/preliminary-analysis-draft.md",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_preliminary_analysis_draft_granularity_two_independent_axes",
-      "target": "docs_preliminary_analysis_draft_spatial_granularity",
-      "confidence_score": 1.0
+      "target": "docs_preliminary_analysis_draft_spatial_granularity"
     },
     {
       "relation": "contains",
@@ -6442,9 +6562,9 @@
       "source_file": "docs/preliminary-analysis-draft.md",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_preliminary_analysis_draft_granularity_two_independent_axes",
-      "target": "docs_preliminary_analysis_draft_temporal_granularity",
-      "confidence_score": 1.0
+      "target": "docs_preliminary_analysis_draft_temporal_granularity"
     },
     {
       "relation": "contains",
@@ -6452,9 +6572,9 @@
       "source_file": "docs/tasks-draft.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_docs_tasks_draft_md",
-      "target": "docs_tasks_draft_poc_task_draft_dc_siting_intelligence_map",
-      "confidence_score": 1.0
+      "target": "docs_tasks_draft_poc_task_draft_dc_siting_intelligence_map"
     },
     {
       "relation": "contains",
@@ -6618,5 +6738,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a7832918c206ff0c48aaeb2fab25daa060ac79b4"
+  "built_at_commit": "10ac5a45db1ba757a02f103053a4be9f35d3be9b"
 }

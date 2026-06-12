@@ -247,3 +247,50 @@ L'integrazione di questi cinque database presenta significative discrepanze di r
 | **PyPSA-Eur** | Nodo di rete | Headroom (MW), N-1 security | Validazione fattibilità fisica allacciamento | Livello di congestione e tempi di attesa della rete |
 | **AlphaEarth** | Coordinate pixel | Temperatura, Solare/Vento $CF$ | Ottimizzazione PUE (cooling) e On-site Gen | Dimensionamento solare locale ed efficienza PUE |
 | **IEA Specs** | Configurazione IT | Profili di carico hardware, PUE | Calcolo dei requisiti di potenza totale | MW totali contrattualizzati richiesti |
+
+---
+
+## 7. Vincoli di Compliance e Limiti Normativi dell'Unione Europea
+
+L'integrazione delle Direttive Europee (in particolare la Direttiva Efficienza Energetica recast EED 2023/1791, i Regolamenti Delegati 2024/1364 e bozza 2026, e la Tassonomia UE per la Finanza Sostenibile) introduce vincoli normativi rigidi che condizionano direttamente le variabili e le scelte del nostro modello di siting.
+
+### A. Soglia di Obbligo di Reporting (EED Threshold)
+*   **Variabile Condizionata**: Potenza computazionale nominale inserita dall'utente ($P_{\text{DC}}$ in $\text{MW}$).
+*   **Regola di Compliance**: La direttiva EED impone l'obbligo di rendicontazione dei dati ambientali al database europeo per tutti i data center con potenza IT $\ge 500\text{ kW}$ ($0.5\text{ MW}$).
+*   **Vincolo nel Modello**:
+    $$\text{Status}_{\text{Reporting}}(P_{\text{DC}}) = \begin{cases} \text{MANDATORY} & \text{se } P_{\text{DC}} \ge 0.5 \text{ MW} \\ \text{VOLUNTARY} & \text{se } P_{\text{DC}} < 0.5 \text{ MW} \end{cases}$$
+    I data center in regime *Mandatory* ricevono un indicatore di complessità burocratica e l'obbligo di tracciare PUE, WUE, ERF e REF per l'ottenimento dell'**Etichetta di Sostenibilità Europea**.
+
+### B. Classificazione Dimensionale Ufficiale UE
+*   **Variabile Condizionata**: $P_{\text{DC}}$ (IT load in $\text{MW}$).
+*   **Regola di Compliance (Allegato IV del Regolamento Delegato)**: I data center vengono categorizzati in 5 classi dimensionali che determinano i cluster di benchmarking dell'etichetta europea:
+    *   **Molto Piccolo (Very Small)**: $0.1 \text{ MW} \le P_{\text{DC}} < 0.5 \text{ MW}$
+    *   **Piccolo (Small)**: $0.5 \text{ MW} \le P_{\text{DC}} < 1.0 \text{ MW}$
+    *   **Medio (Medium)**: $1.0 \text{ MW} \le P_{\text{DC}} < 2.0 \text{ MW}$
+    *   **Grande (Large)**: $2.0 \text{ MW} \le P_{\text{DC}} < 10.0 \text{ MW}$
+    *   **Molto Grande (Very Large)**: $P_{\text{DC}} \ge 10.0 \text{ MW}$
+
+### C. Limite Limite PUE (EU Taxonomy & Leggi Nazionali EnEfG)
+*   **Variabile Condizionata**: Power Usage Effectiveness previsto del sito ($\text{PUE}_{\text{pred}}$).
+*   **Regola di Compliance**: Per accedere alla finanza sostenibile (allineamento *EU Taxonomy*) e per rispettare le leggi nazionali degli Stati membri che implementano la direttiva (es. la legge tedesca EnEfG per impianti operativi post 1 Luglio 2026), il PUE deve rispettare un limite massimo stringente.
+*   **Vincolo nel Modello**:
+    $$\text{PUE}_{\text{pred}} \le 1.30 \quad (\text{Target Assoluto per nuovi DC})$$
+    *   Se $\text{PUE}_{\text{pred}} \le 1.30 \rightarrow$ **TAXONOMY ALIGNED** (Status Verde, sblocca sconti sul debito dal 0.5% al 1.5%).
+    *   Se $\text{PUE}_{\text{pred}} > 1.30 \rightarrow$ **COMPLIANCE RISK** (Status Rosso, esclude o penalizza gravemente il sito in mercati regolamentati come la Germania).
+    *Il PUE orario viene stimato correlando gli embeddings climatici di AlphaEarth (temperatura di bulbo umido locale) con il fabbisogno energetico dei sistemi di raffreddamento.*
+
+### D. Obbligo di Recupero Calore (Waste Heat Readiness & ERF)
+*   **Variabile Condizionata**: Energy Reuse Factor ($\text{ERF} = E_{\text{REUSE}} / E_{\text{DC}}$).
+*   **Regola di Compliance**: Tutti i nuovi data center sopra $1\text{ MW}$ devono essere predisposti per il riutilizzo del calore di scarto (*waste heat reuse ready*), e le normative locali impongono quote minime di riutilizzo effettivo (es. $\text{ERF} \ge 10\text{-}20\%$).
+*   **Vincolo nel Modello**:
+    Il modello di siting esegue una query spaziale tramite OSM per verificare la presenza di reti di teleriscaldamento esistenti o pianificate, o consumatori industriali/agricoli di calore entro un raggio di $2\text{ km}$ dal nodo.
+    $$\text{Potenziale}_{\text{ERF}}(n) = \begin{cases} \ge 20\% & \text{se presente teleriscaldamento } \le 2\text{ km} \\ 0\% & \text{se isolato} \end{cases}$$
+    Se $P_{\text{DC}} \ge 1\text{ MW}$ e $\text{Potenziale}_{\text{ERF}}(n) = 0\%$, il sito riceve una **penalizzazione del 30%** sul punteggio di compliance e un avviso di rischio di autorizzazione.
+
+### E. Limite di Efficienza Idrica (WUE Target)
+*   **Variabile Condizionata**: Water Usage Effectiveness ($\text{WUE}$ in $\text{m}^3/\text{MWh}$ o $\text{L/kWh}$).
+*   **Regola di Compliance (Climate Neutral Data Centre Pact)**: Allineamento con l'accordo di neutralità climatica supportato dalla Commissione Europea.
+*   **Vincolo nel Modello**:
+    $$\text{WUE} \le 0.4 \quad (\text{equivalente a } 0.4 \text{ litri per kWh consumato dall'IT})$$
+    Se il sistema di condizionamento previsto per il sito richiede raffreddamento evaporativo (es. torri evaporative per climi caldi) e la risorsa idrica locale (mappata tramite indici di stress idrico in AlphaEarth) è scarsa, il WUE orario calcolato supererà $0.4$, attivando un alert di **"Water Stress Vulnerability"**.
+

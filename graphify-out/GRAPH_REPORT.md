@@ -1,16 +1,16 @@
 # Graph Report - Project_Antigravity  (2026-06-13)
 
 ## Corpus Check
-- 33 files · ~33,281 words
+- 33 files · ~33,932 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 346 nodes · 313 edges · 36 communities (33 shown, 3 thin omitted)
+- 352 nodes · 319 edges · 37 communities (34 shown, 3 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a7832918`
+- Built from commit: `10ac5a45`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -42,15 +42,16 @@
 - [[_COMMUNITY_Community 30|Community 30]]
 - [[_COMMUNITY_Community 31|Community 31]]
 - [[_COMMUNITY_Community 32|Community 32]]
+- [[_COMMUNITY_Community 36|Community 36]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `market_context` - 22 edges
 2. `AS-IS Customer Journey: EU Data Center Site Research` - 14 edges
 3. `Persona: DC Infrastructure Decision-Maker` - 11 edges
 4. `Challenge: Data-Center Siting & Power (Invertix)` - 11 edges
-5. `Epics & Tasks` - 10 edges
-6. `sam_derivation` - 9 edges
-7. `Analisi Dettagliata dei Database e Opportunità Applicative` - 9 edges
+5. `Analisi Dettagliata dei Database e Opportunità Applicative` - 10 edges
+6. `Epics & Tasks` - 10 edges
+7. `sam_derivation` - 9 edges
 8. `src/data_ingestion/download_datasets.py` - 8 edges
 9. `quantified_costs` - 8 edges
 10. `tam_derivation` - 8 edges
@@ -61,7 +62,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (36 total, 3 thin omitted)
+## Communities (37 total, 3 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.17
@@ -112,8 +113,8 @@ Cohesion: 0.25
 Nodes (7): 1. Valutazione Multicriterio (MCDA), 2. Tabella dei Dati di Sintesi, Analytical Siting Evaluator, Errori Comuni da Evitare, Overview, Regole di Comportamento (Behavioral Rules), Workflow (Procedura di Analisi)
 
 ### Community 17 - "Community 17"
-Cohesion: 0.07
-Nodes (26): 1. Ember / Our World in Data (OWID) Energy Database, 1. Nodi (Buses), 2. Linee di Trasmissione (Lines) e Link DC (Links), 2. OpenStreetMap (OSM) via Overpass API, 3. Generatori (Generators), 3. PyPSA-Eur Network Data, 4. Google AlphaEarth (Satellite Embeddings in GEE), 4. Unità di Accumulo (Storage Units & Stores) (+18 more)
+Cohesion: 0.08
+Nodes (24): 1. Ember / Our World in Data (OWID) Energy Database, 2. OpenStreetMap (OSM) via Overpass API, 4. Google AlphaEarth (Satellite Embeddings in GEE), 5. IEA Energy & AI Reference Specifications, 6. Analisi dei Mismatch di Granularità e Impatti sul Progetto, 7. Vincoli di Compliance e Limiti Normativi dell'Unione Europea, A. Caratteristiche dei Dati, A. Caratteristiche dei Dati (+16 more)
 
 ### Community 19 - "Community 19"
 Cohesion: 0.29
@@ -159,8 +160,12 @@ Nodes (8): tam_derivation, eu_dc_market_usd_bn, global_advisory_usd_m, global_dc
 Cohesion: 0.29
 Nodes (6): Data Sources, DC Siting Intelligence Tool — Hackathon, Dev Commands, Important, Key Constraints, Project Layout
 
+### Community 36 - "Community 36"
+Cohesion: 0.25
+Nodes (8): 1. Nodi (Buses), 2. Linee di Trasmissione (Lines) e Link DC (Links), 3. Generatori (Generators), 3. PyPSA-Eur Network Data, 4. Unità di Accumulo (Storage Units & Stores), 5. Trasformatori (Transformers), A. Caratteristiche dei Dati e Struttura delle Componenti, B. Opportunità Applicative e Formule Chiave
+
 ## Knowledge Gaps
-- **254 isolated node(s):** `$schema`, `deny`, `PreToolUse`, `SessionStart`, `Stop` (+249 more)
+- **259 isolated node(s):** `$schema`, `deny`, `PreToolUse`, `SessionStart`, `Stop` (+254 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -174,7 +179,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `tam_derivation` connect `Community 29` to `Community 1`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **What connects `$schema`, `deny`, `PreToolUse` to the rest of the system?**
-  _254 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _259 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**
