@@ -13,6 +13,20 @@ Questo documento fornisce un'analisi quantitativa dei database disponibili per i
 *   **Contenuto**:
     *   Generazione elettrica per paese (in **TWh**) suddivisa per singola fonte (carbone, gas, solare, eolico, nucleare, idroelettrico).
     *   Intensità di carbonio della rete elettrica nazionale (in **$\text{gCO}_2/\text{kWh}$**).
+        > [!NOTE]
+        > **Definizione di Intensità di Carbonio della Rete**: Rappresenta la massa di anidride carbonica equivalente ($CO_2e$) emessa per ogni unità di energia elettrica generata o consumata. L'unità di misura standard è il grammo di $CO_2$ equivalente per chilowattora ($gCO_2e/kWh$) o il chilogrammo per megawattora ($kgCO_2e/MWh$).
+        > 
+        > La formula generale di calcolo è:
+        > $$\text{CI} = \frac{\sum (E_i \times EF_i)}{\sum E_i}$$
+        > Dove $E_i$ è l'energia generata dalla fonte $i$ (in **MWh**) ed $EF_i$ è il fattore di emissione specifico per quella tecnologia (in **$kgCO_2e/MWh$**):
+        > - **Carbone**: $\approx 800 - 1000 \text{ gCO}_2/\text{kWh}$
+        > - **Gas Naturale**: $\approx 350 - 450 \text{ gCO}_2/\text{kWh}$
+        > - **Solare / Eolico (Ciclo di vita)**: $\approx 10 - 40 \text{ gCO}_2/\text{kWh}$
+        > - **Nucleare**: $\approx 5 - 12 \text{ gCO}_2/\text{kWh}$
+        > 
+        > Si distingue inoltre tra:
+        > 1. **Generation-based**: Calcolata solo sulla base delle centrali attive nel territorio nazionale.
+        > 2. **Consumption-based (raccomandata per il Siting)**: Tiene conto dell'import/export transfrontaliero di energia, calcolando l'effettiva intensità del mix energetico consumato in loco.
     *   Domanda e consumi totali di elettricità.
 
 ### B. Opportunità Applicative
