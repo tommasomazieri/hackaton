@@ -26,3 +26,19 @@
 {"event": "hook", "tool": "Glob", "decision": "block", "ts": "2026-06-12T23:07:31.923"}
 {"event": "hook", "tool": "Bash", "decision": "block", "cmd_snippet": "find artifacts -type f 2>/dev/null | head -20", "ts": "2026-06-12T23:07:33.893"}
 {"event": "hook", "tool": "Bash", "decision": "pass", "pass_reason": "no nav pattern", "cmd_snippet": "git add CLAUDE.md docs/tasks-draft.md docs/e0-commands.md graphify-out/ project-", "ts": "2026-06-12T23:07:40.455"}
+{"event": "hook", "tool": "Bash", "decision": "block", "cmd_snippet": "git commit -m \"$(cat <<'EOF'\nfeat: expand product vision \u00e2\u20ac\u201d 5-dim scoring, NPV ", "ts": "2026-06-12T23:07:48.510"}
+{"event": "hook", "tool": "Bash", "decision": "pass", "pass_reason": "no nav pattern", "cmd_snippet": "cd \"C:/Users/tomin/OneDrive/Desktop/PROGETTI/operating_proejcts/hackaton\" && git", "ts": "2026-06-12T23:14:21.289"}
+{"event": "hook", "tool": "Bash", "decision": "block", "cmd_snippet": "cd \"C:/Users/tomin/OneDrive/Desktop/PROGETTI/operating_proejcts/hackaton\" && git", "ts": "2026-06-12T23:14:33.196"}
+{"event": "hook", "tool": "Bash", "decision": "block", "cmd_snippet": "ls \"C:\\Users\\tomin\\OneDrive\\Desktop\\PROGETTI\\operating_proejcts\\hackaton\\artifac", "ts": "2026-06-12T23:22:00.948"}
+{"event": "hook", "tool": "Glob", "decision": "block", "ts": "2026-06-12T23:22:03.375"}
+{"event": "hook", "tool": "Bash", "decision": "pass", "pass_reason": "no nav pattern", "cmd_snippet": "cd \"C:\\Users\\tomin\\OneDrive\\Desktop\\PROGETTI\\operating_proejcts\\hackaton\" && git", "ts": "2026-06-12T23:23:25.557"}
+{"event": "hook", "tool": "Bash", "decision": "pass", "pass_reason": "no nav pattern", "cmd_snippet": "cd \"C:\\Users\\tomin\\OneDrive\\Desktop\\PROGETTI\\operating_proejcts\\hackaton\" && git", "ts": "2026-06-12T23:23:29.594"}
+{"event": "hook", "tool": "Bash", "decision": "block", "cmd_snippet": "cd \"C:\\Users\\tomin\\OneDrive\\Desktop\\PROGETTI\\operating_proejcts\\hackaton\" && git", "ts": "2026-06-12T23:23:34.726"}
+{"event": "hook", "tool": "Glob", "decision": "block", "ts": "2026-06-12T23:27:26.467"}
+{"event": "hook", "tool": "Glob", "decision": "block", "ts": "2026-06-12T23:27:26.659"}
+{"event": "hook", "tool": "Bash", "decision": "block", "cmd_snippet": "find \"C:/Users/tomin/OneDrive/Desktop/PROGETTI/operating_proejcts/hackaton\" -nam", "ts": "2026-06-12T23:27:29.770"}
+{"event": "hook", "tool": "Bash", "decision": "pass", "pass_reason": "no nav pattern", "cmd_snippet": "cd \"C:\\Users\\tomin\\OneDrive\\Desktop\\PROGETTI\\operating_proejcts\\hackaton\" && git", "ts": "2026-06-12T23:32:39.955"}
+{"event": "hook", "tool": "Bash", "decision": "block", "cmd_snippet": "cd \"C:\\Users\\tomin\\OneDrive\\Desktop\\PROGETTI\\operating_proejcts\\hackaton\" && git", "ts": "2026-06-12T23:32:46.341"}
+{"event": "hook", "tool": "Bash", "decision": "pass", "pass_reason": "no nav pattern", "cmd_snippet": "cd \"C:/Users/tomin/OneDrive/Desktop/PROGETTI/operating_proejcts/hackaton\" && git", "ts": "2026-06-12T23:50:19.981"}
+{"event": "hook", "tool": "Bash", "decision": "pass", "pass_reason": "no nav pattern", "cmd_snippet": "cd \"C:/Users/tomin/OneDrive/Desktop/PROGETTI/operating_proejcts/hackaton\" && git", "ts": "2026-06-12T23:50:34.269"}
+{"event": "hook", "tool": "Bash", "decision": "block", "cmd_snippet": "cd \"C:/Users/tomin/OneDrive/Desktop/PROGETTI/operating_proejcts/hackaton\" && git", "ts": "2026-06-12T23:50:39.611"}

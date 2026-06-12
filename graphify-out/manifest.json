@@ -1,172 +1,147 @@
 {
   ".claude/settings.json": {
-    "mtime": 1781292184.3039901,
+    "mtime": 1781291125.5607598,
     "ast_hash": "e21ce3288c675dbc07b0a96634c651b1",
     "semantic_hash": ""
   },
+  ".mcp.json": {
+    "mtime": 1781290897.208778,
+    "ast_hash": "cf21d63a83450d4c4a5584b7bcdf80c8",
+    "semantic_hash": ""
+  },
   "CLAUDE.md": {
-    "mtime": 1781298957.4111774,
+    "mtime": 1781298906.0373902,
     "ast_hash": "f54821991242e76ddc57cfb75e19d3cb",
     "semantic_hash": ""
   },
   "docs/challenge.md": {
-    "mtime": 1781292184.329445,
-    "ast_hash": "87d60980724102d5785db36f8f445cdd",
+    "mtime": 1781290800.1078334,
+    "ast_hash": "6aa2a2e1f76e47f4d1406dd9e6e3d56e",
     "semantic_hash": ""
   },
   ".codemapper_cache.json": {
-    "mtime": 1781298957.4063299,
+    "mtime": 1781298906.0373902,
     "ast_hash": "4d1dcc54ad535811a14fc2ef0268bd18",
     "semantic_hash": ""
   },
   "project-management/backlog.json": {
-    "mtime": 1781298957.4420843,
+    "mtime": 1781298906.062988,
     "ast_hash": "19247822f1a1fee302287638a1d17143",
     "semantic_hash": ""
   },
   "project-management/epics.json": {
-    "mtime": 1781298957.443833,
+    "mtime": 1781298906.063996,
     "ast_hash": "1bd9c0827509a8c38ee4dd6a511a92b3",
     "semantic_hash": ""
   },
   "project-management/kanban.json": {
-    "mtime": 1781292184.3328898,
-    "ast_hash": "6b62c2e58c3e4e54f8c5f43418bdbeb7",
+    "mtime": 1781290998.2533548,
+    "ast_hash": "2c02cf33b53e5c144c00b98920ad57c4",
     "semantic_hash": ""
   },
   "project-management/open-pm.sh": {
-    "mtime": 1781292184.334901,
-    "ast_hash": "ebc3fcc42e8396ebc5018617205dfe7f",
+    "mtime": 1781291018.1035407,
+    "ast_hash": "2c008192ad91c8bb0cf8e9f61a542ace",
     "semantic_hash": ""
   },
   "project-management/project.json": {
-    "mtime": 1781292184.334901,
-    "ast_hash": "d6aaed429c241a21e0774d0912f727d4",
+    "mtime": 1781290990.5165687,
+    "ast_hash": "77e5461e408c04770b2ded0874dcf58b",
     "semantic_hash": ""
   },
   "project-management/risks.json": {
-    "mtime": 1781292184.334901,
-    "ast_hash": "35d0e0b801444bb1f4c2115720f8e4f6",
+    "mtime": 1781291000.9921155,
+    "ast_hash": "58e0494c51d30eb3494f7c9198986bb9",
     "semantic_hash": ""
   },
   "project-management/run.ps1": {
-    "mtime": 1781292184.3399198,
-    "ast_hash": "2748fa6a0dc7ebcbcbd676856f3f2027",
+    "mtime": 1781291011.8164988,
+    "ast_hash": "9a2dafb53e2a1141524a2790fe681aeb",
     "semantic_hash": ""
   },
   "project-management/wbs.json": {
-    "mtime": 1781292184.3407755,
-    "ast_hash": "c443b04d0fc26b0a5a4573a78e0082a1",
+    "mtime": 1781291003.389249,
+    "ast_hash": "8a80554c91d9fca8acb82f023de02f11",
     "semantic_hash": ""
   },
   "src/data_ingestion/download_datasets.py": {
-    "mtime": 1781293214.942083,
+    "mtime": 1781293277.7682862,
     "ast_hash": "82dc8328a3cac626be4f5cb5be27967c",
     "semantic_hash": ""
   },
   ".agents/skills/analytical-siting-evaluator/SKILL.md": {
-    "mtime": 1781292463.3291616,
-    "ast_hash": "132af0059a0028fedfc3cfccbf38bed3",
+    "mtime": 1781293005.9274638,
+    "ast_hash": "59156789ee4c7a7ce7843ac1f0b98094",
     "semantic_hash": ""
   },
   "artifacts/persona.md": {
-    "mtime": 1781298957.4111774,
+    "mtime": 1781298906.0413928,
     "ast_hash": "1de56676d1bc1e86470f7e60e065f231",
     "semantic_hash": ""
   },
   "docs/challenge_it.md": {
-    "mtime": 1781291940.5519047,
-    "ast_hash": "52822ea59f2ffa84da286902cf0c5c79",
+    "mtime": 1781293005.9274638,
+    "ast_hash": "d62a23e7d6099dfd526e457b0e7e1722",
     "semantic_hash": ""
   },
   "docs/tasks-draft.md": {
-    "mtime": 1781298957.4192867,
+    "mtime": 1781298906.0463903,
     "ast_hash": "b4a2cb2b25fc3bbf2c12d1567fc7bdfd",
     "semantic_hash": ""
   },
   "challenges/Energy \u00d7 AI Hackathon \u2014 Eight Directionspdf_260612_201927.pdf": {
-    "mtime": 1781292184.3256776,
+    "mtime": 1781288932.9620335,
     "ast_hash": "1f79014bf2cedd3bd1c769c8c34311c7",
     "semantic_hash": ""
   },
   "docs/e0-commands.md": {
-    "mtime": 1781298957.4192867,
+    "mtime": 1781298906.0443907,
     "ast_hash": "229a8a04f5466aa00c8662aba3c16d30",
     "semantic_hash": ""
   },
   "artifacts/personas.json": {
-    "mtime": 1781298957.4156623,
+    "mtime": 1781298906.0413928,
     "ast_hash": "77e916822fe6b5749008b5ace84ef93d",
     "semantic_hash": ""
   },
   "artifacts/stakeholder-map.json": {
-    "mtime": 1781299888.2091713,
+    "mtime": 1781299441.2460673,
     "ast_hash": "355aa5469535754d57b9f19cdc9ecaf8",
     "semantic_hash": ""
   },
   "artifacts/personas.md": {
-    "mtime": 1781298957.4156623,
+    "mtime": 1781298906.042339,
     "ast_hash": "447a1a5f7149f60738611e185487a16a",
     "semantic_hash": ""
   },
   "artifacts/stakeholder-map.md": {
-    "mtime": 1781299888.2740493,
+    "mtime": 1781299441.2470598,
     "ast_hash": "45fa7598763c26a22d38900b8bc53b2f",
     "semantic_hash": ""
   },
   "artifacts/journey-before.json": {
-    "mtime": 1781298957.4111774,
+    "mtime": 1781298906.0393906,
     "ast_hash": "a0a37efe31449131671cd90122021bfe",
     "semantic_hash": ""
   },
-  ".agents/rules/graphify.md": {
-    "mtime": 1781299994.9991481,
-    "ast_hash": "a0e4d192b9e2e17256124dbfc8e24e6a",
-    "semantic_hash": ""
-  },
-  ".agents/workflows/graphify.md": {
-    "mtime": 1781299994.9991481,
-    "ast_hash": "637776aa6f7496d069afe7520c845c8a",
+  "artifacts/jtbd.json": {
+    "mtime": 1781299266.5748298,
+    "ast_hash": "dda9cdcf348fcf60b1d14be68631747f",
     "semantic_hash": ""
   },
   "artifacts/journey-before.md": {
-    "mtime": 1781298957.4111774,
+    "mtime": 1781298906.0405376,
     "ast_hash": "bb641f5ee7cbfc4cc91073db6b7f9268",
     "semantic_hash": ""
   },
-  "docs/data.md": {
-    "mtime": 1781299281.9833596,
-    "ast_hash": "5280bde3416d3764e8f495b013b0915c",
-    "semantic_hash": ""
-  },
-  "docs/C_2024_1639_final.pdf": {
-    "mtime": 1781299995.0093777,
-    "ast_hash": "e262d6f746b5f7007789a095dbcd6b96",
-    "semantic_hash": ""
-  },
-  "artifacts/jtbd.json": {
-    "mtime": 1781299888.1934571,
-    "ast_hash": "3016ae34aec054ae5cb626994a335c35",
-    "semantic_hash": ""
-  },
-  "artifacts/market-viability.json": {
-    "mtime": 1781299994.8765302,
-    "ast_hash": "b645b695a9df52fa6387bd01901ddf4d",
-    "semantic_hash": ""
-  },
   "artifacts/jtbd.md": {
-    "mtime": 1781299888.2043722,
-    "ast_hash": "b7b87470e3866228a0d572a2e036b0e5",
+    "mtime": 1781299292.2690675,
+    "ast_hash": "449d69d968d6a4685ecf7d2e1a4cb19b",
     "semantic_hash": ""
   },
-  "artifacts/market-viability.md": {
-    "mtime": 1781299994.8765302,
-    "ast_hash": "048ce400fc927a60e28b5f421f420501",
-    "semantic_hash": ""
-  },
-  "docs/EU_Data_Center_Rating_Scheme_Draft_2026.pdf": {
-    "mtime": 1781299965.1424944,
-    "ast_hash": "4a490bee940a5bdc9cff0db8588ecea1",
+  "docs/data.md": {
+    "mtime": 1781299441.231071,
+    "ast_hash": "5280bde3416d3764e8f495b013b0915c",
     "semantic_hash": ""
   }
 }

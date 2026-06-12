@@ -302,6 +302,226 @@
       "codemapper": {}
     },
     {
+      "label": "journey-before.json",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_json_artifacts_journey_before",
+      "community": 24,
+      "norm_label": "journey-before.json",
+      "codemapper": {}
+    },
+    {
+      "label": "journey_id",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_journey_id",
+      "community": 24,
+      "norm_label": "journey_id",
+      "codemapper": {}
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_version",
+      "community": 24,
+      "norm_label": "version",
+      "codemapper": {}
+    },
+    {
+      "label": "title",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_title",
+      "community": 24,
+      "norm_label": "title",
+      "codemapper": {}
+    },
+    {
+      "label": "subtitle",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_subtitle",
+      "community": 24,
+      "norm_label": "subtitle",
+      "codemapper": {}
+    },
+    {
+      "label": "persona_ref",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_persona_ref",
+      "community": 24,
+      "norm_label": "persona_ref",
+      "codemapper": {}
+    },
+    {
+      "label": "trigger",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_trigger",
+      "community": 24,
+      "norm_label": "trigger",
+      "codemapper": {}
+    },
+    {
+      "label": "end_state",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_end_state",
+      "community": 24,
+      "norm_label": "end_state",
+      "codemapper": {}
+    },
+    {
+      "label": "total_elapsed_calendar_days_range",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_total_elapsed_calendar_days_range",
+      "community": 24,
+      "norm_label": "total_elapsed_calendar_days_range",
+      "codemapper": {}
+    },
+    {
+      "label": "total_analyst_hours_range",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_total_analyst_hours_range",
+      "community": 24,
+      "norm_label": "total_analyst_hours_range",
+      "codemapper": {}
+    },
+    {
+      "label": "quantified_costs",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_quantified_costs",
+      "community": 24,
+      "norm_label": "quantified_costs",
+      "codemapper": {}
+    },
+    {
+      "label": "in_house_analyst_cost_eur",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_quantified_costs_in_house_analyst_cost_eur",
+      "community": 24,
+      "norm_label": "in_house_analyst_cost_eur",
+      "codemapper": {}
+    },
+    {
+      "label": "external_consultant_alternative_eur",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_quantified_costs_external_consultant_alternative_eur",
+      "community": 24,
+      "norm_label": "external_consultant_alternative_eur",
+      "codemapper": {}
+    },
+    {
+      "label": "decision_risk_lifetime",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_quantified_costs_decision_risk_lifetime",
+      "community": 24,
+      "norm_label": "decision_risk_lifetime",
+      "codemapper": {}
+    },
+    {
+      "label": "ember_carbon_data_lag",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_quantified_costs_ember_carbon_data_lag",
+      "community": 24,
+      "norm_label": "ember_carbon_data_lag",
+      "codemapper": {}
+    },
+    {
+      "label": "entso_e_granularity",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_quantified_costs_entso_e_granularity",
+      "community": 24,
+      "norm_label": "entso_e_granularity",
+      "codemapper": {}
+    },
+    {
+      "label": "grid_queue_context",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_quantified_costs_grid_queue_context",
+      "community": 24,
+      "norm_label": "grid_queue_context",
+      "codemapper": {}
+    },
+    {
+      "label": "re_run_cost",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_quantified_costs_re_run_cost",
+      "community": 24,
+      "norm_label": "re_run_cost",
+      "codemapper": {}
+    },
+    {
+      "label": "stages",
+      "file_type": "code",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_stages",
+      "community": 24,
+      "norm_label": "stages",
+      "codemapper": {}
+    },
+    {
+      "label": "jtbd.json",
+      "file_type": "code",
+      "source_file": "artifacts/jtbd.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "artifacts_jtbd_json_artifacts_jtbd",
+      "community": 27,
+      "norm_label": "jtbd.json",
+      "codemapper": {}
+    },
+    {
       "label": "personas.json",
       "file_type": "code",
       "source_file": "artifacts/personas.json",
@@ -898,6 +1118,303 @@
       "codemapper": {}
     },
     {
+      "label": "journey-before.md",
+      "file_type": "document",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_md_artifacts_journey_before",
+      "community": 25,
+      "norm_label": "journey-before.md",
+      "codemapper": {}
+    },
+    {
+      "label": "AS-IS Customer Journey: EU Data Center Site Research",
+      "file_type": "document",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
+      "community": 25,
+      "norm_label": "as-is customer journey: eu data center site research",
+      "codemapper": {}
+    },
+    {
+      "label": "The Cost of Today",
+      "file_type": "document",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_the_cost_of_today",
+      "community": 25,
+      "norm_label": "the cost of today",
+      "codemapper": {}
+    },
+    {
+      "label": "Journey Map",
+      "file_type": "document",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_journey_map",
+      "community": 25,
+      "norm_label": "journey map",
+      "codemapper": {}
+    },
+    {
+      "label": "Stage 1 \u2014 Mandate & Brief",
+      "file_type": "document",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_stage_1_mandate_brief",
+      "community": 25,
+      "norm_label": "stage 1 \u2014 mandate & brief",
+      "codemapper": {}
+    },
+    {
+      "label": "Stage 2 \u2014 Energy Price Data Sourcing",
+      "file_type": "document",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_stage_2_energy_price_data_sourcing",
+      "community": 25,
+      "norm_label": "stage 2 \u2014 energy price data sourcing",
+      "codemapper": {}
+    },
+    {
+      "label": "Stage 3 \u2014 Carbon Intensity Data Sourcing",
+      "file_type": "document",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_stage_3_carbon_intensity_data_sourcing",
+      "community": 25,
+      "norm_label": "stage 3 \u2014 carbon intensity data sourcing",
+      "codemapper": {}
+    },
+    {
+      "label": "Stage 4 \u2014 Grid Infrastructure Scoping",
+      "file_type": "document",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L86",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_stage_4_grid_infrastructure_scoping",
+      "community": 25,
+      "norm_label": "stage 4 \u2014 grid infrastructure scoping",
+      "codemapper": {}
+    },
+    {
+      "label": "Stage 5 \u2014 Manual Data Integration & Longlist",
+      "file_type": "document",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L106",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_stage_5_manual_data_integration_longlist",
+      "community": 25,
+      "norm_label": "stage 5 \u2014 manual data integration & longlist",
+      "codemapper": {}
+    },
+    {
+      "label": "Stage 6 \u2014 Supply Mix Analysis",
+      "file_type": "document",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L123",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_stage_6_supply_mix_analysis",
+      "community": 25,
+      "norm_label": "stage 6 \u2014 supply mix analysis",
+      "codemapper": {}
+    },
+    {
+      "label": "Stage 7 \u2014 Site Shortlisting & Scoring",
+      "file_type": "document",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L143",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_stage_7_site_shortlisting_scoring",
+      "community": 25,
+      "norm_label": "stage 7 \u2014 site shortlisting & scoring",
+      "codemapper": {}
+    },
+    {
+      "label": "Stage 8 \u2014 IC / Board Presentation Preparation",
+      "file_type": "document",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L160",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_stage_8_ic_board_presentation_preparation",
+      "community": 25,
+      "norm_label": "stage 8 \u2014 ic / board presentation preparation",
+      "codemapper": {}
+    },
+    {
+      "label": "Stage 9 \u2014 IC Meeting & Follow-up",
+      "file_type": "document",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L180",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_stage_9_ic_meeting_follow_up",
+      "community": 25,
+      "norm_label": "stage 9 \u2014 ic meeting & follow-up",
+      "codemapper": {}
+    },
+    {
+      "label": "What This Costs, Summed",
+      "file_type": "document",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L201",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_what_this_costs_summed",
+      "community": 25,
+      "norm_label": "what this costs, summed",
+      "codemapper": {}
+    },
+    {
+      "label": "Sources",
+      "file_type": "document",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L220",
+      "_origin": "ast",
+      "id": "artifacts_journey_before_sources",
+      "community": 25,
+      "norm_label": "sources",
+      "codemapper": {}
+    },
+    {
+      "label": "jtbd.md",
+      "file_type": "document",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "artifacts_jtbd_md_artifacts_jtbd",
+      "community": 26,
+      "norm_label": "jtbd.md",
+      "codemapper": {}
+    },
+    {
+      "label": "Jobs-To-Be-Done: DC Siting Intelligence Tool",
+      "file_type": "document",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "artifacts_jtbd_jobs_to_be_done_dc_siting_intelligence_tool",
+      "community": 26,
+      "norm_label": "jobs-to-be-done: dc siting intelligence tool",
+      "codemapper": {}
+    },
+    {
+      "label": "Why JTBD over features",
+      "file_type": "document",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "artifacts_jtbd_why_jtbd_over_features",
+      "community": 26,
+      "norm_label": "why jtbd over features",
+      "codemapper": {}
+    },
+    {
+      "label": "JTBD-001 \u2014 Jordan \u00b7 Functional",
+      "file_type": "document",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "artifacts_jtbd_jtbd_001_jordan_functional",
+      "community": 26,
+      "norm_label": "jtbd-001 \u2014 jordan \u00b7 functional",
+      "codemapper": {}
+    },
+    {
+      "label": "Screen Europe in one query instead of 20+ country downloads",
+      "file_type": "document",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "artifacts_jtbd_screen_europe_in_one_query_instead_of_20_country_downloads",
+      "community": 26,
+      "norm_label": "screen europe in one query instead of 20+ country downloads",
+      "codemapper": {}
+    },
+    {
+      "label": "JTBD-002 \u2014 Jordan \u00b7 Emotional",
+      "file_type": "document",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "artifacts_jtbd_jtbd_002_jordan_emotional",
+      "community": 26,
+      "norm_label": "jtbd-002 \u2014 jordan \u00b7 emotional",
+      "codemapper": {}
+    },
+    {
+      "label": "Walk into IC with a defensible methodology, not gut-feel Excel",
+      "file_type": "document",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "artifacts_jtbd_walk_into_ic_with_a_defensible_methodology_not_gut_feel_excel",
+      "community": 26,
+      "norm_label": "walk into ic with a defensible methodology, not gut-feel excel",
+      "codemapper": {}
+    },
+    {
+      "label": "JTBD-003 \u2014 CFO / IC Member \u00b7 Financial",
+      "file_type": "document",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "artifacts_jtbd_jtbd_003_cfo_ic_member_financial",
+      "community": 26,
+      "norm_label": "jtbd-003 \u2014 cfo / ic member \u00b7 financial",
+      "codemapper": {}
+    },
+    {
+      "label": "Turn the PPA flag into a \u20ac/MWh number for the DCF model",
+      "file_type": "document",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "artifacts_jtbd_turn_the_ppa_flag_into_a_mwh_number_for_the_dcf_model",
+      "community": 26,
+      "norm_label": "turn the ppa flag into a \u20ac/mwh number for the dcf model",
+      "codemapper": {}
+    },
+    {
+      "label": "JTBD-004 \u2014 CEO \u00b7 Social / Decision",
+      "file_type": "document",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "artifacts_jtbd_jtbd_004_ceo_social_decision",
+      "community": 26,
+      "norm_label": "jtbd-004 \u2014 ceo \u00b7 social / decision",
+      "codemapper": {}
+    },
+    {
+      "label": "Receive one ranked winner \u2014 not a spreadsheet with the answer on page 62",
+      "file_type": "document",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "artifacts_jtbd_receive_one_ranked_winner_not_a_spreadsheet_with_the_answer_on_page_62",
+      "community": 26,
+      "norm_label": "receive one ranked winner \u2014 not a spreadsheet with the answer on page 62",
+      "codemapper": {}
+    },
+    {
+      "label": "Summary",
+      "file_type": "document",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "artifacts_jtbd_summary",
+      "community": 26,
+      "norm_label": "summary",
+      "codemapper": {}
+    },
+    {
       "label": "persona.md",
       "file_type": "document",
       "source_file": "artifacts/persona.md",
@@ -1052,36 +1569,36 @@
       "codemapper": {}
     },
     {
-      "label": "Jordan \u2014 The Analyst Who Has to Find the Answer",
+      "label": "Decision Structure",
       "file_type": "document",
       "source_file": "artifacts/personas.md",
-      "source_location": "L5",
+      "source_location": "L3",
       "_origin": "ast",
-      "id": "artifacts_personas_jordan_the_analyst_who_has_to_find_the_answer",
+      "id": "artifacts_personas_decision_structure",
       "community": 21,
-      "norm_label": "jordan \u2014 the analyst who has to find the answer",
+      "norm_label": "decision structure",
+      "codemapper": {}
+    },
+    {
+      "label": "Jordan \u2014 Technical Advisor & Our Direct User",
+      "file_type": "document",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "artifacts_personas_jordan_technical_advisor_our_direct_user",
+      "community": 21,
+      "norm_label": "jordan \u2014 technical advisor & our direct user",
       "codemapper": {}
     },
     {
       "label": "Goals",
       "file_type": "document",
       "source_file": "artifacts/personas.md",
-      "source_location": "L20",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "artifacts_personas_goals",
       "community": 21,
       "norm_label": "goals",
-      "codemapper": {}
-    },
-    {
-      "label": "Current Pain",
-      "file_type": "document",
-      "source_file": "artifacts/personas.md",
-      "source_location": "L27",
-      "_origin": "ast",
-      "id": "artifacts_personas_current_pain",
-      "community": 21,
-      "norm_label": "current pain",
       "codemapper": {}
     },
     {
@@ -1096,25 +1613,25 @@
       "codemapper": {}
     },
     {
-      "label": "IC / CFO \u2014 The Person Who Approves",
+      "label": "CEO / C-Suite \u2014 The Decision Maker",
       "file_type": "document",
       "source_file": "artifacts/personas.md",
       "source_location": "L47",
       "_origin": "ast",
-      "id": "artifacts_personas_ic_cfo_the_person_who_approves",
+      "id": "artifacts_personas_ceo_c_suite_the_decision_maker",
       "community": 21,
-      "norm_label": "ic / cfo \u2014 the person who approves",
+      "norm_label": "ceo / c-suite \u2014 the decision maker",
       "codemapper": {}
     },
     {
-      "label": "What They Read",
+      "label": "What They Need the Narrative to Cover",
       "file_type": "document",
       "source_file": "artifacts/personas.md",
       "source_location": "L60",
       "_origin": "ast",
-      "id": "artifacts_personas_what_they_read",
+      "id": "artifacts_personas_what_they_need_the_narrative_to_cover",
       "community": 21,
-      "norm_label": "what they read",
+      "norm_label": "what they need the narrative to cover",
       "codemapper": {}
     },
     {
@@ -1129,10 +1646,43 @@
       "codemapper": {}
     },
     {
-      "label": "Persona Summary Table",
+      "label": "CFO \u2014 Financial Advisor to the CEO",
       "file_type": "document",
       "source_file": "artifacts/personas.md",
       "source_location": "L74",
+      "_origin": "ast",
+      "id": "artifacts_personas_cfo_financial_advisor_to_the_ceo",
+      "community": 21,
+      "norm_label": "cfo \u2014 financial advisor to the ceo",
+      "codemapper": {}
+    },
+    {
+      "label": "Key Differential KPIs (what the tool must surface)",
+      "file_type": "document",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "artifacts_personas_key_differential_kpis_what_the_tool_must_surface",
+      "community": 21,
+      "norm_label": "key differential kpis (what the tool must surface)",
+      "codemapper": {}
+    },
+    {
+      "label": "What Makes Them Approve",
+      "file_type": "document",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "artifacts_personas_what_makes_them_approve_98",
+      "community": 21,
+      "norm_label": "what makes them approve",
+      "codemapper": {}
+    },
+    {
+      "label": "Persona Summary Table",
+      "file_type": "document",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L107",
       "_origin": "ast",
       "id": "artifacts_personas_persona_summary_table",
       "community": 21,
@@ -1162,10 +1712,21 @@
       "codemapper": {}
     },
     {
+      "label": "Adoption Path",
+      "file_type": "document",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "artifacts_stakeholder_map_adoption_path",
+      "community": 20,
+      "norm_label": "adoption path",
+      "codemapper": {}
+    },
+    {
       "label": "Influence / Interest Grid",
       "file_type": "document",
       "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L3",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "artifacts_stakeholder_map_influence_interest_grid",
       "community": 20,
@@ -1173,54 +1734,65 @@
       "codemapper": {}
     },
     {
-      "label": "Stakeholder Profiles",
+      "label": "Layer 1 \u2014 Main (Adoption Triad)",
       "file_type": "document",
       "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L29",
+      "source_location": "L56",
       "_origin": "ast",
-      "id": "artifacts_stakeholder_map_stakeholder_profiles",
+      "id": "artifacts_stakeholder_map_layer_1_main_adoption_triad",
       "community": 20,
-      "norm_label": "stakeholder profiles",
+      "norm_label": "layer 1 \u2014 main (adoption triad)",
       "codemapper": {}
     },
     {
-      "label": "SH-001 \u2014 IC Partner",
+      "label": "SH-001 \u2014 Jordan",
       "file_type": "document",
       "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L31",
+      "source_location": "L62",
       "_origin": "ast",
-      "id": "artifacts_stakeholder_map_sh_001_ic_partner",
+      "id": "artifacts_stakeholder_map_sh_001_jordan",
       "community": 20,
-      "norm_label": "sh-001 \u2014 ic partner",
+      "norm_label": "sh-001 \u2014 jordan",
       "codemapper": {}
     },
     {
-      "label": "SH-002 \u2014 CFO / CIO",
+      "label": "SH-002 \u2014 CEO / C-Suite",
       "file_type": "document",
       "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L44",
+      "source_location": "L78",
       "_origin": "ast",
-      "id": "artifacts_stakeholder_map_sh_002_cfo_cio",
+      "id": "artifacts_stakeholder_map_sh_002_ceo_c_suite",
       "community": 20,
-      "norm_label": "sh-002 \u2014 cfo / cio",
+      "norm_label": "sh-002 \u2014 ceo / c-suite",
       "codemapper": {}
     },
     {
-      "label": "SH-003 \u2014 Head of DC Development *(Jordan's manager)*",
+      "label": "SH-003 \u2014 CFO",
       "file_type": "document",
       "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L57",
+      "source_location": "L94",
       "_origin": "ast",
-      "id": "artifacts_stakeholder_map_sh_003_head_of_dc_development_jordan_s_manager",
+      "id": "artifacts_stakeholder_map_sh_003_cfo",
       "community": 20,
-      "norm_label": "sh-003 \u2014 head of dc development *(jordan's manager)*",
+      "norm_label": "sh-003 \u2014 cfo",
+      "codemapper": {}
+    },
+    {
+      "label": "Layer 2 \u2014 Peripheral (Output Validators)",
+      "file_type": "document",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L110",
+      "_origin": "ast",
+      "id": "artifacts_stakeholder_map_layer_2_peripheral_output_validators",
+      "community": 20,
+      "norm_label": "layer 2 \u2014 peripheral (output validators)",
       "codemapper": {}
     },
     {
       "label": "SH-004 \u2014 ESG Officer",
       "file_type": "document",
       "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L70",
+      "source_location": "L116",
       "_origin": "ast",
       "id": "artifacts_stakeholder_map_sh_004_esg_officer",
       "community": 20,
@@ -1228,47 +1800,69 @@
       "codemapper": {}
     },
     {
-      "label": "SH-005 \u2014 Board / LP",
+      "label": "SH-005 \u2014 Infrastructure PM",
       "file_type": "document",
       "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L83",
+      "source_location": "L130",
       "_origin": "ast",
-      "id": "artifacts_stakeholder_map_sh_005_board_lp",
+      "id": "artifacts_stakeholder_map_sh_005_infrastructure_pm",
       "community": 20,
-      "norm_label": "sh-005 \u2014 board / lp",
+      "norm_label": "sh-005 \u2014 infrastructure pm",
       "codemapper": {}
     },
     {
-      "label": "SH-006 \u2014 Infrastructure PM",
+      "label": "SH-006 \u2014 Legal / Regulatory Counsel",
       "file_type": "document",
       "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L96",
+      "source_location": "L144",
       "_origin": "ast",
-      "id": "artifacts_stakeholder_map_sh_006_infrastructure_pm",
+      "id": "artifacts_stakeholder_map_sh_006_legal_regulatory_counsel",
       "community": 20,
-      "norm_label": "sh-006 \u2014 infrastructure pm",
+      "norm_label": "sh-006 \u2014 legal / regulatory counsel",
       "codemapper": {}
     },
     {
-      "label": "SH-007 \u2014 Legal / Compliance",
+      "label": "Layer 3 \u2014 Institutional / Macro (Constraint-Setters)",
       "file_type": "document",
       "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L109",
+      "source_location": "L158",
       "_origin": "ast",
-      "id": "artifacts_stakeholder_map_sh_007_legal_compliance",
+      "id": "artifacts_stakeholder_map_layer_3_institutional_macro_constraint_setters",
       "community": 20,
-      "norm_label": "sh-007 \u2014 legal / compliance",
+      "norm_label": "layer 3 \u2014 institutional / macro (constraint-setters)",
       "codemapper": {}
     },
     {
-      "label": "Narrative: Pitch Implications",
+      "label": "SH-007 \u2014 Investment Committee / IC Partner",
       "file_type": "document",
       "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L122",
+      "source_location": "L164",
       "_origin": "ast",
-      "id": "artifacts_stakeholder_map_narrative_pitch_implications",
+      "id": "artifacts_stakeholder_map_sh_007_investment_committee_ic_partner",
       "community": 20,
-      "norm_label": "narrative: pitch implications",
+      "norm_label": "sh-007 \u2014 investment committee / ic partner",
+      "codemapper": {}
+    },
+    {
+      "label": "SH-008 \u2014 Board / LP",
+      "file_type": "document",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L178",
+      "_origin": "ast",
+      "id": "artifacts_stakeholder_map_sh_008_board_lp",
+      "community": 20,
+      "norm_label": "sh-008 \u2014 board / lp",
+      "codemapper": {}
+    },
+    {
+      "label": "Pitch Implications",
+      "file_type": "document",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L192",
+      "_origin": "ast",
+      "id": "artifacts_stakeholder_map_pitch_implications",
+      "community": 20,
+      "norm_label": "pitch implications",
       "codemapper": {}
     },
     {
@@ -1525,6 +2119,248 @@
       "codemapper": {}
     },
     {
+      "label": "data.md",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_data",
+      "community": 17,
+      "norm_label": "data.md",
+      "codemapper": {}
+    },
+    {
+      "label": "Analisi Dettagliata dei Database e Opportunit\u00e0 Applicative",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
+      "community": 17,
+      "norm_label": "analisi dettagliata dei database e opportunita applicative",
+      "codemapper": {}
+    },
+    {
+      "label": "1. Ember / Our World in Data (OWID) Energy Database",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_data_1_ember_our_world_in_data_owid_energy_database",
+      "community": 17,
+      "norm_label": "1. ember / our world in data (owid) energy database",
+      "codemapper": {}
+    },
+    {
+      "label": "A. Caratteristiche dei Dati",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "docs_data_a_caratteristiche_dei_dati",
+      "community": 17,
+      "norm_label": "a. caratteristiche dei dati",
+      "codemapper": {}
+    },
+    {
+      "label": "B. Opportunit\u00e0 Applicative",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "docs_data_b_opportunit\u00e0_applicative",
+      "community": 17,
+      "norm_label": "b. opportunita applicative",
+      "codemapper": {}
+    },
+    {
+      "label": "2. OpenStreetMap (OSM) via Overpass API",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "docs_data_2_openstreetmap_osm_via_overpass_api",
+      "community": 17,
+      "norm_label": "2. openstreetmap (osm) via overpass api",
+      "codemapper": {}
+    },
+    {
+      "label": "A. Caratteristiche dei Dati",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "docs_data_a_caratteristiche_dei_dati_50",
+      "community": 17,
+      "norm_label": "a. caratteristiche dei dati",
+      "codemapper": {}
+    },
+    {
+      "label": "B. Opportunit\u00e0 Applicative",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "docs_data_b_opportunit\u00e0_applicative_59",
+      "community": 17,
+      "norm_label": "b. opportunita applicative",
+      "codemapper": {}
+    },
+    {
+      "label": "3. PyPSA-Eur Network Data",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "docs_data_3_pypsa_eur_network_data",
+      "community": 17,
+      "norm_label": "3. pypsa-eur network data",
+      "codemapper": {}
+    },
+    {
+      "label": "A. Caratteristiche dei Dati",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "docs_data_a_caratteristiche_dei_dati_71",
+      "community": 17,
+      "norm_label": "a. caratteristiche dei dati",
+      "codemapper": {}
+    },
+    {
+      "label": "B. Opportunit\u00e0 Applicative",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "docs_data_b_opportunit\u00e0_applicative_77",
+      "community": 17,
+      "norm_label": "b. opportunita applicative",
+      "codemapper": {}
+    },
+    {
+      "label": "4. Google AlphaEarth (Satellite Embeddings in GEE)",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "docs_data_4_google_alphaearth_satellite_embeddings_in_gee",
+      "community": 17,
+      "norm_label": "4. google alphaearth (satellite embeddings in gee)",
+      "codemapper": {}
+    },
+    {
+      "label": "A. Caratteristiche dei Dati",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "docs_data_a_caratteristiche_dei_dati_89",
+      "community": 17,
+      "norm_label": "a. caratteristiche dei dati",
+      "codemapper": {}
+    },
+    {
+      "label": "B. Opportunit\u00e0 Applicative",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L95",
+      "_origin": "ast",
+      "id": "docs_data_b_opportunit\u00e0_applicative_95",
+      "community": 17,
+      "norm_label": "b. opportunita applicative",
+      "codemapper": {}
+    },
+    {
+      "label": "5. IEA Energy & AI Reference Specifications",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L103",
+      "_origin": "ast",
+      "id": "docs_data_5_iea_energy_ai_reference_specifications",
+      "community": 17,
+      "norm_label": "5. iea energy & ai reference specifications",
+      "codemapper": {}
+    },
+    {
+      "label": "A. Caratteristiche dei Dati",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L105",
+      "_origin": "ast",
+      "id": "docs_data_a_caratteristiche_dei_dati_105",
+      "community": 17,
+      "norm_label": "a. caratteristiche dei dati",
+      "codemapper": {}
+    },
+    {
+      "label": "B. Opportunit\u00e0 Applicative",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L111",
+      "_origin": "ast",
+      "id": "docs_data_b_opportunit\u00e0_applicative_111",
+      "community": 17,
+      "norm_label": "b. opportunita applicative",
+      "codemapper": {}
+    },
+    {
+      "label": "6. Analisi dei Mismatch di Granularit\u00e0 e Impatti sul Progetto",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L120",
+      "_origin": "ast",
+      "id": "docs_data_6_analisi_dei_mismatch_di_granularit\u00e0_e_impatti_sul_progetto",
+      "community": 17,
+      "norm_label": "6. analisi dei mismatch di granularita e impatti sul progetto",
+      "codemapper": {}
+    },
+    {
+      "label": "A. Mismatch Spaziale (da Nazionale a Pixel-level)",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L124",
+      "_origin": "ast",
+      "id": "docs_data_a_mismatch_spaziale_da_nazionale_a_pixel_level",
+      "community": 17,
+      "norm_label": "a. mismatch spaziale (da nazionale a pixel-level)",
+      "codemapper": {}
+    },
+    {
+      "label": "B. Mismatch Temporale (da Statico a Orario)",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L134",
+      "_origin": "ast",
+      "id": "docs_data_b_mismatch_temporale_da_statico_a_orario",
+      "community": 17,
+      "norm_label": "b. mismatch temporale (da statico a orario)",
+      "codemapper": {}
+    },
+    {
+      "label": "Tabella Sinottica delle Granularit\u00e0",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L143",
+      "_origin": "ast",
+      "id": "docs_data_tabella_sinottica_delle_granularit\u00e0",
+      "community": 17,
+      "norm_label": "tabella sinottica delle granularita",
+      "codemapper": {}
+    },
+    {
+      "label": "Tabella Sinottica delle Opportunit\u00e0 di Integrazione",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L155",
+      "_origin": "ast",
+      "id": "docs_data_tabella_sinottica_delle_opportunit\u00e0_di_integrazione",
+      "community": 17,
+      "norm_label": "tabella sinottica delle opportunita di integrazione",
+      "codemapper": {}
+    },
+    {
       "label": "e0-commands.md",
       "file_type": "document",
       "source_file": "docs/e0-commands.md",
@@ -1608,7 +2444,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_tasks_draft",
-      "community": 17,
+      "community": 15,
       "norm_label": "tasks-draft.md",
       "codemapper": {}
     },
@@ -1619,7 +2455,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_tasks_draft_poc_task_draft_dc_siting_intelligence_map",
-      "community": 17,
+      "community": 15,
       "norm_label": "poc task draft \u2014 dc siting intelligence map",
       "codemapper": {}
     },
@@ -1630,7 +2466,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "docs_tasks_draft_product_direction_option_3_intelligence_map",
-      "community": 17,
+      "community": 15,
       "norm_label": "product direction: option 3 \u2014 intelligence map",
       "codemapper": {}
     },
@@ -1641,7 +2477,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "docs_tasks_draft_decision_engine_dual_signal_confluence",
-      "community": 17,
+      "community": 15,
       "norm_label": "decision engine \u2014 dual signal + confluence",
       "codemapper": {}
     },
@@ -1652,7 +2488,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "docs_tasks_draft_architecture",
-      "community": 17,
+      "community": 15,
       "norm_label": "architecture",
       "codemapper": {}
     },
@@ -1773,7 +2609,7 @@
       "source_location": "L214",
       "_origin": "ast",
       "id": "docs_tasks_draft_total_98_sp",
-      "community": 17,
+      "community": 15,
       "norm_label": "total: 98 sp",
       "codemapper": {}
     },
@@ -1784,7 +2620,7 @@
       "source_location": "L230",
       "_origin": "ast",
       "id": "docs_tasks_draft_24h_critical_path",
-      "community": 17,
+      "community": 15,
       "norm_label": "24h critical path",
       "codemapper": {}
     },
@@ -1795,7 +2631,7 @@
       "source_location": "L250",
       "_origin": "ast",
       "id": "docs_tasks_draft_open_decisions",
-      "community": 17,
+      "community": 15,
       "norm_label": "open decisions",
       "codemapper": {}
     }
@@ -2031,6 +2867,186 @@
       "context": "command",
       "source": "mcp_mcp_server_codemapper2",
       "target": "mcp_command_c_users_tomin_onedrive_desktop_progetti_operating_proejcts_aider_for_large_codebases_codemapper_venv_scripts_python_exe"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "target": "artifacts_journey_before_end_state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "target": "artifacts_journey_before_journey_id",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "target": "artifacts_journey_before_persona_ref",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "target": "artifacts_journey_before_quantified_costs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "target": "artifacts_journey_before_stages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "target": "artifacts_journey_before_subtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "target": "artifacts_journey_before_title",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "target": "artifacts_journey_before_total_analyst_hours_range",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "target": "artifacts_journey_before_total_elapsed_calendar_days_range",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "target": "artifacts_journey_before_trigger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "target": "artifacts_journey_before_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_quantified_costs",
+      "target": "artifacts_journey_before_quantified_costs_decision_risk_lifetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_quantified_costs",
+      "target": "artifacts_journey_before_quantified_costs_ember_carbon_data_lag",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_quantified_costs",
+      "target": "artifacts_journey_before_quantified_costs_entso_e_granularity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_quantified_costs",
+      "target": "artifacts_journey_before_quantified_costs_external_consultant_alternative_eur",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_quantified_costs",
+      "target": "artifacts_journey_before_quantified_costs_grid_queue_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_quantified_costs",
+      "target": "artifacts_journey_before_quantified_costs_in_house_analyst_cost_eur",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_quantified_costs",
+      "target": "artifacts_journey_before_quantified_costs_re_run_cost",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2435,6 +3451,256 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_md_artifacts_journey_before",
+      "target": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
+      "target": "artifacts_journey_before_journey_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L220",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
+      "target": "artifacts_journey_before_sources",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
+      "target": "artifacts_journey_before_stage_1_mandate_brief",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
+      "target": "artifacts_journey_before_stage_2_energy_price_data_sourcing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
+      "target": "artifacts_journey_before_stage_3_carbon_intensity_data_sourcing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
+      "target": "artifacts_journey_before_stage_4_grid_infrastructure_scoping",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
+      "target": "artifacts_journey_before_stage_5_manual_data_integration_longlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
+      "target": "artifacts_journey_before_stage_6_supply_mix_analysis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
+      "target": "artifacts_journey_before_stage_7_site_shortlisting_scoring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L160",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
+      "target": "artifacts_journey_before_stage_8_ic_board_presentation_preparation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L180",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
+      "target": "artifacts_journey_before_stage_9_ic_meeting_follow_up",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
+      "target": "artifacts_journey_before_the_cost_of_today",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/journey-before.md",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
+      "target": "artifacts_journey_before_what_this_costs_summed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "artifacts_jtbd_md_artifacts_jtbd",
+      "target": "artifacts_jtbd_jobs_to_be_done_dc_siting_intelligence_tool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "artifacts_jtbd_jobs_to_be_done_dc_siting_intelligence_tool",
+      "target": "artifacts_jtbd_jtbd_001_jordan_functional",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "artifacts_jtbd_jobs_to_be_done_dc_siting_intelligence_tool",
+      "target": "artifacts_jtbd_jtbd_002_jordan_emotional",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "artifacts_jtbd_jobs_to_be_done_dc_siting_intelligence_tool",
+      "target": "artifacts_jtbd_jtbd_003_cfo_ic_member_financial",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "artifacts_jtbd_jobs_to_be_done_dc_siting_intelligence_tool",
+      "target": "artifacts_jtbd_jtbd_004_ceo_social_decision",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "artifacts_jtbd_jobs_to_be_done_dc_siting_intelligence_tool",
+      "target": "artifacts_jtbd_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "artifacts_jtbd_jobs_to_be_done_dc_siting_intelligence_tool",
+      "target": "artifacts_jtbd_why_jtbd_over_features",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "artifacts_jtbd_jtbd_001_jordan_functional",
+      "target": "artifacts_jtbd_screen_europe_in_one_query_instead_of_20_country_downloads",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "artifacts_jtbd_jtbd_002_jordan_emotional",
+      "target": "artifacts_jtbd_walk_into_ic_with_a_defensible_methodology_not_gut_feel_excel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "artifacts_jtbd_jtbd_003_cfo_ic_member_financial",
+      "target": "artifacts_jtbd_turn_the_ppa_flag_into_a_mwh_number_for_the_dcf_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/jtbd.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "artifacts_jtbd_jtbd_004_ceo_social_decision",
+      "target": "artifacts_jtbd_receive_one_ranked_winner_not_a_spreadsheet_with_the_answer_on_page_62",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "artifacts/persona.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -2548,9 +3814,9 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_personas_md_artifacts_personas",
-      "target": "artifacts_personas_dc_siting_intelligence_tool_user_personas",
-      "confidence_score": 1.0
+      "target": "artifacts_personas_dc_siting_intelligence_tool_user_personas"
     },
     {
       "relation": "contains",
@@ -2559,17 +3825,7 @@
       "source_location": "L47",
       "weight": 1.0,
       "source": "artifacts_personas_dc_siting_intelligence_tool_user_personas",
-      "target": "artifacts_personas_ic_cfo_the_person_who_approves",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "artifacts/personas.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "artifacts_personas_dc_siting_intelligence_tool_user_personas",
-      "target": "artifacts_personas_jordan_the_analyst_who_has_to_find_the_answer",
+      "target": "artifacts_personas_ceo_c_suite_the_decision_maker",
       "confidence_score": 1.0
     },
     {
@@ -2579,8 +3835,38 @@
       "source_location": "L74",
       "weight": 1.0,
       "source": "artifacts_personas_dc_siting_intelligence_tool_user_personas",
-      "target": "artifacts_personas_persona_summary_table",
+      "target": "artifacts_personas_cfo_financial_advisor_to_the_ceo",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "artifacts_personas_dc_siting_intelligence_tool_user_personas",
+      "target": "artifacts_personas_decision_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "artifacts_personas_dc_siting_intelligence_tool_user_personas",
+      "target": "artifacts_personas_jordan_technical_advisor_our_direct_user",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "artifacts_personas_dc_siting_intelligence_tool_user_personas",
+      "target": "artifacts_personas_persona_summary_table"
     },
     {
       "relation": "contains",
@@ -2588,17 +3874,7 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L27",
       "weight": 1.0,
-      "source": "artifacts_personas_jordan_the_analyst_who_has_to_find_the_answer",
-      "target": "artifacts_personas_current_pain",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "artifacts/personas.md",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "artifacts_personas_jordan_the_analyst_who_has_to_find_the_answer",
+      "source": "artifacts_personas_jordan_technical_advisor_our_direct_user",
       "target": "artifacts_personas_goals",
       "confidence_score": 1.0
     },
@@ -2608,7 +3884,7 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L34",
       "weight": 1.0,
-      "source": "artifacts_personas_jordan_the_analyst_who_has_to_find_the_answer",
+      "source": "artifacts_personas_jordan_technical_advisor_our_direct_user",
       "target": "artifacts_personas_what_makes_jordan_buy",
       "confidence_score": 1.0
     },
@@ -2618,7 +3894,7 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L66",
       "weight": 1.0,
-      "source": "artifacts_personas_ic_cfo_the_person_who_approves",
+      "source": "artifacts_personas_ceo_c_suite_the_decision_maker",
       "target": "artifacts_personas_what_makes_them_approve",
       "confidence_score": 1.0
     },
@@ -2628,8 +3904,28 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L60",
       "weight": 1.0,
-      "source": "artifacts_personas_ic_cfo_the_person_who_approves",
-      "target": "artifacts_personas_what_they_read",
+      "source": "artifacts_personas_ceo_c_suite_the_decision_maker",
+      "target": "artifacts_personas_what_they_need_the_narrative_to_cover",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "artifacts_personas_cfo_financial_advisor_to_the_ceo",
+      "target": "artifacts_personas_key_differential_kpis_what_the_tool_must_surface",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/personas.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "artifacts_personas_cfo_financial_advisor_to_the_ceo",
+      "target": "artifacts_personas_what_makes_them_approve_98",
       "confidence_score": 1.0
     },
     {
@@ -2638,8 +3934,18 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_stakeholder_map_md_artifacts_stakeholder_map",
-      "target": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
+      "target": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
+      "target": "artifacts_stakeholder_map_adoption_path",
       "confidence_score": 1.0
     },
     {
@@ -2648,67 +3954,87 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
-      "target": "artifacts_stakeholder_map_influence_interest_grid",
-      "confidence_score": 1.0
+      "target": "artifacts_stakeholder_map_influence_interest_grid"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L122",
-      "weight": 1.0,
-      "source": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
-      "target": "artifacts_stakeholder_map_narrative_pitch_implications",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L29",
+      "source_location": "L56",
       "weight": 1.0,
       "source": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
-      "target": "artifacts_stakeholder_map_stakeholder_profiles",
+      "target": "artifacts_stakeholder_map_layer_1_main_adoption_triad",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L31",
+      "source_location": "L110",
       "weight": 1.0,
-      "source": "artifacts_stakeholder_map_stakeholder_profiles",
-      "target": "artifacts_stakeholder_map_sh_001_ic_partner",
+      "source": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
+      "target": "artifacts_stakeholder_map_layer_2_peripheral_output_validators",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L44",
+      "source_location": "L158",
       "weight": 1.0,
-      "source": "artifacts_stakeholder_map_stakeholder_profiles",
-      "target": "artifacts_stakeholder_map_sh_002_cfo_cio",
+      "source": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
+      "target": "artifacts_stakeholder_map_layer_3_institutional_macro_constraint_setters",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L57",
+      "source_location": "L192",
       "weight": 1.0,
-      "source": "artifacts_stakeholder_map_stakeholder_profiles",
-      "target": "artifacts_stakeholder_map_sh_003_head_of_dc_development_jordan_s_manager",
+      "source": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
+      "target": "artifacts_stakeholder_map_pitch_implications",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L70",
+      "source_location": "L62",
       "weight": 1.0,
-      "source": "artifacts_stakeholder_map_stakeholder_profiles",
+      "source": "artifacts_stakeholder_map_layer_1_main_adoption_triad",
+      "target": "artifacts_stakeholder_map_sh_001_jordan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "artifacts_stakeholder_map_layer_1_main_adoption_triad",
+      "target": "artifacts_stakeholder_map_sh_002_ceo_c_suite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "artifacts_stakeholder_map_layer_1_main_adoption_triad",
+      "target": "artifacts_stakeholder_map_sh_003_cfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "artifacts_stakeholder_map_layer_2_peripheral_output_validators",
       "target": "artifacts_stakeholder_map_sh_004_esg_officer",
       "confidence_score": 1.0
     },
@@ -2716,30 +4042,40 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L83",
+      "source_location": "L130",
       "weight": 1.0,
-      "source": "artifacts_stakeholder_map_stakeholder_profiles",
-      "target": "artifacts_stakeholder_map_sh_005_board_lp",
+      "source": "artifacts_stakeholder_map_layer_2_peripheral_output_validators",
+      "target": "artifacts_stakeholder_map_sh_005_infrastructure_pm",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L96",
+      "source_location": "L144",
       "weight": 1.0,
-      "source": "artifacts_stakeholder_map_stakeholder_profiles",
-      "target": "artifacts_stakeholder_map_sh_006_infrastructure_pm",
+      "source": "artifacts_stakeholder_map_layer_2_peripheral_output_validators",
+      "target": "artifacts_stakeholder_map_sh_006_legal_regulatory_counsel",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "artifacts/stakeholder-map.md",
-      "source_location": "L109",
+      "source_location": "L164",
       "weight": 1.0,
-      "source": "artifacts_stakeholder_map_stakeholder_profiles",
-      "target": "artifacts_stakeholder_map_sh_007_legal_compliance",
+      "source": "artifacts_stakeholder_map_layer_3_institutional_macro_constraint_setters",
+      "target": "artifacts_stakeholder_map_sh_007_investment_committee_ic_partner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/stakeholder-map.md",
+      "source_location": "L178",
+      "weight": 1.0,
+      "source": "artifacts_stakeholder_map_layer_3_institutional_macro_constraint_setters",
+      "target": "artifacts_stakeholder_map_sh_008_board_lp",
       "confidence_score": 1.0
     },
     {
@@ -2951,6 +4287,216 @@
       "confidence_score": 1.0,
       "source": "docs_challenge_it_3_risorse_e_data_source_principali",
       "target": "docs_challenge_it_e_google_alphaearth"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_data",
+      "target": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
+      "target": "docs_data_1_ember_our_world_in_data_owid_energy_database",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
+      "target": "docs_data_2_openstreetmap_osm_via_overpass_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
+      "target": "docs_data_3_pypsa_eur_network_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
+      "target": "docs_data_4_google_alphaearth_satellite_embeddings_in_gee",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
+      "target": "docs_data_5_iea_energy_ai_reference_specifications",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
+      "target": "docs_data_6_analisi_dei_mismatch_di_granularit\u00e0_e_impatti_sul_progetto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
+      "target": "docs_data_tabella_sinottica_delle_granularit\u00e0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
+      "target": "docs_data_tabella_sinottica_delle_opportunit\u00e0_di_integrazione",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "docs_data_1_ember_our_world_in_data_owid_energy_database",
+      "target": "docs_data_a_caratteristiche_dei_dati",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "docs_data_1_ember_our_world_in_data_owid_energy_database",
+      "target": "docs_data_b_opportunit\u00e0_applicative",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "docs_data_2_openstreetmap_osm_via_overpass_api",
+      "target": "docs_data_a_caratteristiche_dei_dati_50",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "docs_data_2_openstreetmap_osm_via_overpass_api",
+      "target": "docs_data_b_opportunit\u00e0_applicative_59",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "docs_data_3_pypsa_eur_network_data",
+      "target": "docs_data_a_caratteristiche_dei_dati_71",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "docs_data_3_pypsa_eur_network_data",
+      "target": "docs_data_b_opportunit\u00e0_applicative_77",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "docs_data_4_google_alphaearth_satellite_embeddings_in_gee",
+      "target": "docs_data_a_caratteristiche_dei_dati_89",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "docs_data_4_google_alphaearth_satellite_embeddings_in_gee",
+      "target": "docs_data_b_opportunit\u00e0_applicative_95",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "docs_data_5_iea_energy_ai_reference_specifications",
+      "target": "docs_data_a_caratteristiche_dei_dati_105",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "docs_data_5_iea_energy_ai_reference_specifications",
+      "target": "docs_data_b_opportunit\u00e0_applicative_111",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "docs_data_6_analisi_dei_mismatch_di_granularit\u00e0_e_impatti_sul_progetto",
+      "target": "docs_data_a_mismatch_spaziale_da_nazionale_a_pixel_level",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "docs_data_6_analisi_dei_mismatch_di_granularit\u00e0_e_impatti_sul_progetto",
+      "target": "docs_data_b_mismatch_temporale_da_statico_a_orario",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3184,5 +4730,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "bf4cb2f49752f155ab741ed0441b00907f7d0e6d"
+  "built_at_commit": "528a98e243c8acdb1ccefdb4b01e62fda238e29d"
 }
