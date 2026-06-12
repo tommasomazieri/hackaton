@@ -9,7 +9,7 @@
       "source_file": ".claude/settings.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "claude_settings",
+      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_claude_settings_json",
       "community": 2,
       "norm_label": "settings.json"
     },
@@ -89,8 +89,8 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "codemapper_cache",
-      "community": 5,
+      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_codemapper_cache_json",
+      "community": 22,
       "norm_label": ".codemapper_cache.json"
     },
     {
@@ -99,8 +99,8 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "codemapper_cache_version",
-      "community": 5,
+      "id": "hackaton_codemapper_cache_version",
+      "community": 22,
       "norm_label": "version"
     },
     {
@@ -109,8 +109,8 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "codemapper_cache_root",
-      "community": 5,
+      "id": "hackaton_codemapper_cache_root",
+      "community": 22,
       "norm_label": "root"
     },
     {
@@ -119,8 +119,8 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "codemapper_cache_mtimes",
-      "community": 5,
+      "id": "hackaton_codemapper_cache_mtimes",
+      "community": 22,
       "norm_label": "mtimes"
     },
     {
@@ -129,8 +129,8 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "codemapper_cache_mtimes_src_data_ingestion_download_datasets_py",
-      "community": 5,
+      "id": "hackaton_codemapper_cache_mtimes_src_data_ingestion_download_datasets_py",
+      "community": 22,
       "norm_label": "src/data_ingestion/download_datasets.py"
     },
     {
@@ -139,8 +139,8 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "codemapper_cache_files",
-      "community": 5,
+      "id": "hackaton_codemapper_cache_files",
+      "community": 22,
       "norm_label": "files"
     },
     {
@@ -149,8 +149,8 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "community": 5,
+      "id": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
+      "community": 22,
       "norm_label": "src/data_ingestion/download_datasets.py"
     },
     {
@@ -159,8 +159,8 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "codemapper_cache_src_data_ingestion_download_datasets_py_path",
-      "community": 5,
+      "id": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_path",
+      "community": 22,
       "norm_label": "path"
     },
     {
@@ -169,8 +169,8 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "codemapper_cache_src_data_ingestion_download_datasets_py_module_doc",
-      "community": 5,
+      "id": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_module_doc",
+      "community": 22,
       "norm_label": "module_doc"
     },
     {
@@ -179,8 +179,8 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "codemapper_cache_src_data_ingestion_download_datasets_py_imports",
-      "community": 5,
+      "id": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_imports",
+      "community": 22,
       "norm_label": "imports"
     },
     {
@@ -189,8 +189,8 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L41",
       "_origin": "ast",
-      "id": "codemapper_cache_src_data_ingestion_download_datasets_py_symbols",
-      "community": 5,
+      "id": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_symbols",
+      "community": 22,
       "norm_label": "symbols"
     },
     {
@@ -199,8 +199,8 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L75",
       "_origin": "ast",
-      "id": "codemapper_cache_src_data_ingestion_download_datasets_py_module_doc_full",
-      "community": 5,
+      "id": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_module_doc_full",
+      "community": 22,
       "norm_label": "module_doc_full"
     },
     {
@@ -209,8 +209,8 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L76",
       "_origin": "ast",
-      "id": "codemapper_cache_src_data_ingestion_download_datasets_py_doc_start_line",
-      "community": 5,
+      "id": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_doc_start_line",
+      "community": 22,
       "norm_label": "doc_start_line"
     },
     {
@@ -219,8 +219,8 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L77",
       "_origin": "ast",
-      "id": "codemapper_cache_src_data_ingestion_download_datasets_py_doc_end_line",
-      "community": 5,
+      "id": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_doc_end_line",
+      "community": 22,
       "norm_label": "doc_end_line"
     },
     {
@@ -232,7 +232,7 @@
         "mcp_kind": "mcp_config_file"
       },
       "_origin": "ast",
-      "id": "mcp",
+      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_mcp_json",
       "community": 3,
       "norm_label": ".mcp.json"
     },
@@ -245,7 +245,7 @@
         "mcp_kind": "mcp_server"
       },
       "_origin": "ast",
-      "id": "mcp_mcp_server_codemapper2",
+      "id": "hackaton_mcp_mcp_server_codemapper2",
       "community": 3,
       "norm_label": "codemapper2"
     },
@@ -281,7 +281,7 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "artifacts_journey_before_json_artifacts_journey_before",
+      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
       "community": 24,
       "norm_label": "journey-before.json"
     },
@@ -476,13 +476,733 @@
       "norm_label": "jtbd.json"
     },
     {
+      "label": "market-viability.json",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_json_artifacts_market_viability",
+      "community": 1,
+      "norm_label": "market-viability.json"
+    },
+    {
+      "label": "_meta",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_meta",
+      "community": 1,
+      "norm_label": "_meta"
+    },
+    {
+      "label": "generated",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_meta_generated",
+      "community": 1,
+      "norm_label": "generated"
+    },
+    {
+      "label": "product",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_meta_product",
+      "community": 1,
+      "norm_label": "product"
+    },
+    {
+      "label": "scope",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_meta_scope",
+      "community": 1,
+      "norm_label": "scope"
+    },
+    {
+      "label": "methodology_note",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_meta_methodology_note",
+      "community": 1,
+      "norm_label": "methodology_note"
+    },
+    {
+      "label": "market_context",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context",
+      "community": 5,
+      "norm_label": "market_context"
+    },
+    {
+      "label": "eu_dc_total_market_usd_bn_2025",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_dc_total_market_usd_bn_2025",
+      "community": 5,
+      "norm_label": "eu_dc_total_market_usd_bn_2025"
+    },
+    {
+      "label": "eu_dc_total_market_usd_bn_2031_forecast",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_dc_total_market_usd_bn_2031_forecast",
+      "community": 5,
+      "norm_label": "eu_dc_total_market_usd_bn_2031_forecast"
+    },
+    {
+      "label": "eu_dc_total_market_cagr_pct",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_dc_total_market_cagr_pct",
+      "community": 5,
+      "norm_label": "eu_dc_total_market_cagr_pct"
+    },
+    {
+      "label": "eu_dc_total_market_source",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_dc_total_market_source",
+      "community": 5,
+      "norm_label": "eu_dc_total_market_source"
+    },
+    {
+      "label": "eu_colo_market_usd_bn_2023",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_colo_market_usd_bn_2023",
+      "community": 5,
+      "norm_label": "eu_colo_market_usd_bn_2023"
+    },
+    {
+      "label": "eu_colo_market_usd_bn_2028_forecast",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_colo_market_usd_bn_2028_forecast",
+      "community": 5,
+      "norm_label": "eu_colo_market_usd_bn_2028_forecast"
+    },
+    {
+      "label": "eu_colo_market_cagr_pct",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_colo_market_cagr_pct",
+      "community": 5,
+      "norm_label": "eu_colo_market_cagr_pct"
+    },
+    {
+      "label": "eu_colo_market_source",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_colo_market_source",
+      "community": 5,
+      "norm_label": "eu_colo_market_source"
+    },
+    {
+      "label": "eu_colo_takeup_mw_2023",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_colo_takeup_mw_2023",
+      "community": 5,
+      "norm_label": "eu_colo_takeup_mw_2023"
+    },
+    {
+      "label": "eu_colo_takeup_mw_2023_yoy_pct",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_colo_takeup_mw_2023_yoy_pct",
+      "community": 5,
+      "norm_label": "eu_colo_takeup_mw_2023_yoy_pct"
+    },
+    {
+      "label": "eu_colo_new_supply_mw_2023",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_colo_new_supply_mw_2023",
+      "community": 5,
+      "norm_label": "eu_colo_new_supply_mw_2023"
+    },
+    {
+      "label": "eu_colo_supply_source",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_colo_supply_source",
+      "community": 5,
+      "norm_label": "eu_colo_supply_source"
+    },
+    {
+      "label": "eu_colo_takeup_mw_2024",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_colo_takeup_mw_2024",
+      "community": 5,
+      "norm_label": "eu_colo_takeup_mw_2024"
+    },
+    {
+      "label": "eu_colo_new_supply_mw_2024",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_colo_new_supply_mw_2024",
+      "community": 5,
+      "norm_label": "eu_colo_new_supply_mw_2024"
+    },
+    {
+      "label": "eu_colo_takeup_mw_2025_projected",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_colo_takeup_mw_2025_projected",
+      "community": 5,
+      "norm_label": "eu_colo_takeup_mw_2025_projected"
+    },
+    {
+      "label": "eu_colo_new_supply_mw_2025_projected",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_colo_new_supply_mw_2025_projected",
+      "community": 5,
+      "norm_label": "eu_colo_new_supply_mw_2025_projected"
+    },
+    {
+      "label": "eu_colo_2024_2025_source",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_colo_2024_2025_source",
+      "community": 5,
+      "norm_label": "eu_colo_2024_2025_source"
+    },
+    {
+      "label": "eu_colo_investment_usd_bn_2022",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_colo_investment_usd_bn_2022",
+      "community": 5,
+      "norm_label": "eu_colo_investment_usd_bn_2022"
+    },
+    {
+      "label": "eu_colo_investment_usd_bn_2023",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_colo_investment_usd_bn_2023",
+      "community": 5,
+      "norm_label": "eu_colo_investment_usd_bn_2023"
+    },
+    {
+      "label": "eu_colo_investment_growth_pct_2023",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_colo_investment_growth_pct_2023",
+      "community": 5,
+      "norm_label": "eu_colo_investment_growth_pct_2023"
+    },
+    {
+      "label": "eu_colo_investment_source",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_context_eu_colo_investment_source",
+      "community": 5,
+      "norm_label": "eu_colo_investment_source"
+    },
+    {
+      "label": "advisory_market",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_advisory_market",
+      "community": 1,
+      "norm_label": "advisory_market"
+    },
+    {
+      "label": "global_dc_advisory_usd_m_2025",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_advisory_market_global_dc_advisory_usd_m_2025",
+      "community": 1,
+      "norm_label": "global_dc_advisory_usd_m_2025"
+    },
+    {
+      "label": "global_dc_advisory_usd_m_2035_forecast",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_advisory_market_global_dc_advisory_usd_m_2035_forecast",
+      "community": 1,
+      "norm_label": "global_dc_advisory_usd_m_2035_forecast"
+    },
+    {
+      "label": "global_dc_advisory_cagr_pct",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_advisory_market_global_dc_advisory_cagr_pct",
+      "community": 1,
+      "norm_label": "global_dc_advisory_cagr_pct"
+    },
+    {
+      "label": "global_dc_advisory_source",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_advisory_market_global_dc_advisory_source",
+      "community": 1,
+      "norm_label": "global_dc_advisory_source"
+    },
+    {
+      "label": "global_dc_advisory_caveat",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_advisory_market_global_dc_advisory_caveat",
+      "community": 1,
+      "norm_label": "global_dc_advisory_caveat"
+    },
+    {
+      "label": "tam_eur",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_tam_eur",
+      "community": 1,
+      "norm_label": "tam_eur"
+    },
+    {
+      "label": "tam_label",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_tam_label",
+      "community": 1,
+      "norm_label": "tam_label"
+    },
+    {
+      "label": "tam_derivation",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_tam_derivation",
+      "community": 29,
+      "norm_label": "tam_derivation"
+    },
+    {
+      "label": "method",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_tam_derivation_method",
+      "community": 29,
+      "norm_label": "method"
+    },
+    {
+      "label": "global_advisory_usd_m",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_tam_derivation_global_advisory_usd_m",
+      "community": 29,
+      "norm_label": "global_advisory_usd_m"
+    },
+    {
+      "label": "eu_dc_market_usd_bn",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_tam_derivation_eu_dc_market_usd_bn",
+      "community": 29,
+      "norm_label": "eu_dc_market_usd_bn"
+    },
+    {
+      "label": "global_dc_market_estimate_usd_bn",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_tam_derivation_global_dc_market_estimate_usd_bn",
+      "community": 29,
+      "norm_label": "global_dc_market_estimate_usd_bn"
+    },
+    {
+      "label": "global_dc_market_note",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_tam_derivation_global_dc_market_note",
+      "community": 29,
+      "norm_label": "global_dc_market_note"
+    },
+    {
+      "label": "usd_eur_rate",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_tam_derivation_usd_eur_rate",
+      "community": 29,
+      "norm_label": "usd_eur_rate"
+    },
+    {
+      "label": "verdict",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_tam_derivation_verdict",
+      "community": 29,
+      "norm_label": "verdict"
+    },
+    {
+      "label": "sam_eur",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_sam_eur",
+      "community": 1,
+      "norm_label": "sam_eur"
+    },
+    {
+      "label": "sam_label",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_sam_label",
+      "community": 1,
+      "norm_label": "sam_label"
+    },
+    {
+      "label": "sam_derivation",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_sam_derivation",
+      "community": 28,
+      "norm_label": "sam_derivation"
+    },
+    {
+      "label": "method",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_sam_derivation_method",
+      "community": 28,
+      "norm_label": "method"
+    },
+    {
+      "label": "active_siting_decisions_per_year",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_sam_derivation_active_siting_decisions_per_year",
+      "community": 28,
+      "norm_label": "active_siting_decisions_per_year"
+    },
+    {
+      "label": "advisory_spend_per_project_eur",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_sam_derivation_advisory_spend_per_project_eur",
+      "community": 28,
+      "norm_label": "advisory_spend_per_project_eur"
+    },
+    {
+      "label": "pre_feasibility_share_of_total_advisory_pct",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_sam_derivation_pre_feasibility_share_of_total_advisory_pct",
+      "community": 28,
+      "norm_label": "pre_feasibility_share_of_total_advisory_pct"
+    },
+    {
+      "label": "infra_fund_screening_events_per_year",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_sam_derivation_infra_fund_screening_events_per_year",
+      "community": 28,
+      "norm_label": "infra_fund_screening_events_per_year"
+    },
+    {
+      "label": "infra_fund_screening_spend_per_event_eur",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L65",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_sam_derivation_infra_fund_screening_spend_per_event_eur",
+      "community": 28,
+      "norm_label": "infra_fund_screening_spend_per_event_eur"
+    },
+    {
+      "label": "calculation",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_sam_derivation_calculation",
+      "community": 28,
+      "norm_label": "calculation"
+    },
+    {
+      "label": "scope_note",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_sam_derivation_scope_note",
+      "community": 28,
+      "norm_label": "scope_note"
+    },
+    {
+      "label": "som_eur_year1",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_som_eur_year1",
+      "community": 1,
+      "norm_label": "som_eur_year1"
+    },
+    {
+      "label": "som_eur_year3",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_som_eur_year3",
+      "community": 1,
+      "norm_label": "som_eur_year3"
+    },
+    {
+      "label": "som_label",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_som_label",
+      "community": 1,
+      "norm_label": "som_label"
+    },
+    {
+      "label": "som_derivation",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_som_derivation",
+      "community": 1,
+      "norm_label": "som_derivation"
+    },
+    {
+      "label": "year1",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_som_derivation_year1",
+      "community": 1,
+      "norm_label": "year1"
+    },
+    {
+      "label": "year3",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L75",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_som_derivation_year3",
+      "community": 1,
+      "norm_label": "year3"
+    },
+    {
+      "label": "sam_capture_year1_pct",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_som_derivation_sam_capture_year1_pct",
+      "community": 1,
+      "norm_label": "sam_capture_year1_pct"
+    },
+    {
+      "label": "sam_capture_year3_pct",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_som_derivation_sam_capture_year3_pct",
+      "community": 1,
+      "norm_label": "sam_capture_year3_pct"
+    },
+    {
+      "label": "benchmark",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_som_derivation_benchmark",
+      "community": 1,
+      "norm_label": "benchmark"
+    },
+    {
+      "label": "pricing_models",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L81",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_pricing_models",
+      "community": 1,
+      "norm_label": "pricing_models"
+    },
+    {
+      "label": "competitors",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L111",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_competitors",
+      "community": 1,
+      "norm_label": "competitors"
+    },
+    {
+      "label": "our_differentiation",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L162",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_our_differentiation",
+      "community": 1,
+      "norm_label": "our_differentiation"
+    },
+    {
+      "label": "summary",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L163",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_our_differentiation_summary",
+      "community": 1,
+      "norm_label": "summary"
+    },
+    {
+      "label": "key_moats",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L164",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_our_differentiation_key_moats",
+      "community": 1,
+      "norm_label": "key_moats"
+    },
+    {
+      "label": "footnotes",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L174",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_footnotes",
+      "community": 1,
+      "norm_label": "footnotes"
+    },
+    {
+      "label": "sources_confirmed_via_direct_fetch",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L175",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_footnotes_sources_confirmed_via_direct_fetch",
+      "community": 1,
+      "norm_label": "sources_confirmed_via_direct_fetch"
+    },
+    {
+      "label": "derived_estimates_methodology",
+      "file_type": "code",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L220",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_footnotes_derived_estimates_methodology",
+      "community": 1,
+      "norm_label": "derived_estimates_methodology"
+    },
+    {
       "label": "personas.json",
       "file_type": "code",
       "source_file": "artifacts/personas.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "artifacts_personas_json_artifacts_personas",
-      "community": 22,
+      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_personas_json",
+      "community": 33,
       "norm_label": "personas.json"
     },
     {
@@ -491,8 +1211,8 @@
       "source_file": "artifacts/stakeholder-map.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "artifacts_stakeholder_map_json_artifacts_stakeholder_map",
-      "community": 23,
+      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_stakeholder_map_json",
+      "community": 34,
       "norm_label": "stakeholder-map.json"
     },
     {
@@ -511,8 +1231,8 @@
       "source_file": "project-management/epics.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "project_management_epics",
-      "community": 10,
+      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_project_management_epics_json",
+      "community": 35,
       "norm_label": "epics.json"
     },
     {
@@ -589,7 +1309,7 @@
         "kind": "bash_entrypoint"
       },
       "_origin": "ast",
-      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_project_management_open_pm_sh__entry",
+      "id": "c_users_gabbo_desktop_hackathon_monaco_project_antigravity_project_management_open_pm_sh__entry",
       "community": 8,
       "norm_label": "open-pm.sh script"
     },
@@ -819,7 +1539,7 @@
       "source_file": "src/data_ingestion/download_datasets.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "data_ingestion_download_datasets",
+      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_src_data_ingestion_download_datasets_py",
       "community": 18,
       "norm_label": "download_datasets.py"
     },
@@ -862,6 +1582,26 @@
       "id": "data_ingestion_download_datasets_create_iea_ai_reference",
       "community": 18,
       "norm_label": "create_iea_ai_reference()"
+    },
+    {
+      "label": "graphify.md",
+      "file_type": "document",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "rules_graphify",
+      "community": 31,
+      "norm_label": "graphify.md"
+    },
+    {
+      "label": "graphify",
+      "file_type": "document",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "rules_graphify_graphify",
+      "community": 31,
+      "norm_label": "graphify"
     },
     {
       "label": "SKILL.md",
@@ -944,13 +1684,33 @@
       "norm_label": "errori comuni da evitare"
     },
     {
+      "label": "graphify.md",
+      "file_type": "document",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "workflows_graphify",
+      "community": 32,
+      "norm_label": "graphify.md"
+    },
+    {
+      "label": "Workflow: graphify",
+      "file_type": "document",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "workflows_graphify_workflow_graphify",
+      "community": 32,
+      "norm_label": "workflow: graphify"
+    },
+    {
       "label": "CLAUDE.md",
       "file_type": "document",
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "claude",
-      "community": 1,
+      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_claude_md",
+      "community": 30,
       "norm_label": "claude.md"
     },
     {
@@ -959,8 +1719,8 @@
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "claude_dc_siting_intelligence_tool_hackathon",
-      "community": 1,
+      "id": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
+      "community": 30,
       "norm_label": "dc siting intelligence tool \u2014 hackathon"
     },
     {
@@ -969,8 +1729,8 @@
       "source_file": "CLAUDE.md",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "claude_project_layout",
-      "community": 1,
+      "id": "hackaton_claude_project_layout",
+      "community": 30,
       "norm_label": "project layout"
     },
     {
@@ -979,8 +1739,8 @@
       "source_file": "CLAUDE.md",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "claude_key_constraints",
-      "community": 1,
+      "id": "hackaton_claude_key_constraints",
+      "community": 30,
       "norm_label": "key constraints"
     },
     {
@@ -989,8 +1749,8 @@
       "source_file": "CLAUDE.md",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "claude_data_sources",
-      "community": 1,
+      "id": "hackaton_claude_data_sources",
+      "community": 30,
       "norm_label": "data sources"
     },
     {
@@ -999,8 +1759,8 @@
       "source_file": "CLAUDE.md",
       "source_location": "L32",
       "_origin": "ast",
-      "id": "claude_dev_commands",
-      "community": 1,
+      "id": "hackaton_claude_dev_commands",
+      "community": 30,
       "norm_label": "dev commands"
     },
     {
@@ -1009,8 +1769,8 @@
       "source_file": "CLAUDE.md",
       "source_location": "L36",
       "_origin": "ast",
-      "id": "claude_important",
-      "community": 1,
+      "id": "hackaton_claude_important",
+      "community": 30,
       "norm_label": "important"
     },
     {
@@ -1019,7 +1779,7 @@
       "source_file": "artifacts/journey-before.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "artifacts_journey_before_md_artifacts_journey_before",
+      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_md",
       "community": 25,
       "norm_label": "journey-before.md"
     },
@@ -1184,104 +1944,284 @@
       "norm_label": "jobs-to-be-done: dc siting intelligence tool"
     },
     {
-      "label": "Why JTBD over features",
+      "label": "What this tool actually does \u2014 and does not do",
       "file_type": "document",
       "source_file": "artifacts/jtbd.md",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "artifacts_jtbd_why_jtbd_over_features",
+      "id": "artifacts_jtbd_what_this_tool_actually_does_and_does_not_do",
       "community": 26,
-      "norm_label": "why jtbd over features"
+      "norm_label": "what this tool actually does \u2014 and does not do"
     },
     {
       "label": "JTBD-001 \u2014 Jordan \u00b7 Functional",
       "file_type": "document",
       "source_file": "artifacts/jtbd.md",
-      "source_location": "L16",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "artifacts_jtbd_jtbd_001_jordan_functional",
       "community": 26,
       "norm_label": "jtbd-001 \u2014 jordan \u00b7 functional"
     },
     {
-      "label": "Screen Europe in one query instead of 20+ country downloads",
+      "label": "Compare EU zones on the variables that actually differ by location",
       "file_type": "document",
       "source_file": "artifacts/jtbd.md",
-      "source_location": "L17",
+      "source_location": "L21",
       "_origin": "ast",
-      "id": "artifacts_jtbd_screen_europe_in_one_query_instead_of_20_country_downloads",
+      "id": "artifacts_jtbd_compare_eu_zones_on_the_variables_that_actually_differ_by_location",
       "community": 26,
-      "norm_label": "screen europe in one query instead of 20+ country downloads"
+      "norm_label": "compare eu zones on the variables that actually differ by location"
     },
     {
       "label": "JTBD-002 \u2014 Jordan \u00b7 Emotional",
       "file_type": "document",
       "source_file": "artifacts/jtbd.md",
-      "source_location": "L28",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "artifacts_jtbd_jtbd_002_jordan_emotional",
       "community": 26,
       "norm_label": "jtbd-002 \u2014 jordan \u00b7 emotional"
     },
     {
-      "label": "Walk into IC with a defensible methodology, not gut-feel Excel",
+      "label": "Back the ranking with spot-specific differentials, not judgment",
       "file_type": "document",
       "source_file": "artifacts/jtbd.md",
-      "source_location": "L29",
+      "source_location": "L33",
       "_origin": "ast",
-      "id": "artifacts_jtbd_walk_into_ic_with_a_defensible_methodology_not_gut_feel_excel",
+      "id": "artifacts_jtbd_back_the_ranking_with_spot_specific_differentials_not_judgment",
       "community": 26,
-      "norm_label": "walk into ic with a defensible methodology, not gut-feel excel"
+      "norm_label": "back the ranking with spot-specific differentials, not judgment"
     },
     {
       "label": "JTBD-003 \u2014 CFO / IC Member \u00b7 Financial",
       "file_type": "document",
       "source_file": "artifacts/jtbd.md",
-      "source_location": "L40",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "artifacts_jtbd_jtbd_003_cfo_ic_member_financial",
       "community": 26,
       "norm_label": "jtbd-003 \u2014 cfo / ic member \u00b7 financial"
     },
     {
-      "label": "Turn the PPA flag into a \u20ac/MWh number for the DCF model",
+      "label": "Give me the location-specific deltas to plug into our model",
       "file_type": "document",
       "source_file": "artifacts/jtbd.md",
-      "source_location": "L41",
+      "source_location": "L45",
       "_origin": "ast",
-      "id": "artifacts_jtbd_turn_the_ppa_flag_into_a_mwh_number_for_the_dcf_model",
+      "id": "artifacts_jtbd_give_me_the_location_specific_deltas_to_plug_into_our_model",
       "community": 26,
-      "norm_label": "turn the ppa flag into a \u20ac/mwh number for the dcf model"
+      "norm_label": "give me the location-specific deltas to plug into our model"
     },
     {
       "label": "JTBD-004 \u2014 CEO \u00b7 Social / Decision",
       "file_type": "document",
       "source_file": "artifacts/jtbd.md",
-      "source_location": "L52",
+      "source_location": "L56",
       "_origin": "ast",
       "id": "artifacts_jtbd_jtbd_004_ceo_social_decision",
       "community": 26,
       "norm_label": "jtbd-004 \u2014 ceo \u00b7 social / decision"
     },
     {
-      "label": "Receive one ranked winner \u2014 not a spreadsheet with the answer on page 62",
+      "label": "One ranked winner \u2014 which location wins on the variables that differ",
       "file_type": "document",
       "source_file": "artifacts/jtbd.md",
-      "source_location": "L53",
+      "source_location": "L57",
       "_origin": "ast",
-      "id": "artifacts_jtbd_receive_one_ranked_winner_not_a_spreadsheet_with_the_answer_on_page_62",
+      "id": "artifacts_jtbd_one_ranked_winner_which_location_wins_on_the_variables_that_differ",
       "community": 26,
-      "norm_label": "receive one ranked winner \u2014 not a spreadsheet with the answer on page 62"
+      "norm_label": "one ranked winner \u2014 which location wins on the variables that differ"
     },
     {
       "label": "Summary",
       "file_type": "document",
       "source_file": "artifacts/jtbd.md",
-      "source_location": "L64",
+      "source_location": "L68",
       "_origin": "ast",
       "id": "artifacts_jtbd_summary",
       "community": 26,
       "norm_label": "summary"
+    },
+    {
+      "label": "market-viability.md",
+      "file_type": "document",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_md_artifacts_market_viability",
+      "community": 10,
+      "norm_label": "market-viability.md"
+    },
+    {
+      "label": "Market Viability \u2014 DC Siting Intelligence Tool (Invertix)",
+      "file_type": "document",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_viability_dc_siting_intelligence_tool_invertix",
+      "community": 10,
+      "norm_label": "market viability \u2014 dc siting intelligence tool (invertix)"
+    },
+    {
+      "label": "The Market Opportunity",
+      "file_type": "document",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_the_market_opportunity",
+      "community": 10,
+      "norm_label": "the market opportunity"
+    },
+    {
+      "label": "Market Sizing",
+      "file_type": "document",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_market_sizing",
+      "community": 10,
+      "norm_label": "market sizing"
+    },
+    {
+      "label": "TAM \u2014 Total Addressable Market: ~\u20ac175M/yr",
+      "file_type": "document",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_tam_total_addressable_market_175m_yr",
+      "community": 10,
+      "norm_label": "tam \u2014 total addressable market: ~\u20ac175m/yr"
+    },
+    {
+      "label": "SAM \u2014 Serviceable Addressable Market: ~\u20ac50M/yr",
+      "file_type": "document",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_sam_serviceable_addressable_market_50m_yr",
+      "community": 10,
+      "norm_label": "sam \u2014 serviceable addressable market: ~\u20ac50m/yr"
+    },
+    {
+      "label": "SOM \u2014 Serviceable Obtainable Market: \u20ac0.9M ARR (Year 1) \u2192 \u20ac4M ARR (Year 3)",
+      "file_type": "document",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_som_serviceable_obtainable_market_0_9m_arr_year_1_4m_arr_year_3",
+      "community": 10,
+      "norm_label": "som \u2014 serviceable obtainable market: \u20ac0.9m arr (year 1) \u2192 \u20ac4m arr (year 3)"
+    },
+    {
+      "label": "Pricing Model",
+      "file_type": "document",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_pricing_model",
+      "community": 10,
+      "norm_label": "pricing model"
+    },
+    {
+      "label": "Option 1 \u2014 Per-Query (\u20ac1,500\u2013\u20ac5,000)",
+      "file_type": "document",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_option_1_per_query_1_500_5_000",
+      "community": 10,
+      "norm_label": "option 1 \u2014 per-query (\u20ac1,500\u2013\u20ac5,000)"
+    },
+    {
+      "label": "Option 2 \u2014 Annual Subscription (\u20ac18K\u2013\u20ac180K/yr)",
+      "file_type": "document",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_option_2_annual_subscription_18k_180k_yr",
+      "community": 10,
+      "norm_label": "option 2 \u2014 annual subscription (\u20ac18k\u2013\u20ac180k/yr)"
+    },
+    {
+      "label": "Option 3 \u2014 White-Label API (\u20ac250K\u2013\u20ac500K/yr)",
+      "file_type": "document",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_option_3_white_label_api_250k_500k_yr",
+      "community": 10,
+      "norm_label": "option 3 \u2014 white-label api (\u20ac250k\u2013\u20ac500k/yr)"
+    },
+    {
+      "label": "Competitive Landscape",
+      "file_type": "document",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L80",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_competitive_landscape",
+      "community": 10,
+      "norm_label": "competitive landscape"
+    },
+    {
+      "label": "What exists today \u2014 and where each falls short",
+      "file_type": "document",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_what_exists_today_and_where_each_falls_short",
+      "community": 10,
+      "norm_label": "what exists today \u2014 and where each falls short"
+    },
+    {
+      "label": "The gap no one fills",
+      "file_type": "document",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L93",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_the_gap_no_one_fills",
+      "community": 10,
+      "norm_label": "the gap no one fills"
+    },
+    {
+      "label": "Why we win against consultants",
+      "file_type": "document",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L104",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_why_we_win_against_consultants",
+      "community": 10,
+      "norm_label": "why we win against consultants"
+    },
+    {
+      "label": "Why Now",
+      "file_type": "document",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L115",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_why_now",
+      "community": 10,
+      "norm_label": "why now"
+    },
+    {
+      "label": "Summary",
+      "file_type": "document",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L124",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_summary",
+      "community": 10,
+      "norm_label": "summary"
+    },
+    {
+      "label": "Footnotes & Sources",
+      "file_type": "document",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L139",
+      "_origin": "ast",
+      "id": "artifacts_market_viability_footnotes_sources",
+      "community": 10,
+      "norm_label": "footnotes & sources"
     },
     {
       "label": "persona.md",
@@ -1289,7 +2229,7 @@
       "source_file": "artifacts/persona.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "artifacts_persona",
+      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_persona_md",
       "community": 7,
       "norm_label": "persona.md"
     },
@@ -1409,7 +2349,7 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "artifacts_personas_md_artifacts_personas",
+      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_personas_md",
       "community": 21,
       "norm_label": "personas.md"
     },
@@ -1539,7 +2479,7 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "artifacts_stakeholder_map_md_artifacts_stakeholder_map",
+      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_stakeholder_map_md",
       "community": 20,
       "norm_label": "stakeholder-map.md"
     },
@@ -2014,30 +2954,80 @@
       "norm_label": "3. pypsa-eur network data"
     },
     {
-      "label": "A. Caratteristiche dei Dati",
+      "label": "A. Caratteristiche dei Dati e Struttura delle Componenti",
       "file_type": "document",
       "source_file": "docs/data.md",
       "source_location": "L71",
       "_origin": "ast",
-      "id": "docs_data_a_caratteristiche_dei_dati_71",
+      "id": "docs_data_a_caratteristiche_dei_dati_e_struttura_delle_componenti",
       "community": 17,
-      "norm_label": "a. caratteristiche dei dati"
+      "norm_label": "a. caratteristiche dei dati e struttura delle componenti"
     },
     {
-      "label": "B. Opportunit\u00e0 Applicative",
+      "label": "1. Nodi (Buses)",
       "file_type": "document",
       "source_file": "docs/data.md",
-      "source_location": "L77",
+      "source_location": "L76",
       "_origin": "ast",
-      "id": "docs_data_b_opportunit\u00e0_applicative_77",
+      "id": "docs_data_1_nodi_buses",
       "community": 17,
-      "norm_label": "b. opportunita applicative"
+      "norm_label": "1. nodi (buses)"
+    },
+    {
+      "label": "2. Linee di Trasmissione (Lines) e Link DC (Links)",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "docs_data_2_linee_di_trasmissione_lines_e_link_dc_links",
+      "community": 17,
+      "norm_label": "2. linee di trasmissione (lines) e link dc (links)"
+    },
+    {
+      "label": "3. Generatori (Generators)",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L105",
+      "_origin": "ast",
+      "id": "docs_data_3_generatori_generators",
+      "community": 17,
+      "norm_label": "3. generatori (generators)"
+    },
+    {
+      "label": "4. Unit\u00e0 di Accumulo (Storage Units & Stores)",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L117",
+      "_origin": "ast",
+      "id": "docs_data_4_unit\u00e0_di_accumulo_storage_units_stores",
+      "community": 17,
+      "norm_label": "4. unita di accumulo (storage units & stores)"
+    },
+    {
+      "label": "5. Trasformatori (Transformers)",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L129",
+      "_origin": "ast",
+      "id": "docs_data_5_trasformatori_transformers",
+      "community": 17,
+      "norm_label": "5. trasformatori (transformers)"
+    },
+    {
+      "label": "B. Opportunit\u00e0 Applicative e Formule Chiave",
+      "file_type": "document",
+      "source_file": "docs/data.md",
+      "source_location": "L137",
+      "_origin": "ast",
+      "id": "docs_data_b_opportunit\u00e0_applicative_e_formule_chiave",
+      "community": 17,
+      "norm_label": "b. opportunita applicative e formule chiave"
     },
     {
       "label": "4. Google AlphaEarth (Satellite Embeddings in GEE)",
       "file_type": "document",
       "source_file": "docs/data.md",
-      "source_location": "L87",
+      "source_location": "L166",
       "_origin": "ast",
       "id": "docs_data_4_google_alphaearth_satellite_embeddings_in_gee",
       "community": 17,
@@ -2047,9 +3037,9 @@
       "label": "A. Caratteristiche dei Dati",
       "file_type": "document",
       "source_file": "docs/data.md",
-      "source_location": "L89",
+      "source_location": "L168",
       "_origin": "ast",
-      "id": "docs_data_a_caratteristiche_dei_dati_89",
+      "id": "docs_data_a_caratteristiche_dei_dati_168",
       "community": 17,
       "norm_label": "a. caratteristiche dei dati"
     },
@@ -2057,9 +3047,9 @@
       "label": "B. Opportunit\u00e0 Applicative",
       "file_type": "document",
       "source_file": "docs/data.md",
-      "source_location": "L95",
+      "source_location": "L174",
       "_origin": "ast",
-      "id": "docs_data_b_opportunit\u00e0_applicative_95",
+      "id": "docs_data_b_opportunit\u00e0_applicative_174",
       "community": 17,
       "norm_label": "b. opportunita applicative"
     },
@@ -2067,7 +3057,7 @@
       "label": "5. IEA Energy & AI Reference Specifications",
       "file_type": "document",
       "source_file": "docs/data.md",
-      "source_location": "L103",
+      "source_location": "L182",
       "_origin": "ast",
       "id": "docs_data_5_iea_energy_ai_reference_specifications",
       "community": 17,
@@ -2077,9 +3067,9 @@
       "label": "A. Caratteristiche dei Dati",
       "file_type": "document",
       "source_file": "docs/data.md",
-      "source_location": "L105",
+      "source_location": "L184",
       "_origin": "ast",
-      "id": "docs_data_a_caratteristiche_dei_dati_105",
+      "id": "docs_data_a_caratteristiche_dei_dati_184",
       "community": 17,
       "norm_label": "a. caratteristiche dei dati"
     },
@@ -2087,9 +3077,9 @@
       "label": "B. Opportunit\u00e0 Applicative",
       "file_type": "document",
       "source_file": "docs/data.md",
-      "source_location": "L111",
+      "source_location": "L190",
       "_origin": "ast",
-      "id": "docs_data_b_opportunit\u00e0_applicative_111",
+      "id": "docs_data_b_opportunit\u00e0_applicative_190",
       "community": 17,
       "norm_label": "b. opportunita applicative"
     },
@@ -2097,7 +3087,7 @@
       "label": "6. Analisi dei Mismatch di Granularit\u00e0 e Impatti sul Progetto",
       "file_type": "document",
       "source_file": "docs/data.md",
-      "source_location": "L120",
+      "source_location": "L199",
       "_origin": "ast",
       "id": "docs_data_6_analisi_dei_mismatch_di_granularit\u00e0_e_impatti_sul_progetto",
       "community": 17,
@@ -2107,7 +3097,7 @@
       "label": "A. Mismatch Spaziale (da Nazionale a Pixel-level)",
       "file_type": "document",
       "source_file": "docs/data.md",
-      "source_location": "L124",
+      "source_location": "L203",
       "_origin": "ast",
       "id": "docs_data_a_mismatch_spaziale_da_nazionale_a_pixel_level",
       "community": 17,
@@ -2117,7 +3107,7 @@
       "label": "B. Mismatch Temporale (da Statico a Orario)",
       "file_type": "document",
       "source_file": "docs/data.md",
-      "source_location": "L134",
+      "source_location": "L220",
       "_origin": "ast",
       "id": "docs_data_b_mismatch_temporale_da_statico_a_orario",
       "community": 17,
@@ -2127,7 +3117,7 @@
       "label": "Tabella Sinottica delle Granularit\u00e0",
       "file_type": "document",
       "source_file": "docs/data.md",
-      "source_location": "L143",
+      "source_location": "L229",
       "_origin": "ast",
       "id": "docs_data_tabella_sinottica_delle_granularit\u00e0",
       "community": 17,
@@ -2137,7 +3127,7 @@
       "label": "Tabella Sinottica delle Opportunit\u00e0 di Integrazione",
       "file_type": "document",
       "source_file": "docs/data.md",
-      "source_location": "L155",
+      "source_location": "L241",
       "_origin": "ast",
       "id": "docs_data_tabella_sinottica_delle_opportunit\u00e0_di_integrazione",
       "community": 17,
@@ -2149,7 +3139,7 @@
       "source_file": "docs/e0-commands.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_e0_commands",
+      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_docs_e0_commands_md",
       "community": 19,
       "norm_label": "e0-commands.md"
     },
@@ -2214,12 +3204,112 @@
       "norm_label": "task-046 \u2014 stakeholder map"
     },
     {
+      "label": "preliminary-analysis-draft.md",
+      "file_type": "document",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_preliminary_analysis_draft",
+      "community": 23,
+      "norm_label": "preliminary-analysis-draft.md"
+    },
+    {
+      "label": "Preliminary Analysis \u2014 DC Siting Intelligence Tool",
+      "file_type": "document",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_preliminary_analysis_draft_preliminary_analysis_dc_siting_intelligence_tool",
+      "community": 23,
+      "norm_label": "preliminary analysis \u2014 dc siting intelligence tool"
+    },
+    {
+      "label": "Who Buys, Who Uses, What Kills the Deal",
+      "file_type": "document",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "docs_preliminary_analysis_draft_who_buys_who_uses_what_kills_the_deal",
+      "community": 23,
+      "norm_label": "who buys, who uses, what kills the deal"
+    },
+    {
+      "label": "Quantified Pain = Pitch Numbers",
+      "file_type": "document",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "docs_preliminary_analysis_draft_quantified_pain_pitch_numbers",
+      "community": 23,
+      "norm_label": "quantified pain = pitch numbers"
+    },
+    {
+      "label": "Granularity \u2014 Two Independent Axes",
+      "file_type": "document",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "docs_preliminary_analysis_draft_granularity_two_independent_axes",
+      "community": 23,
+      "norm_label": "granularity \u2014 two independent axes"
+    },
+    {
+      "label": "Spatial Granularity",
+      "file_type": "document",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "docs_preliminary_analysis_draft_spatial_granularity",
+      "community": 23,
+      "norm_label": "spatial granularity"
+    },
+    {
+      "label": "Temporal Granularity",
+      "file_type": "document",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "docs_preliminary_analysis_draft_temporal_granularity",
+      "community": 23,
+      "norm_label": "temporal granularity"
+    },
+    {
+      "label": "Data Design Insights",
+      "file_type": "document",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "docs_preliminary_analysis_draft_data_design_insights",
+      "community": 23,
+      "norm_label": "data design insights"
+    },
+    {
+      "label": "Dev Critical Path",
+      "file_type": "document",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L81",
+      "_origin": "ast",
+      "id": "docs_preliminary_analysis_draft_dev_critical_path",
+      "community": 23,
+      "norm_label": "dev critical path"
+    },
+    {
+      "label": "Solution Design Hints",
+      "file_type": "document",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "docs_preliminary_analysis_draft_solution_design_hints",
+      "community": 23,
+      "norm_label": "solution design hints"
+    },
+    {
       "label": "tasks-draft.md",
       "file_type": "document",
       "source_file": "docs/tasks-draft.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_tasks_draft",
+      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_docs_tasks_draft_md",
       "community": 15,
       "norm_label": "tasks-draft.md"
     },
@@ -2401,9 +3491,9 @@
       "source_file": ".claude/settings.json",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_settings",
-      "target": "claude_settings_hooks"
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_claude_settings_json",
+      "target": "claude_settings_hooks",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2411,9 +3501,9 @@
       "source_file": ".claude/settings.json",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_settings",
-      "target": "claude_settings_permissions"
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_claude_settings_json",
+      "target": "claude_settings_permissions",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2421,9 +3511,9 @@
       "source_file": ".claude/settings.json",
       "source_location": "L2",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_settings",
-      "target": "claude_settings_schema"
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_claude_settings_json",
+      "target": "claude_settings_schema",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2469,11 +3559,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": ".codemapper_cache.json",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "codemapper_cache",
-      "target": "codemapper_cache_files"
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_codemapper_cache_json",
+      "target": "hackaton_codemapper_cache_files",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2481,9 +3571,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L4",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "codemapper_cache",
-      "target": "codemapper_cache_mtimes"
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_codemapper_cache_json",
+      "target": "hackaton_codemapper_cache_mtimes",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2491,9 +3581,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "codemapper_cache",
-      "target": "codemapper_cache_root"
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_codemapper_cache_json",
+      "target": "hackaton_codemapper_cache_root",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2501,9 +3591,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L2",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "codemapper_cache",
-      "target": "codemapper_cache_version"
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_codemapper_cache_json",
+      "target": "hackaton_codemapper_cache_version",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2511,9 +3601,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "codemapper_cache_mtimes",
-      "target": "codemapper_cache_mtimes_src_data_ingestion_download_datasets_py"
+      "source": "hackaton_codemapper_cache_mtimes",
+      "target": "hackaton_codemapper_cache_mtimes_src_data_ingestion_download_datasets_py",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2521,9 +3611,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "codemapper_cache_files",
-      "target": "codemapper_cache_files_src_data_ingestion_download_datasets_py"
+      "source": "hackaton_codemapper_cache_files",
+      "target": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2531,9 +3621,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L77",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "codemapper_cache_src_data_ingestion_download_datasets_py_doc_end_line"
+      "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
+      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_doc_end_line",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2541,9 +3631,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L76",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "codemapper_cache_src_data_ingestion_download_datasets_py_doc_start_line"
+      "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
+      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_doc_start_line",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2551,9 +3641,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L11",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "codemapper_cache_src_data_ingestion_download_datasets_py_imports"
+      "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
+      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_imports",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2561,9 +3651,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L10",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "codemapper_cache_src_data_ingestion_download_datasets_py_module_doc"
+      "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
+      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_module_doc",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2571,9 +3661,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L75",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "codemapper_cache_src_data_ingestion_download_datasets_py_module_doc_full"
+      "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
+      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_module_doc_full",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2581,9 +3671,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "codemapper_cache_src_data_ingestion_download_datasets_py_path"
+      "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
+      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_path",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2591,9 +3681,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L41",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "codemapper_cache_src_data_ingestion_download_datasets_py_symbols"
+      "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
+      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_symbols",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2602,8 +3692,8 @@
       "source_file": ".mcp.json",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "mcp",
-      "target": "mcp_mcp_server_codemapper2"
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_mcp_json",
+      "target": "hackaton_mcp_mcp_server_codemapper2"
     },
     {
       "relation": "requires_env",
@@ -2612,7 +3702,7 @@
       "source_file": ".mcp.json",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "mcp_mcp_server_codemapper2",
+      "source": "hackaton_mcp_mcp_server_codemapper2",
       "target": "env_var_codemapper_root"
     },
     {
@@ -2623,7 +3713,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "context": "command",
-      "source": "mcp_mcp_server_codemapper2",
+      "source": "hackaton_mcp_mcp_server_codemapper2",
       "target": "mcp_command_c_users_tomin_onedrive_desktop_progetti_operating_proejcts_aider_for_large_codebases_codemapper_venv_scripts_python_exe"
     },
     {
@@ -2632,7 +3722,7 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L8",
       "weight": 1.0,
-      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
       "target": "artifacts_journey_before_end_state",
       "confidence_score": 1.0
     },
@@ -2642,7 +3732,7 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L2",
       "weight": 1.0,
-      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
       "target": "artifacts_journey_before_journey_id",
       "confidence_score": 1.0
     },
@@ -2652,7 +3742,7 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L6",
       "weight": 1.0,
-      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
       "target": "artifacts_journey_before_persona_ref",
       "confidence_score": 1.0
     },
@@ -2662,7 +3752,7 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L11",
       "weight": 1.0,
-      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
       "target": "artifacts_journey_before_quantified_costs",
       "confidence_score": 1.0
     },
@@ -2672,7 +3762,7 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L20",
       "weight": 1.0,
-      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
       "target": "artifacts_journey_before_stages",
       "confidence_score": 1.0
     },
@@ -2682,7 +3772,7 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L5",
       "weight": 1.0,
-      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
       "target": "artifacts_journey_before_subtitle",
       "confidence_score": 1.0
     },
@@ -2692,7 +3782,7 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L4",
       "weight": 1.0,
-      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
       "target": "artifacts_journey_before_title",
       "confidence_score": 1.0
     },
@@ -2702,7 +3792,7 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L10",
       "weight": 1.0,
-      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
       "target": "artifacts_journey_before_total_analyst_hours_range",
       "confidence_score": 1.0
     },
@@ -2712,7 +3802,7 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L9",
       "weight": 1.0,
-      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
       "target": "artifacts_journey_before_total_elapsed_calendar_days_range",
       "confidence_score": 1.0
     },
@@ -2722,7 +3812,7 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L7",
       "weight": 1.0,
-      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
       "target": "artifacts_journey_before_trigger",
       "confidence_score": 1.0
     },
@@ -2732,7 +3822,7 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L3",
       "weight": 1.0,
-      "source": "artifacts_journey_before_json_artifacts_journey_before",
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
       "target": "artifacts_journey_before_version",
       "confidence_score": 1.0
     },
@@ -2742,9 +3832,9 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_quantified_costs",
-      "target": "artifacts_journey_before_quantified_costs_decision_risk_lifetime",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_quantified_costs_decision_risk_lifetime"
     },
     {
       "relation": "contains",
@@ -2752,9 +3842,9 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_quantified_costs",
-      "target": "artifacts_journey_before_quantified_costs_ember_carbon_data_lag",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_quantified_costs_ember_carbon_data_lag"
     },
     {
       "relation": "contains",
@@ -2762,9 +3852,9 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_quantified_costs",
-      "target": "artifacts_journey_before_quantified_costs_entso_e_granularity",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_quantified_costs_entso_e_granularity"
     },
     {
       "relation": "contains",
@@ -2772,9 +3862,9 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_quantified_costs",
-      "target": "artifacts_journey_before_quantified_costs_external_consultant_alternative_eur",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_quantified_costs_external_consultant_alternative_eur"
     },
     {
       "relation": "contains",
@@ -2782,9 +3872,9 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_quantified_costs",
-      "target": "artifacts_journey_before_quantified_costs_grid_queue_context",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_quantified_costs_grid_queue_context"
     },
     {
       "relation": "contains",
@@ -2792,9 +3882,9 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_quantified_costs",
-      "target": "artifacts_journey_before_quantified_costs_in_house_analyst_cost_eur",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_quantified_costs_in_house_analyst_cost_eur"
     },
     {
       "relation": "contains",
@@ -2802,8 +3892,718 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_quantified_costs",
-      "target": "artifacts_journey_before_quantified_costs_re_run_cost",
+      "target": "artifacts_journey_before_quantified_costs_re_run_cost"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_json_artifacts_market_viability",
+      "target": "artifacts_market_viability_advisory_market",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_json_artifacts_market_viability",
+      "target": "artifacts_market_viability_competitors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L174",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_json_artifacts_market_viability",
+      "target": "artifacts_market_viability_footnotes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_json_artifacts_market_viability",
+      "target": "artifacts_market_viability_market_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_json_artifacts_market_viability",
+      "target": "artifacts_market_viability_meta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_json_artifacts_market_viability",
+      "target": "artifacts_market_viability_our_differentiation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_json_artifacts_market_viability",
+      "target": "artifacts_market_viability_pricing_models",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_json_artifacts_market_viability",
+      "target": "artifacts_market_viability_sam_derivation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_json_artifacts_market_viability",
+      "target": "artifacts_market_viability_sam_eur",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_json_artifacts_market_viability",
+      "target": "artifacts_market_viability_sam_label",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_json_artifacts_market_viability",
+      "target": "artifacts_market_viability_som_derivation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_json_artifacts_market_viability",
+      "target": "artifacts_market_viability_som_eur_year1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_json_artifacts_market_viability",
+      "target": "artifacts_market_viability_som_eur_year3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_json_artifacts_market_viability",
+      "target": "artifacts_market_viability_som_label",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_json_artifacts_market_viability",
+      "target": "artifacts_market_viability_tam_derivation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_json_artifacts_market_viability",
+      "target": "artifacts_market_viability_tam_eur",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_json_artifacts_market_viability",
+      "target": "artifacts_market_viability_tam_label",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_meta",
+      "target": "artifacts_market_viability_meta_generated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_meta",
+      "target": "artifacts_market_viability_meta_methodology_note",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_meta",
+      "target": "artifacts_market_viability_meta_product",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_meta",
+      "target": "artifacts_market_viability_meta_scope",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_colo_2024_2025_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_colo_investment_growth_pct_2023",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_colo_investment_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_colo_investment_usd_bn_2022",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_colo_investment_usd_bn_2023",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_colo_market_cagr_pct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_colo_market_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_colo_market_usd_bn_2023",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_colo_market_usd_bn_2028_forecast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_colo_new_supply_mw_2023",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_colo_new_supply_mw_2024",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_colo_new_supply_mw_2025_projected",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_colo_supply_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_colo_takeup_mw_2023",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_colo_takeup_mw_2023_yoy_pct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_colo_takeup_mw_2024",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_colo_takeup_mw_2025_projected",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_dc_total_market_cagr_pct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_dc_total_market_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_dc_total_market_usd_bn_2025",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_context",
+      "target": "artifacts_market_viability_market_context_eu_dc_total_market_usd_bn_2031_forecast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_advisory_market",
+      "target": "artifacts_market_viability_advisory_market_global_dc_advisory_cagr_pct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_advisory_market",
+      "target": "artifacts_market_viability_advisory_market_global_dc_advisory_caveat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_advisory_market",
+      "target": "artifacts_market_viability_advisory_market_global_dc_advisory_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_advisory_market",
+      "target": "artifacts_market_viability_advisory_market_global_dc_advisory_usd_m_2025",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_advisory_market",
+      "target": "artifacts_market_viability_advisory_market_global_dc_advisory_usd_m_2035_forecast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_tam_derivation",
+      "target": "artifacts_market_viability_tam_derivation_eu_dc_market_usd_bn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_tam_derivation",
+      "target": "artifacts_market_viability_tam_derivation_global_advisory_usd_m",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_tam_derivation",
+      "target": "artifacts_market_viability_tam_derivation_global_dc_market_estimate_usd_bn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_tam_derivation",
+      "target": "artifacts_market_viability_tam_derivation_global_dc_market_note",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_tam_derivation",
+      "target": "artifacts_market_viability_tam_derivation_method",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_tam_derivation",
+      "target": "artifacts_market_viability_tam_derivation_usd_eur_rate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_tam_derivation",
+      "target": "artifacts_market_viability_tam_derivation_verdict",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_sam_derivation",
+      "target": "artifacts_market_viability_sam_derivation_active_siting_decisions_per_year",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_sam_derivation",
+      "target": "artifacts_market_viability_sam_derivation_advisory_spend_per_project_eur",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_sam_derivation",
+      "target": "artifacts_market_viability_sam_derivation_calculation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_sam_derivation",
+      "target": "artifacts_market_viability_sam_derivation_infra_fund_screening_events_per_year",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_sam_derivation",
+      "target": "artifacts_market_viability_sam_derivation_infra_fund_screening_spend_per_event_eur",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_sam_derivation",
+      "target": "artifacts_market_viability_sam_derivation_method",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_sam_derivation",
+      "target": "artifacts_market_viability_sam_derivation_pre_feasibility_share_of_total_advisory_pct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_sam_derivation",
+      "target": "artifacts_market_viability_sam_derivation_scope_note",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_som_derivation",
+      "target": "artifacts_market_viability_som_derivation_benchmark",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_som_derivation",
+      "target": "artifacts_market_viability_som_derivation_sam_capture_year1_pct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_som_derivation",
+      "target": "artifacts_market_viability_som_derivation_sam_capture_year3_pct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_som_derivation",
+      "target": "artifacts_market_viability_som_derivation_year1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_som_derivation",
+      "target": "artifacts_market_viability_som_derivation_year3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_our_differentiation",
+      "target": "artifacts_market_viability_our_differentiation_key_moats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_our_differentiation",
+      "target": "artifacts_market_viability_our_differentiation_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L220",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_footnotes",
+      "target": "artifacts_market_viability_footnotes_derived_estimates_methodology",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.json",
+      "source_location": "L175",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_footnotes",
+      "target": "artifacts_market_viability_footnotes_sources_confirmed_via_direct_fetch",
       "confidence_score": 1.0
     },
     {
@@ -2852,9 +4652,9 @@
       "source_file": "project-management/open-pm.sh",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "project_management_open_pm",
-      "target": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_project_management_open_pm_sh__entry"
+      "target": "c_users_gabbo_desktop_hackathon_monaco_project_antigravity_project_management_open_pm_sh__entry",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3042,9 +4842,9 @@
       "source_file": "src/data_ingestion/download_datasets.py",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "data_ingestion_download_datasets",
-      "target": "data_ingestion_download_datasets_create_folders"
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_src_data_ingestion_download_datasets_py",
+      "target": "data_ingestion_download_datasets_create_folders",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3052,9 +4852,9 @@
       "source_file": "src/data_ingestion/download_datasets.py",
       "source_location": "L83",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "data_ingestion_download_datasets",
-      "target": "data_ingestion_download_datasets_create_iea_ai_reference"
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_src_data_ingestion_download_datasets_py",
+      "target": "data_ingestion_download_datasets_create_iea_ai_reference",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3062,9 +4862,9 @@
       "source_file": "src/data_ingestion/download_datasets.py",
       "source_location": "L12",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "data_ingestion_download_datasets",
-      "target": "data_ingestion_download_datasets_download_file"
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_src_data_ingestion_download_datasets_py",
+      "target": "data_ingestion_download_datasets_download_file",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3072,9 +4872,19 @@
       "source_file": "src/data_ingestion/download_datasets.py",
       "source_location": "L47",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "data_ingestion_download_datasets",
-      "target": "data_ingestion_download_datasets_fetch_osm_power_grid"
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_src_data_ingestion_download_datasets_py",
+      "target": "data_ingestion_download_datasets_fetch_osm_power_grid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "rules_graphify",
+      "target": "rules_graphify_graphify",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3149,12 +4959,22 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "workflows_graphify",
+      "target": "workflows_graphify_workflow_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude",
-      "target": "claude_dc_siting_intelligence_tool_hackathon"
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_claude_md",
+      "target": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3162,29 +4982,29 @@
       "source_file": "CLAUDE.md",
       "source_location": "L20",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_dc_siting_intelligence_tool_hackathon",
-      "target": "claude_data_sources"
+      "source": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
+      "target": "hackaton_claude_data_sources",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
-      "source_location": "L29",
+      "source_location": "L32",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_dc_siting_intelligence_tool_hackathon",
-      "target": "claude_dev_commands"
+      "source": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
+      "target": "hackaton_claude_dev_commands",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
-      "source_location": "L33",
+      "source_location": "L36",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_dc_siting_intelligence_tool_hackathon",
-      "target": "claude_important"
+      "source": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
+      "target": "hackaton_claude_important",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3192,9 +5012,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L14",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_dc_siting_intelligence_tool_hackathon",
-      "target": "claude_key_constraints"
+      "source": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
+      "target": "hackaton_claude_key_constraints",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3202,9 +5022,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_dc_siting_intelligence_tool_hackathon",
-      "target": "claude_project_layout"
+      "source": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
+      "target": "hackaton_claude_project_layout",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3212,7 +5032,7 @@
       "source_file": "artifacts/journey-before.md",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "artifacts_journey_before_md_artifacts_journey_before",
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_md",
       "target": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
       "confidence_score": 1.0
     },
@@ -3222,9 +5042,9 @@
       "source_file": "artifacts/journey-before.md",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
-      "target": "artifacts_journey_before_journey_map",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_journey_map"
     },
     {
       "relation": "contains",
@@ -3232,9 +5052,9 @@
       "source_file": "artifacts/journey-before.md",
       "source_location": "L220",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
-      "target": "artifacts_journey_before_sources",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_sources"
     },
     {
       "relation": "contains",
@@ -3242,9 +5062,9 @@
       "source_file": "artifacts/journey-before.md",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
-      "target": "artifacts_journey_before_stage_1_mandate_brief",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_stage_1_mandate_brief"
     },
     {
       "relation": "contains",
@@ -3252,9 +5072,9 @@
       "source_file": "artifacts/journey-before.md",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
-      "target": "artifacts_journey_before_stage_2_energy_price_data_sourcing",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_stage_2_energy_price_data_sourcing"
     },
     {
       "relation": "contains",
@@ -3262,9 +5082,9 @@
       "source_file": "artifacts/journey-before.md",
       "source_location": "L67",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
-      "target": "artifacts_journey_before_stage_3_carbon_intensity_data_sourcing",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_stage_3_carbon_intensity_data_sourcing"
     },
     {
       "relation": "contains",
@@ -3272,9 +5092,9 @@
       "source_file": "artifacts/journey-before.md",
       "source_location": "L86",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
-      "target": "artifacts_journey_before_stage_4_grid_infrastructure_scoping",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_stage_4_grid_infrastructure_scoping"
     },
     {
       "relation": "contains",
@@ -3282,9 +5102,9 @@
       "source_file": "artifacts/journey-before.md",
       "source_location": "L106",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
-      "target": "artifacts_journey_before_stage_5_manual_data_integration_longlist",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_stage_5_manual_data_integration_longlist"
     },
     {
       "relation": "contains",
@@ -3292,9 +5112,9 @@
       "source_file": "artifacts/journey-before.md",
       "source_location": "L123",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
-      "target": "artifacts_journey_before_stage_6_supply_mix_analysis",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_stage_6_supply_mix_analysis"
     },
     {
       "relation": "contains",
@@ -3302,9 +5122,9 @@
       "source_file": "artifacts/journey-before.md",
       "source_location": "L143",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
-      "target": "artifacts_journey_before_stage_7_site_shortlisting_scoring",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_stage_7_site_shortlisting_scoring"
     },
     {
       "relation": "contains",
@@ -3312,9 +5132,9 @@
       "source_file": "artifacts/journey-before.md",
       "source_location": "L160",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
-      "target": "artifacts_journey_before_stage_8_ic_board_presentation_preparation",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_stage_8_ic_board_presentation_preparation"
     },
     {
       "relation": "contains",
@@ -3322,9 +5142,9 @@
       "source_file": "artifacts/journey-before.md",
       "source_location": "L180",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
-      "target": "artifacts_journey_before_stage_9_ic_meeting_follow_up",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_stage_9_ic_meeting_follow_up"
     },
     {
       "relation": "contains",
@@ -3332,9 +5152,9 @@
       "source_file": "artifacts/journey-before.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
-      "target": "artifacts_journey_before_the_cost_of_today",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_the_cost_of_today"
     },
     {
       "relation": "contains",
@@ -3342,9 +5162,9 @@
       "source_file": "artifacts/journey-before.md",
       "source_location": "L201",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research",
-      "target": "artifacts_journey_before_what_this_costs_summed",
-      "confidence_score": 1.0
+      "target": "artifacts_journey_before_what_this_costs_summed"
     },
     {
       "relation": "contains",
@@ -3352,9 +5172,9 @@
       "source_file": "artifacts/jtbd.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_jtbd_md_artifacts_jtbd",
-      "target": "artifacts_jtbd_jobs_to_be_done_dc_siting_intelligence_tool",
-      "confidence_score": 1.0
+      "target": "artifacts_jtbd_jobs_to_be_done_dc_siting_intelligence_tool"
     },
     {
       "relation": "contains",
@@ -3362,9 +5182,9 @@
       "source_file": "artifacts/jtbd.md",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_jtbd_jobs_to_be_done_dc_siting_intelligence_tool",
-      "target": "artifacts_jtbd_jtbd_001_jordan_functional",
-      "confidence_score": 1.0
+      "target": "artifacts_jtbd_jtbd_001_jordan_functional"
     },
     {
       "relation": "contains",
@@ -3372,9 +5192,9 @@
       "source_file": "artifacts/jtbd.md",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_jtbd_jobs_to_be_done_dc_siting_intelligence_tool",
-      "target": "artifacts_jtbd_jtbd_002_jordan_emotional",
-      "confidence_score": 1.0
+      "target": "artifacts_jtbd_jtbd_002_jordan_emotional"
     },
     {
       "relation": "contains",
@@ -3382,9 +5202,9 @@
       "source_file": "artifacts/jtbd.md",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_jtbd_jobs_to_be_done_dc_siting_intelligence_tool",
-      "target": "artifacts_jtbd_jtbd_003_cfo_ic_member_financial",
-      "confidence_score": 1.0
+      "target": "artifacts_jtbd_jtbd_003_cfo_ic_member_financial"
     },
     {
       "relation": "contains",
@@ -3392,9 +5212,9 @@
       "source_file": "artifacts/jtbd.md",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_jtbd_jobs_to_be_done_dc_siting_intelligence_tool",
-      "target": "artifacts_jtbd_jtbd_004_ceo_social_decision",
-      "confidence_score": 1.0
+      "target": "artifacts_jtbd_jtbd_004_ceo_social_decision"
     },
     {
       "relation": "contains",
@@ -3402,9 +5222,9 @@
       "source_file": "artifacts/jtbd.md",
       "source_location": "L64",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_jtbd_jobs_to_be_done_dc_siting_intelligence_tool",
-      "target": "artifacts_jtbd_summary",
-      "confidence_score": 1.0
+      "target": "artifacts_jtbd_summary"
     },
     {
       "relation": "contains",
@@ -3413,47 +5233,217 @@
       "source_location": "L8",
       "weight": 1.0,
       "source": "artifacts_jtbd_jobs_to_be_done_dc_siting_intelligence_tool",
-      "target": "artifacts_jtbd_why_jtbd_over_features",
+      "target": "artifacts_jtbd_what_this_tool_actually_does_and_does_not_do",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "artifacts/jtbd.md",
-      "source_location": "L17",
+      "source_location": "L21",
       "weight": 1.0,
       "source": "artifacts_jtbd_jtbd_001_jordan_functional",
-      "target": "artifacts_jtbd_screen_europe_in_one_query_instead_of_20_country_downloads",
+      "target": "artifacts_jtbd_compare_eu_zones_on_the_variables_that_actually_differ_by_location",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "artifacts/jtbd.md",
-      "source_location": "L29",
+      "source_location": "L33",
       "weight": 1.0,
       "source": "artifacts_jtbd_jtbd_002_jordan_emotional",
-      "target": "artifacts_jtbd_walk_into_ic_with_a_defensible_methodology_not_gut_feel_excel",
+      "target": "artifacts_jtbd_back_the_ranking_with_spot_specific_differentials_not_judgment",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "artifacts/jtbd.md",
-      "source_location": "L41",
+      "source_location": "L45",
       "weight": 1.0,
       "source": "artifacts_jtbd_jtbd_003_cfo_ic_member_financial",
-      "target": "artifacts_jtbd_turn_the_ppa_flag_into_a_mwh_number_for_the_dcf_model",
+      "target": "artifacts_jtbd_give_me_the_location_specific_deltas_to_plug_into_our_model",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "artifacts/jtbd.md",
-      "source_location": "L53",
+      "source_location": "L57",
       "weight": 1.0,
       "source": "artifacts_jtbd_jtbd_004_ceo_social_decision",
-      "target": "artifacts_jtbd_receive_one_ranked_winner_not_a_spreadsheet_with_the_answer_on_page_62",
+      "target": "artifacts_jtbd_one_ranked_winner_which_location_wins_on_the_variables_that_differ",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_md_artifacts_market_viability",
+      "target": "artifacts_market_viability_market_viability_dc_siting_intelligence_tool_invertix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_viability_dc_siting_intelligence_tool_invertix",
+      "target": "artifacts_market_viability_competitive_landscape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_viability_dc_siting_intelligence_tool_invertix",
+      "target": "artifacts_market_viability_footnotes_sources",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_viability_dc_siting_intelligence_tool_invertix",
+      "target": "artifacts_market_viability_market_sizing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_viability_dc_siting_intelligence_tool_invertix",
+      "target": "artifacts_market_viability_pricing_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_viability_dc_siting_intelligence_tool_invertix",
+      "target": "artifacts_market_viability_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_viability_dc_siting_intelligence_tool_invertix",
+      "target": "artifacts_market_viability_the_market_opportunity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_viability_dc_siting_intelligence_tool_invertix",
+      "target": "artifacts_market_viability_why_now",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_sizing",
+      "target": "artifacts_market_viability_sam_serviceable_addressable_market_50m_yr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_sizing",
+      "target": "artifacts_market_viability_som_serviceable_obtainable_market_0_9m_arr_year_1_4m_arr_year_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_market_sizing",
+      "target": "artifacts_market_viability_tam_total_addressable_market_175m_yr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_pricing_model",
+      "target": "artifacts_market_viability_option_1_per_query_1_500_5_000",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_pricing_model",
+      "target": "artifacts_market_viability_option_2_annual_subscription_18k_180k_yr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_pricing_model",
+      "target": "artifacts_market_viability_option_3_white_label_api_250k_500k_yr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_competitive_landscape",
+      "target": "artifacts_market_viability_the_gap_no_one_fills",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_competitive_landscape",
+      "target": "artifacts_market_viability_what_exists_today_and_where_each_falls_short",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "artifacts/market-viability.md",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "artifacts_market_viability_competitive_landscape",
+      "target": "artifacts_market_viability_why_we_win_against_consultants",
       "confidence_score": 1.0
     },
     {
@@ -3462,9 +5452,9 @@
       "source_file": "artifacts/persona.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "artifacts_persona",
-      "target": "artifacts_persona_persona_dc_infrastructure_decision_maker"
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_persona_md",
+      "target": "artifacts_persona_persona_dc_infrastructure_decision_maker",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3572,9 +5562,9 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "artifacts_personas_md_artifacts_personas",
-      "target": "artifacts_personas_dc_siting_intelligence_tool_user_personas"
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_personas_md",
+      "target": "artifacts_personas_dc_siting_intelligence_tool_user_personas",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3582,9 +5572,9 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_personas_dc_siting_intelligence_tool_user_personas",
-      "target": "artifacts_personas_ceo_c_suite_the_decision_maker",
-      "confidence_score": 1.0
+      "target": "artifacts_personas_ceo_c_suite_the_decision_maker"
     },
     {
       "relation": "contains",
@@ -3592,9 +5582,9 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_personas_dc_siting_intelligence_tool_user_personas",
-      "target": "artifacts_personas_cfo_financial_advisor_to_the_ceo",
-      "confidence_score": 1.0
+      "target": "artifacts_personas_cfo_financial_advisor_to_the_ceo"
     },
     {
       "relation": "contains",
@@ -3602,9 +5592,9 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_personas_dc_siting_intelligence_tool_user_personas",
-      "target": "artifacts_personas_decision_structure",
-      "confidence_score": 1.0
+      "target": "artifacts_personas_decision_structure"
     },
     {
       "relation": "contains",
@@ -3612,9 +5602,9 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_personas_dc_siting_intelligence_tool_user_personas",
-      "target": "artifacts_personas_jordan_technical_advisor_our_direct_user",
-      "confidence_score": 1.0
+      "target": "artifacts_personas_jordan_technical_advisor_our_direct_user"
     },
     {
       "relation": "contains",
@@ -3632,9 +5622,9 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_personas_jordan_technical_advisor_our_direct_user",
-      "target": "artifacts_personas_goals",
-      "confidence_score": 1.0
+      "target": "artifacts_personas_goals"
     },
     {
       "relation": "contains",
@@ -3642,9 +5632,9 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_personas_jordan_technical_advisor_our_direct_user",
-      "target": "artifacts_personas_what_makes_jordan_buy",
-      "confidence_score": 1.0
+      "target": "artifacts_personas_what_makes_jordan_buy"
     },
     {
       "relation": "contains",
@@ -3652,9 +5642,9 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L66",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_personas_ceo_c_suite_the_decision_maker",
-      "target": "artifacts_personas_what_makes_them_approve",
-      "confidence_score": 1.0
+      "target": "artifacts_personas_what_makes_them_approve"
     },
     {
       "relation": "contains",
@@ -3662,9 +5652,9 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L60",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_personas_ceo_c_suite_the_decision_maker",
-      "target": "artifacts_personas_what_they_need_the_narrative_to_cover",
-      "confidence_score": 1.0
+      "target": "artifacts_personas_what_they_need_the_narrative_to_cover"
     },
     {
       "relation": "contains",
@@ -3672,9 +5662,9 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L87",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_personas_cfo_financial_advisor_to_the_ceo",
-      "target": "artifacts_personas_key_differential_kpis_what_the_tool_must_surface",
-      "confidence_score": 1.0
+      "target": "artifacts_personas_key_differential_kpis_what_the_tool_must_surface"
     },
     {
       "relation": "contains",
@@ -3682,9 +5672,9 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L98",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_personas_cfo_financial_advisor_to_the_ceo",
-      "target": "artifacts_personas_what_makes_them_approve_98",
-      "confidence_score": 1.0
+      "target": "artifacts_personas_what_makes_them_approve_98"
     },
     {
       "relation": "contains",
@@ -3692,9 +5682,9 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "artifacts_stakeholder_map_md_artifacts_stakeholder_map",
-      "target": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool"
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_stakeholder_map_md",
+      "target": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3702,9 +5692,9 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
-      "target": "artifacts_stakeholder_map_adoption_path",
-      "confidence_score": 1.0
+      "target": "artifacts_stakeholder_map_adoption_path"
     },
     {
       "relation": "contains",
@@ -3722,9 +5712,9 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
-      "target": "artifacts_stakeholder_map_layer_1_main_adoption_triad",
-      "confidence_score": 1.0
+      "target": "artifacts_stakeholder_map_layer_1_main_adoption_triad"
     },
     {
       "relation": "contains",
@@ -3732,9 +5722,9 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L110",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
-      "target": "artifacts_stakeholder_map_layer_2_peripheral_output_validators",
-      "confidence_score": 1.0
+      "target": "artifacts_stakeholder_map_layer_2_peripheral_output_validators"
     },
     {
       "relation": "contains",
@@ -3742,9 +5732,9 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L158",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
-      "target": "artifacts_stakeholder_map_layer_3_institutional_macro_constraint_setters",
-      "confidence_score": 1.0
+      "target": "artifacts_stakeholder_map_layer_3_institutional_macro_constraint_setters"
     },
     {
       "relation": "contains",
@@ -3752,9 +5742,9 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L192",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool",
-      "target": "artifacts_stakeholder_map_pitch_implications",
-      "confidence_score": 1.0
+      "target": "artifacts_stakeholder_map_pitch_implications"
     },
     {
       "relation": "contains",
@@ -3762,9 +5752,9 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_stakeholder_map_layer_1_main_adoption_triad",
-      "target": "artifacts_stakeholder_map_sh_001_jordan",
-      "confidence_score": 1.0
+      "target": "artifacts_stakeholder_map_sh_001_jordan"
     },
     {
       "relation": "contains",
@@ -3772,9 +5762,9 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_stakeholder_map_layer_1_main_adoption_triad",
-      "target": "artifacts_stakeholder_map_sh_002_ceo_c_suite",
-      "confidence_score": 1.0
+      "target": "artifacts_stakeholder_map_sh_002_ceo_c_suite"
     },
     {
       "relation": "contains",
@@ -3782,9 +5772,9 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L94",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_stakeholder_map_layer_1_main_adoption_triad",
-      "target": "artifacts_stakeholder_map_sh_003_cfo",
-      "confidence_score": 1.0
+      "target": "artifacts_stakeholder_map_sh_003_cfo"
     },
     {
       "relation": "contains",
@@ -3792,9 +5782,9 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L116",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_stakeholder_map_layer_2_peripheral_output_validators",
-      "target": "artifacts_stakeholder_map_sh_004_esg_officer",
-      "confidence_score": 1.0
+      "target": "artifacts_stakeholder_map_sh_004_esg_officer"
     },
     {
       "relation": "contains",
@@ -3802,9 +5792,9 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L130",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_stakeholder_map_layer_2_peripheral_output_validators",
-      "target": "artifacts_stakeholder_map_sh_005_infrastructure_pm",
-      "confidence_score": 1.0
+      "target": "artifacts_stakeholder_map_sh_005_infrastructure_pm"
     },
     {
       "relation": "contains",
@@ -3812,9 +5802,9 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L144",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_stakeholder_map_layer_2_peripheral_output_validators",
-      "target": "artifacts_stakeholder_map_sh_006_legal_regulatory_counsel",
-      "confidence_score": 1.0
+      "target": "artifacts_stakeholder_map_sh_006_legal_regulatory_counsel"
     },
     {
       "relation": "contains",
@@ -3822,9 +5812,9 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L164",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_stakeholder_map_layer_3_institutional_macro_constraint_setters",
-      "target": "artifacts_stakeholder_map_sh_007_investment_committee_ic_partner",
-      "confidence_score": 1.0
+      "target": "artifacts_stakeholder_map_sh_007_investment_committee_ic_partner"
     },
     {
       "relation": "contains",
@@ -3832,9 +5822,9 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L178",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "artifacts_stakeholder_map_layer_3_institutional_macro_constraint_setters",
-      "target": "artifacts_stakeholder_map_sh_008_board_lp",
-      "confidence_score": 1.0
+      "target": "artifacts_stakeholder_map_sh_008_board_lp"
     },
     {
       "relation": "contains",
@@ -4052,9 +6042,9 @@
       "source_file": "docs/data.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data",
-      "target": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
-      "confidence_score": 1.0
+      "target": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative"
     },
     {
       "relation": "contains",
@@ -4062,9 +6052,9 @@
       "source_file": "docs/data.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
-      "target": "docs_data_1_ember_our_world_in_data_owid_energy_database",
-      "confidence_score": 1.0
+      "target": "docs_data_1_ember_our_world_in_data_owid_energy_database"
     },
     {
       "relation": "contains",
@@ -4072,9 +6062,9 @@
       "source_file": "docs/data.md",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
-      "target": "docs_data_2_openstreetmap_osm_via_overpass_api",
-      "confidence_score": 1.0
+      "target": "docs_data_2_openstreetmap_osm_via_overpass_api"
     },
     {
       "relation": "contains",
@@ -4082,9 +6072,9 @@
       "source_file": "docs/data.md",
       "source_location": "L69",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
-      "target": "docs_data_3_pypsa_eur_network_data",
-      "confidence_score": 1.0
+      "target": "docs_data_3_pypsa_eur_network_data"
     },
     {
       "relation": "contains",
@@ -4092,9 +6082,9 @@
       "source_file": "docs/data.md",
       "source_location": "L87",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
-      "target": "docs_data_4_google_alphaearth_satellite_embeddings_in_gee",
-      "confidence_score": 1.0
+      "target": "docs_data_4_google_alphaearth_satellite_embeddings_in_gee"
     },
     {
       "relation": "contains",
@@ -4102,9 +6092,9 @@
       "source_file": "docs/data.md",
       "source_location": "L103",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
-      "target": "docs_data_5_iea_energy_ai_reference_specifications",
-      "confidence_score": 1.0
+      "target": "docs_data_5_iea_energy_ai_reference_specifications"
     },
     {
       "relation": "contains",
@@ -4112,9 +6102,9 @@
       "source_file": "docs/data.md",
       "source_location": "L120",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
-      "target": "docs_data_6_analisi_dei_mismatch_di_granularit\u00e0_e_impatti_sul_progetto",
-      "confidence_score": 1.0
+      "target": "docs_data_6_analisi_dei_mismatch_di_granularit\u00e0_e_impatti_sul_progetto"
     },
     {
       "relation": "contains",
@@ -4122,9 +6112,9 @@
       "source_file": "docs/data.md",
       "source_location": "L143",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
-      "target": "docs_data_tabella_sinottica_delle_granularit\u00e0",
-      "confidence_score": 1.0
+      "target": "docs_data_tabella_sinottica_delle_granularit\u00e0"
     },
     {
       "relation": "contains",
@@ -4132,9 +6122,9 @@
       "source_file": "docs/data.md",
       "source_location": "L155",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative",
-      "target": "docs_data_tabella_sinottica_delle_opportunit\u00e0_di_integrazione",
-      "confidence_score": 1.0
+      "target": "docs_data_tabella_sinottica_delle_opportunit\u00e0_di_integrazione"
     },
     {
       "relation": "contains",
@@ -4142,9 +6132,9 @@
       "source_file": "docs/data.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_1_ember_our_world_in_data_owid_energy_database",
-      "target": "docs_data_a_caratteristiche_dei_dati",
-      "confidence_score": 1.0
+      "target": "docs_data_a_caratteristiche_dei_dati"
     },
     {
       "relation": "contains",
@@ -4152,9 +6142,9 @@
       "source_file": "docs/data.md",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_1_ember_our_world_in_data_owid_energy_database",
-      "target": "docs_data_b_opportunit\u00e0_applicative",
-      "confidence_score": 1.0
+      "target": "docs_data_b_opportunit\u00e0_applicative"
     },
     {
       "relation": "contains",
@@ -4162,9 +6152,9 @@
       "source_file": "docs/data.md",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_2_openstreetmap_osm_via_overpass_api",
-      "target": "docs_data_a_caratteristiche_dei_dati_50",
-      "confidence_score": 1.0
+      "target": "docs_data_a_caratteristiche_dei_dati_50"
     },
     {
       "relation": "contains",
@@ -4172,9 +6162,9 @@
       "source_file": "docs/data.md",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_2_openstreetmap_osm_via_overpass_api",
-      "target": "docs_data_b_opportunit\u00e0_applicative_59",
-      "confidence_score": 1.0
+      "target": "docs_data_b_opportunit\u00e0_applicative_59"
     },
     {
       "relation": "contains",
@@ -4183,37 +6173,37 @@
       "source_location": "L71",
       "weight": 1.0,
       "source": "docs_data_3_pypsa_eur_network_data",
-      "target": "docs_data_a_caratteristiche_dei_dati_71",
+      "target": "docs_data_a_caratteristiche_dei_dati_e_struttura_delle_componenti",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/data.md",
-      "source_location": "L77",
+      "source_location": "L137",
       "weight": 1.0,
       "source": "docs_data_3_pypsa_eur_network_data",
-      "target": "docs_data_b_opportunit\u00e0_applicative_77",
+      "target": "docs_data_b_opportunit\u00e0_applicative_e_formule_chiave",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/data.md",
-      "source_location": "L89",
+      "source_location": "L76",
       "weight": 1.0,
-      "source": "docs_data_4_google_alphaearth_satellite_embeddings_in_gee",
-      "target": "docs_data_a_caratteristiche_dei_dati_89",
+      "source": "docs_data_a_caratteristiche_dei_dati_e_struttura_delle_componenti",
+      "target": "docs_data_1_nodi_buses",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/data.md",
-      "source_location": "L95",
+      "source_location": "L87",
       "weight": 1.0,
-      "source": "docs_data_4_google_alphaearth_satellite_embeddings_in_gee",
-      "target": "docs_data_b_opportunit\u00e0_applicative_95",
+      "source": "docs_data_a_caratteristiche_dei_dati_e_struttura_delle_componenti",
+      "target": "docs_data_2_linee_di_trasmissione_lines_e_link_dc_links",
       "confidence_score": 1.0
     },
     {
@@ -4222,18 +6212,68 @@
       "source_file": "docs/data.md",
       "source_location": "L105",
       "weight": 1.0,
-      "source": "docs_data_5_iea_energy_ai_reference_specifications",
-      "target": "docs_data_a_caratteristiche_dei_dati_105",
+      "source": "docs_data_a_caratteristiche_dei_dati_e_struttura_delle_componenti",
+      "target": "docs_data_3_generatori_generators",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/data.md",
-      "source_location": "L111",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "docs_data_a_caratteristiche_dei_dati_e_struttura_delle_componenti",
+      "target": "docs_data_4_unit\u00e0_di_accumulo_storage_units_stores",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "docs_data_a_caratteristiche_dei_dati_e_struttura_delle_componenti",
+      "target": "docs_data_5_trasformatori_transformers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "docs_data_4_google_alphaearth_satellite_embeddings_in_gee",
+      "target": "docs_data_a_caratteristiche_dei_dati_168",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L174",
+      "weight": 1.0,
+      "source": "docs_data_4_google_alphaearth_satellite_embeddings_in_gee",
+      "target": "docs_data_b_opportunit\u00e0_applicative_174",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L184",
       "weight": 1.0,
       "source": "docs_data_5_iea_energy_ai_reference_specifications",
-      "target": "docs_data_b_opportunit\u00e0_applicative_111",
+      "target": "docs_data_a_caratteristiche_dei_dati_184",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data.md",
+      "source_location": "L190",
+      "weight": 1.0,
+      "source": "docs_data_5_iea_energy_ai_reference_specifications",
+      "target": "docs_data_b_opportunit\u00e0_applicative_190",
       "confidence_score": 1.0
     },
     {
@@ -4242,9 +6282,9 @@
       "source_file": "docs/data.md",
       "source_location": "L124",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_6_analisi_dei_mismatch_di_granularit\u00e0_e_impatti_sul_progetto",
-      "target": "docs_data_a_mismatch_spaziale_da_nazionale_a_pixel_level",
-      "confidence_score": 1.0
+      "target": "docs_data_a_mismatch_spaziale_da_nazionale_a_pixel_level"
     },
     {
       "relation": "contains",
@@ -4252,9 +6292,9 @@
       "source_file": "docs/data.md",
       "source_location": "L134",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_6_analisi_dei_mismatch_di_granularit\u00e0_e_impatti_sul_progetto",
-      "target": "docs_data_b_mismatch_temporale_da_statico_a_orario",
-      "confidence_score": 1.0
+      "target": "docs_data_b_mismatch_temporale_da_statico_a_orario"
     },
     {
       "relation": "contains",
@@ -4262,9 +6302,9 @@
       "source_file": "docs/e0-commands.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_e0_commands",
-      "target": "docs_e0_commands_e0_task_commands_run_each_in_its_own_terminal"
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_docs_e0_commands_md",
+      "target": "docs_e0_commands_e0_task_commands_run_each_in_its_own_terminal",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -4319,12 +6359,102 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "docs_preliminary_analysis_draft",
+      "target": "docs_preliminary_analysis_draft_preliminary_analysis_dc_siting_intelligence_tool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "docs_preliminary_analysis_draft_preliminary_analysis_dc_siting_intelligence_tool",
+      "target": "docs_preliminary_analysis_draft_data_design_insights",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "docs_preliminary_analysis_draft_preliminary_analysis_dc_siting_intelligence_tool",
+      "target": "docs_preliminary_analysis_draft_dev_critical_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "docs_preliminary_analysis_draft_preliminary_analysis_dc_siting_intelligence_tool",
+      "target": "docs_preliminary_analysis_draft_granularity_two_independent_axes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "docs_preliminary_analysis_draft_preliminary_analysis_dc_siting_intelligence_tool",
+      "target": "docs_preliminary_analysis_draft_quantified_pain_pitch_numbers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "docs_preliminary_analysis_draft_preliminary_analysis_dc_siting_intelligence_tool",
+      "target": "docs_preliminary_analysis_draft_solution_design_hints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "docs_preliminary_analysis_draft_preliminary_analysis_dc_siting_intelligence_tool",
+      "target": "docs_preliminary_analysis_draft_who_buys_who_uses_what_kills_the_deal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "docs_preliminary_analysis_draft_granularity_two_independent_axes",
+      "target": "docs_preliminary_analysis_draft_spatial_granularity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/preliminary-analysis-draft.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "docs_preliminary_analysis_draft_granularity_two_independent_axes",
+      "target": "docs_preliminary_analysis_draft_temporal_granularity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/tasks-draft.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_tasks_draft",
-      "target": "docs_tasks_draft_poc_task_draft_dc_siting_intelligence_map"
+      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_docs_tasks_draft_md",
+      "target": "docs_tasks_draft_poc_task_draft_dc_siting_intelligence_map",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -4488,5 +6618,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "528a98e243c8acdb1ccefdb4b01e62fda238e29d"
+  "built_at_commit": "a7832918c206ff0c48aaeb2fab25daa060ac79b4"
 }
