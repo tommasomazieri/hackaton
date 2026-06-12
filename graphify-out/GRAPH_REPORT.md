@@ -1,16 +1,16 @@
 # Graph Report - Project_Antigravity  (2026-06-12)
 
 ## Corpus Check
-- 27 files · ~24,505 words
+- 31 files · ~31,123 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 220 nodes · 193 edges · 27 communities (24 shown, 3 thin omitted)
+- 327 nodes · 296 edges · 34 communities (31 shown, 3 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `85d45803`
+- Built from commit: `875d933c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -34,18 +34,24 @@
 - [[_COMMUNITY_Community 20|Community 20]]
 - [[_COMMUNITY_Community 21|Community 21]]
 - [[_COMMUNITY_Community 24|Community 24]]
+- [[_COMMUNITY_Community 27|Community 27]]
+- [[_COMMUNITY_Community 28|Community 28]]
+- [[_COMMUNITY_Community 29|Community 29]]
+- [[_COMMUNITY_Community 30|Community 30]]
+- [[_COMMUNITY_Community 31|Community 31]]
+- [[_COMMUNITY_Community 32|Community 32]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `AS-IS Customer Journey: EU Data Center Site Research` - 14 edges
-2. `Persona: DC Infrastructure Decision-Maker` - 11 edges
-3. `Challenge: Data-Center Siting & Power (Invertix)` - 11 edges
-4. `Epics & Tasks` - 10 edges
-5. `Analisi Dettagliata dei Database e Opportunità Applicative` - 9 edges
-6. `src/data_ingestion/download_datasets.py` - 8 edges
-7. `quantified_costs` - 8 edges
-8. `Stakeholder Profiles` - 8 edges
-9. `PoC Task Draft — DC Siting Intelligence Map` - 8 edges
-10. `DC Siting Intelligence Tool — Hackathon` - 6 edges
+1. `market_context` - 22 edges
+2. `AS-IS Customer Journey: EU Data Center Site Research` - 14 edges
+3. `Persona: DC Infrastructure Decision-Maker` - 11 edges
+4. `Challenge: Data-Center Siting & Power (Invertix)` - 11 edges
+5. `Epics & Tasks` - 10 edges
+6. `sam_derivation` - 9 edges
+7. `Analisi Dettagliata dei Database e Opportunità Applicative` - 9 edges
+8. `src/data_ingestion/download_datasets.py` - 8 edges
+9. `quantified_costs` - 8 edges
+10. `tam_derivation` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -53,7 +59,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (27 total, 3 thin omitted)
+## Communities (34 total, 3 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.17
@@ -112,32 +118,56 @@ Cohesion: 0.29
 Nodes (6): E0 Task Commands — run each in its own terminal, TASK-001 — Personas, TASK-002 — Customer Journey: Before, TASK-004 — JTBD Framework, TASK-005 — Market Viability, TASK-046 — Stakeholder Map
 
 ### Community 20 - "Community 20"
-Cohesion: 0.17
-Nodes (11): Influence / Interest Grid, Narrative: Pitch Implications, SH-001 — IC Partner, SH-002 — CFO / CIO, SH-003 — Head of DC Development *(Jordan's manager)*, SH-004 — ESG Officer, SH-005 — Board / LP, SH-006 — Infrastructure PM (+3 more)
+Cohesion: 0.12
+Nodes (15): Adoption Path, Influence / Interest Grid, Layer 1 — Main (Adoption Triad), Layer 2 — Peripheral (Output Validators), Layer 3 — Institutional / Macro (Constraint-Setters), Pitch Implications, SH-001 — Jordan, SH-002 — CEO / C-Suite (+7 more)
 
 ### Community 21 - "Community 21"
 Cohesion: 0.15
 Nodes (12): CEO / C-Suite — The Decision Maker, CFO — Financial Advisor to the CEO, DC Siting Intelligence Tool — User Personas, Decision Structure, Goals, Jordan — Technical Advisor & Our Direct User, Key Differential KPIs (what the tool must surface), Persona Summary Table (+4 more)
 
+### Community 27 - "Community 27"
+Cohesion: 0.06
+Nodes (32): advisory_market, global_dc_advisory_cagr_pct, global_dc_advisory_caveat, global_dc_advisory_source, global_dc_advisory_usd_m_2025, global_dc_advisory_usd_m_2035_forecast, competitors, footnotes (+24 more)
+
+### Community 28 - "Community 28"
+Cohesion: 0.09
+Nodes (22): market_context, eu_colo_2024_2025_source, eu_colo_investment_growth_pct_2023, eu_colo_investment_source, eu_colo_investment_usd_bn_2022, eu_colo_investment_usd_bn_2023, eu_colo_market_cagr_pct, eu_colo_market_source (+14 more)
+
+### Community 29 - "Community 29"
+Cohesion: 0.11
+Nodes (17): Competitive Landscape, Footnotes & Sources, Market Sizing, Market Viability — DC Siting Intelligence Tool (Invertix), Option 1 — Per-Query (€1,500–€5,000), Option 2 — Annual Subscription (€18K–€180K/yr), Option 3 — White-Label API (€250K–€500K/yr), Pricing Model (+9 more)
+
+### Community 30 - "Community 30"
+Cohesion: 0.17
+Nodes (11): Back the ranking with spot-specific differentials, not judgment, Compare EU zones on the variables that actually differ by location, Give me the location-specific deltas to plug into our model, Jobs-To-Be-Done: DC Siting Intelligence Tool, JTBD-001 — Jordan · Functional, JTBD-002 — Jordan · Emotional, JTBD-003 — CFO / IC Member · Financial, JTBD-004 — CEO · Social / Decision (+3 more)
+
+### Community 31 - "Community 31"
+Cohesion: 0.22
+Nodes (9): sam_derivation, active_siting_decisions_per_year, advisory_spend_per_project_eur, calculation, infra_fund_screening_events_per_year, infra_fund_screening_spend_per_event_eur, method, pre_feasibility_share_of_total_advisory_pct (+1 more)
+
+### Community 32 - "Community 32"
+Cohesion: 0.25
+Nodes (8): tam_derivation, eu_dc_market_usd_bn, global_advisory_usd_m, global_dc_market_estimate_usd_bn, global_dc_market_note, method, usd_eur_rate, verdict
+
 ## Knowledge Gaps
-- **157 isolated node(s):** `$schema`, `deny`, `PreToolUse`, `SessionStart`, `Stop` (+152 more)
+- **241 isolated node(s):** `$schema`, `deny`, `PreToolUse`, `SessionStart`, `Stop` (+236 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `market_context` connect `Community 28` to `Community 27`?**
+  _High betweenness centrality (0.024) - this node is a cross-community bridge._
+- **Why does `sam_derivation` connect `Community 31` to `Community 27`?**
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+- **Why does `tam_derivation` connect `Community 32` to `Community 27`?**
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **What connects `$schema`, `deny`, `PreToolUse` to the rest of the system?**
-  _157 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _241 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 3` be split into smaller, more focused modules?**
   _Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**
   _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
 - **Should `Community 5` be split into smaller, more focused modules?**
   _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
-- **Should `Community 9` be split into smaller, more focused modules?**
-  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
-- **Should `Community 10` be split into smaller, more focused modules?**
-  _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
-- **Should `Community 15` be split into smaller, more focused modules?**
-  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._

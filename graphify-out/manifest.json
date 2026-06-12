@@ -100,8 +100,8 @@
     "semantic_hash": ""
   },
   "artifacts/stakeholder-map.json": {
-    "mtime": 1781298957.4156623,
-    "ast_hash": "65c27eb8be5550f6aa700b4fd6fb61db",
+    "mtime": 1781299888.2091713,
+    "ast_hash": "355aa5469535754d57b9f19cdc9ecaf8",
     "semantic_hash": ""
   },
   "artifacts/personas.md": {
@@ -110,8 +110,8 @@
     "semantic_hash": ""
   },
   "artifacts/stakeholder-map.md": {
-    "mtime": 1781298957.4156623,
-    "ast_hash": "c1d02523f32ff6b01d2c36a604984d23",
+    "mtime": 1781299888.2740493,
+    "ast_hash": "45fa7598763c26a22d38900b8bc53b2f",
     "semantic_hash": ""
   },
   "artifacts/journey-before.json": {
@@ -120,12 +120,12 @@
     "semantic_hash": ""
   },
   ".agents/rules/graphify.md": {
-    "mtime": 1781299783.9341009,
+    "mtime": 1781299994.9991481,
     "ast_hash": "a0e4d192b9e2e17256124dbfc8e24e6a",
     "semantic_hash": ""
   },
   ".agents/workflows/graphify.md": {
-    "mtime": 1781299783.9445157,
+    "mtime": 1781299994.9991481,
     "ast_hash": "637776aa6f7496d069afe7520c845c8a",
     "semantic_hash": ""
   },
@@ -140,8 +140,33 @@
     "semantic_hash": ""
   },
   "docs/C_2024_1639_final.pdf": {
-    "mtime": 1781299581.6947453,
+    "mtime": 1781299995.0093777,
     "ast_hash": "e262d6f746b5f7007789a095dbcd6b96",
+    "semantic_hash": ""
+  },
+  "artifacts/jtbd.json": {
+    "mtime": 1781299888.1934571,
+    "ast_hash": "3016ae34aec054ae5cb626994a335c35",
+    "semantic_hash": ""
+  },
+  "artifacts/market-viability.json": {
+    "mtime": 1781299994.8765302,
+    "ast_hash": "b645b695a9df52fa6387bd01901ddf4d",
+    "semantic_hash": ""
+  },
+  "artifacts/jtbd.md": {
+    "mtime": 1781299888.2043722,
+    "ast_hash": "b7b87470e3866228a0d572a2e036b0e5",
+    "semantic_hash": ""
+  },
+  "artifacts/market-viability.md": {
+    "mtime": 1781299994.8765302,
+    "ast_hash": "048ce400fc927a60e28b5f421f420501",
+    "semantic_hash": ""
+  },
+  "docs/EU_Data_Center_Rating_Scheme_Draft_2026.pdf": {
+    "mtime": 1781299965.1424944,
+    "ast_hash": "4a490bee940a5bdc9cff0db8588ecea1",
     "semantic_hash": ""
   }
 }
