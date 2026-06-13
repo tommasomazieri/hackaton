@@ -35,6 +35,10 @@ graphify-out/site_analysis.geojson
 # OS
 .DS_Store
 Thumbs.db
+*.stackdump
+
+# IDE
+.idea/
 
 # Agent skills
 .agents/skills/frontend-manager/

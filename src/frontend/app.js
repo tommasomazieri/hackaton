@@ -132,7 +132,6 @@ async function fetchRanked(weights) {
     rankedNodes = await res.json();
     console.debug('[rank] applied', weights, '→ top:', rankedNodes.map(r => r.node_id));
     render();
-    prewarmSiteImages(weights);   // start CNN imagery in the background while user reads the table
   } catch (err) {
     alert(err.message || 'Could not compute ranking.');
   }
@@ -650,51 +649,50 @@ function buildReportCharts() {
   }
 }
 
-// Kick off CNN imagery for the applied roster in the background (fire-and-forget).
-// Backend caches per node, so by export time many/all are ready and instant.
-const AOI_KM = 5.0;
-function prewarmSiteImages(weights) {
-  fetch(`${API}/report/site-images`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ weights, top_n: 10, aoi_km: AOI_KM }),
-  }).catch(() => {});
-}
-
-// Load site images progressively — one node per request — so each box fills as
-// the CNN finishes it instead of blocking on the whole batch. The backend caches
-// per node, so re-opening the report is instant.
+// Generate site images STRICTLY on export open — one node per request, in rank
+// order, generated on the go by the CNN. Each box fills as its node finishes.
+// The backend caches per node, so re-opening the report reuses what's done.
+// ~3.8 km -> ~388 px composite, under the DW model's 399 px window, so the CNN
+// runs a single inference (no 2x2 tiling) — the biggest per-node speedup.
+const AOI_KM = 3.8;
 let reportImgToken = 0;
 async function loadReportSiteImages() {
   const token = ++reportImgToken;  // invalidated if the modal is reopened
   const fill = (id, html) => { const s = document.getElementById(`site-img-${id}`); if (s) s.innerHTML = html; };
   const cap = (id, html) => { const s = document.getElementById(`site-cap-${id}`); if (s) s.innerHTML = html; };
 
-  for (let i = 0; i < rankedNodes.length; i++) {
-    if (token !== reportImgToken) return;  // a newer open superseded this run
-    const r = rankedNodes[i];
-    fill(r.node_id, `<div class="site-pending"><span class="site-spin"></span>Analysing land around ${r.node_id}…</div>`);
-    try {
-      const res = await fetch(`${API}/report/site-images`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ node_ids: [r.node_id], aoi_km: AOI_KM }),
-      });
-      if (token !== reportImgToken) return;
-      if (!res.ok) throw new Error(`site-images ${res.status}`);
-      const rec = (await res.json())[0] || {};
-      if (rec.image_url) {
-        fill(r.node_id, `<img src="${API}${rec.image_url}?t=${Date.now()}" alt="${r.node_id} site" crossorigin="anonymous">`);
-        const ha = rec.buildable_area_ha != null ? ` · ${fmtNum(rec.buildable_area_ha)} ha buildable` : '';
-        cap(r.node_id, `${rec.dominant_buildable_class || 'site'}${ha}`);
-      } else {
-        fill(r.node_id, `<div class="site-pending">No buildable land / imagery for this node.</div>`);
+  rankedNodes.forEach(r =>
+    fill(r.node_id, `<div class="site-pending"><span class="site-spin"></span>Analysing land around ${r.node_id}…</div>`));
+
+  const CONCURRENCY = 4;  // overlap network-bound fetches across nodes
+  let next = 0;
+  async function worker() {
+    while (next < rankedNodes.length) {
+      if (token !== reportImgToken) return;  // a newer open superseded this run
+      const r = rankedNodes[next++];
+      try {
+        const res = await fetch(`${API}/report/site-images`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ node_ids: [r.node_id], aoi_km: AOI_KM }),
+        });
+        if (token !== reportImgToken) return;
+        if (!res.ok) throw new Error(`site-images ${res.status}`);
+        const rec = (await res.json())[0] || {};
+        if (rec.image_url) {
+          fill(r.node_id, `<img src="${API}${rec.image_url}?t=${Date.now()}" alt="${r.node_id} site" crossorigin="anonymous">`);
+          const ha = rec.buildable_area_ha != null ? ` · ${fmtNum(rec.buildable_area_ha)} ha buildable` : '';
+          cap(r.node_id, `${rec.dominant_buildable_class || 'site'}${ha}`);
+        } else {
+          fill(r.node_id, `<div class="site-pending">No buildable land / imagery for this node.</div>`);
+        }
+      } catch (e) {
+        if (token !== reportImgToken) return;
+        fill(r.node_id, `<div class="site-pending">Site imagery unavailable (analysis stage offline).</div>`);
       }
-    } catch (e) {
-      if (token !== reportImgToken) return;
-      fill(r.node_id, `<div class="site-pending">Site imagery unavailable (analysis stage offline).</div>`);
     }
   }
+  await Promise.all(Array.from({ length: CONCURRENCY }, worker));
 }
 
 // ---------- boot ----------

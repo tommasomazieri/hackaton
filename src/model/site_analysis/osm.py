@@ -15,6 +15,7 @@ import hashlib
 import json
 import os
 import time
+from functools import lru_cache
 
 from shapely.geometry import LineString, Point, Polygon, shape  # noqa: F401
 from shapely.ops import transform as shapely_transform
@@ -77,8 +78,11 @@ def _node_lookup(elements: list) -> dict:
             and "lon" in e and "lat" in e}
 
 
+@lru_cache(maxsize=4)
 def power_features(path: str | None = None) -> list:
-    """Shapely geoms (lon/lat) for grid lines, cables and substations."""
+    """Shapely geoms (lon/lat) for grid lines, cables and substations.
+
+    Cached: the dump is large and identical across nodes, so load + parse once."""
     p = path or OSM_POWER_JSON
     with open(p, encoding="utf-8") as fh:
         elements = json.load(fh)["elements"]

@@ -51,6 +51,15 @@ GEOJSON_OUT = os.path.join(PROJECT_ROOT, "graphify-out", "site_analysis.geojson"
 MAX_PATCHES_SCORED = 8
 DEFAULT_AOI_KM = 10.0
 
+# Projected power-grid geoms per UTM EPSG — same grid reused across nodes in a zone.
+_GRID_UTM_CACHE: dict[int, list] = {}
+
+
+def _grid_utm_for(epsg: int) -> list:
+    if epsg not in _GRID_UTM_CACHE:
+        _GRID_UTM_CACHE[epsg] = osm.project_geoms(osm.power_features(), epsg)
+    return _GRID_UTM_CACHE[epsg]
+
 
 # ---------------------------------------------------------------------------
 # Node lat/lon lookup
@@ -126,8 +135,9 @@ def analyze_node(
         return {"node_id": node_id, "lat": lat, "lon": lon,
                 "status": "no_buildable_land", "patches_found": 0}
 
-    # Pre-project grid + road geoms to UTM once.
-    grid_utm = osm.project_geoms(osm.power_features(), epsg)
+    # Pre-project grid + road geoms to UTM once. The grid is global + identical
+    # across nodes, so cache its projection per UTM zone (reused by same-zone nodes).
+    grid_utm = _grid_utm_for(epsg)
     road_utm = osm.project_geoms(osm.roads(bbox), epsg)
 
     from shapely.geometry import Point
