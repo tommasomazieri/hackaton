@@ -26,6 +26,7 @@ S2_COLLECTION = "sentinel-2-l2a"
 DEM_COLLECTION = "cop-dem-glo-30"
 RES_M = 10.0
 BOA_OFFSET = 1000  # re-add the post-baseline-4.0 BOA_ADD_OFFSET (-1000) to align scenes
+MAX_SCENES = 4     # composite only the N least-cloudy scenes (cuts download time)
 
 # DW band order (B2,B3,…) -> Planetary Computer sentinel-2-l2a asset keys, which
 # are zero-padded (B02,B03,…); B11/B12 are not padded. Used only for STAC loading;
@@ -83,6 +84,10 @@ def fetch_composite(
         items = _search_s2(bbox, 60, date_range)
     if not items:
         raise RuntimeError(f"No Sentinel-2 scenes for bbox={bbox} cloud<60%")
+
+    # Compositing the whole summer dominates per-node wall time (network download).
+    # Keep only the few least-cloudy scenes — enough for a clean median, far less data.
+    items = sorted(items, key=lambda it: it.properties.get("eo:cloud_cover", 100.0))[:MAX_SCENES]
 
     pc_bands = [PC_ASSET[b] for b in S2_BANDS]
     ds = odc.stac.load(
