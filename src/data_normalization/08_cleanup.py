@@ -226,7 +226,16 @@ def run():
 
         n_nan = nodes_land["land_price_eur_ha"].isna().sum()
         if n_nan > 0:
-            log.warning(f"{n_nan} nodes have no land price — check NUTS3 coverage")
+            from scipy.spatial import KDTree
+            known = nodes_land["land_price_eur_ha"].notna()
+            unknown = ~known
+            if known.any():
+                tree = KDTree(nodes_land.loc[known, ["x", "y"]].to_numpy())
+                _, idx = tree.query(nodes_land.loc[unknown, ["x", "y"]].to_numpy(), k=1)
+                nodes_land.loc[unknown, "land_price_eur_ha"] = (
+                    nodes_land.loc[known, "land_price_eur_ha"].iloc[idx].values
+                )
+                log.info(f"KNN-imputed {n_nan} missing land prices from nearest non-NaN node")
 
         nodes_land.to_parquet(
             os.path.join(proc, "land_price.parquet"), index=False
