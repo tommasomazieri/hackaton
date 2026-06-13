@@ -59,7 +59,7 @@ def _load_processed(paths: dict, name: str, key: str = "node_id") -> pd.DataFram
 
 def _run_fallbacks(paths: dict) -> None:
     """Auto-run fallback + cleanup if PyPSA-dependent processed files are missing."""
-    pypsa_files = ["energy_price", "congestion", "capacity"]
+    pypsa_files = ["energy_price", "congestion", "capacity", "infrastructure_access"]
     missing = [
         f for f in pypsa_files
         if not os.path.exists(os.path.join(paths["data_processed"], f"{f}.parquet"))
@@ -201,8 +201,8 @@ def run():
     result = result[final_cols]
 
     result.to_parquet(out_path, index=False)
-    size_mb = os.path.getsize(out_path) / 1e6
-    log.info(f"Saved → {out_path}  ({n_rows} rows, {size_mb:.1f} MB)")
+    size_kb = os.path.getsize(out_path) / 1_024
+    log.info(f"Saved → {out_path}  ({n_rows} rows, {size_kb:.0f} KB)")
 
 
 if __name__ == "__main__":

@@ -174,8 +174,19 @@ def run():
         f"(mean {ep['energy_price_eur_mwh'].mean():.1f} €/MWh)"
     )
 
+    # infrastructure_access.parquet — neutral fallback (0.5) when OSM data unavailable
+    ia_path = os.path.join(proc, "infrastructure_access.parquet")
+    if not os.path.exists(ia_path):
+        ia = nodes[["node_id", "country"]].copy()
+        ia["connectivity_score"] = 0.5
+        ia["grid_access_score"] = 0.5
+        ia["fiber_connectivity_score"] = 0.5
+        ia["infra_data_quality"] = "fallback"
+        ia.to_parquet(ia_path, index=False)
+        log.info("infrastructure_access.parquet → neutral 0.5 fallback (run 04_infrastructure_access.py for real values)")
+
     log.info(
-        "\nAll three PyPSA-fallback parquets written.\n"
+        "\nAll PyPSA-fallback parquets written.\n"
         "Next: python src/data_normalization/09_build_table.py"
     )
 
