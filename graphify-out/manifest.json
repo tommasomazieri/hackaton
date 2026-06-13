@@ -183,5 +183,15 @@
     "mtime": 1781306693.1699195,
     "ast_hash": "3d301fabeccd7b4d9e8da4b518ccc011",
     "semantic_hash": ""
+  },
+  "front-end/app.js": {
+    "mtime": 1781320633.8300703,
+    "ast_hash": "66fb80c555b8d66bd17d623fbd6b463e",
+    "semantic_hash": ""
+  },
+  "front-end/index.html": {
+    "mtime": 1781321528.9932373,
+    "ast_hash": "0a670d7eb14b16235e6cb8597a215814",
+    "semantic_hash": ""
   }
 }

@@ -1,16 +1,16 @@
 # Graph Report - Project_Antigravity  (2026-06-13)
 
 ## Corpus Check
-- 34 files · ~35,080 words
+- 35 files · ~37,293 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 365 nodes · 331 edges · 38 communities (35 shown, 3 thin omitted)
+- 391 nodes · 359 edges · 39 communities (36 shown, 3 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `dfad801f`
+- Built from commit: `f1bcaaca`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -44,6 +44,7 @@
 - [[_COMMUNITY_Community 32|Community 32]]
 - [[_COMMUNITY_Community 36|Community 36]]
 - [[_COMMUNITY_Community 37|Community 37]]
+- [[_COMMUNITY_Community 38|Community 38]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `market_context` - 22 edges
@@ -63,7 +64,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (38 total, 3 thin omitted)
+## Communities (39 total, 3 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.17
@@ -169,8 +170,12 @@ Nodes (8): 1. Nodi (Buses), 2. Linee di Trasmissione (Lines) e Link DC (Links), 
 Cohesion: 0.15
 Nodes (12): 1. Cos'è il PUE (Power Usage Effectiveness)?, 2. Logica Computazionale e Formule (Backend Backend Siting Engine), 3. Test Unitari per il Controllo Qualità (QA/QC Assertions), 4. UI Guidelines (Streamlit Frontend), A. Classificazione e Obbligo EED, A. Formula Matematica di Calcolo, B. Interpretazione dei Valori, B. Verifica del PUE Limite (Tassonomia e Legge Tedesca EnEfG) (+4 more)
 
+### Community 38 - "Community 38"
+Cohesion: 0.09
+Nodes (17): btnProfile, btnSettings, countriesLayersMap, currentPriorityText, dropdownItems, dropMenu, dropTrigger, profileCircle (+9 more)
+
 ## Knowledge Gaps
-- **268 isolated node(s):** `$schema`, `deny`, `PreToolUse`, `SessionStart`, `Stop` (+263 more)
+- **281 isolated node(s):** `$schema`, `deny`, `PreToolUse`, `SessionStart`, `Stop` (+276 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -178,11 +183,11 @@ Nodes (12): 1. Cos'è il PUE (Power Usage Effectiveness)?, 2. Logica Computazion
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `market_context` connect `Community 5` to `Community 1`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **Why does `tam_derivation` connect `Community 29` to `Community 1`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **What connects `$schema`, `deny`, `PreToolUse` to the rest of the system?**
-  _268 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _281 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**

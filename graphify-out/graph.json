@@ -1216,6 +1216,266 @@
       "norm_label": "stakeholder-map.json"
     },
     {
+      "label": "app.js",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "front_end_app",
+      "community": 38,
+      "norm_label": "app.js"
+    },
+    {
+      "label": "sites",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "front_end_app_sites",
+      "community": 38,
+      "norm_label": "sites"
+    },
+    {
+      "label": "top5Countries",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "front_end_app_top5countries",
+      "community": 38,
+      "norm_label": "top5countries"
+    },
+    {
+      "label": "siteMarkers",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "front_end_app_sitemarkers",
+      "community": 38,
+      "norm_label": "sitemarkers"
+    },
+    {
+      "label": "scoredSites",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "front_end_app_scoredsites",
+      "community": 38,
+      "norm_label": "scoredsites"
+    },
+    {
+      "label": "countriesLayersMap",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "front_end_app_countrieslayersmap",
+      "community": 38,
+      "norm_label": "countrieslayersmap"
+    },
+    {
+      "label": "initMap()",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "front_end_app_initmap",
+      "community": 38,
+      "norm_label": "initmap()"
+    },
+    {
+      "label": "countryStyle()",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "front_end_app_countrystyle",
+      "community": 38,
+      "norm_label": "countrystyle()"
+    },
+    {
+      "label": "updateDashboard()",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "front_end_app_updatedashboard",
+      "community": 38,
+      "norm_label": "updatedashboard()"
+    },
+    {
+      "label": "selectCountry()",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "front_end_app_selectcountry",
+      "community": 38,
+      "norm_label": "selectcountry()"
+    },
+    {
+      "label": "triggerMapSelection()",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "front_end_app_triggermapselection",
+      "community": 38,
+      "norm_label": "triggermapselection()"
+    },
+    {
+      "label": "showDetail()",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L84",
+      "_origin": "ast",
+      "id": "front_end_app_showdetail",
+      "community": 38,
+      "norm_label": "showdetail()"
+    },
+    {
+      "label": "dropTrigger",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L114",
+      "_origin": "ast",
+      "id": "front_end_app_droptrigger",
+      "community": 38,
+      "norm_label": "droptrigger"
+    },
+    {
+      "label": "dropMenu",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L115",
+      "_origin": "ast",
+      "id": "front_end_app_dropmenu",
+      "community": 38,
+      "norm_label": "dropmenu"
+    },
+    {
+      "label": "currentPriorityText",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L116",
+      "_origin": "ast",
+      "id": "front_end_app_currentprioritytext",
+      "community": 38,
+      "norm_label": "currentprioritytext"
+    },
+    {
+      "label": "dropdownItems",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L117",
+      "_origin": "ast",
+      "id": "front_end_app_dropdownitems",
+      "community": 38,
+      "norm_label": "dropdownitems"
+    },
+    {
+      "label": "profileCircle",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L152",
+      "_origin": "ast",
+      "id": "front_end_app_profilecircle",
+      "community": 38,
+      "norm_label": "profilecircle"
+    },
+    {
+      "label": "profilePage",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L152",
+      "_origin": "ast",
+      "id": "front_end_app_profilepage",
+      "community": 38,
+      "norm_label": "profilepage"
+    },
+    {
+      "label": "btnProfile",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L153",
+      "_origin": "ast",
+      "id": "front_end_app_btnprofile",
+      "community": 38,
+      "norm_label": "btnprofile"
+    },
+    {
+      "label": "btnSettings",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L153",
+      "_origin": "ast",
+      "id": "front_end_app_btnsettings",
+      "community": 38,
+      "norm_label": "btnsettings"
+    },
+    {
+      "label": "explodeButtons()",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L156",
+      "_origin": "ast",
+      "id": "front_end_app_explodebuttons",
+      "community": 38,
+      "norm_label": "explodebuttons()"
+    },
+    {
+      "label": "implodeImmediately()",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L172",
+      "_origin": "ast",
+      "id": "front_end_app_implodeimmediately",
+      "community": 38,
+      "norm_label": "implodeimmediately()"
+    },
+    {
+      "label": "implodeButtons()",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L178",
+      "_origin": "ast",
+      "id": "front_end_app_implodebuttons",
+      "community": 38,
+      "norm_label": "implodebuttons()"
+    },
+    {
+      "label": "openProfilePage()",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L194",
+      "_origin": "ast",
+      "id": "front_end_app_openprofilepage",
+      "community": 38,
+      "norm_label": "openprofilepage()"
+    },
+    {
+      "label": "updateProfileCircleIcon()",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L201",
+      "_origin": "ast",
+      "id": "front_end_app_updateprofilecircleicon",
+      "community": 38,
+      "norm_label": "updateprofilecircleicon()"
+    },
+    {
+      "label": "renderSavedSearches()",
+      "file_type": "code",
+      "source_file": "front-end/app.js",
+      "source_location": "L230",
+      "_origin": "ast",
+      "id": "front_end_app_rendersavedsearches",
+      "community": 38,
+      "norm_label": "rendersavedsearches()"
+    },
+    {
       "label": "backlog.json",
       "file_type": "code",
       "source_file": "project-management/backlog.json",
@@ -4799,6 +5059,289 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L153",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_btnprofile"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L153",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_btnsettings"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_countrieslayersmap"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_countrystyle"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L116",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_currentprioritytext"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L117",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_dropdownitems"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L115",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_dropmenu"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L114",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_droptrigger"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L156",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_explodebuttons"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L169",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_implodebuttons"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_implodeimmediately",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_initmap"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L164",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_openprofilepage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L120",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_profilecircle"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L120",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_profilepage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L128",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_rendersavedsearches"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_scoredsites"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L122",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_selectcountry"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L185",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_showdetail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_sitemarkers"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_sites"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_top5countries"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L159",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_triggermapselection"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L93",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_updatedashboard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L175",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app",
+      "target": "front_end_app_updateprofilecircleicon"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L136",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app_updatedashboard",
+      "target": "front_end_app_showdetail"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L162",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app_triggermapselection",
+      "target": "front_end_app_selectcountry"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "front-end/app.js",
+      "source_location": "L180",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "front_end_app_triggermapselection",
+      "target": "front_end_app_showdetail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "project-management/kanban.json",
       "source_location": "L2",
       "weight": 1.0,
@@ -6242,9 +6785,9 @@
       "source_file": "docs/compliance_guide.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_compliance_guide_guida_di_sviluppo_integrazione_dei_vincoli_di_conformit\u00e0_ue_eed_tassonomia_enefg",
-      "target": "docs_compliance_guide_1_cos_\u00e8_il_pue_power_usage_effectiveness",
-      "confidence_score": 1.0
+      "target": "docs_compliance_guide_1_cos_\u00e8_il_pue_power_usage_effectiveness"
     },
     {
       "relation": "contains",
@@ -6282,9 +6825,9 @@
       "source_file": "docs/compliance_guide.md",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_compliance_guide_1_cos_\u00e8_il_pue_power_usage_effectiveness",
-      "target": "docs_compliance_guide_a_formula_matematica_di_calcolo",
-      "confidence_score": 1.0
+      "target": "docs_compliance_guide_a_formula_matematica_di_calcolo"
     },
     {
       "relation": "contains",
@@ -6292,9 +6835,9 @@
       "source_file": "docs/compliance_guide.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_compliance_guide_1_cos_\u00e8_il_pue_power_usage_effectiveness",
-      "target": "docs_compliance_guide_b_interpretazione_dei_valori",
-      "confidence_score": 1.0
+      "target": "docs_compliance_guide_b_interpretazione_dei_valori"
     },
     {
       "relation": "contains",
@@ -6302,9 +6845,9 @@
       "source_file": "docs/compliance_guide.md",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_compliance_guide_1_cos_\u00e8_il_pue_power_usage_effectiveness",
-      "target": "docs_compliance_guide_c_impatto_sulle_variabili_del_modello",
-      "confidence_score": 1.0
+      "target": "docs_compliance_guide_c_impatto_sulle_variabili_del_modello"
     },
     {
       "relation": "contains",
@@ -6988,5 +7531,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "dfad801fb7c3fde0ecae98b4680caf2e6e759e4a"
+  "built_at_commit": "f1bcaacad43c481d1697a54d432f218deaec67e9"
 }
