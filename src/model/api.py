@@ -188,6 +188,8 @@ def post_report_images(req: ReportImagesRequest) -> list[dict[str, Any]]:
             raise HTTPException(status_code=400, detail=f"Unknown weight keys: {sorted(unknown)}")
         ids = list(rank_by_weights(weights, top_n=req.top_n))
 
+    # Cache-first: reuse images already in data/site_analysis; on a miss, still
+    # compute at runtime (the report shows its "Analysing land…" label meanwhile).
     results = site_stage.run(ids, size_km=req.aoi_km, write=True, cache=True)
 
     out: list[dict[str, Any]] = []

@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import logging
 import os
 import time
 from functools import lru_cache
@@ -131,7 +132,7 @@ def _overpass(query: str, kind: str, bbox: tuple, max_age_s: int = 7 * 86400) ->
     last = None
     for url in OVERPASS_MIRRORS:
         try:
-            resp = requests.post(url, data={"data": query}, headers=_OVERPASS_HEADERS, timeout=180)
+            resp = requests.post(url, data={"data": query}, headers=_OVERPASS_HEADERS, timeout=45)
             resp.raise_for_status()
             payload = resp.json()
             break
@@ -158,7 +159,11 @@ def roads(bbox: tuple) -> list:
         f'way["highway"~"^({regex})$"]({_bbox_str(bbox)});'
         f"out geom;"
     )
-    data = _overpass(q, "roads", bbox)
+    try:
+        data = _overpass(q, "roads", bbox)
+    except Exception as exc:  # soft layer — never let Overpass kill a node
+        logging.getLogger("osm").warning(f"roads overpass failed, degrading to none: {exc}")
+        return []
     out = []
     for e in data.get("elements", []):
         geom = e.get("geometry")
@@ -176,7 +181,11 @@ def landuse_polygons(bbox: tuple) -> list:
         f'relation["landuse"~"^({keys})$"]({_bbox_str(bbox)}););'
         f"out geom;"
     )
-    data = _overpass(q, "landuse", bbox)
+    try:
+        data = _overpass(q, "landuse", bbox)
+    except Exception as exc:  # soft layer — never let Overpass kill a node
+        logging.getLogger("osm").warning(f"landuse overpass failed, degrading to none: {exc}")
+        return []
     out = []
     for e in data.get("elements", []):
         geom = e.get("geometry")

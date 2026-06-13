@@ -270,10 +270,16 @@ def _features_for(result: dict) -> list[dict]:
 
 def run(node_ids: list[str], size_km: float = DEFAULT_AOI_KM,
         date_range: str = "2023-05-01/2023-09-30", write: bool = True,
-        cache: bool = True, render_image: bool = True) -> list[dict]:
+        cache: bool = True, render_image: bool = True,
+        cache_only: bool = False) -> list[dict]:
     """Analyse `node_ids`. With `cache=True`, nodes that already have a cached
     `<id>.json` are loaded from disk instead of re-running the CNN — so the heavy
-    stage runs at most once per node. Coordinates are only read on a cache miss."""
+    stage runs at most once per node. Coordinates are only read on a cache miss.
+
+    With `cache_only=True`, cache misses are NOT computed: the node returns
+    `status="not_cached"` and no CNN runs. Used by the report export so a
+    presentation never triggers slow on-the-go inference — it serves only what's
+    already in data/site_analysis."""
     os.makedirs(OUT_DIR, exist_ok=True)
 
     results, features = [], []
@@ -285,6 +291,8 @@ def run(node_ids: list[str], size_km: float = DEFAULT_AOI_KM,
                 res = json.load(fh)
             if res.get("image") and not os.path.exists(os.path.join(OUT_DIR, res["image"])):
                 res.pop("image", None)  # cached json but image was cleaned up
+        elif cache_only:
+            res = {"node_id": node_id, "status": "not_cached"}
         else:
             if coords is None:
                 coords = load_node_coords(node_ids)

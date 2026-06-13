@@ -56,6 +56,9 @@ let reportCharts = [];       // Chart.js instances built for the report modal
 
 const GREY = { fillColor: '#475569', color: '#64748b', weight: 1, radius: 5, fillOpacity: 0.55, opacity: 0.6 };
 const HOT  = { fillColor: '#f59e0b', color: '#fbbf24', weight: 3, radius: 9, fillOpacity: 0.95, opacity: 1 };
+// Brighter/bigger grey for the report's static map so mainland nodes read clearly
+// against the dark basemap (the live map can stay subtle; a printed page can't).
+const REPORT_GREY = { fillColor: '#7c8aa5', color: '#aab6cc', weight: 1, radius: 6, fillOpacity: 0.8, opacity: 0.9 };
 
 // ---------- formatting ----------
 function fmtNum(v) { return Math.round(v).toLocaleString('en-US'); }
@@ -542,8 +545,11 @@ function buildReport() {
   return reportTablePage() + reportMapPage() + reportAnalysisPage() + reportSitesPage();
 }
 
-// Render the report straight to a downloaded PDF (no print dialog). Each
-// .report-page is rasterised, then sliced across A4 pages.
+// Render the report straight to a downloaded PDF (no print dialog). Paginated by
+// BLOCK, not by fixed slices: every `.pdf-block` is rasterised whole and placed
+// on the current page only if it fits — otherwise it starts a fresh page. A block
+// taller than a full page is scaled down to fit one page. So nothing (especially
+// a site image) is ever cut across a page boundary.
 async function downloadReportPDF() {
   const btn = document.getElementById('report-download');
   if (!window.jspdf || !window.html2canvas) { alert('PDF libraries failed to load.'); return; }
@@ -555,25 +561,32 @@ async function downloadReportPDF() {
     const pdf = new jsPDF('p', 'pt', 'a4');
     const pw = pdf.internal.pageSize.getWidth();
     const ph = pdf.internal.pageSize.getHeight();
-    const pages = [...document.querySelectorAll('#report-scroll .report-page')];
-    let first = true;
-    for (const page of pages) {
-      const canvas = await html2canvas(page, { useCORS: true, scale: 2, backgroundColor: '#0b1020', logging: false });
-      const imgData = canvas.toDataURL('image/jpeg', 0.92);
-      const imgW = pw;
-      const imgH = canvas.height * (imgW / canvas.width);
-      if (!first) pdf.addPage();
-      first = false;
-      let heightLeft = imgH;
-      let position = 0;
-      pdf.addImage(imgData, 'JPEG', 0, position, imgW, imgH);
-      heightLeft -= ph;
-      while (heightLeft > 0) {           // slice a tall page across multiple A4 sheets
-        position -= ph;
-        pdf.addPage();
-        pdf.addImage(imgData, 'JPEG', 0, position, imgW, imgH);
-        heightLeft -= ph;
+    const M = 26;                       // page margin (pt)
+    const GAP = 12;                     // vertical gap between blocks (pt)
+    const usableW = pw - 2 * M;
+    const usableH = ph - 2 * M;
+
+    const blocks = [...document.querySelectorAll('#report-scroll .pdf-block')];
+    let y = M;
+    let pageStarted = false;            // has anything been drawn on the current page?
+
+    for (const block of blocks) {
+      const canvas = await html2canvas(block, { useCORS: true, scale: 2, backgroundColor: '#0b1020', logging: false });
+      let w = usableW;
+      let h = canvas.height * (w / canvas.width);
+      if (h > usableH) {                // block taller than a page → scale to fit one page
+        const s = usableH / h;
+        h *= s; w *= s;
       }
+      if (pageStarted && y + h > ph - M) {   // not enough room left → next page
+        pdf.addPage();
+        y = M;
+        pageStarted = false;
+      }
+      const x = M + (usableW - w) / 2;       // centre horizontally
+      pdf.addImage(canvas.toDataURL('image/jpeg', 0.92), 'JPEG', x, y, w, h);
+      y += h + GAP;
+      pageStarted = true;
     }
     pdf.save('dc-siting-report.pdf');
   } catch (e) {
@@ -606,15 +619,15 @@ function reportTablePage() {
 
   return `
     <div class="report-page">
-      <div class="rp-header">
+      <div class="rp-header pdf-block">
         <div>
           <div class="rp-title">DC Siting Report</div>
           <div class="rp-meta">Top ${rankedNodes.length} ranked European grid sites</div>
         </div>
         <div class="rp-meta rp-meta-right">${cap} MW · ${(+foot).toLocaleString('en-US')} m²<br>${date}</div>
       </div>
-      <div class="rp-table">${thead}${rows}</div>
-      <div class="assumptions">
+      <div class="rp-table pdf-block">${thead}${rows}</div>
+      <div class="assumptions pdf-block">
         <div class="as-title">Assumptions — ranking weights</div>
         <ul>${assumptions}</ul>
         <div class="as-note">Sites ranked by a weighted average of normalised congestion, carbon, cost and connectivity scores (lower is better).</div>
@@ -625,9 +638,11 @@ function reportTablePage() {
 function reportMapPage() {
   return `
     <div class="report-page">
-      <div class="rp-title">Geographic distribution</div>
-      <div class="rp-map" id="report-map"></div>
-      <div class="rp-cap">All viable grid nodes (grey) with the top ${rankedNodes.length} ranked sites highlighted in amber.</div>
+      <div class="pdf-block">
+        <div class="rp-title">Geographic distribution</div>
+        <div class="rp-map" id="report-map"></div>
+        <div class="rp-cap">All viable grid nodes (grey) with the top ${rankedNodes.length} ranked sites highlighted in amber.</div>
+      </div>
     </div>`;
 }
 
@@ -648,13 +663,19 @@ function reportAnalysisPage() {
 
   return `
     <div class="report-page">
-      <div class="rp-title">Analysis</div>
-      <div class="rp-sub">#1 pick — ${w.node_id} · ${w.country || wc.country || ''}</div>
-      <div class="stat-cards">${cards}</div>
-      <div class="rp-sub">Cost composition (energy vs land)</div>
-      <div class="chart-wrap"><canvas id="chart-cost"></canvas></div>
-      <div class="rp-sub">Cost vs CO₂ trade-off</div>
-      <div class="chart-wrap"><canvas id="chart-scatter"></canvas></div>
+      <div class="pdf-block">
+        <div class="rp-title">Analysis</div>
+        <div class="rp-sub">#1 pick — ${w.node_id} · ${w.country || wc.country || ''}</div>
+        <div class="stat-cards">${cards}</div>
+      </div>
+      <div class="pdf-block">
+        <div class="rp-sub">Cost composition (energy vs land)</div>
+        <div class="chart-wrap"><canvas id="chart-cost"></canvas></div>
+      </div>
+      <div class="pdf-block">
+        <div class="rp-sub">Cost vs CO₂ trade-off</div>
+        <div class="chart-wrap"><canvas id="chart-scatter"></canvas></div>
+      </div>
     </div>`;
 }
 
@@ -662,7 +683,7 @@ function reportSitesPage() {
   const blocks = rankedNodes.map((r, i) => {
     const country = r.country || (coordsById[r.node_id] || {}).country || '';
     return `
-      <div class="site-block">
+      <div class="site-block pdf-block">
         <div class="site-title">#${i + 1} ${r.node_id} · ${country}</div>
         <div class="site-img" id="site-img-${r.node_id}"><div class="site-pending">Generating site imagery…</div></div>
         <div class="site-cap" id="site-cap-${r.node_id}"></div>
@@ -670,8 +691,10 @@ function reportSitesPage() {
   }).join('');
   return `
     <div class="report-page report-sites">
-      <div class="rp-title">Recommended build sites</div>
-      <div class="rp-cap">CNN land analysis — true-colour satellite with the chosen buildable footprint (amber box) and largest inscribed pad (yellow circle).</div>
+      <div class="pdf-block">
+        <div class="rp-title">Recommended build sites</div>
+        <div class="rp-cap">CNN land analysis — true-colour satellite with the chosen buildable footprint (amber box) and largest inscribed pad (yellow circle).</div>
+      </div>
       ${blocks}
     </div>`;
 }
@@ -686,16 +709,28 @@ function buildReportMap() {
   }).addTo(rmap);
 
   const topIds = new Set(rankedNodes.map(r => r.node_id));
-  const bounds = [];
+  const lats = [], lngs = [];
   allNodes.forEach(n => {
     const c = coordsById[n.node_id];
     if (!c || c.lat == null) return;
     const hot = topIds.has(n.node_id);
-    L.circleMarker([c.lat, c.lng], hot ? HOT : GREY).addTo(rmap);
-    if (hot) bounds.push([c.lat, c.lng]);
+    L.circleMarker([c.lat, c.lng], hot ? HOT : REPORT_GREY).addTo(rmap);
+    lats.push(c.lat); lngs.push(c.lng);
   });
-  if (bounds.length) rmap.fitBounds(bounds, { padding: [30, 30], maxZoom: 6 });
-  else rmap.setView([54, 12], 4);
+  // Frame to the BULK of the nodes (5th–95th percentile per axis), not the raw
+  // min/max — a single far-flung node (e.g. the Canary Islands at 28°N) otherwise
+  // blows the zoom out so far that mainland Spain/Italy squish into empty ocean.
+  const pctBox = vals => {
+    const s = [...vals].sort((a, b) => a - b);
+    const q = p => s[Math.min(s.length - 1, Math.max(0, Math.round(p * (s.length - 1))))];
+    return [q(0.05), q(0.95)];
+  };
+  if (lats.length) {
+    const [la0, la1] = pctBox(lats), [lo0, lo1] = pctBox(lngs);
+    rmap.fitBounds([[la0, lo0], [la1, lo1]], { padding: [34, 34], maxZoom: 7 });
+  } else {
+    rmap.setView([54, 12], 4);
+  }
   reportMaps.push(rmap);
   setTimeout(() => rmap.invalidateSize(), 80);
 }
@@ -792,6 +827,8 @@ async function loadReportSiteImages() {
           fill(r.node_id, `<img src="${API}${rec.image_url}?t=${Date.now()}" alt="${r.node_id} site" crossorigin="anonymous">`);
           const ha = rec.buildable_area_ha != null ? ` · ${fmtNum(rec.buildable_area_ha)} ha buildable` : '';
           cap(r.node_id, `${rec.dominant_buildable_class || 'site'}${ha}`);
+        } else if (rec.status === 'not_cached') {
+          fill(r.node_id, `<div class="site-pending">No cached site imagery for this node.</div>`);
         } else {
           fill(r.node_id, `<div class="site-pending">No buildable land / imagery for this node.</div>`);
         }
