@@ -56,12 +56,15 @@ def run(
     dc_capacity_mw: float,
     dc_surface_m2: float,
     grid_path: str | None = None,
+    allowed_countries: list[str] | None = None,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
     Args:
-        dc_capacity_mw  Required generation headroom (MW) — hard filter threshold.
-        dc_surface_m2   DC footprint in square metres (use km2 * 1e6 to convert).
-        grid_path       Override default data/grid_nodes.parquet path.
+        dc_capacity_mw    Required generation headroom (MW) — hard filter threshold.
+        dc_surface_m2     DC footprint in square metres (use km2 * 1e6 to convert).
+        grid_path         Override default data/grid_nodes.parquet path.
+        allowed_countries ISO2 whitelist — hard gate on node country. None / empty
+                          ⇒ no country filter (all countries pass).
 
     Returns:
         (scores_df, metadata_df) — both indexed by node_id.
@@ -125,5 +128,15 @@ def run(
             f"Hard gate ({dc_capacity_mw} MW): {n_total} → {n_kept} nodes "
             f"({n_total - n_kept} discarded)"
         )
+
+    # -------------------------------------------------------------------------
+    # Hard gate: country whitelist (optional). Empty / None ⇒ no filter.
+    # -------------------------------------------------------------------------
+    if allowed_countries:
+        allowed = set(allowed_countries)
+        keep = metadata.index[metadata["country"].isin(allowed)]
+        scores = scores.loc[scores.index.intersection(keep)]
+        metadata = metadata.loc[scores.index]
+        log.info(f"Country filter {sorted(allowed)}: → {len(scores)} nodes")
 
     return scores, metadata

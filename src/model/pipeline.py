@@ -27,12 +27,15 @@ def run(
     dc_capacity_mw: float,
     dc_surface_m2: float,
     grid_path: str | None = None,
+    allowed_countries: list[str] | None = None,
 ) -> tuple[dict[str, pd.DataFrame], pd.DataFrame]:
     """
     Args:
-        dc_capacity_mw  DC power demand in MW (hard filter + congestion model).
-        dc_surface_m2   DC footprint in m² (land cost scaling).
-        grid_path       Override path to grid_nodes.parquet (optional).
+        dc_capacity_mw    DC power demand in MW (hard filter + congestion model).
+        dc_surface_m2     DC footprint in m² (land cost scaling).
+        grid_path         Override path to grid_nodes.parquet (optional).
+        allowed_countries ISO2 whitelist — only these countries are considered.
+                          None / empty ⇒ no country filter (all countries).
 
     Returns:
         (results_dict, metadata_df)
@@ -42,7 +45,14 @@ def run(
         dc_capacity_mw=dc_capacity_mw,
         dc_surface_m2=dc_surface_m2,
         grid_path=grid_path,
+        allowed_countries=allowed_countries,
     )
+    # No surviving nodes (capacity + country gates too strict). Skip compute/rank
+    # (which can't normalise an empty frame) and return empty tables — the API
+    # turns this into a clean 400.
+    if scores.empty:
+        empty = {"gross": scores, "detail": scores, "pareto": scores, "metadata": metadata}
+        return empty, metadata
     scores = compute.run(
         df=scores,
         dc_capacity_mw=dc_capacity_mw,

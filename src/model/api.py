@@ -56,6 +56,7 @@ def _df_to_records(df: pd.DataFrame) -> list[dict[str, Any]]:
 class RunRequest(BaseModel):
     capacity_mw: float
     surface_m2: float
+    countries: list[str] | None = None
 
 
 class RankRequest(BaseModel):
@@ -75,10 +76,14 @@ def run_pipeline(req: RunRequest) -> dict[str, Any]:
     results, metadata = pipeline_run(
         dc_capacity_mw=req.capacity_mw,
         dc_surface_m2=req.surface_m2,
+        allowed_countries=req.countries,
     )
     n = len(results["gross"])
     if n == 0:
-        raise HTTPException(status_code=400, detail="No nodes meet capacity constraint")
+        raise HTTPException(
+            status_code=400,
+            detail="No nodes meet the capacity and country constraints",
+        )
     _results = results
     _metadata = metadata
     return {"status": "ok", "n_nodes": n}

@@ -23,6 +23,19 @@ const DETAIL_ROWS = [
   { key: 'consumption_std_mw',  label: 'Consumption σ',   fmt: v => (+v).toFixed(1) + ' MW' },
 ];
 
+// Country ledger — ISO2 -> display name (the 27 countries the backend covers,
+// matching COUNTRY_AREA_KM2 in src/model/01_load_filter.py).
+const COUNTRIES = {
+  AT: 'Austria', BE: 'Belgium', BG: 'Bulgaria', CY: 'Cyprus', CZ: 'Czech Republic',
+  DE: 'Germany', DK: 'Denmark', EE: 'Estonia', ES: 'Spain', FI: 'Finland',
+  FR: 'France', HR: 'Croatia', HU: 'Hungary', IE: 'Ireland', IT: 'Italy',
+  LT: 'Lithuania', LU: 'Luxembourg', LV: 'Latvia', MT: 'Malta', NL: 'Netherlands',
+  NO: 'Norway', PL: 'Poland', PT: 'Portugal', RO: 'Romania', SE: 'Sweden',
+  SI: 'Slovenia', SK: 'Slovakia',
+};
+const VISIBLE_FLAGS = 5;                       // inline chips before the (…) overflow
+const flagSrc = code => `flags/${code.toLowerCase()}.svg`;
+
 // State
 let map = null;
 let markerLayer = null;      // Leaflet LayerGroup holding all node dots
@@ -34,6 +47,7 @@ let rankedNodes = [];        // POST /results/ranked (top10 raw rows, best-first
 let appliedWeights = {};     // weights last sent to backend (default 1/n each)
 let pendingWeights = {};     // working copy edited via the column headers
 let hasRun = false;
+let selectedCountries = [];   // ISO2 whitelist, insertion order. Empty = all countries.
 let hoverTimer = null;
 let activeTooltipMarker = null;
 let mapMoving = false;
@@ -81,7 +95,7 @@ async function runModel() {
     const runRes = await fetch(`${API}/run`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ capacity_mw, surface_m2 }),
+      body: JSON.stringify({ capacity_mw, surface_m2, countries: selectedCountries }),
     });
     if (!runRes.ok) {
       const err = await runRes.json().catch(() => ({}));
@@ -135,6 +149,100 @@ async function fetchRanked(weights) {
   } catch (err) {
     alert(err.message || 'Could not compute ranking.');
   }
+}
+
+// ---------- country ledger ----------
+// Floating transparent pill hanging off the header's bottom edge. Curates the
+// `selectedCountries` whitelist; any change after the first run re-runs the model.
+function renderLedger() {
+  const el = document.getElementById('country-ledger');
+  if (!el) return;
+  closeLedgerMenus();
+
+  const sel = selectedCountries;
+  const inline = sel.length <= VISIBLE_FLAGS ? sel : sel.slice(0, VISIBLE_FLAGS);
+  const overflow = sel.length <= VISIBLE_FLAGS ? [] : sel.slice(VISIBLE_FLAGS);
+
+  const chips = inline.map(code =>
+    `<button class="cl-flag" data-code="${code}" title="${COUNTRIES[code]} — click to remove">
+       <img src="${flagSrc(code)}" alt="${code}">
+       <span class="cl-x">×</span>
+     </button>`).join('');
+
+  const overflowChip = overflow.length
+    ? `<button class="cl-overflow" id="cl-overflow" title="${overflow.length} more selected">+${overflow.length}</button>`
+    : '';
+
+  const addChip = `<button class="cl-add" id="cl-add" title="Add a country">+</button>`;
+
+  el.innerHTML = chips + overflowChip + addChip;
+
+  el.querySelectorAll('.cl-flag').forEach(btn =>
+    btn.addEventListener('click', () => removeCountry(btn.dataset.code)));
+  const ov = document.getElementById('cl-overflow');
+  if (ov) ov.addEventListener('click', e => { e.stopPropagation(); toggleOverflowMenu(); });
+  document.getElementById('cl-add').addEventListener('click', e => { e.stopPropagation(); toggleAddMenu(); });
+}
+
+function addCountry(code) {
+  if (!COUNTRIES[code] || selectedCountries.includes(code)) return;
+  selectedCountries.push(code);
+  onLedgerChange();
+}
+
+function removeCountry(code) {
+  selectedCountries = selectedCountries.filter(c => c !== code);
+  onLedgerChange();
+}
+
+function onLedgerChange() {
+  renderLedger();
+  if (hasRun) runModel();   // auto re-run with the new whitelist
+}
+
+// the + button menu — countries NOT yet selected (flag circle + name)
+function toggleAddMenu() {
+  const open = document.getElementById('cl-menu');
+  if (open) { const was = open.dataset.owner; closeLedgerMenus(); if (was === 'add') return; }
+  const remaining = Object.keys(COUNTRIES)
+    .filter(c => !selectedCountries.includes(c))
+    .sort((a, b) => COUNTRIES[a].localeCompare(COUNTRIES[b]));
+  if (!remaining.length) return;
+  const items = remaining.map(code =>
+    `<button class="cl-menu-item" data-code="${code}">
+       <img src="${flagSrc(code)}" alt="${code}"><span>${COUNTRIES[code]}</span>
+     </button>`).join('');
+  openLedgerMenu('add', items, code => addCountry(code));
+}
+
+// the (…) overflow menu — selected countries beyond the inline cap (removable)
+function toggleOverflowMenu() {
+  const open = document.getElementById('cl-menu');
+  if (open) { const was = open.dataset.owner; closeLedgerMenus(); if (was === 'overflow') return; }
+  const overflow = selectedCountries.slice(VISIBLE_FLAGS);
+  if (!overflow.length) return;
+  const items = overflow.map(code =>
+    `<button class="cl-menu-item" data-code="${code}">
+       <img src="${flagSrc(code)}" alt="${code}"><span>${COUNTRIES[code]}</span><b class="cl-mi-x">×</b>
+     </button>`).join('');
+  openLedgerMenu('overflow', items, code => removeCountry(code));
+}
+
+function openLedgerMenu(owner, itemsHtml, onPick) {
+  closeLedgerMenus();
+  const menu = document.createElement('div');
+  menu.className = 'cl-menu';
+  menu.id = 'cl-menu';
+  menu.dataset.owner = owner;
+  menu.innerHTML = itemsHtml;
+  document.getElementById('country-ledger').appendChild(menu);
+  menu.querySelectorAll('.cl-menu-item').forEach(item =>
+    item.addEventListener('click', e => { e.stopPropagation(); onPick(item.dataset.code); }));
+}
+
+function closeLedgerMenus() {
+  const m = document.getElementById('cl-menu');
+  if (m) m.remove();
 }
 
 // ---------- map ----------
@@ -247,6 +355,7 @@ function initControls() {
   // click outside an open weight popover closes it
   document.addEventListener('mousedown', e => {
     if (!e.target.closest('.weight-pop') && !e.target.closest('.col-head')) closeWeightInput();
+    if (!e.target.closest('#country-ledger')) closeLedgerMenus();
   });
 
   // report modal
@@ -700,4 +809,5 @@ window.addEventListener('DOMContentLoaded', () => {
   initWeights();
   createMap();
   initControls();
+  renderLedger();
 });
