@@ -4,6 +4,7 @@ RANK — Stage 3
 Takes the 4-score DataFrame from 02_compute and produces three in-memory tables:
 
   _RESULTS["gross"]    raw scores as-is (indexed by node_id)
+  _RESULTS["detail"]   gross + every raw input & cost sub-component (popup view)
   _RESULTS["pareto"]   each score max-normalised to [0, 1]  (higher = worse)
   _RESULTS["balance"]  pareto table + balance_score = L2 norm of the 4 scores,
                        sorted ascending (rank 0 = best overall node)
@@ -66,10 +67,16 @@ def run(df: pd.DataFrame, metadata: pd.DataFrame) -> dict[str, pd.DataFrame]:
             df[col] = np.nan
 
     # -------------------------------------------------------------------------
-    # 1. Gross table — raw scores, no transformation
+    # 1. Gross table — raw scores, no transformation (raw & ranked views use this)
     # -------------------------------------------------------------------------
     _RESULTS["gross"] = df[SCORE_COLS].copy()
     log.info(f"Gross table stored: {len(_RESULTS['gross'])} nodes")
+
+    # Detail table — every column 02_compute produced (raw inputs + cost split).
+    # Feeds the map popup; never sliced to SCORE_COLS.
+    _RESULTS["detail"] = df.copy()
+    log.info(f"Detail table stored: {len(_RESULTS['detail'])} nodes, "
+             f"columns={list(_RESULTS['detail'].columns)}")
 
     # -------------------------------------------------------------------------
     # 2. Pareto (max-normalised) table

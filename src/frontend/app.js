@@ -14,6 +14,16 @@ const COLUMNS = {
 const RAW_TABS = ['congestion_alpha', 'dc_carbon_tco2_yr', 'total_cost_eur', 'connectivity_score'];
 const RANKED_TABS = [...RAW_TABS, 'balance_score'];
 
+// Extra fields shown ONLY in the map hover popup (not in raw/ranked tables).
+// Cost split + consumption stats — sourced from /results/detail.
+const DETAIL_ROWS = [
+  { key: 'area_km2',            label: 'Area (proxy)',    fmt: v => fmtNum(v) + ' km²' },
+  { key: 'energy_cost_eur',     label: 'Energy cost',     fmt: v => fmtEur(v) },
+  { key: 'land_cost_eur',       label: 'Land cost',       fmt: v => fmtEur(v) },
+  { key: 'consumption_mean_mw', label: 'Consumption μ',   fmt: v => fmtNum(v) + ' MW' },
+  { key: 'consumption_std_mw',  label: 'Consumption σ',   fmt: v => (+v).toFixed(1) + ' MW' },
+];
+
 // prioritize dropdown -> default view after a run
 const PRIO_MAP = {
   balanced:   { mode: 'ranked', tab: 'balance_score' },
@@ -28,6 +38,7 @@ let markerLayer = null;      // Leaflet LayerGroup holding all node dots
 let markerMap = {};          // node_id -> circleMarker
 let coordsById = {};         // node_id -> { lat, lng, country }
 let allNodes = [];           // /results/raw  (scores + country, NO coords)
+let detailById = {};         // node_id -> /results/detail row (full breakdown for popup)
 let balanceNodes = [];       // /results/balance (top10 normalized + balance_score + country)
 let activeMode = 'raw';
 let activeTab = 'congestion_alpha';
@@ -73,15 +84,18 @@ async function runModel() {
     }
     showLoading(true, 'Scoring surviving nodes');
 
-    const [coords, raw, balance] = await Promise.all([
+    const [coords, raw, detail, balance] = await Promise.all([
       fetch(`${API}/nodes`).then(r => r.json()),
       fetch(`${API}/results/raw`).then(r => r.json()),
+      fetch(`${API}/results/detail`).then(r => r.json()),
       fetch(`${API}/results/balance`).then(r => r.json()),
     ]);
 
     coordsById = {};
     coords.forEach(n => { coordsById[n.node_id] = { lat: n.lat, lng: n.lng, country: n.country }; });
     allNodes = raw;
+    detailById = {};
+    detail.forEach(n => { detailById[n.node_id] = n; });
     balanceNodes = balance;
 
     // apply prioritize selection -> default view
@@ -119,6 +133,7 @@ function createMap() {
   }).addTo(map);
 
   markerLayer = L.layerGroup().addTo(map);
+  map.on('moveend zoomend', refreshTipDirections);
 }
 
 function populateMarkers(fit) {
@@ -129,7 +144,7 @@ function populateMarkers(fit) {
     const c = coordsById[n.node_id];
     if (!c || c.lat == null || c.lng == null) return;
     const m = L.circleMarker([c.lat, c.lng], GREY);
-    m.bindTooltip(nodeTooltip(n, c), { direction: 'top', className: 'node-tip', sticky: true });
+    m.bindTooltip(nodeTooltip(n, c), { direction: tipDirection(c.lat, c.lng), className: 'node-tip', sticky: true });
     markerLayer.addLayer(m);
     markerMap[n.node_id] = m;
     bounds.push([c.lat, c.lng]);
@@ -137,12 +152,43 @@ function populateMarkers(fit) {
   if (fit && bounds.length) map.fitBounds(bounds, { padding: [40, 40], maxZoom: 6 });
 }
 
-// full raw-row tooltip
+// Popup opens above the node by default; if that would tuck it under the fixed
+// header, open it below instead. Recomputed on pan/zoom.
+function tipDirection(lat, lng) {
+  const header = document.querySelector('header');
+  const headerH = header ? header.offsetHeight : 0;
+  const TIP_H = 200;  // worst-case popup height incl. detail rows
+  const y = map.latLngToContainerPoint([lat, lng]).y;
+  return (y - TIP_H) < headerH ? 'bottom' : 'top';
+}
+
+function refreshTipDirections() {
+  Object.values(markerMap).forEach(m => {
+    const tip = m.getTooltip();
+    if (!tip) return;
+    const ll = m.getLatLng();
+    tip.options.direction = tipDirection(ll.lat, ll.lng);
+    if (m.isTooltipOpen()) m.openTooltip();  // re-place an open popup
+  });
+}
+
+// hover popup — raw scores PLUS the detail breakdown (cost split + consumption)
 function nodeTooltip(n, c) {
   const rows = RAW_TABS.map(col =>
     `<div class="tt-row"><span>${COLUMNS[col].label}</span><b>${n[col] != null ? COLUMNS[col].fmt(n[col]) : '—'}</b></div>`
   ).join('');
-  return `<div class="tt-head">${n.node_id}<span>${(c && c.country) || n.country || ''}</span></div>${rows}`;
+
+  const d = detailById[n.node_id];
+  let extra = '';
+  if (d) {
+    const detailRows = DETAIL_ROWS
+      .filter(r => d[r.key] != null)
+      .map(r => `<div class="tt-row"><span>${r.label}</span><b>${r.fmt(d[r.key])}</b></div>`)
+      .join('');
+    if (detailRows) extra = `<div class="tt-sep"></div>${detailRows}`;
+  }
+
+  return `<div class="tt-head">${n.node_id}<span>${(c && c.country) || n.country || ''}</span></div>${rows}${extra}`;
 }
 
 function updateMapHighlights(top10Ids) {

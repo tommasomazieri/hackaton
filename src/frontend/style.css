@@ -143,6 +143,7 @@ header {
 }
 .tt-row span { color: var(--text-muted); }
 .tt-row b { color: var(--text); font-weight: 700; }
+.tt-sep { height: 1px; background: var(--border); margin: 0.4rem 0; }
 
 /* ---- Sidebar ---- */
 .sidebar-results {

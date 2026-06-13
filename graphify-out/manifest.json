@@ -20,8 +20,8 @@
     "semantic_hash": ""
   },
   ".codemapper_cache.json": {
-    "mtime": 1781323745.7255533,
-    "ast_hash": "d3fb9b30ab6725f807121cd7f91c555d",
+    "mtime": 1781326623.2431872,
+    "ast_hash": "71a85a891a7f5dc9417a7a6a2830b8a6",
     "semantic_hash": ""
   },
   "project-management/backlog.json": {
@@ -435,28 +435,23 @@
     "semantic_hash": ""
   },
   "src/model/01_load_filter.py": {
-    "mtime": 1781323703.2980647,
-    "ast_hash": "a417322397ba6aede29d0f63207a2d2c",
+    "mtime": 1781328348.6990776,
+    "ast_hash": "fef85f425a2752e213bd028a6f3ad83f",
     "semantic_hash": ""
   },
   "src/model/02_compute.py": {
-    "mtime": 1781325053.9112422,
-    "ast_hash": "6274a7ff2981e00598ab07e9bf9474ee",
+    "mtime": 1781327103.5474968,
+    "ast_hash": "ad7fc0c9c4bc2050d8f6d1ad0d6d64b0",
     "semantic_hash": ""
   },
   "src/model/03_rank.py": {
-    "mtime": 1781325197.0050702,
-    "ast_hash": "bf5e67b05f49f2d48f2e15ea2c6b425a",
+    "mtime": 1781328472.3411882,
+    "ast_hash": "a0b560ff6e3db1c009ff4d272c47aa5f",
     "semantic_hash": ""
   },
   "src/model/__init__.py": {
     "mtime": 1781322228.5795417,
     "ast_hash": "68424453ca061310c159a824d071a856",
-    "semantic_hash": ""
-  },
-  "src/model/mock.py": {
-    "mtime": 1781322228.5805426,
-    "ast_hash": "430358b2aab8f47292a7c2f8294571ed",
     "semantic_hash": ""
   },
   "src/model/pipeline.py": {
@@ -480,23 +475,28 @@
     "semantic_hash": ""
   },
   "src/frontend/app.js": {
-    "mtime": 1781325979.2388122,
-    "ast_hash": "52bef99910e4c7f5111912ba79222e5c",
+    "mtime": 1781328376.3159494,
+    "ast_hash": "996c99f91c9f2da16f3174afb28f9537",
     "semantic_hash": ""
   },
   "src/model/api.py": {
-    "mtime": 1781324770.7764957,
-    "ast_hash": "a5bff39c675735948f8adccf67abb519",
+    "mtime": 1781328354.2774854,
+    "ast_hash": "1589ecf8b10c60b8eb558bd09debe025",
     "semantic_hash": ""
   },
   "src/frontend/index.html": {
-    "mtime": 1781326601.3450396,
-    "ast_hash": "e01b63607f000fb51a1fef8f14f9a4f0",
+    "mtime": 1781328394.9394236,
+    "ast_hash": "05665c92b21d6cb4177f5a6857e14bcb",
     "semantic_hash": ""
   },
   "src/main.py": {
     "mtime": 1781325282.9815745,
     "ast_hash": "e48678b8788d64b1c5d852b61b81e325",
+    "semantic_hash": ""
+  },
+  "src/model/TO_BE_ARCHITECTURE.md": {
+    "mtime": 1781326825.4792643,
+    "ast_hash": "260385c13c915f909ffcff80ff1f5872",
     "semantic_hash": ""
   }
 }

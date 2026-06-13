@@ -16,11 +16,10 @@
     "src/data_normalization/download_network.py": 1781323658.720041,
     "src/data_normalization/_utils.py": 1781322495.9510725,
     "src/data_normalization/__init__.py": 1781315882.0238638,
-    "src/model/01_load_filter.py": 1781323703.2980647,
-    "src/model/02_compute.py": 1781325053.9112422,
-    "src/model/03_rank.py": 1781325197.0050702,
-    "src/model/api.py": 1781324770.7764957,
-    "src/model/mock.py": 1781322228.5805426,
+    "src/model/01_load_filter.py": 1781328348.6990776,
+    "src/model/02_compute.py": 1781327103.5474968,
+    "src/model/03_rank.py": 1781328472.3411882,
+    "src/model/api.py": 1781328354.2774854,
     "src/model/pipeline.py": 1781322228.58154,
     "src/model/__init__.py": 1781322228.5795417
   },
@@ -1634,35 +1633,35 @@
           "module": "os",
           "alias": null,
           "kind": "stdlib",
-          "line": 12,
+          "line": 24,
           "scope": null
         },
         {
           "module": "sys",
           "alias": null,
           "kind": "stdlib",
-          "line": 13,
+          "line": 25,
           "scope": null
         },
         {
           "module": "numpy",
           "alias": "np",
           "kind": "package",
-          "line": 15,
+          "line": 27,
           "scope": null
         },
         {
           "module": "pandas",
           "alias": "pd",
           "kind": "package",
-          "line": 16,
+          "line": 28,
           "scope": null
         },
         {
           "module": "_utils",
           "alias": "setup_logger",
           "kind": "local",
-          "line": 21,
+          "line": 33,
           "scope": null
         }
       ],
@@ -1670,7 +1669,7 @@
         {
           "name": "_HERE",
           "kind": "constant",
-          "line": 18,
+          "line": 30,
           "signature": null,
           "parent": null,
           "decorators": []
@@ -1678,7 +1677,7 @@
         {
           "name": "_PROJECT_ROOT",
           "kind": "constant",
-          "line": 19,
+          "line": 31,
           "signature": null,
           "parent": null,
           "decorators": []
@@ -1686,7 +1685,7 @@
         {
           "name": "log",
           "kind": "variable",
-          "line": 23,
+          "line": 35,
           "signature": null,
           "parent": null,
           "decorators": []
@@ -1694,7 +1693,7 @@
         {
           "name": "METADATA_COLS",
           "kind": "constant",
-          "line": 25,
+          "line": 37,
           "signature": null,
           "parent": null,
           "decorators": []
@@ -1702,7 +1701,7 @@
         {
           "name": "_DEFAULT_PATH",
           "kind": "constant",
-          "line": 26,
+          "line": 38,
           "signature": null,
           "parent": null,
           "decorators": []
@@ -1710,7 +1709,15 @@
         {
           "name": "_CLIP_LOWER_ZERO",
           "kind": "constant",
-          "line": 29,
+          "line": 41,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "COUNTRY_AREA_KM2",
+          "kind": "constant",
+          "line": 45,
           "signature": null,
           "parent": null,
           "decorators": []
@@ -1718,15 +1725,15 @@
         {
           "name": "run",
           "kind": "function",
-          "line": 32,
+          "line": 55,
           "signature": "run(dc_capacity_mw: float, dc_surface_m2: float, grid_path: str | None = None) -> tuple[pd.DataFrame, pd.DataFrame]",
           "parent": null,
           "decorators": []
         }
       ],
-      "module_doc_full": "LOAD & FILTER \u2014 Stage 1\n=======================\nLoads data/grid_nodes.parquet, splits metadata from scores, clips negative\nprices to zero, then hard-gates nodes whose installed capacity is below the\nrequested DC demand.\n\nReturns:\n    scores_df   pd.DataFrame  \u2014 scoring columns, indexed by node_id\n    metadata_df pd.DataFrame  \u2014 x / y / country,  indexed by node_id",
+      "module_doc_full": "LOAD & FILTER \u2014 Stage 1\n=======================\nLoads data/grid_nodes.parquet, splits metadata from scores, clips negative\nprices to zero, then hard-gates nodes whose installed capacity is below the\nrequested DC demand.\n\nNode size proxy (area / radius)\n-------------------------------\nIn a more developed version of this proof of concept, each node's physical size\ncould be inferred precisely from the land areas (substation service territory /\ncatchment polygons) that belong to it. Gathering and attributing that geometry\nis slow, so for this MVP we take a shortcut: every node is assigned an area\nequal to 1/n of its country's total land area, where n is the number of nodes\nin that country. The node is then treated as a circle, so we derive a radius\nfrom that area (radius_km = sqrt(area_km2 / pi)). Both `area_km2` and\n`radius_km` are emitted as node metadata. These are deliberately coarse MVP\nassumptions, not real footprints.\n\nReturns:\n    scores_df   pd.DataFrame  \u2014 scoring columns, indexed by node_id\n    metadata_df pd.DataFrame  \u2014 x / y / country / area_km2 / radius_km, by node_id",
       "doc_start_line": 1,
-      "doc_end_line": 11
+      "doc_end_line": 23
     },
     "src/model/02_compute.py": {
       "path": "src/model/02_compute.py",
@@ -1736,33 +1743,135 @@
           "module": "os",
           "alias": null,
           "kind": "stdlib",
-          "line": 14,
+          "line": 16,
           "scope": null
         },
         {
           "module": "sys",
           "alias": null,
           "kind": "stdlib",
-          "line": 15,
+          "line": 17,
           "scope": null
         },
         {
           "module": "numpy",
           "alias": "np",
           "kind": "package",
-          "line": 17,
+          "line": 19,
           "scope": null
         },
         {
           "module": "pandas",
           "alias": "pd",
           "kind": "package",
-          "line": 18,
+          "line": 20,
           "scope": null
         },
         {
           "module": "scipy.stats",
           "alias": "norm",
+          "kind": "package",
+          "line": 21,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "setup_logger",
+          "kind": "local",
+          "line": 26,
+          "scope": null
+        }
+      ],
+      "symbols": [
+        {
+          "name": "_HERE",
+          "kind": "constant",
+          "line": 23,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "_PROJECT_ROOT",
+          "kind": "constant",
+          "line": 24,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "log",
+          "kind": "variable",
+          "line": 28,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "HOURS_IN_YEAR",
+          "kind": "constant",
+          "line": 30,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "COST_OF_EQUITY",
+          "kind": "constant",
+          "line": 31,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "SCORE_COLS",
+          "kind": "constant",
+          "line": 35,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "run",
+          "kind": "function",
+          "line": 43,
+          "signature": "run(df: pd.DataFrame, dc_capacity_mw: float, dc_surface_m2: float) -> pd.DataFrame",
+          "parent": null,
+          "decorators": []
+        }
+      ],
+      "module_doc_full": "COMPUTE SCORES \u2014 Stage 2\n========================\nTransforms raw grid-node metrics into four comparable risk/cost scores:\n\n  congestion_alpha   float  P(hourly consumption > node capacity | DC load added)\n  dc_carbon_tco2_yr  float  Tonnes CO\u2082/yr emitted by the DC at this node\n  total_cost_eur     float  Annualised OpEx (energy) + CapEx/CoE (land) in \u20ac/yr\n  connectivity_score float  Passed through unchanged (already [0-1], lower=better)\n\nIt ALSO keeps every intermediate / raw column it touches (consumption mean & std,\nprices, carbon intensity, capacity) plus the two cost sub-components\n(energy_cost_eur, land_cost_eur) so the map popup can show a full breakdown.\nNothing is dropped \u2014 downstream ranking slices SCORE_COLS itself.",
+      "doc_start_line": 1,
+      "doc_end_line": 15
+    },
+    "src/model/03_rank.py": {
+      "path": "src/model/03_rank.py",
+      "module_doc": "RANK \u2014 Stage 3",
+      "imports": [
+        {
+          "module": "os",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 15,
+          "scope": null
+        },
+        {
+          "module": "sys",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 16,
+          "scope": null
+        },
+        {
+          "module": "numpy",
+          "alias": "np",
+          "kind": "package",
+          "line": 18,
+          "scope": null
+        },
+        {
+          "module": "pandas",
+          "alias": "pd",
           "kind": "package",
           "line": 19,
           "scope": null
@@ -1801,7 +1910,7 @@
           "decorators": []
         },
         {
-          "name": "HOURS_IN_YEAR",
+          "name": "SCORE_COLS",
           "kind": "constant",
           "line": 28,
           "signature": null,
@@ -1809,119 +1918,9 @@
           "decorators": []
         },
         {
-          "name": "COST_OF_EQUITY",
-          "kind": "constant",
-          "line": 29,
-          "signature": null,
-          "parent": null,
-          "decorators": []
-        },
-        {
-          "name": "_DROP_COLS",
-          "kind": "constant",
-          "line": 32,
-          "signature": null,
-          "parent": null,
-          "decorators": []
-        },
-        {
-          "name": "SCORE_COLS",
-          "kind": "constant",
-          "line": 43,
-          "signature": null,
-          "parent": null,
-          "decorators": []
-        },
-        {
-          "name": "run",
-          "kind": "function",
-          "line": 51,
-          "signature": "run(df: pd.DataFrame, dc_capacity_mw: float, dc_surface_m2: float) -> pd.DataFrame",
-          "parent": null,
-          "decorators": []
-        }
-      ],
-      "module_doc_full": "COMPUTE SCORES \u2014 Stage 2\n========================\nTransforms raw grid-node metrics into four comparable risk/cost scores:\n\n  congestion_alpha   float  P(hourly consumption > node capacity | DC load added)\n  dc_carbon_tco2_yr  float  Tonnes CO\u2082/yr emitted by the DC at this node\n  total_cost_eur     float  Annualised OpEx (energy) + CapEx/CoE (land) in \u20ac/yr\n  connectivity_score float  Passed through unchanged (already [0-1], lower=better)\n\ncapacity_mw is used internally for the congestion z-score and dropped here.\nAll intermediate raw columns are dropped before returning.",
-      "doc_start_line": 1,
-      "doc_end_line": 13
-    },
-    "src/model/03_rank.py": {
-      "path": "src/model/03_rank.py",
-      "module_doc": "RANK \u2014 Stage 3",
-      "imports": [
-        {
-          "module": "os",
-          "alias": null,
-          "kind": "stdlib",
-          "line": 14,
-          "scope": null
-        },
-        {
-          "module": "sys",
-          "alias": null,
-          "kind": "stdlib",
-          "line": 15,
-          "scope": null
-        },
-        {
-          "module": "numpy",
-          "alias": "np",
-          "kind": "package",
-          "line": 17,
-          "scope": null
-        },
-        {
-          "module": "pandas",
-          "alias": "pd",
-          "kind": "package",
-          "line": 18,
-          "scope": null
-        },
-        {
-          "module": "_utils",
-          "alias": "setup_logger",
-          "kind": "local",
-          "line": 23,
-          "scope": null
-        }
-      ],
-      "symbols": [
-        {
-          "name": "_HERE",
-          "kind": "constant",
-          "line": 20,
-          "signature": null,
-          "parent": null,
-          "decorators": []
-        },
-        {
-          "name": "_PROJECT_ROOT",
-          "kind": "constant",
-          "line": 21,
-          "signature": null,
-          "parent": null,
-          "decorators": []
-        },
-        {
-          "name": "log",
-          "kind": "variable",
-          "line": 25,
-          "signature": null,
-          "parent": null,
-          "decorators": []
-        },
-        {
-          "name": "SCORE_COLS",
-          "kind": "constant",
-          "line": 27,
-          "signature": null,
-          "parent": null,
-          "decorators": []
-        },
-        {
           "name": "_RESULTS",
           "kind": "constant",
-          "line": 35,
+          "line": 36,
           "signature": null,
           "parent": null,
           "decorators": []
@@ -1929,7 +1928,7 @@
         {
           "name": "_max_normalise",
           "kind": "function",
-          "line": 38,
+          "line": 39,
           "signature": "_max_normalise(df: pd.DataFrame, cols: list[str]) -> pd.DataFrame",
           "parent": null,
           "decorators": []
@@ -1937,15 +1936,15 @@
         {
           "name": "run",
           "kind": "function",
-          "line": 50,
+          "line": 51,
           "signature": "run(df: pd.DataFrame, metadata: pd.DataFrame) -> dict[str, pd.DataFrame]",
           "parent": null,
           "decorators": []
         }
       ],
-      "module_doc_full": "RANK \u2014 Stage 3\n==============\nTakes the 4-score DataFrame from 02_compute and produces three in-memory tables:\n\n  _RESULTS[\"gross\"]    raw scores as-is (indexed by node_id)\n  _RESULTS[\"pareto\"]   each score max-normalised to [0, 1]  (higher = worse)\n  _RESULTS[\"balance\"]  pareto table + balance_score = L2 norm of the 4 scores,\n                       sorted ascending (rank 0 = best overall node)\n\nAll tables are indexed by node_id.  Metadata (x/y/country) is never merged in\nhere \u2014 callers join on index.",
+      "module_doc_full": "RANK \u2014 Stage 3\n==============\nTakes the 4-score DataFrame from 02_compute and produces three in-memory tables:\n\n  _RESULTS[\"gross\"]    raw scores as-is (indexed by node_id)\n  _RESULTS[\"detail\"]   gross + every raw input & cost sub-component (popup view)\n  _RESULTS[\"pareto\"]   each score max-normalised to [0, 1]  (higher = worse)\n  _RESULTS[\"balance\"]  pareto table + balance_score = L2 norm of the 4 scores,\n                       sorted ascending (rank 0 = best overall node)\n\nAll tables are indexed by node_id.  Metadata (x/y/country) is never merged in\nhere \u2014 callers join on index.",
       "doc_start_line": 1,
-      "doc_end_line": 13
+      "doc_end_line": 14
     },
     "src/model/api.py": {
       "path": "src/model/api.py",
@@ -2097,8 +2096,18 @@
         {
           "name": "get_raw",
           "kind": "function",
-          "line": 95,
+          "line": 93,
           "signature": "get_raw() -> list[dict[str, Any]]",
+          "parent": null,
+          "decorators": [
+            "@get"
+          ]
+        },
+        {
+          "name": "get_detail",
+          "kind": "function",
+          "line": 101,
+          "signature": "get_detail() -> list[dict[str, Any]]",
           "parent": null,
           "decorators": [
             "@get"
@@ -2107,7 +2116,7 @@
         {
           "name": "get_pareto",
           "kind": "function",
-          "line": 103,
+          "line": 111,
           "signature": "get_pareto() -> list[dict[str, Any]]",
           "parent": null,
           "decorators": [
@@ -2117,7 +2126,7 @@
         {
           "name": "get_balance",
           "kind": "function",
-          "line": 110,
+          "line": 118,
           "signature": "get_balance() -> list[dict[str, Any]]",
           "parent": null,
           "decorators": [
@@ -2128,84 +2137,6 @@
       "module_doc_full": null,
       "doc_start_line": null,
       "doc_end_line": null
-    },
-    "src/model/mock.py": {
-      "path": "src/model/mock.py",
-      "module_doc": "MOCK RUN \u2014 full pipeline walkthrough",
-      "imports": [
-        {
-          "module": "os",
-          "alias": null,
-          "kind": "stdlib",
-          "line": 10,
-          "scope": null
-        },
-        {
-          "module": "sys",
-          "alias": null,
-          "kind": "stdlib",
-          "line": 11,
-          "scope": null
-        },
-        {
-          "module": "src.model",
-          "alias": "load_filter",
-          "kind": "local",
-          "line": 17,
-          "scope": null
-        },
-        {
-          "module": "src.model",
-          "alias": "compute",
-          "kind": "local",
-          "line": 17,
-          "scope": null
-        },
-        {
-          "module": "src.model",
-          "alias": "rank",
-          "kind": "local",
-          "line": 17,
-          "scope": null
-        }
-      ],
-      "symbols": [
-        {
-          "name": "_HERE",
-          "kind": "constant",
-          "line": 13,
-          "signature": null,
-          "parent": null,
-          "decorators": []
-        },
-        {
-          "name": "_PROJECT_ROOT",
-          "kind": "constant",
-          "line": 14,
-          "signature": null,
-          "parent": null,
-          "decorators": []
-        },
-        {
-          "name": "_section",
-          "kind": "function",
-          "line": 20,
-          "signature": "_section(title: str) -> None",
-          "parent": null,
-          "decorators": []
-        },
-        {
-          "name": "_show",
-          "kind": "function",
-          "line": 25,
-          "signature": "_show(label: str, df) -> None",
-          "parent": null,
-          "decorators": []
-        }
-      ],
-      "module_doc_full": "MOCK RUN \u2014 full pipeline walkthrough\n=====================================\nSet your DC inputs below, then run:\n\n    python src/model/mock.py\n\nEvery intermediate and final DataFrame is printed to stdout.",
-      "doc_start_line": 1,
-      "doc_end_line": 9
     },
     "src/model/pipeline.py": {
       "path": "src/model/pipeline.py",
