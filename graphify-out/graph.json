@@ -9,7 +9,7 @@
       "source_file": ".claude/settings.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_claude_settings_json",
+      "id": "claude_settings",
       "community": 2,
       "norm_label": "settings.json"
     },
@@ -89,8 +89,8 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_codemapper_cache_json",
-      "community": 22,
+      "id": "codemapper_cache",
+      "community": 30,
       "norm_label": ".codemapper_cache.json"
     },
     {
@@ -99,8 +99,8 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "hackaton_codemapper_cache_version",
-      "community": 22,
+      "id": "codemapper_cache_version",
+      "community": 30,
       "norm_label": "version"
     },
     {
@@ -109,8 +109,8 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "hackaton_codemapper_cache_root",
-      "community": 22,
+      "id": "codemapper_cache_root",
+      "community": 30,
       "norm_label": "root"
     },
     {
@@ -119,108 +119,558 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "hackaton_codemapper_cache_mtimes",
-      "community": 22,
+      "id": "codemapper_cache_mtimes",
+      "community": 30,
       "norm_label": "mtimes"
     },
     {
-      "label": "src/data_ingestion/download_datasets.py",
+      "label": "src/data_normalization/01_carbon_emissions.py",
       "file_type": "code",
       "source_file": ".codemapper_cache.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "hackaton_codemapper_cache_mtimes_src_data_ingestion_download_datasets_py",
-      "community": 22,
-      "norm_label": "src/data_ingestion/download_datasets.py"
+      "id": "codemapper_cache_mtimes_src_data_normalization_01_carbon_emissions_py",
+      "community": 30,
+      "norm_label": "src/data_normalization/01_carbon_emissions.py"
+    },
+    {
+      "label": "src/data_normalization/02_energy_price.py",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "codemapper_cache_mtimes_src_data_normalization_02_energy_price_py",
+      "community": 30,
+      "norm_label": "src/data_normalization/02_energy_price.py"
+    },
+    {
+      "label": "src/data_normalization/03_land_price.py",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "codemapper_cache_mtimes_src_data_normalization_03_land_price_py",
+      "community": 30,
+      "norm_label": "src/data_normalization/03_land_price.py"
+    },
+    {
+      "label": "src/data_normalization/04_infrastructure_access.py",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "codemapper_cache_mtimes_src_data_normalization_04_infrastructure_access_py",
+      "community": 30,
+      "norm_label": "src/data_normalization/04_infrastructure_access.py"
+    },
+    {
+      "label": "src/data_normalization/_utils.py",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "codemapper_cache_mtimes_src_data_normalization_utils_py",
+      "community": 30,
+      "norm_label": "src/data_normalization/_utils.py"
+    },
+    {
+      "label": "src/data_normalization/__init__.py",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "codemapper_cache_mtimes_src_data_normalization_init_py",
+      "community": 30,
+      "norm_label": "src/data_normalization/__init__.py"
     },
     {
       "label": "files",
       "file_type": "code",
       "source_file": ".codemapper_cache.json",
-      "source_location": "L7",
+      "source_location": "L12",
       "_origin": "ast",
-      "id": "hackaton_codemapper_cache_files",
-      "community": 22,
+      "id": "codemapper_cache_files",
+      "community": 30,
       "norm_label": "files"
     },
     {
-      "label": "src/data_ingestion/download_datasets.py",
+      "label": "src/data_normalization/01_carbon_emissions.py",
       "file_type": "code",
       "source_file": ".codemapper_cache.json",
-      "source_location": "L8",
+      "source_location": "L13",
       "_origin": "ast",
-      "id": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "community": 22,
-      "norm_label": "src/data_ingestion/download_datasets.py"
+      "id": "codemapper_cache_files_src_data_normalization_01_carbon_emissions_py",
+      "community": 30,
+      "norm_label": "src/data_normalization/01_carbon_emissions.py"
     },
     {
       "label": "path",
       "file_type": "code",
       "source_file": ".codemapper_cache.json",
-      "source_location": "L9",
+      "source_location": "L14",
       "_origin": "ast",
-      "id": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_path",
-      "community": 22,
+      "id": "codemapper_cache_src_data_normalization_01_carbon_emissions_py_path",
+      "community": 30,
       "norm_label": "path"
     },
     {
       "label": "module_doc",
       "file_type": "code",
       "source_file": ".codemapper_cache.json",
-      "source_location": "L10",
+      "source_location": "L15",
       "_origin": "ast",
-      "id": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_module_doc",
-      "community": 22,
+      "id": "codemapper_cache_src_data_normalization_01_carbon_emissions_py_module_doc",
+      "community": 30,
       "norm_label": "module_doc"
     },
     {
       "label": "imports",
       "file_type": "code",
       "source_file": ".codemapper_cache.json",
-      "source_location": "L11",
+      "source_location": "L16",
       "_origin": "ast",
-      "id": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_imports",
-      "community": 22,
+      "id": "codemapper_cache_src_data_normalization_01_carbon_emissions_py_imports",
+      "community": 30,
       "norm_label": "imports"
     },
     {
       "label": "symbols",
       "file_type": "code",
       "source_file": ".codemapper_cache.json",
-      "source_location": "L41",
+      "source_location": "L74",
       "_origin": "ast",
-      "id": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_symbols",
-      "community": 22,
+      "id": "codemapper_cache_src_data_normalization_01_carbon_emissions_py_symbols",
+      "community": 30,
       "norm_label": "symbols"
     },
     {
       "label": "module_doc_full",
       "file_type": "code",
       "source_file": ".codemapper_cache.json",
-      "source_location": "L75",
+      "source_location": "L92",
       "_origin": "ast",
-      "id": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_module_doc_full",
-      "community": 22,
+      "id": "codemapper_cache_src_data_normalization_01_carbon_emissions_py_module_doc_full",
+      "community": 30,
       "norm_label": "module_doc_full"
     },
     {
       "label": "doc_start_line",
       "file_type": "code",
       "source_file": ".codemapper_cache.json",
-      "source_location": "L76",
+      "source_location": "L93",
       "_origin": "ast",
-      "id": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_doc_start_line",
-      "community": 22,
+      "id": "codemapper_cache_src_data_normalization_01_carbon_emissions_py_doc_start_line",
+      "community": 30,
       "norm_label": "doc_start_line"
     },
     {
       "label": "doc_end_line",
       "file_type": "code",
       "source_file": ".codemapper_cache.json",
-      "source_location": "L77",
+      "source_location": "L94",
       "_origin": "ast",
-      "id": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_doc_end_line",
-      "community": 22,
+      "id": "codemapper_cache_src_data_normalization_01_carbon_emissions_py_doc_end_line",
+      "community": 30,
+      "norm_label": "doc_end_line"
+    },
+    {
+      "label": "src/data_normalization/02_energy_price.py",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "codemapper_cache_files_src_data_normalization_02_energy_price_py",
+      "community": 30,
+      "norm_label": "src/data_normalization/02_energy_price.py"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_02_energy_price_py_path",
+      "community": 30,
+      "norm_label": "path"
+    },
+    {
+      "label": "module_doc",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_02_energy_price_py_module_doc",
+      "community": 30,
+      "norm_label": "module_doc"
+    },
+    {
+      "label": "imports",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L99",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_02_energy_price_py_imports",
+      "community": 30,
+      "norm_label": "imports"
+    },
+    {
+      "label": "symbols",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L150",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_02_energy_price_py_symbols",
+      "community": 30,
+      "norm_label": "symbols"
+    },
+    {
+      "label": "module_doc_full",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L168",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_02_energy_price_py_module_doc_full",
+      "community": 30,
+      "norm_label": "module_doc_full"
+    },
+    {
+      "label": "doc_start_line",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L169",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_02_energy_price_py_doc_start_line",
+      "community": 30,
+      "norm_label": "doc_start_line"
+    },
+    {
+      "label": "doc_end_line",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L170",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_02_energy_price_py_doc_end_line",
+      "community": 30,
+      "norm_label": "doc_end_line"
+    },
+    {
+      "label": "src/data_normalization/03_land_price.py",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L172",
+      "_origin": "ast",
+      "id": "codemapper_cache_files_src_data_normalization_03_land_price_py",
+      "community": 30,
+      "norm_label": "src/data_normalization/03_land_price.py"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L173",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_03_land_price_py_path",
+      "community": 30,
+      "norm_label": "path"
+    },
+    {
+      "label": "module_doc",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L174",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_03_land_price_py_module_doc",
+      "community": 30,
+      "norm_label": "module_doc"
+    },
+    {
+      "label": "imports",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L175",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_03_land_price_py_imports",
+      "community": 30,
+      "norm_label": "imports"
+    },
+    {
+      "label": "symbols",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L240",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_03_land_price_py_symbols",
+      "community": 30,
+      "norm_label": "symbols"
+    },
+    {
+      "label": "module_doc_full",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L298",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_03_land_price_py_module_doc_full",
+      "community": 30,
+      "norm_label": "module_doc_full"
+    },
+    {
+      "label": "doc_start_line",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L299",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_03_land_price_py_doc_start_line",
+      "community": 30,
+      "norm_label": "doc_start_line"
+    },
+    {
+      "label": "doc_end_line",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L300",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_03_land_price_py_doc_end_line",
+      "community": 30,
+      "norm_label": "doc_end_line"
+    },
+    {
+      "label": "src/data_normalization/04_infrastructure_access.py",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L302",
+      "_origin": "ast",
+      "id": "codemapper_cache_files_src_data_normalization_04_infrastructure_access_py",
+      "community": 42,
+      "norm_label": "src/data_normalization/04_infrastructure_access.py"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L303",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_04_infrastructure_access_py_path",
+      "community": 42,
+      "norm_label": "path"
+    },
+    {
+      "label": "module_doc",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L304",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_04_infrastructure_access_py_module_doc",
+      "community": 42,
+      "norm_label": "module_doc"
+    },
+    {
+      "label": "imports",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L305",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_04_infrastructure_access_py_imports",
+      "community": 42,
+      "norm_label": "imports"
+    },
+    {
+      "label": "symbols",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L433",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_04_infrastructure_access_py_symbols",
+      "community": 42,
+      "norm_label": "symbols"
+    },
+    {
+      "label": "module_doc_full",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L507",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_04_infrastructure_access_py_module_doc_full",
+      "community": 42,
+      "norm_label": "module_doc_full"
+    },
+    {
+      "label": "doc_start_line",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L508",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_04_infrastructure_access_py_doc_start_line",
+      "community": 42,
+      "norm_label": "doc_start_line"
+    },
+    {
+      "label": "doc_end_line",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L509",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_04_infrastructure_access_py_doc_end_line",
+      "community": 42,
+      "norm_label": "doc_end_line"
+    },
+    {
+      "label": "src/data_normalization/_utils.py",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L511",
+      "_origin": "ast",
+      "id": "codemapper_cache_files_src_data_normalization_utils_py",
+      "community": 30,
+      "norm_label": "src/data_normalization/_utils.py"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L512",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_utils_py_path",
+      "community": 30,
+      "norm_label": "path"
+    },
+    {
+      "label": "module_doc",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L513",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_utils_py_module_doc",
+      "community": 30,
+      "norm_label": "module_doc"
+    },
+    {
+      "label": "imports",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L514",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_utils_py_imports",
+      "community": 30,
+      "norm_label": "imports"
+    },
+    {
+      "label": "symbols",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L558",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_utils_py_symbols",
+      "community": 30,
+      "norm_label": "symbols"
+    },
+    {
+      "label": "module_doc_full",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L640",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_utils_py_module_doc_full",
+      "community": 30,
+      "norm_label": "module_doc_full"
+    },
+    {
+      "label": "doc_start_line",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L641",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_utils_py_doc_start_line",
+      "community": 30,
+      "norm_label": "doc_start_line"
+    },
+    {
+      "label": "doc_end_line",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L642",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_utils_py_doc_end_line",
+      "community": 30,
+      "norm_label": "doc_end_line"
+    },
+    {
+      "label": "src/data_normalization/__init__.py",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L644",
+      "_origin": "ast",
+      "id": "codemapper_cache_files_src_data_normalization_init_py",
+      "community": 43,
+      "norm_label": "src/data_normalization/__init__.py"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L645",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_init_py_path",
+      "community": 43,
+      "norm_label": "path"
+    },
+    {
+      "label": "module_doc",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L646",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_init_py_module_doc",
+      "community": 43,
+      "norm_label": "module_doc"
+    },
+    {
+      "label": "imports",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L647",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_init_py_imports",
+      "community": 43,
+      "norm_label": "imports"
+    },
+    {
+      "label": "symbols",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L648",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_init_py_symbols",
+      "community": 43,
+      "norm_label": "symbols"
+    },
+    {
+      "label": "module_doc_full",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L649",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_init_py_module_doc_full",
+      "community": 43,
+      "norm_label": "module_doc_full"
+    },
+    {
+      "label": "doc_start_line",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L650",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_init_py_doc_start_line",
+      "community": 43,
+      "norm_label": "doc_start_line"
+    },
+    {
+      "label": "doc_end_line",
+      "file_type": "code",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L651",
+      "_origin": "ast",
+      "id": "codemapper_cache_src_data_normalization_init_py_doc_end_line",
+      "community": 43,
       "norm_label": "doc_end_line"
     },
     {
@@ -232,7 +682,7 @@
         "mcp_kind": "mcp_config_file"
       },
       "_origin": "ast",
-      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_mcp_json",
+      "id": "mcp",
       "community": 3,
       "norm_label": ".mcp.json"
     },
@@ -245,7 +695,7 @@
         "mcp_kind": "mcp_server"
       },
       "_origin": "ast",
-      "id": "hackaton_mcp_mcp_server_codemapper2",
+      "id": "mcp_mcp_server_codemapper2",
       "community": 3,
       "norm_label": "codemapper2"
     },
@@ -281,7 +731,7 @@
       "source_file": "artifacts/journey-before.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
+      "id": "artifacts_journey_before_json_artifacts_journey_before",
       "community": 24,
       "norm_label": "journey-before.json"
     },
@@ -1062,7 +1512,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "artifacts_market_viability_som_derivation",
-      "community": 28,
+      "community": 1,
       "norm_label": "som_derivation"
     },
     {
@@ -1072,7 +1522,7 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "artifacts_market_viability_som_derivation_year1",
-      "community": 28,
+      "community": 1,
       "norm_label": "year1"
     },
     {
@@ -1082,7 +1532,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "artifacts_market_viability_som_derivation_year3",
-      "community": 28,
+      "community": 1,
       "norm_label": "year3"
     },
     {
@@ -1092,7 +1542,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "artifacts_market_viability_som_derivation_sam_capture_year1_pct",
-      "community": 28,
+      "community": 1,
       "norm_label": "sam_capture_year1_pct"
     },
     {
@@ -1102,7 +1552,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "artifacts_market_viability_som_derivation_sam_capture_year3_pct",
-      "community": 28,
+      "community": 1,
       "norm_label": "sam_capture_year3_pct"
     },
     {
@@ -1112,7 +1562,7 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "artifacts_market_viability_som_derivation_benchmark",
-      "community": 28,
+      "community": 1,
       "norm_label": "benchmark"
     },
     {
@@ -1201,8 +1651,8 @@
       "source_file": "artifacts/personas.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_personas_json",
-      "community": 33,
+      "id": "artifacts_personas_json_artifacts_personas",
+      "community": 35,
       "norm_label": "personas.json"
     },
     {
@@ -1211,8 +1661,8 @@
       "source_file": "artifacts/stakeholder-map.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_stakeholder_map_json",
-      "community": 34,
+      "id": "artifacts_stakeholder_map_json_artifacts_stakeholder_map",
+      "community": 36,
       "norm_label": "stakeholder-map.json"
     },
     {
@@ -1481,8 +1931,8 @@
       "source_file": "project-management/backlog.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "project_management_backlog",
-      "community": 9,
+      "id": "c_users_gabbo_desktop_hackathon_monaco_project_antigravity_project_management_backlog_json",
+      "community": 37,
       "norm_label": "backlog.json"
     },
     {
@@ -1491,8 +1941,8 @@
       "source_file": "project-management/epics.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_project_management_epics_json",
-      "community": 35,
+      "id": "project_management_epics",
+      "community": 38,
       "norm_label": "epics.json"
     },
     {
@@ -1569,7 +2019,7 @@
         "kind": "bash_entrypoint"
       },
       "_origin": "ast",
-      "id": "c_users_gabbo_desktop_hackathon_monaco_project_antigravity_project_management_open_pm_sh__entry",
+      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_project_management_open_pm_sh__entry",
       "community": 8,
       "norm_label": "open-pm.sh script"
     },
@@ -1799,49 +2249,759 @@
       "source_file": "src/data_ingestion/download_datasets.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_src_data_ingestion_download_datasets_py",
-      "community": 18,
+      "id": "data_ingestion_download_datasets",
+      "community": 45,
       "norm_label": "download_datasets.py"
     },
     {
-      "label": "create_folders()",
+      "label": "01_carbon_emissions.py",
       "file_type": "code",
-      "source_file": "src/data_ingestion/download_datasets.py",
-      "source_location": "L6",
+      "source_file": "src/data_normalization/01_carbon_emissions.py",
+      "source_location": "L1",
       "_origin": "ast",
-      "id": "data_ingestion_download_datasets_create_folders",
+      "id": "data_normalization_01_carbon_emissions",
       "community": 18,
-      "norm_label": "create_folders()"
+      "norm_label": "01_carbon_emissions.py"
     },
     {
-      "label": "download_file()",
+      "label": "run()",
       "file_type": "code",
-      "source_file": "src/data_ingestion/download_datasets.py",
-      "source_location": "L12",
+      "source_file": "src/data_normalization/01_carbon_emissions.py",
+      "source_location": "L69",
       "_origin": "ast",
-      "id": "data_ingestion_download_datasets_download_file",
+      "id": "data_normalization_01_carbon_emissions_run",
       "community": 18,
-      "norm_label": "download_file()"
+      "norm_label": "run()"
     },
     {
-      "label": "fetch_osm_power_grid()",
+      "label": "CARBON INTENSITY ================ Theory ------ Carbon intensity (gCO\u2082/kWh) is t",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/01_carbon_emissions.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_01_carbon_emissions_rationale_1",
+      "community": 18,
+      "norm_label": "carbon intensity ================ theory ------ carbon intensity (gco2/kwh) is t"
+    },
+    {
+      "label": "02_energy_price.py",
       "file_type": "code",
-      "source_file": "src/data_ingestion/download_datasets.py",
+      "source_file": "src/data_normalization/02_energy_price.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_02_energy_price",
+      "community": 18,
+      "norm_label": "02_energy_price.py"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/02_energy_price.py",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "data_normalization_02_energy_price_run",
+      "community": 18,
+      "norm_label": "run()"
+    },
+    {
+      "label": "ENERGY PRICE \u2014 Locational Marginal Price (LMP) =================================",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/02_energy_price.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_02_energy_price_rationale_1",
+      "community": 18,
+      "norm_label": "energy price \u2014 locational marginal price (lmp) ================================="
+    },
+    {
+      "label": "03_land_price.py",
+      "file_type": "code",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_03_land_price",
+      "community": 18,
+      "norm_label": "03_land_price.py"
+    },
+    {
+      "label": "_fetch_package()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L88",
+      "_origin": "ast",
+      "id": "data_normalization_03_land_price_fetch_package",
+      "community": 18,
+      "norm_label": "_fetch_package()"
+    },
+    {
+      "label": "DataFrame",
+      "file_type": "code",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L88",
+      "_origin": "ast",
+      "id": "src_data_normalization_03_land_price_py_dataframe",
+      "community": 18,
+      "norm_label": "dataframe"
+    },
+    {
+      "label": "_fetch_rest()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L99",
+      "_origin": "ast",
+      "id": "data_normalization_03_land_price_fetch_rest",
+      "community": 18,
+      "norm_label": "_fetch_rest()"
+    },
+    {
+      "label": "_normalise_long()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L138",
+      "_origin": "ast",
+      "id": "data_normalization_03_land_price_normalise_long",
+      "community": 18,
+      "norm_label": "_normalise_long()"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L232",
+      "_origin": "ast",
+      "id": "data_normalization_03_land_price_run",
+      "community": 18,
+      "norm_label": "run()"
+    },
+    {
+      "label": "LAND PRICE \u2014 Agricultural Land Transaction Prices (Eurostat apri_lprc) =========",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_03_land_price_rationale_1",
+      "community": 18,
+      "norm_label": "land price \u2014 agricultural land transaction prices (eurostat apri_lprc) ========="
+    },
+    {
+      "label": "Try the `eurostat` Python package. Returns None on failure.",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "data_normalization_03_land_price_rationale_89",
+      "community": 18,
+      "norm_label": "try the `eurostat` python package. returns none on failure."
+    },
+    {
+      "label": "Fallback: parse Eurostat JSON-stat REST response.     Returns a long-format Data",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L100",
+      "_origin": "ast",
+      "id": "data_normalization_03_land_price_rationale_100",
+      "community": 18,
+      "norm_label": "fallback: parse eurostat json-stat rest response.     returns a long-format data"
+    },
+    {
+      "label": "Convert either package (wide) or REST (already long) output to a uniform     lon",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L139",
+      "_origin": "ast",
+      "id": "data_normalization_03_land_price_rationale_139",
+      "community": 18,
+      "norm_label": "convert either package (wide) or rest (already long) output to a uniform     lon"
+    },
+    {
+      "label": "04_infrastructure_access.py",
+      "file_type": "code",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_04_infrastructure_access",
+      "community": 33,
+      "norm_label": "04_infrastructure_access.py"
+    },
+    {
+      "label": "_parse_osm_elements()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L121",
+      "_origin": "ast",
+      "id": "data_normalization_04_infrastructure_access_parse_osm_elements",
+      "community": 33,
+      "norm_label": "_parse_osm_elements()"
+    },
+    {
+      "label": "_max_voltage()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L168",
+      "_origin": "ast",
+      "id": "data_normalization_04_infrastructure_access_max_voltage",
+      "community": 33,
+      "norm_label": "_max_voltage()"
+    },
+    {
+      "label": "_load_from_json()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L179",
+      "_origin": "ast",
+      "id": "data_normalization_04_infrastructure_access_load_from_json",
+      "community": 33,
+      "norm_label": "_load_from_json()"
+    },
+    {
+      "label": "_load_from_cache_or_fetch()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L189",
+      "_origin": "ast",
+      "id": "data_normalization_04_infrastructure_access_load_from_cache_or_fetch",
+      "community": 33,
+      "norm_label": "_load_from_cache_or_fetch()"
+    },
+    {
+      "label": "_to_epsg3035()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L275",
+      "_origin": "ast",
+      "id": "data_normalization_04_infrastructure_access_to_epsg3035",
+      "community": 33,
+      "norm_label": "_to_epsg3035()"
+    },
+    {
+      "label": "ndarray",
+      "file_type": "code",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L275",
+      "_origin": "ast",
+      "id": "ndarray",
+      "community": 33,
+      "norm_label": "ndarray"
+    },
+    {
+      "label": "_compute_signals()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L289",
+      "_origin": "ast",
+      "id": "data_normalization_04_infrastructure_access_compute_signals",
+      "community": 33,
+      "norm_label": "_compute_signals()"
+    },
+    {
+      "label": "DataFrame",
+      "file_type": "code",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L289",
+      "_origin": "ast",
+      "id": "src_data_normalization_04_infrastructure_access_py_dataframe",
+      "community": 33,
+      "norm_label": "dataframe"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L333",
+      "_origin": "ast",
+      "id": "data_normalization_04_infrastructure_access_run",
+      "community": 33,
+      "norm_label": "run()"
+    },
+    {
+      "label": "INFRASTRUCTURE ACCESS \u2014 Grid Connection & Fiber Backhaul Proximity =============",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_04_infrastructure_access_rationale_1",
+      "community": 33,
+      "norm_label": "infrastructure access \u2014 grid connection & fiber backhaul proximity ============="
+    },
+    {
+      "label": "Split raw OSM elements into substations and IXP/telecom exchange points.      Re",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L122",
+      "_origin": "ast",
+      "id": "data_normalization_04_infrastructure_access_rationale_122",
+      "community": 33,
+      "norm_label": "split raw osm elements into substations and ixp/telecom exchange points.      re"
+    },
+    {
+      "label": "Parse a semicolon-separated voltage string and return the maximum value.",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L169",
+      "_origin": "ast",
+      "id": "data_normalization_04_infrastructure_access_rationale_169",
+      "community": 33,
+      "norm_label": "parse a semicolon-separated voltage string and return the maximum value."
+    },
+    {
+      "label": "Load EU-wide OSM data: from gpkg cache if present, else fetch via osmnx.",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L190",
+      "_origin": "ast",
+      "id": "data_normalization_04_infrastructure_access_rationale_190",
+      "community": 33,
+      "norm_label": "load eu-wide osm data: from gpkg cache if present, else fetch via osmnx."
+    },
+    {
+      "label": "Convert [(lat, lon), \u2026] to EPSG:3035 (meters). Returns (N, 2) array.",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L276",
+      "_origin": "ast",
+      "id": "data_normalization_04_infrastructure_access_rationale_276",
+      "community": 33,
+      "norm_label": "convert [(lat, lon), ...] to epsg:3035 (meters). returns (n, 2) array."
+    },
+    {
+      "label": "Compute three distance/count signals for each node.",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L295",
+      "_origin": "ast",
+      "id": "data_normalization_04_infrastructure_access_rationale_295",
+      "community": 33,
+      "norm_label": "compute three distance/count signals for each node."
+    },
+    {
+      "label": "05_congestion.py",
+      "file_type": "code",
+      "source_file": "src/data_normalization/05_congestion.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_05_congestion",
+      "community": 18,
+      "norm_label": "05_congestion.py"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/05_congestion.py",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "data_normalization_05_congestion_run",
+      "community": 18,
+      "norm_label": "run()"
+    },
+    {
+      "label": "CONGESTION \u2014 Grid Line Loading Fraction ========================================",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/05_congestion.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_05_congestion_rationale_1",
+      "community": 18,
+      "norm_label": "congestion \u2014 grid line loading fraction ========================================"
+    },
+    {
+      "label": "06_headroom.py",
+      "file_type": "code",
+      "source_file": "src/data_normalization/06_headroom.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_06_headroom",
+      "community": 18,
+      "norm_label": "06_headroom.py"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/06_headroom.py",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "data_normalization_06_headroom_run",
+      "community": 18,
+      "norm_label": "run()"
+    },
+    {
+      "label": "HEADROOM \u2014 Available Grid Capacity at Node (P5 Spare MW) =======================",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/06_headroom.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_06_headroom_rationale_1",
+      "community": 18,
+      "norm_label": "headroom \u2014 available grid capacity at node (p5 spare mw) ======================="
+    },
+    {
+      "label": "07_node_geometry.py",
+      "file_type": "code",
+      "source_file": "src/data_normalization/07_node_geometry.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_07_node_geometry",
+      "community": 18,
+      "norm_label": "07_node_geometry.py"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/07_node_geometry.py",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "data_normalization_07_node_geometry_run",
+      "community": 18,
+      "norm_label": "run()"
+    },
+    {
+      "label": "NODE GEOMETRY \u2014 PyPSA Bus Voronoi Catchment Areas ==============================",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/07_node_geometry.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_07_node_geometry_rationale_1",
+      "community": 18,
+      "norm_label": "node geometry \u2014 pypsa bus voronoi catchment areas =============================="
+    },
+    {
+      "label": "08_cleanup.py",
+      "file_type": "code",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_08_cleanup",
+      "community": 41,
+      "norm_label": "08_cleanup.py"
+    },
+    {
+      "label": "_check_range()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "data_normalization_08_cleanup_check_range",
+      "community": 41,
+      "norm_label": "_check_range()"
+    },
+    {
+      "label": "DataFrame",
+      "file_type": "code",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "src_data_normalization_08_cleanup_py_dataframe",
+      "community": 41,
+      "norm_label": "dataframe"
+    },
+    {
+      "label": "_log_nan_frac()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/08_cleanup.py",
       "source_location": "L47",
       "_origin": "ast",
-      "id": "data_ingestion_download_datasets_fetch_osm_power_grid",
-      "community": 18,
-      "norm_label": "fetch_osm_power_grid()"
+      "id": "data_normalization_08_cleanup_log_nan_frac",
+      "community": 41,
+      "norm_label": "_log_nan_frac()"
     },
     {
-      "label": "create_iea_ai_reference()",
+      "label": "_spatial_join_land_price()",
       "file_type": "code",
-      "source_file": "src/data_ingestion/download_datasets.py",
-      "source_location": "L83",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L60",
       "_origin": "ast",
-      "id": "data_ingestion_download_datasets_create_iea_ai_reference",
+      "id": "data_normalization_08_cleanup_spatial_join_land_price",
+      "community": 41,
+      "norm_label": "_spatial_join_land_price()"
+    },
+    {
+      "label": "GeoDataFrame",
+      "file_type": "code",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "geodataframe",
+      "community": 41,
+      "norm_label": "geodataframe"
+    },
+    {
+      "label": "Series",
+      "file_type": "code",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "src_data_normalization_08_cleanup_py_series",
+      "community": 41,
+      "norm_label": "series"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L137",
+      "_origin": "ast",
+      "id": "data_normalization_08_cleanup_run",
+      "community": 41,
+      "norm_label": "run()"
+    },
+    {
+      "label": "CLEANUP \u2014 Validation, Spatial Join, and Processed Dataset Export ===============",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_08_cleanup_rationale_1",
+      "community": 41,
+      "norm_label": "cleanup \u2014 validation, spatial join, and processed dataset export ==============="
+    },
+    {
+      "label": "Check a column against [lo, hi]. action: 'nan', 'clamp', 'warn'.",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "data_normalization_08_cleanup_rationale_33",
+      "community": 41,
+      "norm_label": "check a column against [lo, hi]. action: 'nan', 'clamp', 'warn'."
+    },
+    {
+      "label": "For each node centroid, find its containing NUTS3 polygon, derive NUTS2 code",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L65",
+      "_origin": "ast",
+      "id": "data_normalization_08_cleanup_rationale_65",
+      "community": 41,
+      "norm_label": "for each node centroid, find its containing nuts3 polygon, derive nuts2 code"
+    },
+    {
+      "label": "09_build_table.py",
+      "file_type": "code",
+      "source_file": "src/data_normalization/09_build_table.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_09_build_table",
+      "community": 44,
+      "norm_label": "09_build_table.py"
+    },
+    {
+      "label": "_load_processed()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/09_build_table.py",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "data_normalization_09_build_table_load_processed",
+      "community": 44,
+      "norm_label": "_load_processed()"
+    },
+    {
+      "label": "DataFrame",
+      "file_type": "code",
+      "source_file": "src/data_normalization/09_build_table.py",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "src_data_normalization_09_build_table_py_dataframe",
+      "community": 44,
+      "norm_label": "dataframe"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/09_build_table.py",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "data_normalization_09_build_table_run",
+      "community": 44,
+      "norm_label": "run()"
+    },
+    {
+      "label": "BUILD TABLE \u2014 Final Dataset Assembly ====================================== Impo",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/09_build_table.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_09_build_table_rationale_1",
+      "community": 44,
+      "norm_label": "build table \u2014 final dataset assembly ====================================== impo"
+    },
+    {
+      "label": "Load a processed parquet; return None with warning if missing.",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/09_build_table.py",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "data_normalization_09_build_table_rationale_51",
+      "community": 44,
+      "norm_label": "load a processed parquet; return none with warning if missing."
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "src/data_normalization/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_init",
+      "community": 40,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "_utils.py",
+      "file_type": "code",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_utils",
       "community": 18,
-      "norm_label": "create_iea_ai_reference()"
+      "norm_label": "_utils.py"
+    },
+    {
+      "label": "minmax_norm()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "data_normalization_utils_minmax_norm",
+      "community": 33,
+      "norm_label": "minmax_norm()"
+    },
+    {
+      "label": "Series",
+      "file_type": "code",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "src_data_normalization_utils_py_series",
+      "community": 33,
+      "norm_label": "series"
+    },
+    {
+      "label": "get_paths()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "data_normalization_utils_get_paths",
+      "community": 18,
+      "norm_label": "get_paths()"
+    },
+    {
+      "label": "ensure_dirs()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "data_normalization_utils_ensure_dirs",
+      "community": 18,
+      "norm_label": "ensure_dirs()"
+    },
+    {
+      "label": "get_pypsa_network()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "data_normalization_utils_get_pypsa_network",
+      "community": 18,
+      "norm_label": "get_pypsa_network()"
+    },
+    {
+      "label": "get_regions_onshore()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L95",
+      "_origin": "ast",
+      "id": "data_normalization_utils_get_regions_onshore",
+      "community": 18,
+      "norm_label": "get_regions_onshore()"
+    },
+    {
+      "label": "setup_logger()",
+      "file_type": "code",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L117",
+      "_origin": "ast",
+      "id": "data_normalization_utils_setup_logger",
+      "community": 18,
+      "norm_label": "setup_logger()"
+    },
+    {
+      "label": "Logger",
+      "file_type": "code",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L117",
+      "_origin": "ast",
+      "id": "logger",
+      "community": 18,
+      "norm_label": "logger"
+    },
+    {
+      "label": "Shared utilities for the data_normalization pipeline.",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_normalization_utils_rationale_1",
+      "community": 18,
+      "norm_label": "shared utilities for the data_normalization pipeline."
+    },
+    {
+      "label": "Min-max normalize a Series to [0, 1]. NaN values are propagated.",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "data_normalization_utils_rationale_29",
+      "community": 33,
+      "norm_label": "min-max normalize a series to [0, 1]. nan values are propagated."
+    },
+    {
+      "label": "Return absolute paths for all project data resources.",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "data_normalization_utils_rationale_38",
+      "community": 18,
+      "norm_label": "return absolute paths for all project data resources."
+    },
+    {
+      "label": "Create data/raw and data/processed directories if absent.",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "data_normalization_utils_rationale_58",
+      "community": 18,
+      "norm_label": "create data/raw and data/processed directories if absent."
+    },
+    {
+      "label": "Load a PyPSA Network from PYPSA_NETWORK_PATH environment variable.      Raises F",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L65",
+      "_origin": "ast",
+      "id": "data_normalization_utils_rationale_65",
+      "community": 18,
+      "norm_label": "load a pypsa network from pypsa_network_path environment variable.      raises f"
+    },
+    {
+      "label": "Load the PyPSA Voronoi regions GeoDataFrame from REGIONS_ONSHORE_PATH.      Sche",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "data_normalization_utils_rationale_96",
+      "community": 18,
+      "norm_label": "load the pypsa voronoi regions geodataframe from regions_onshore_path.      sche"
+    },
+    {
+      "label": "Return a logger with format: [name][LEVEL] message.",
+      "file_type": "rationale",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L118",
+      "_origin": "ast",
+      "id": "data_normalization_utils_rationale_118",
+      "community": 18,
+      "norm_label": "return a logger with format: [name][level] message."
     },
     {
       "label": "graphify.md",
@@ -1849,7 +3009,7 @@
       "source_file": ".agents/rules/graphify.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "rules_graphify",
+      "id": "c_users_gabbo_desktop_hackathon_monaco_project_antigravity_agents_rules_graphify_md",
       "community": 31,
       "norm_label": "graphify.md"
     },
@@ -1949,7 +3109,7 @@
       "source_file": ".agents/workflows/graphify.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "workflows_graphify",
+      "id": "c_users_gabbo_desktop_hackathon_monaco_project_antigravity_agents_workflows_graphify_md",
       "community": 32,
       "norm_label": "graphify.md"
     },
@@ -1969,8 +3129,8 @@
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_claude_md",
-      "community": 30,
+      "id": "claude",
+      "community": 34,
       "norm_label": "claude.md"
     },
     {
@@ -1979,8 +3139,8 @@
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
-      "community": 30,
+      "id": "claude_dc_siting_intelligence_tool_hackathon",
+      "community": 34,
       "norm_label": "dc siting intelligence tool \u2014 hackathon"
     },
     {
@@ -1989,8 +3149,8 @@
       "source_file": "CLAUDE.md",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "hackaton_claude_project_layout",
-      "community": 30,
+      "id": "claude_project_layout",
+      "community": 34,
       "norm_label": "project layout"
     },
     {
@@ -1999,8 +3159,8 @@
       "source_file": "CLAUDE.md",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "hackaton_claude_key_constraints",
-      "community": 30,
+      "id": "claude_key_constraints",
+      "community": 34,
       "norm_label": "key constraints"
     },
     {
@@ -2009,8 +3169,8 @@
       "source_file": "CLAUDE.md",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "hackaton_claude_data_sources",
-      "community": 30,
+      "id": "claude_data_sources",
+      "community": 34,
       "norm_label": "data sources"
     },
     {
@@ -2019,8 +3179,8 @@
       "source_file": "CLAUDE.md",
       "source_location": "L32",
       "_origin": "ast",
-      "id": "hackaton_claude_dev_commands",
-      "community": 30,
+      "id": "claude_dev_commands",
+      "community": 34,
       "norm_label": "dev commands"
     },
     {
@@ -2029,8 +3189,8 @@
       "source_file": "CLAUDE.md",
       "source_location": "L36",
       "_origin": "ast",
-      "id": "hackaton_claude_important",
-      "community": 30,
+      "id": "claude_important",
+      "community": 34,
       "norm_label": "important"
     },
     {
@@ -2039,7 +3199,7 @@
       "source_file": "artifacts/journey-before.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_md",
+      "id": "artifacts_journey_before_md_artifacts_journey_before",
       "community": 25,
       "norm_label": "journey-before.md"
     },
@@ -2489,7 +3649,7 @@
       "source_file": "artifacts/persona.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_persona_md",
+      "id": "artifacts_persona",
       "community": 7,
       "norm_label": "persona.md"
     },
@@ -2609,7 +3769,7 @@
       "source_file": "artifacts/personas.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_personas_md",
+      "id": "artifacts_personas_md_artifacts_personas",
       "community": 21,
       "norm_label": "personas.md"
     },
@@ -2739,7 +3899,7 @@
       "source_file": "artifacts/stakeholder-map.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_stakeholder_map_md",
+      "id": "artifacts_stakeholder_map_md_artifacts_stakeholder_map",
       "community": 20,
       "norm_label": "stakeholder-map.md"
     },
@@ -3130,7 +4290,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_compliance_guide",
-      "community": 37,
+      "community": 39,
       "norm_label": "compliance_guide.md"
     },
     {
@@ -3140,7 +4300,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_compliance_guide_guida_di_sviluppo_integrazione_dei_vincoli_di_conformit\u00e0_ue_eed_tassonomia_enefg",
-      "community": 37,
+      "community": 39,
       "norm_label": "guida di sviluppo: integrazione dei vincoli di conformita ue (eed, tassonomia, enefg)"
     },
     {
@@ -3150,7 +4310,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "docs_compliance_guide_1_cos_\u00e8_il_pue_power_usage_effectiveness",
-      "community": 37,
+      "community": 39,
       "norm_label": "1. cos'e il pue (power usage effectiveness)?"
     },
     {
@@ -3160,7 +4320,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "docs_compliance_guide_a_formula_matematica_di_calcolo",
-      "community": 37,
+      "community": 39,
       "norm_label": "a. formula matematica di calcolo"
     },
     {
@@ -3170,7 +4330,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "docs_compliance_guide_b_interpretazione_dei_valori",
-      "community": 37,
+      "community": 39,
       "norm_label": "b. interpretazione dei valori"
     },
     {
@@ -3180,7 +4340,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "docs_compliance_guide_c_impatto_sulle_variabili_del_modello",
-      "community": 37,
+      "community": 39,
       "norm_label": "c. impatto sulle variabili del modello"
     },
     {
@@ -3190,7 +4350,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "docs_compliance_guide_2_logica_computazionale_e_formule_backend_backend_siting_engine",
-      "community": 37,
+      "community": 39,
       "norm_label": "2. logica computazionale e formule (backend backend siting engine)"
     },
     {
@@ -3200,7 +4360,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "docs_compliance_guide_a_classificazione_e_obbligo_eed",
-      "community": 37,
+      "community": 39,
       "norm_label": "a. classificazione e obbligo eed"
     },
     {
@@ -3210,7 +4370,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "docs_compliance_guide_b_verifica_del_pue_limite_tassonomia_e_legge_tedesca_enefg",
-      "community": 37,
+      "community": 39,
       "norm_label": "b. verifica del pue limite (tassonomia e legge tedesca enefg)"
     },
     {
@@ -3220,7 +4380,7 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "docs_compliance_guide_c_analisi_spaziale_del_calore_di_scarto_erf_energy_reuse_factor",
-      "community": 37,
+      "community": 39,
       "norm_label": "c. analisi spaziale del calore di scarto (erf - energy reuse factor)"
     },
     {
@@ -3230,7 +4390,7 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "docs_compliance_guide_d_limitazione_del_consumo_idrico_wue_target",
-      "community": 37,
+      "community": 39,
       "norm_label": "d. limitazione del consumo idrico (wue target)"
     },
     {
@@ -3240,7 +4400,7 @@
       "source_location": "L123",
       "_origin": "ast",
       "id": "docs_compliance_guide_3_test_unitari_per_il_controllo_qualit\u00e0_qa_qc_assertions",
-      "community": 37,
+      "community": 39,
       "norm_label": "3. test unitari per il controllo qualita (qa/qc assertions)"
     },
     {
@@ -3250,7 +4410,7 @@
       "source_location": "L158",
       "_origin": "ast",
       "id": "docs_compliance_guide_4_ui_guidelines_streamlit_frontend",
-      "community": 37,
+      "community": 39,
       "norm_label": "4. ui guidelines (streamlit frontend)"
     },
     {
@@ -3259,7 +4419,7 @@
       "source_file": "docs/data.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_data",
+      "id": "c_users_gabbo_desktop_hackathon_monaco_project_antigravity_docs_data_md",
       "community": 17,
       "norm_label": "data.md"
     },
@@ -3340,7 +4500,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "docs_data_3_pypsa_eur_network_data",
-      "community": 36,
+      "community": 17,
       "norm_label": "3. pypsa-eur network data"
     },
     {
@@ -3350,7 +4510,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "docs_data_a_caratteristiche_dei_dati_e_struttura_delle_componenti",
-      "community": 36,
+      "community": 17,
       "norm_label": "a. caratteristiche dei dati e struttura delle componenti"
     },
     {
@@ -3360,7 +4520,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "docs_data_1_nodi_buses",
-      "community": 36,
+      "community": 17,
       "norm_label": "1. nodi (buses)"
     },
     {
@@ -3370,7 +4530,7 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "docs_data_2_linee_di_trasmissione_lines_e_link_dc_links",
-      "community": 36,
+      "community": 17,
       "norm_label": "2. linee di trasmissione (lines) e link dc (links)"
     },
     {
@@ -3380,7 +4540,7 @@
       "source_location": "L105",
       "_origin": "ast",
       "id": "docs_data_3_generatori_generators",
-      "community": 36,
+      "community": 17,
       "norm_label": "3. generatori (generators)"
     },
     {
@@ -3390,7 +4550,7 @@
       "source_location": "L117",
       "_origin": "ast",
       "id": "docs_data_4_unit\u00e0_di_accumulo_storage_units_stores",
-      "community": 36,
+      "community": 17,
       "norm_label": "4. unita di accumulo (storage units & stores)"
     },
     {
@@ -3400,7 +4560,7 @@
       "source_location": "L129",
       "_origin": "ast",
       "id": "docs_data_5_trasformatori_transformers",
-      "community": 36,
+      "community": 17,
       "norm_label": "5. trasformatori (transformers)"
     },
     {
@@ -3410,7 +4570,7 @@
       "source_location": "L137",
       "_origin": "ast",
       "id": "docs_data_b_opportunit\u00e0_applicative_e_formule_chiave",
-      "community": 36,
+      "community": 17,
       "norm_label": "b. opportunita applicative e formule chiave"
     },
     {
@@ -3589,7 +4749,7 @@
       "source_file": "docs/e0-commands.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_docs_e0_commands_md",
+      "id": "docs_e0_commands",
       "community": 19,
       "norm_label": "e0-commands.md"
     },
@@ -3654,12 +4814,702 @@
       "norm_label": "task-046 \u2014 stakeholder map"
     },
     {
+      "label": "independent-variables.md",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_independent_variables",
+      "community": 9,
+      "norm_label": "independent-variables.md"
+    },
+    {
+      "label": "Independent Variables \u2014 Data Point API Map",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_independent_variables_independent_variables_data_point_api_map",
+      "community": 9,
+      "norm_label": "independent variables \u2014 data point api map"
+    },
+    {
+      "label": "1. Carbon Intensity \u2014 OWID / Ember",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_independent_variables_1_carbon_intensity_owid_ember",
+      "community": 9,
+      "norm_label": "1. carbon intensity \u2014 owid / ember"
+    },
+    {
+      "label": "Access",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "docs_independent_variables_access",
+      "community": 9,
+      "norm_label": "access"
+    },
+    {
+      "label": "Raw Response (fetched live \u2014 EU27 + Norway, 2024, all values real)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "docs_independent_variables_raw_response_fetched_live_eu27_norway_2024_all_values_real",
+      "community": 9,
+      "norm_label": "raw response (fetched live \u2014 eu27 + norway, 2024, all values real)"
+    },
+    {
+      "label": "Exact Field Names",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "docs_independent_variables_exact_field_names",
+      "community": 9,
+      "norm_label": "exact field names"
+    },
+    {
+      "label": "Units",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "docs_independent_variables_units",
+      "community": 9,
+      "norm_label": "units"
+    },
+    {
+      "label": "Notes",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "docs_independent_variables_notes",
+      "community": 9,
+      "norm_label": "notes"
+    },
+    {
+      "label": "Granularity",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "docs_independent_variables_granularity",
+      "community": 9,
+      "norm_label": "granularity"
+    },
+    {
+      "label": "1b. Electricity Generation Mix \u2014 OWID (full per-technology breakdown)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "docs_independent_variables_1b_electricity_generation_mix_owid_full_per_technology_breakdown",
+      "community": 9,
+      "norm_label": "1b. electricity generation mix \u2014 owid (full per-technology breakdown)"
+    },
+    {
+      "label": "Access",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "docs_independent_variables_access_72",
+      "community": 9,
+      "norm_label": "access"
+    },
+    {
+      "label": "All 131 Columns (header \u2014 fetched live from GitHub)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "docs_independent_variables_all_131_columns_header_fetched_live_from_github",
+      "community": 9,
+      "norm_label": "all 131 columns (header \u2014 fetched live from github)"
+    },
+    {
+      "label": "Key Columns for DC Siting (extracted from Germany 2023 row)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L122",
+      "_origin": "ast",
+      "id": "docs_independent_variables_key_columns_for_dc_siting_extracted_from_germany_2023_row",
+      "community": 9,
+      "norm_label": "key columns for dc siting (extracted from germany 2023 row)"
+    },
+    {
+      "label": "Notes",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L153",
+      "_origin": "ast",
+      "id": "docs_independent_variables_notes_153",
+      "community": 9,
+      "norm_label": "notes"
+    },
+    {
+      "label": "Granularity",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L161",
+      "_origin": "ast",
+      "id": "docs_independent_variables_granularity_161",
+      "community": 9,
+      "norm_label": "granularity"
+    },
+    {
+      "label": "2. OSM Power Infrastructure \u2014 Overpass API",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L167",
+      "_origin": "ast",
+      "id": "docs_independent_variables_2_osm_power_infrastructure_overpass_api",
+      "community": 28,
+      "norm_label": "2. osm power infrastructure \u2014 overpass api"
+    },
+    {
+      "label": "Access",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L169",
+      "_origin": "ast",
+      "id": "docs_independent_variables_access_169",
+      "community": 28,
+      "norm_label": "access"
+    },
+    {
+      "label": "Overpass Query Structure (POST body)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L177",
+      "_origin": "ast",
+      "id": "docs_independent_variables_overpass_query_structure_post_body",
+      "community": 28,
+      "norm_label": "overpass query structure (post body)"
+    },
+    {
+      "label": "Response JSON Structure",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L187",
+      "_origin": "ast",
+      "id": "docs_independent_variables_response_json_structure",
+      "community": 28,
+      "norm_label": "response json structure"
+    },
+    {
+      "label": "Substation Tag Schema (`power=substation`)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L216",
+      "_origin": "ast",
+      "id": "docs_independent_variables_substation_tag_schema_power_substation",
+      "community": 28,
+      "norm_label": "substation tag schema (`power=substation`)"
+    },
+    {
+      "label": "Transmission Line Tag Schema (`power=line`)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L229",
+      "_origin": "ast",
+      "id": "docs_independent_variables_transmission_line_tag_schema_power_line",
+      "community": 28,
+      "norm_label": "transmission line tag schema (`power=line`)"
+    },
+    {
+      "label": "Underground HV Cable Tag Schema (`power=cable`)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L241",
+      "_origin": "ast",
+      "id": "docs_independent_variables_underground_hv_cable_tag_schema_power_cable",
+      "community": 28,
+      "norm_label": "underground hv cable tag schema (`power=cable`)"
+    },
+    {
+      "label": "Raw Response \u2014 Underground Cable Element",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L253",
+      "_origin": "ast",
+      "id": "docs_independent_variables_raw_response_underground_cable_element",
+      "community": 28,
+      "norm_label": "raw response \u2014 underground cable element"
+    },
+    {
+      "label": "Existing Data Center Tag Schema (`building=data_center`)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L269",
+      "_origin": "ast",
+      "id": "docs_independent_variables_existing_data_center_tag_schema_building_data_center",
+      "community": 28,
+      "norm_label": "existing data center tag schema (`building=data_center`)"
+    },
+    {
+      "label": "Raw Response \u2014 Existing Data Center Element",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L278",
+      "_origin": "ast",
+      "id": "docs_independent_variables_raw_response_existing_data_center_element",
+      "community": 28,
+      "norm_label": "raw response \u2014 existing data center element"
+    },
+    {
+      "label": "Overpass Query \u2014 Existing Data Centers",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L292",
+      "_origin": "ast",
+      "id": "docs_independent_variables_overpass_query_existing_data_centers",
+      "community": 28,
+      "norm_label": "overpass query \u2014 existing data centers"
+    },
+    {
+      "label": "Telecom / Fiber Infrastructure Tag Schema (`telecom=*`)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L304",
+      "_origin": "ast",
+      "id": "docs_independent_variables_telecom_fiber_infrastructure_tag_schema_telecom",
+      "community": 28,
+      "norm_label": "telecom / fiber infrastructure tag schema (`telecom=*`)"
+    },
+    {
+      "label": "Raw Response \u2014 Telecom Exchange Element",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L316",
+      "_origin": "ast",
+      "id": "docs_independent_variables_raw_response_telecom_exchange_element",
+      "community": 28,
+      "norm_label": "raw response \u2014 telecom exchange element"
+    },
+    {
+      "label": "Overpass Query \u2014 Telecom Nodes (fiber proxy)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L331",
+      "_origin": "ast",
+      "id": "docs_independent_variables_overpass_query_telecom_nodes_fiber_proxy",
+      "community": 28,
+      "norm_label": "overpass query \u2014 telecom nodes (fiber proxy)"
+    },
+    {
+      "label": "Granularity",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L343",
+      "_origin": "ast",
+      "id": "docs_independent_variables_granularity_343",
+      "community": 28,
+      "norm_label": "granularity"
+    },
+    {
+      "label": "Notes",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L347",
+      "_origin": "ast",
+      "id": "docs_independent_variables_notes_347",
+      "community": 28,
+      "norm_label": "notes"
+    },
+    {
+      "label": "3. PyPSA-Eur Network",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L358",
+      "_origin": "ast",
+      "id": "docs_independent_variables_3_pypsa_eur_network",
+      "community": 22,
+      "norm_label": "3. pypsa-eur network"
+    },
+    {
+      "label": "Access",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L360",
+      "_origin": "ast",
+      "id": "docs_independent_variables_access_360",
+      "community": 22,
+      "norm_label": "access"
+    },
+    {
+      "label": "Raw Python Output (after loading .nc network)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L370",
+      "_origin": "ast",
+      "id": "docs_independent_variables_raw_python_output_after_loading_nc_network",
+      "community": 22,
+      "norm_label": "raw python output (after loading .nc network)"
+    },
+    {
+      "label": "Clustering Configuration",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L422",
+      "_origin": "ast",
+      "id": "docs_independent_variables_clustering_configuration",
+      "community": 22,
+      "norm_label": "clustering configuration"
+    },
+    {
+      "label": "Network Components and Exact Variable Names",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L438",
+      "_origin": "ast",
+      "id": "docs_independent_variables_network_components_and_exact_variable_names",
+      "community": 22,
+      "norm_label": "network components and exact variable names"
+    },
+    {
+      "label": "Buses (nodes)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L440",
+      "_origin": "ast",
+      "id": "docs_independent_variables_buses_nodes",
+      "community": 22,
+      "norm_label": "buses (nodes)"
+    },
+    {
+      "label": "Lines (AC transmission)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L451",
+      "_origin": "ast",
+      "id": "docs_independent_variables_lines_ac_transmission",
+      "community": 22,
+      "norm_label": "lines (ac transmission)"
+    },
+    {
+      "label": "Links (HVDC)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L463",
+      "_origin": "ast",
+      "id": "docs_independent_variables_links_hvdc",
+      "community": 22,
+      "norm_label": "links (hvdc)"
+    },
+    {
+      "label": "Generators",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L472",
+      "_origin": "ast",
+      "id": "docs_independent_variables_generators",
+      "community": 22,
+      "norm_label": "generators"
+    },
+    {
+      "label": "Storage Units (PHS, BESS)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L484",
+      "_origin": "ast",
+      "id": "docs_independent_variables_storage_units_phs_bess",
+      "community": 22,
+      "norm_label": "storage units (phs, bess)"
+    },
+    {
+      "label": "Granularity",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L495",
+      "_origin": "ast",
+      "id": "docs_independent_variables_granularity_495",
+      "community": 22,
+      "norm_label": "granularity"
+    },
+    {
+      "label": "Notes",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L499",
+      "_origin": "ast",
+      "id": "docs_independent_variables_notes_499",
+      "community": 22,
+      "norm_label": "notes"
+    },
+    {
+      "label": "3b. Grid Zone Dataset \u2014 Atomic Spatial Unit",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L506",
+      "_origin": "ast",
+      "id": "docs_independent_variables_3b_grid_zone_dataset_atomic_spatial_unit",
+      "community": 22,
+      "norm_label": "3b. grid zone dataset \u2014 atomic spatial unit"
+    },
+    {
+      "label": "Where Grid Zone Polygons Come From",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L512",
+      "_origin": "ast",
+      "id": "docs_independent_variables_where_grid_zone_polygons_come_from",
+      "community": 22,
+      "norm_label": "where grid zone polygons come from"
+    },
+    {
+      "label": "`regions_onshore.geojson` Schema (columns)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L524",
+      "_origin": "ast",
+      "id": "docs_independent_variables_regions_onshore_geojson_schema_columns",
+      "community": 22,
+      "norm_label": "`regions_onshore.geojson` schema (columns)"
+    },
+    {
+      "label": "Compute `area_km2` per Grid Zone",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L534",
+      "_origin": "ast",
+      "id": "docs_independent_variables_compute_area_km2_per_grid_zone",
+      "community": 22,
+      "norm_label": "compute `area_km2` per grid zone"
+    },
+    {
+      "label": "Full Grid Zone Scoring Pipeline",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L554",
+      "_origin": "ast",
+      "id": "docs_independent_variables_full_grid_zone_scoring_pipeline",
+      "community": 22,
+      "norm_label": "full grid zone scoring pipeline"
+    },
+    {
+      "label": "Scoring Thresholds (per grid zone)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L611",
+      "_origin": "ast",
+      "id": "docs_independent_variables_scoring_thresholds_per_grid_zone",
+      "community": 22,
+      "norm_label": "scoring thresholds (per grid zone)"
+    },
+    {
+      "label": "3c. EU Grid Connection Requirements \u2014 Regulatory Constraints",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L624",
+      "_origin": "ast",
+      "id": "docs_independent_variables_3c_eu_grid_connection_requirements_regulatory_constraints",
+      "community": 9,
+      "norm_label": "3c. eu grid connection requirements \u2014 regulatory constraints"
+    },
+    {
+      "label": "4. NUTS3 Geodata \u2014 Eurostat GISCO",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L650",
+      "_origin": "ast",
+      "id": "docs_independent_variables_4_nuts3_geodata_eurostat_gisco",
+      "community": 9,
+      "norm_label": "4. nuts3 geodata \u2014 eurostat gisco"
+    },
+    {
+      "label": "Access",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L652",
+      "_origin": "ast",
+      "id": "docs_independent_variables_access_652",
+      "community": 9,
+      "norm_label": "access"
+    },
+    {
+      "label": "URL Naming Convention",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L659",
+      "_origin": "ast",
+      "id": "docs_independent_variables_url_naming_convention",
+      "community": 9,
+      "norm_label": "url naming convention"
+    },
+    {
+      "label": "Raw Response (fetched live \u2014 20M scale)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L669",
+      "_origin": "ast",
+      "id": "docs_independent_variables_raw_response_fetched_live_20m_scale",
+      "community": 9,
+      "norm_label": "raw response (fetched live \u2014 20m scale)"
+    },
+    {
+      "label": "Complete Properties Field Reference",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L711",
+      "_origin": "ast",
+      "id": "docs_independent_variables_complete_properties_field_reference",
+      "community": 9,
+      "norm_label": "complete properties field reference"
+    },
+    {
+      "label": "Granularity",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L732",
+      "_origin": "ast",
+      "id": "docs_independent_variables_granularity_732",
+      "community": 9,
+      "norm_label": "granularity"
+    },
+    {
+      "label": "Notes",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L737",
+      "_origin": "ast",
+      "id": "docs_independent_variables_notes_737",
+      "community": 9,
+      "norm_label": "notes"
+    },
+    {
+      "label": "5. Google AlphaEarth \u2014 Earth Engine",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L748",
+      "_origin": "ast",
+      "id": "docs_independent_variables_5_google_alphaearth_earth_engine",
+      "community": 9,
+      "norm_label": "5. google alphaearth \u2014 earth engine"
+    },
+    {
+      "label": "Access",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L750",
+      "_origin": "ast",
+      "id": "docs_independent_variables_access_750",
+      "community": 9,
+      "norm_label": "access"
+    },
+    {
+      "label": "Python Access + Raw Response",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L758",
+      "_origin": "ast",
+      "id": "docs_independent_variables_python_access_raw_response",
+      "community": 9,
+      "norm_label": "python access + raw response"
+    },
+    {
+      "label": "Raw `.getInfo()` Response",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L772",
+      "_origin": "ast",
+      "id": "docs_independent_variables_raw_getinfo_response",
+      "community": 9,
+      "norm_label": "raw `.getinfo()` response"
+    },
+    {
+      "label": "Data Structure",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L802",
+      "_origin": "ast",
+      "id": "docs_independent_variables_data_structure",
+      "community": 9,
+      "norm_label": "data structure"
+    },
+    {
+      "label": "Granularity",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L812",
+      "_origin": "ast",
+      "id": "docs_independent_variables_granularity_812",
+      "community": 9,
+      "norm_label": "granularity"
+    },
+    {
+      "label": "Use in siting engine",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L816",
+      "_origin": "ast",
+      "id": "docs_independent_variables_use_in_siting_engine",
+      "community": 9,
+      "norm_label": "use in siting engine"
+    },
+    {
+      "label": "6. IEA Reference Specs (Static Constants)",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L823",
+      "_origin": "ast",
+      "id": "docs_independent_variables_6_iea_reference_specs_static_constants",
+      "community": 9,
+      "norm_label": "6. iea reference specs (static constants)"
+    },
+    {
+      "label": "Access",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L825",
+      "_origin": "ast",
+      "id": "docs_independent_variables_access_825",
+      "community": 9,
+      "norm_label": "access"
+    },
+    {
+      "label": "Raw File Content (`data/iea_reference_specs.json`) \u2014 to be created",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L829",
+      "_origin": "ast",
+      "id": "docs_independent_variables_raw_file_content_data_iea_reference_specs_json_to_be_created",
+      "community": 9,
+      "norm_label": "raw file content (`data/iea_reference_specs.json`) \u2014 to be created"
+    },
+    {
+      "label": "Notes",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L863",
+      "_origin": "ast",
+      "id": "docs_independent_variables_notes_863",
+      "community": 9,
+      "norm_label": "notes"
+    },
+    {
+      "label": "Access Status Summary",
+      "file_type": "document",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L870",
+      "_origin": "ast",
+      "id": "docs_independent_variables_access_status_summary",
+      "community": 9,
+      "norm_label": "access status summary"
+    },
+    {
       "label": "preliminary-analysis-draft.md",
       "file_type": "document",
       "source_file": "docs/preliminary-analysis-draft.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_preliminary_analysis_draft",
+      "id": "c_users_gabbo_desktop_hackathon_monaco_project_antigravity_docs_preliminary_analysis_draft_md",
       "community": 23,
       "norm_label": "preliminary-analysis-draft.md"
     },
@@ -3759,7 +5609,7 @@
       "source_file": "docs/tasks-draft.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_docs_tasks_draft_md",
+      "id": "docs_tasks_draft",
       "community": 15,
       "norm_label": "tasks-draft.md"
     },
@@ -3942,7 +5792,7 @@
       "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_claude_settings_json",
+      "source": "claude_settings",
       "target": "claude_settings_hooks"
     },
     {
@@ -3952,7 +5802,7 @@
       "source_location": "L3",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_claude_settings_json",
+      "source": "claude_settings",
       "target": "claude_settings_permissions"
     },
     {
@@ -3962,7 +5812,7 @@
       "source_location": "L2",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_claude_settings_json",
+      "source": "claude_settings",
       "target": "claude_settings_schema"
     },
     {
@@ -4012,8 +5862,8 @@
       "source_location": "L7",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_codemapper_cache_json",
-      "target": "hackaton_codemapper_cache_files"
+      "source": "codemapper_cache",
+      "target": "codemapper_cache_files"
     },
     {
       "relation": "contains",
@@ -4022,8 +5872,8 @@
       "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_codemapper_cache_json",
-      "target": "hackaton_codemapper_cache_mtimes"
+      "source": "codemapper_cache",
+      "target": "codemapper_cache_mtimes"
     },
     {
       "relation": "contains",
@@ -4032,8 +5882,8 @@
       "source_location": "L3",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_codemapper_cache_json",
-      "target": "hackaton_codemapper_cache_root"
+      "source": "codemapper_cache",
+      "target": "codemapper_cache_root"
     },
     {
       "relation": "contains",
@@ -4042,8 +5892,8 @@
       "source_location": "L2",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_codemapper_cache_json",
-      "target": "hackaton_codemapper_cache_version"
+      "source": "codemapper_cache",
+      "target": "codemapper_cache_version"
     },
     {
       "relation": "contains",
@@ -4051,9 +5901,29 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "hackaton_codemapper_cache_mtimes",
-      "target": "hackaton_codemapper_cache_mtimes_src_data_ingestion_download_datasets_py"
+      "source": "codemapper_cache_mtimes",
+      "target": "codemapper_cache_mtimes_src_data_normalization_01_carbon_emissions_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "codemapper_cache_mtimes",
+      "target": "codemapper_cache_mtimes_src_data_normalization_02_energy_price_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "codemapper_cache_mtimes",
+      "target": "codemapper_cache_mtimes_src_data_normalization_03_land_price_py",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -4061,39 +5931,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "hackaton_codemapper_cache_files",
-      "target": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".codemapper_cache.json",
-      "source_location": "L77",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_doc_end_line"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".codemapper_cache.json",
-      "source_location": "L76",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_doc_start_line"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".codemapper_cache.json",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_imports"
+      "source": "codemapper_cache_mtimes",
+      "target": "codemapper_cache_mtimes_src_data_normalization_04_infrastructure_access_py",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -4101,19 +5941,9 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L10",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_module_doc"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".codemapper_cache.json",
-      "source_location": "L75",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_module_doc_full"
+      "source": "codemapper_cache_mtimes",
+      "target": "codemapper_cache_mtimes_src_data_normalization_init_py",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -4121,19 +5951,489 @@
       "source_file": ".codemapper_cache.json",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_path"
+      "source": "codemapper_cache_mtimes",
+      "target": "codemapper_cache_mtimes_src_data_normalization_utils_py",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": ".codemapper_cache.json",
-      "source_location": "L41",
+      "source_location": "L13",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "hackaton_codemapper_cache_files_src_data_ingestion_download_datasets_py",
-      "target": "hackaton_codemapper_cache_src_data_ingestion_download_datasets_py_symbols"
+      "source": "codemapper_cache_files",
+      "target": "codemapper_cache_files_src_data_normalization_01_carbon_emissions_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "codemapper_cache_files",
+      "target": "codemapper_cache_files_src_data_normalization_02_energy_price_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "codemapper_cache_files",
+      "target": "codemapper_cache_files_src_data_normalization_03_land_price_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L302",
+      "weight": 1.0,
+      "source": "codemapper_cache_files",
+      "target": "codemapper_cache_files_src_data_normalization_04_infrastructure_access_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L644",
+      "weight": 1.0,
+      "source": "codemapper_cache_files",
+      "target": "codemapper_cache_files_src_data_normalization_init_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L511",
+      "weight": 1.0,
+      "source": "codemapper_cache_files",
+      "target": "codemapper_cache_files_src_data_normalization_utils_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_01_carbon_emissions_py",
+      "target": "codemapper_cache_src_data_normalization_01_carbon_emissions_py_doc_end_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_01_carbon_emissions_py",
+      "target": "codemapper_cache_src_data_normalization_01_carbon_emissions_py_doc_start_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_01_carbon_emissions_py",
+      "target": "codemapper_cache_src_data_normalization_01_carbon_emissions_py_imports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_01_carbon_emissions_py",
+      "target": "codemapper_cache_src_data_normalization_01_carbon_emissions_py_module_doc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_01_carbon_emissions_py",
+      "target": "codemapper_cache_src_data_normalization_01_carbon_emissions_py_module_doc_full",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_01_carbon_emissions_py",
+      "target": "codemapper_cache_src_data_normalization_01_carbon_emissions_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_01_carbon_emissions_py",
+      "target": "codemapper_cache_src_data_normalization_01_carbon_emissions_py_symbols",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_02_energy_price_py",
+      "target": "codemapper_cache_src_data_normalization_02_energy_price_py_doc_end_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_02_energy_price_py",
+      "target": "codemapper_cache_src_data_normalization_02_energy_price_py_doc_start_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_02_energy_price_py",
+      "target": "codemapper_cache_src_data_normalization_02_energy_price_py_imports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_02_energy_price_py",
+      "target": "codemapper_cache_src_data_normalization_02_energy_price_py_module_doc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_02_energy_price_py",
+      "target": "codemapper_cache_src_data_normalization_02_energy_price_py_module_doc_full",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_02_energy_price_py",
+      "target": "codemapper_cache_src_data_normalization_02_energy_price_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_02_energy_price_py",
+      "target": "codemapper_cache_src_data_normalization_02_energy_price_py_symbols",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L300",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_03_land_price_py",
+      "target": "codemapper_cache_src_data_normalization_03_land_price_py_doc_end_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L299",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_03_land_price_py",
+      "target": "codemapper_cache_src_data_normalization_03_land_price_py_doc_start_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L175",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_03_land_price_py",
+      "target": "codemapper_cache_src_data_normalization_03_land_price_py_imports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L174",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_03_land_price_py",
+      "target": "codemapper_cache_src_data_normalization_03_land_price_py_module_doc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L298",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_03_land_price_py",
+      "target": "codemapper_cache_src_data_normalization_03_land_price_py_module_doc_full",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L173",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_03_land_price_py",
+      "target": "codemapper_cache_src_data_normalization_03_land_price_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L240",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_03_land_price_py",
+      "target": "codemapper_cache_src_data_normalization_03_land_price_py_symbols",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L509",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_04_infrastructure_access_py",
+      "target": "codemapper_cache_src_data_normalization_04_infrastructure_access_py_doc_end_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L508",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_04_infrastructure_access_py",
+      "target": "codemapper_cache_src_data_normalization_04_infrastructure_access_py_doc_start_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L305",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_04_infrastructure_access_py",
+      "target": "codemapper_cache_src_data_normalization_04_infrastructure_access_py_imports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L304",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_04_infrastructure_access_py",
+      "target": "codemapper_cache_src_data_normalization_04_infrastructure_access_py_module_doc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L507",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_04_infrastructure_access_py",
+      "target": "codemapper_cache_src_data_normalization_04_infrastructure_access_py_module_doc_full",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L303",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_04_infrastructure_access_py",
+      "target": "codemapper_cache_src_data_normalization_04_infrastructure_access_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L433",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_04_infrastructure_access_py",
+      "target": "codemapper_cache_src_data_normalization_04_infrastructure_access_py_symbols",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L642",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_utils_py",
+      "target": "codemapper_cache_src_data_normalization_utils_py_doc_end_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L641",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_utils_py",
+      "target": "codemapper_cache_src_data_normalization_utils_py_doc_start_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L514",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_utils_py",
+      "target": "codemapper_cache_src_data_normalization_utils_py_imports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L513",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_utils_py",
+      "target": "codemapper_cache_src_data_normalization_utils_py_module_doc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L640",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_utils_py",
+      "target": "codemapper_cache_src_data_normalization_utils_py_module_doc_full",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L512",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_utils_py",
+      "target": "codemapper_cache_src_data_normalization_utils_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L558",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_utils_py",
+      "target": "codemapper_cache_src_data_normalization_utils_py_symbols",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L651",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_init_py",
+      "target": "codemapper_cache_src_data_normalization_init_py_doc_end_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L650",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_init_py",
+      "target": "codemapper_cache_src_data_normalization_init_py_doc_start_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L647",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_init_py",
+      "target": "codemapper_cache_src_data_normalization_init_py_imports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L646",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_init_py",
+      "target": "codemapper_cache_src_data_normalization_init_py_module_doc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L649",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_init_py",
+      "target": "codemapper_cache_src_data_normalization_init_py_module_doc_full",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L645",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_init_py",
+      "target": "codemapper_cache_src_data_normalization_init_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codemapper_cache.json",
+      "source_location": "L648",
+      "weight": 1.0,
+      "source": "codemapper_cache_files_src_data_normalization_init_py",
+      "target": "codemapper_cache_src_data_normalization_init_py_symbols",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -4142,8 +6442,8 @@
       "source_file": ".mcp.json",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_mcp_json",
-      "target": "hackaton_mcp_mcp_server_codemapper2"
+      "source": "mcp",
+      "target": "mcp_mcp_server_codemapper2"
     },
     {
       "relation": "requires_env",
@@ -4152,7 +6452,7 @@
       "source_file": ".mcp.json",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "hackaton_mcp_mcp_server_codemapper2",
+      "source": "mcp_mcp_server_codemapper2",
       "target": "env_var_codemapper_root"
     },
     {
@@ -4163,7 +6463,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "context": "command",
-      "source": "hackaton_mcp_mcp_server_codemapper2",
+      "source": "mcp_mcp_server_codemapper2",
       "target": "mcp_command_c_users_tomin_onedrive_desktop_progetti_operating_proejcts_aider_for_large_codebases_codemapper_venv_scripts_python_exe"
     },
     {
@@ -4173,7 +6473,7 @@
       "source_location": "L8",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
       "target": "artifacts_journey_before_end_state"
     },
     {
@@ -4183,7 +6483,7 @@
       "source_location": "L2",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
       "target": "artifacts_journey_before_journey_id"
     },
     {
@@ -4193,7 +6493,7 @@
       "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
       "target": "artifacts_journey_before_persona_ref"
     },
     {
@@ -4203,7 +6503,7 @@
       "source_location": "L11",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
       "target": "artifacts_journey_before_quantified_costs"
     },
     {
@@ -4213,7 +6513,7 @@
       "source_location": "L20",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
       "target": "artifacts_journey_before_stages"
     },
     {
@@ -4223,7 +6523,7 @@
       "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
       "target": "artifacts_journey_before_subtitle"
     },
     {
@@ -4233,7 +6533,7 @@
       "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
       "target": "artifacts_journey_before_title"
     },
     {
@@ -4243,7 +6543,7 @@
       "source_location": "L10",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
       "target": "artifacts_journey_before_total_analyst_hours_range"
     },
     {
@@ -4253,7 +6553,7 @@
       "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
       "target": "artifacts_journey_before_total_elapsed_calendar_days_range"
     },
     {
@@ -4263,7 +6563,7 @@
       "source_location": "L7",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
       "target": "artifacts_journey_before_trigger"
     },
     {
@@ -4273,7 +6573,7 @@
       "source_location": "L3",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_json",
+      "source": "artifacts_journey_before_json_artifacts_journey_before",
       "target": "artifacts_journey_before_version"
     },
     {
@@ -5387,7 +7687,7 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "project_management_open_pm",
-      "target": "c_users_gabbo_desktop_hackathon_monaco_project_antigravity_project_management_open_pm_sh__entry"
+      "target": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_project_management_open_pm_sh__entry"
     },
     {
       "relation": "contains",
@@ -5572,42 +7872,1113 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/data_ingestion/download_datasets.py",
-      "source_location": "L6",
+      "source_file": "src/data_normalization/01_carbon_emissions.py",
+      "source_location": "L69",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_src_data_ingestion_download_datasets_py",
-      "target": "data_ingestion_download_datasets_create_folders"
+      "source": "data_normalization_01_carbon_emissions",
+      "target": "data_normalization_01_carbon_emissions_run"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/01_carbon_emissions.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_01_carbon_emissions_rationale_1",
+      "target": "data_normalization_01_carbon_emissions"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/01_carbon_emissions.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "data_normalization_01_carbon_emissions_run",
+      "target": "data_normalization_utils_ensure_dirs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/01_carbon_emissions.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "data_normalization_01_carbon_emissions_run",
+      "target": "data_normalization_utils_get_paths"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/data_ingestion/download_datasets.py",
-      "source_location": "L83",
+      "source_file": "src/data_normalization/02_energy_price.py",
+      "source_location": "L68",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_src_data_ingestion_download_datasets_py",
-      "target": "data_ingestion_download_datasets_create_iea_ai_reference"
+      "source": "data_normalization_02_energy_price",
+      "target": "data_normalization_02_energy_price_run"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/02_energy_price.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_02_energy_price_rationale_1",
+      "target": "data_normalization_02_energy_price"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/02_energy_price.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "data_normalization_02_energy_price_run",
+      "target": "data_normalization_utils_ensure_dirs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/02_energy_price.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "data_normalization_02_energy_price_run",
+      "target": "data_normalization_utils_get_paths"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/02_energy_price.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "data_normalization_02_energy_price_run",
+      "target": "data_normalization_utils_get_pypsa_network"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/data_ingestion/download_datasets.py",
-      "source_location": "L12",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L88",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_src_data_ingestion_download_datasets_py",
-      "target": "data_ingestion_download_datasets_download_file"
+      "source": "data_normalization_03_land_price",
+      "target": "data_normalization_03_land_price_fetch_package"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/data_ingestion/download_datasets.py",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_03_land_price",
+      "target": "data_normalization_03_land_price_fetch_rest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_03_land_price",
+      "target": "data_normalization_03_land_price_normalise_long"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L221",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_03_land_price",
+      "target": "data_normalization_03_land_price_run"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_03_land_price_rationale_1",
+      "target": "data_normalization_03_land_price"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_03_land_price_fetch_package",
+      "target": "src_data_normalization_03_land_price_py_dataframe"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L89",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_03_land_price_rationale_89",
+      "target": "data_normalization_03_land_price_fetch_package"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L225",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_03_land_price_run",
+      "target": "data_normalization_03_land_price_fetch_package"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_03_land_price_fetch_rest",
+      "target": "src_data_normalization_03_land_price_py_dataframe"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_03_land_price_normalise_long",
+      "target": "src_data_normalization_03_land_price_py_dataframe"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_03_land_price_rationale_100",
+      "target": "data_normalization_03_land_price_fetch_rest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L226",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_03_land_price_run",
+      "target": "data_normalization_03_land_price_fetch_rest"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L139",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_03_land_price_rationale_139",
+      "target": "data_normalization_03_land_price_normalise_long"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L226",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_03_land_price_run",
+      "target": "data_normalization_03_land_price_normalise_long"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L223",
+      "weight": 1.0,
+      "source": "data_normalization_03_land_price_run",
+      "target": "data_normalization_utils_ensure_dirs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/03_land_price.py",
+      "source_location": "L222",
+      "weight": 1.0,
+      "source": "data_normalization_03_land_price_run",
+      "target": "data_normalization_utils_get_paths"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L289",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access",
+      "target": "data_normalization_04_infrastructure_access_compute_signals"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L189",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access",
+      "target": "data_normalization_04_infrastructure_access_load_from_cache_or_fetch"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L179",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access",
+      "target": "data_normalization_04_infrastructure_access_load_from_json"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L168",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access",
+      "target": "data_normalization_04_infrastructure_access_max_voltage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access",
+      "target": "data_normalization_04_infrastructure_access_parse_osm_elements"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L333",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access",
+      "target": "data_normalization_04_infrastructure_access_run"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L275",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access",
+      "target": "data_normalization_04_infrastructure_access_to_epsg3035"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access_rationale_1",
+      "target": "data_normalization_04_infrastructure_access"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L184",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access_load_from_json",
+      "target": "data_normalization_04_infrastructure_access_parse_osm_elements"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L156",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access_parse_osm_elements",
+      "target": "data_normalization_04_infrastructure_access_max_voltage"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L122",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access_rationale_122",
+      "target": "data_normalization_04_infrastructure_access_parse_osm_elements"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L169",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access_rationale_169",
+      "target": "data_normalization_04_infrastructure_access_max_voltage"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L356",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access_run",
+      "target": "data_normalization_04_infrastructure_access_load_from_json"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L190",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access_rationale_190",
+      "target": "data_normalization_04_infrastructure_access_load_from_cache_or_fetch"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L358",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access_run",
+      "target": "data_normalization_04_infrastructure_access_load_from_cache_or_fetch"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L276",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access_rationale_276",
+      "target": "data_normalization_04_infrastructure_access_to_epsg3035"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L374",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access_run",
+      "target": "data_normalization_04_infrastructure_access_to_epsg3035"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L275",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access_to_epsg3035",
+      "target": "ndarray"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L289",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access_compute_signals",
+      "target": "ndarray"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L289",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access_compute_signals",
+      "target": "src_data_normalization_04_infrastructure_access_py_dataframe"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L295",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access_rationale_295",
+      "target": "data_normalization_04_infrastructure_access_compute_signals"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L380",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_04_infrastructure_access_run",
+      "target": "data_normalization_04_infrastructure_access_compute_signals"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L335",
+      "weight": 1.0,
+      "source": "data_normalization_04_infrastructure_access_run",
+      "target": "data_normalization_utils_ensure_dirs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L334",
+      "weight": 1.0,
+      "source": "data_normalization_04_infrastructure_access_run",
+      "target": "data_normalization_utils_get_paths"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/04_infrastructure_access.py",
+      "source_location": "L383",
+      "weight": 1.0,
+      "source": "data_normalization_04_infrastructure_access_run",
+      "target": "data_normalization_utils_minmax_norm"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/05_congestion.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "data_normalization_05_congestion",
+      "target": "data_normalization_05_congestion_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/05_congestion.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "data_normalization_05_congestion_rationale_1",
+      "target": "data_normalization_05_congestion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/05_congestion.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "data_normalization_05_congestion_run",
+      "target": "data_normalization_utils_ensure_dirs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/05_congestion.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "data_normalization_05_congestion_run",
+      "target": "data_normalization_utils_get_paths"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/05_congestion.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "data_normalization_05_congestion_run",
+      "target": "data_normalization_utils_get_pypsa_network"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/06_headroom.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "data_normalization_06_headroom",
+      "target": "data_normalization_06_headroom_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/06_headroom.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "data_normalization_06_headroom_rationale_1",
+      "target": "data_normalization_06_headroom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/06_headroom.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "data_normalization_06_headroom_run",
+      "target": "data_normalization_utils_ensure_dirs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/06_headroom.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "data_normalization_06_headroom_run",
+      "target": "data_normalization_utils_get_paths"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/06_headroom.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "data_normalization_06_headroom_run",
+      "target": "data_normalization_utils_get_pypsa_network"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/07_node_geometry.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "data_normalization_07_node_geometry",
+      "target": "data_normalization_07_node_geometry_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/07_node_geometry.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "data_normalization_07_node_geometry_rationale_1",
+      "target": "data_normalization_07_node_geometry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/07_node_geometry.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "data_normalization_07_node_geometry_run",
+      "target": "data_normalization_utils_ensure_dirs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/07_node_geometry.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "data_normalization_07_node_geometry_run",
+      "target": "data_normalization_utils_get_paths"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/07_node_geometry.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "data_normalization_07_node_geometry_run",
+      "target": "data_normalization_utils_get_regions_onshore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "data_normalization_08_cleanup",
+      "target": "data_normalization_08_cleanup_check_range",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/08_cleanup.py",
       "source_location": "L47",
       "weight": 1.0,
+      "source": "data_normalization_08_cleanup",
+      "target": "data_normalization_08_cleanup_log_nan_frac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "data_normalization_08_cleanup",
+      "target": "data_normalization_08_cleanup_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "data_normalization_08_cleanup",
+      "target": "data_normalization_08_cleanup_spatial_join_land_price",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "data_normalization_08_cleanup_rationale_1",
+      "target": "data_normalization_08_cleanup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "data_normalization_08_cleanup_check_range",
+      "target": "src_data_normalization_08_cleanup_py_dataframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "data_normalization_08_cleanup_rationale_33",
+      "target": "data_normalization_08_cleanup_check_range",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "data_normalization_08_cleanup_run",
+      "target": "data_normalization_08_cleanup_check_range",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "data_normalization_08_cleanup_log_nan_frac",
+      "target": "src_data_normalization_08_cleanup_py_dataframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "data_normalization_08_cleanup_spatial_join_land_price",
+      "target": "src_data_normalization_08_cleanup_py_dataframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "data_normalization_08_cleanup_run",
+      "target": "data_normalization_08_cleanup_log_nan_frac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "data_normalization_08_cleanup_rationale_65",
+      "target": "data_normalization_08_cleanup_spatial_join_land_price",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L202",
+      "weight": 1.0,
+      "source": "data_normalization_08_cleanup_run",
+      "target": "data_normalization_08_cleanup_spatial_join_land_price",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "data_normalization_08_cleanup_spatial_join_land_price",
+      "target": "geodataframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "data_normalization_08_cleanup_spatial_join_land_price",
+      "target": "src_data_normalization_08_cleanup_py_series",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "data_normalization_08_cleanup_run",
+      "target": "data_normalization_utils_ensure_dirs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/08_cleanup.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "data_normalization_08_cleanup_run",
+      "target": "data_normalization_utils_get_paths"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/09_build_table.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "data_normalization_09_build_table",
+      "target": "data_normalization_09_build_table_load_processed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/09_build_table.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "data_normalization_09_build_table",
+      "target": "data_normalization_09_build_table_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/09_build_table.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "data_normalization_09_build_table_rationale_1",
+      "target": "data_normalization_09_build_table",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/09_build_table.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "data_normalization_09_build_table_load_processed",
+      "target": "src_data_normalization_09_build_table_py_dataframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/09_build_table.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "data_normalization_09_build_table_rationale_51",
+      "target": "data_normalization_09_build_table_load_processed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/09_build_table.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "data_normalization_09_build_table_run",
+      "target": "data_normalization_09_build_table_load_processed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/data_normalization/09_build_table.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "data_normalization_09_build_table_run",
+      "target": "data_normalization_utils_get_paths"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L57",
+      "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_src_data_ingestion_download_datasets_py",
-      "target": "data_ingestion_download_datasets_fetch_osm_power_grid"
+      "source": "data_normalization_utils",
+      "target": "data_normalization_utils_ensure_dirs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_utils",
+      "target": "data_normalization_utils_get_paths"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_utils",
+      "target": "data_normalization_utils_get_pypsa_network"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_utils",
+      "target": "data_normalization_utils_get_regions_onshore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_utils",
+      "target": "data_normalization_utils_minmax_norm"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_utils",
+      "target": "data_normalization_utils_setup_logger"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_utils_rationale_1",
+      "target": "data_normalization_utils"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "data_normalization_utils_minmax_norm",
+      "target": "src_data_normalization_utils_py_series",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_utils_rationale_29",
+      "target": "data_normalization_utils_minmax_norm"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_utils_ensure_dirs",
+      "target": "data_normalization_utils_get_paths"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L103",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_utils_get_regions_onshore",
+      "target": "data_normalization_utils_get_paths"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_utils_rationale_38",
+      "target": "data_normalization_utils_get_paths"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_utils_rationale_58",
+      "target": "data_normalization_utils_ensure_dirs"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_utils_rationale_65",
+      "target": "data_normalization_utils_get_pypsa_network"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_utils_rationale_96",
+      "target": "data_normalization_utils_get_regions_onshore"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L118",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_utils_rationale_118",
+      "target": "data_normalization_utils_setup_logger"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data_normalization/_utils.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_normalization_utils_setup_logger",
+      "target": "logger"
     },
     {
       "relation": "contains",
@@ -5616,7 +8987,7 @@
       "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "rules_graphify",
+      "source": "c_users_gabbo_desktop_hackathon_monaco_project_antigravity_agents_rules_graphify_md",
       "target": "rules_graphify_graphify"
     },
     {
@@ -5696,7 +9067,7 @@
       "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "workflows_graphify",
+      "source": "c_users_gabbo_desktop_hackathon_monaco_project_antigravity_agents_workflows_graphify_md",
       "target": "workflows_graphify_workflow_graphify"
     },
     {
@@ -5706,8 +9077,8 @@
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_claude_md",
-      "target": "hackaton_claude_dc_siting_intelligence_tool_hackathon"
+      "source": "claude",
+      "target": "claude_dc_siting_intelligence_tool_hackathon"
     },
     {
       "relation": "contains",
@@ -5716,8 +9087,8 @@
       "source_location": "L20",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
-      "target": "hackaton_claude_data_sources"
+      "source": "claude_dc_siting_intelligence_tool_hackathon",
+      "target": "claude_data_sources"
     },
     {
       "relation": "contains",
@@ -5726,8 +9097,8 @@
       "source_location": "L32",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
-      "target": "hackaton_claude_dev_commands"
+      "source": "claude_dc_siting_intelligence_tool_hackathon",
+      "target": "claude_dev_commands"
     },
     {
       "relation": "contains",
@@ -5736,8 +9107,8 @@
       "source_location": "L36",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
-      "target": "hackaton_claude_important"
+      "source": "claude_dc_siting_intelligence_tool_hackathon",
+      "target": "claude_important"
     },
     {
       "relation": "contains",
@@ -5746,8 +9117,8 @@
       "source_location": "L14",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
-      "target": "hackaton_claude_key_constraints"
+      "source": "claude_dc_siting_intelligence_tool_hackathon",
+      "target": "claude_key_constraints"
     },
     {
       "relation": "contains",
@@ -5756,8 +9127,8 @@
       "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "hackaton_claude_dc_siting_intelligence_tool_hackathon",
-      "target": "hackaton_claude_project_layout"
+      "source": "claude_dc_siting_intelligence_tool_hackathon",
+      "target": "claude_project_layout"
     },
     {
       "relation": "contains",
@@ -5766,7 +9137,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_journey_before_md",
+      "source": "artifacts_journey_before_md_artifacts_journey_before",
       "target": "artifacts_journey_before_as_is_customer_journey_eu_data_center_site_research"
     },
     {
@@ -6186,7 +9557,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_persona_md",
+      "source": "artifacts_persona",
       "target": "artifacts_persona_persona_dc_infrastructure_decision_maker"
     },
     {
@@ -6296,7 +9667,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_personas_md",
+      "source": "artifacts_personas_md_artifacts_personas",
       "target": "artifacts_personas_dc_siting_intelligence_tool_user_personas"
     },
     {
@@ -6416,7 +9787,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_artifacts_stakeholder_map_md",
+      "source": "artifacts_stakeholder_map_md_artifacts_stakeholder_map",
       "target": "artifacts_stakeholder_map_stakeholder_map_dc_siting_intelligence_tool"
     },
     {
@@ -6793,7 +10164,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/compliance_guide.md",
-      "source_location": "L66",
+      "source_location": "L37",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "docs_compliance_guide_guida_di_sviluppo_integrazione_dei_vincoli_di_conformit\u00e0_ue_eed_tassonomia_enefg",
@@ -6803,7 +10174,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/compliance_guide.md",
-      "source_location": "L152",
+      "source_location": "L123",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "docs_compliance_guide_guida_di_sviluppo_integrazione_dei_vincoli_di_conformit\u00e0_ue_eed_tassonomia_enefg",
@@ -6813,7 +10184,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/compliance_guide.md",
-      "source_location": "L187",
+      "source_location": "L158",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "docs_compliance_guide_guida_di_sviluppo_integrazione_dei_vincoli_di_conformit\u00e0_ue_eed_tassonomia_enefg",
@@ -6853,7 +10224,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/compliance_guide.md",
-      "source_location": "L70",
+      "source_location": "L41",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "docs_compliance_guide_2_logica_computazionale_e_formule_backend_backend_siting_engine",
@@ -6863,7 +10234,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/compliance_guide.md",
-      "source_location": "L92",
+      "source_location": "L63",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "docs_compliance_guide_2_logica_computazionale_e_formule_backend_backend_siting_engine",
@@ -6873,7 +10244,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/compliance_guide.md",
-      "source_location": "L113",
+      "source_location": "L84",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "docs_compliance_guide_2_logica_computazionale_e_formule_backend_backend_siting_engine",
@@ -6883,7 +10254,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/compliance_guide.md",
-      "source_location": "L137",
+      "source_location": "L108",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "docs_compliance_guide_2_logica_computazionale_e_formule_backend_backend_siting_engine",
@@ -6896,7 +10267,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "docs_data",
+      "source": "c_users_gabbo_desktop_hackathon_monaco_project_antigravity_docs_data_md",
       "target": "docs_data_analisi_dettagliata_dei_database_e_opportunit\u00e0_applicative"
     },
     {
@@ -7216,7 +10587,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_docs_e0_commands_md",
+      "source": "docs_e0_commands",
       "target": "docs_e0_commands_e0_task_commands_run_each_in_its_own_terminal"
     },
     {
@@ -7272,11 +10643,691 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables",
+      "target": "docs_independent_variables_independent_variables_data_point_api_map"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_independent_variables_data_point_api_map",
+      "target": "docs_independent_variables_1_carbon_intensity_owid_ember"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_independent_variables_data_point_api_map",
+      "target": "docs_independent_variables_1b_electricity_generation_mix_owid_full_per_technology_breakdown"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L167",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_independent_variables_data_point_api_map",
+      "target": "docs_independent_variables_2_osm_power_infrastructure_overpass_api"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L358",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_independent_variables_data_point_api_map",
+      "target": "docs_independent_variables_3_pypsa_eur_network"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L624",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_independent_variables_data_point_api_map",
+      "target": "docs_independent_variables_3c_eu_grid_connection_requirements_regulatory_constraints"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L650",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_independent_variables_data_point_api_map",
+      "target": "docs_independent_variables_4_nuts3_geodata_eurostat_gisco"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L748",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_independent_variables_data_point_api_map",
+      "target": "docs_independent_variables_5_google_alphaearth_earth_engine"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L823",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_independent_variables_data_point_api_map",
+      "target": "docs_independent_variables_6_iea_reference_specs_static_constants"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L870",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_independent_variables_data_point_api_map",
+      "target": "docs_independent_variables_access_status_summary"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_1_carbon_intensity_owid_ember",
+      "target": "docs_independent_variables_access"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_1_carbon_intensity_owid_ember",
+      "target": "docs_independent_variables_exact_field_names"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_1_carbon_intensity_owid_ember",
+      "target": "docs_independent_variables_granularity"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_1_carbon_intensity_owid_ember",
+      "target": "docs_independent_variables_notes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_1_carbon_intensity_owid_ember",
+      "target": "docs_independent_variables_raw_response_fetched_live_eu27_norway_2024_all_values_real"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_1_carbon_intensity_owid_ember",
+      "target": "docs_independent_variables_units"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_1b_electricity_generation_mix_owid_full_per_technology_breakdown",
+      "target": "docs_independent_variables_access_72"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_1b_electricity_generation_mix_owid_full_per_technology_breakdown",
+      "target": "docs_independent_variables_all_131_columns_header_fetched_live_from_github"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L161",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_1b_electricity_generation_mix_owid_full_per_technology_breakdown",
+      "target": "docs_independent_variables_granularity_161"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_1b_electricity_generation_mix_owid_full_per_technology_breakdown",
+      "target": "docs_independent_variables_key_columns_for_dc_siting_extracted_from_germany_2023_row"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L153",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_1b_electricity_generation_mix_owid_full_per_technology_breakdown",
+      "target": "docs_independent_variables_notes_153"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L169",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_2_osm_power_infrastructure_overpass_api",
+      "target": "docs_independent_variables_access_169"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L269",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_2_osm_power_infrastructure_overpass_api",
+      "target": "docs_independent_variables_existing_data_center_tag_schema_building_data_center"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L343",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_2_osm_power_infrastructure_overpass_api",
+      "target": "docs_independent_variables_granularity_343"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L347",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_2_osm_power_infrastructure_overpass_api",
+      "target": "docs_independent_variables_notes_347"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L292",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_2_osm_power_infrastructure_overpass_api",
+      "target": "docs_independent_variables_overpass_query_existing_data_centers"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L177",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_2_osm_power_infrastructure_overpass_api",
+      "target": "docs_independent_variables_overpass_query_structure_post_body"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L331",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_2_osm_power_infrastructure_overpass_api",
+      "target": "docs_independent_variables_overpass_query_telecom_nodes_fiber_proxy"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L278",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_2_osm_power_infrastructure_overpass_api",
+      "target": "docs_independent_variables_raw_response_existing_data_center_element"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L316",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_2_osm_power_infrastructure_overpass_api",
+      "target": "docs_independent_variables_raw_response_telecom_exchange_element"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L253",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_2_osm_power_infrastructure_overpass_api",
+      "target": "docs_independent_variables_raw_response_underground_cable_element"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L187",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_2_osm_power_infrastructure_overpass_api",
+      "target": "docs_independent_variables_response_json_structure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L216",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_2_osm_power_infrastructure_overpass_api",
+      "target": "docs_independent_variables_substation_tag_schema_power_substation"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L304",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_2_osm_power_infrastructure_overpass_api",
+      "target": "docs_independent_variables_telecom_fiber_infrastructure_tag_schema_telecom"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L229",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_2_osm_power_infrastructure_overpass_api",
+      "target": "docs_independent_variables_transmission_line_tag_schema_power_line"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L241",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_2_osm_power_infrastructure_overpass_api",
+      "target": "docs_independent_variables_underground_hv_cable_tag_schema_power_cable"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L506",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_3_pypsa_eur_network",
+      "target": "docs_independent_variables_3b_grid_zone_dataset_atomic_spatial_unit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L360",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_3_pypsa_eur_network",
+      "target": "docs_independent_variables_access_360"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L422",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_3_pypsa_eur_network",
+      "target": "docs_independent_variables_clustering_configuration"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L495",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_3_pypsa_eur_network",
+      "target": "docs_independent_variables_granularity_495"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L438",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_3_pypsa_eur_network",
+      "target": "docs_independent_variables_network_components_and_exact_variable_names"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L499",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_3_pypsa_eur_network",
+      "target": "docs_independent_variables_notes_499"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L370",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_3_pypsa_eur_network",
+      "target": "docs_independent_variables_raw_python_output_after_loading_nc_network"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L440",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_network_components_and_exact_variable_names",
+      "target": "docs_independent_variables_buses_nodes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L472",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_network_components_and_exact_variable_names",
+      "target": "docs_independent_variables_generators"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L451",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_network_components_and_exact_variable_names",
+      "target": "docs_independent_variables_lines_ac_transmission"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L463",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_network_components_and_exact_variable_names",
+      "target": "docs_independent_variables_links_hvdc"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L484",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_network_components_and_exact_variable_names",
+      "target": "docs_independent_variables_storage_units_phs_bess"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L534",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_3b_grid_zone_dataset_atomic_spatial_unit",
+      "target": "docs_independent_variables_compute_area_km2_per_grid_zone"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L554",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_3b_grid_zone_dataset_atomic_spatial_unit",
+      "target": "docs_independent_variables_full_grid_zone_scoring_pipeline"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L524",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_3b_grid_zone_dataset_atomic_spatial_unit",
+      "target": "docs_independent_variables_regions_onshore_geojson_schema_columns"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L611",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_3b_grid_zone_dataset_atomic_spatial_unit",
+      "target": "docs_independent_variables_scoring_thresholds_per_grid_zone"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L512",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_3b_grid_zone_dataset_atomic_spatial_unit",
+      "target": "docs_independent_variables_where_grid_zone_polygons_come_from"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L652",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_4_nuts3_geodata_eurostat_gisco",
+      "target": "docs_independent_variables_access_652"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L711",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_4_nuts3_geodata_eurostat_gisco",
+      "target": "docs_independent_variables_complete_properties_field_reference"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L732",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_4_nuts3_geodata_eurostat_gisco",
+      "target": "docs_independent_variables_granularity_732"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L737",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_4_nuts3_geodata_eurostat_gisco",
+      "target": "docs_independent_variables_notes_737"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L669",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_4_nuts3_geodata_eurostat_gisco",
+      "target": "docs_independent_variables_raw_response_fetched_live_20m_scale"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L659",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_4_nuts3_geodata_eurostat_gisco",
+      "target": "docs_independent_variables_url_naming_convention"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L750",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_5_google_alphaearth_earth_engine",
+      "target": "docs_independent_variables_access_750"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L802",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_5_google_alphaearth_earth_engine",
+      "target": "docs_independent_variables_data_structure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L812",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_5_google_alphaearth_earth_engine",
+      "target": "docs_independent_variables_granularity_812"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L758",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_5_google_alphaearth_earth_engine",
+      "target": "docs_independent_variables_python_access_raw_response"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L772",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_5_google_alphaearth_earth_engine",
+      "target": "docs_independent_variables_raw_getinfo_response"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L816",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_5_google_alphaearth_earth_engine",
+      "target": "docs_independent_variables_use_in_siting_engine"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L825",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_6_iea_reference_specs_static_constants",
+      "target": "docs_independent_variables_access_825"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L863",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_6_iea_reference_specs_static_constants",
+      "target": "docs_independent_variables_notes_863"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/independent-variables.md",
+      "source_location": "L829",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_independent_variables_6_iea_reference_specs_static_constants",
+      "target": "docs_independent_variables_raw_file_content_data_iea_reference_specs_json_to_be_created"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/preliminary-analysis-draft.md",
       "source_location": "L7",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "docs_preliminary_analysis_draft",
+      "source": "c_users_gabbo_desktop_hackathon_monaco_project_antigravity_docs_preliminary_analysis_draft_md",
       "target": "docs_preliminary_analysis_draft_preliminary_analysis_dc_siting_intelligence_tool"
     },
     {
@@ -7366,7 +11417,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_tomin_onedrive_desktop_progetti_operating_proejcts_hackaton_docs_tasks_draft_md",
+      "source": "docs_tasks_draft",
       "target": "docs_tasks_draft_poc_task_draft_dc_siting_intelligence_map"
     },
     {

@@ -47,10 +47,6 @@ def get_paths() -> dict:
         "nuts3_geojson": os.path.join(data_dir, "nuts3_all_features.json"),
         "owid_csv": os.path.join(data_dir, "owid-energy-data.csv"),
         "osm_json": os.path.join(data_dir, "osm_power_infrastructure.json"),
-        "regions_onshore": os.environ.get(
-            "REGIONS_ONSHORE_PATH",
-            os.path.join(project_root, "resources", "regions_onshore.geojson"),
-        ),
     }
 
 
@@ -90,28 +86,6 @@ def get_pypsa_network():
             "  export REGIONS_ONSHORE_PATH=/path/to/resources/regions_onshore.geojson"
         )
     return pypsa.Network(path)
-
-
-def get_regions_onshore():
-    """
-    Load the PyPSA Voronoi regions GeoDataFrame from REGIONS_ONSHORE_PATH.
-
-    Schema: name (bus id), x (lon), y (lat), country (ISO alpha-2), geometry (Polygon).
-    """
-    import geopandas as gpd
-
-    paths = get_paths()
-    path = paths["regions_onshore"]
-    if not os.path.exists(path):
-        raise FileNotFoundError(
-            f"regions_onshore.geojson not found at '{path}'.\n\n"
-            "Download the PyPSA-Eur Zenodo bundle:\n"
-            "  https://zenodo.org/records/13756400\n"
-            "Extract and set:\n"
-            "  export REGIONS_ONSHORE_PATH=/path/to/resources/regions_onshore.geojson\n\n"
-            "Or generate via Snakemake 'base_network' rule in pypsa-eur."
-        )
-    return gpd.read_file(path)
 
 
 def setup_logger(name: str) -> logging.Logger:

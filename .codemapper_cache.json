@@ -2,76 +2,1129 @@
   "version": 2,
   "root": "C:\\Users\\tomin\\OneDrive\\Desktop\\PROGETTI\\operating_proejcts\\hackaton",
   "mtimes": {
-    "src/data_ingestion/download_datasets.py": 1781293277.7682862
+    "src/data_ingestion/download_datasets.py": 1781316493.579731,
+    "src/data_normalization/01_carbon_emissions.py": 1781315932.5103488,
+    "src/data_normalization/02_energy_price.py": 1781315962.9749,
+    "src/data_normalization/03_land_price.py": 1781316428.1313784,
+    "src/data_normalization/04_infrastructure_access.py": 1781316090.2702217,
+    "src/data_normalization/05_congestion.py": 1781316122.7165086,
+    "src/data_normalization/06_headroom.py": 1781316148.1421616,
+    "src/data_normalization/07_node_geometry.py": 1781316175.940951,
+    "src/data_normalization/08_cleanup.py": 1781316214.7880943,
+    "src/data_normalization/09_build_table.py": 1781316242.2112355,
+    "src/data_normalization/_utils.py": 1781315903.4010491,
+    "src/data_normalization/__init__.py": 1781315882.0238638
   },
   "files": {
     "src/data_ingestion/download_datasets.py": {
       "path": "src/data_ingestion/download_datasets.py",
       "module_doc": null,
+      "imports": [],
+      "symbols": [],
+      "module_doc_full": null,
+      "doc_start_line": null,
+      "doc_end_line": null
+    },
+    "src/data_normalization/01_carbon_emissions.py": {
+      "path": "src/data_normalization/01_carbon_emissions.py",
+      "module_doc": "CARBON INTENSITY",
       "imports": [
         {
           "module": "os",
           "alias": null,
           "kind": "stdlib",
-          "line": 1,
+          "line": 58,
           "scope": null
         },
         {
-          "module": "urllib.request",
+          "module": "sys",
           "alias": null,
           "kind": "stdlib",
-          "line": 2,
+          "line": 59,
+          "scope": null
+        },
+        {
+          "module": "pandas",
+          "alias": "pd",
+          "kind": "package",
+          "line": 63,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "setup_logger",
+          "kind": "local",
+          "line": 64,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "get_paths",
+          "kind": "local",
+          "line": 64,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "ISO3_TO_ISO2",
+          "kind": "local",
+          "line": 64,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "EU_COUNTRIES_ISO3",
+          "kind": "local",
+          "line": 64,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "ensure_dirs",
+          "kind": "local",
+          "line": 64,
+          "scope": null
+        }
+      ],
+      "symbols": [
+        {
+          "name": "log",
+          "kind": "variable",
+          "line": 66,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "run",
+          "kind": "function",
+          "line": 69,
+          "signature": "run()",
+          "parent": null,
+          "decorators": []
+        }
+      ],
+      "module_doc_full": "CARBON INTENSITY\n================\nTheory\n------\nCarbon intensity (gCO\u2082/kWh) is the primary sustainability constraint for data\ncenter siting. DC operators bound by the EU Taxonomy for Sustainable Finance,\ninternal Scope 2 commitments, or RE100/PPA targets must verify that the grid at\nthe chosen location meets their carbon budget. Grid carbon intensity is the\nweighted average of emission factors across all generation technologies dispatched\nin a given period, including cross-border imports:\n\n    CI = \u03a3(E_i \u00d7 EF_i) / \u03a3(E_i)\n\nwhere E_i is generation from source i (MWh) and EF_i its lifecycle emission factor\n(gCO\u2082/kWh): coal \u2248 950, gas \u2248 400, solar \u2248 30, nuclear \u2248 12, wind \u2248 15.\n\nWhy it matters for siting:\n  - Hard constraint: if CI_node > operator's carbon_max, the site is ineligible\n    regardless of cost or grid capacity.\n  - OpEx driver: lower CI \u2192 lower Scope 2 emissions \u2192 lower EU ETS exposure and\n    lower green bond financing costs (\u221250 to \u2212150 bps for <100 gCO\u2082/kWh sites,\n    EU Taxonomy aligned).\n\nMVP Implementation\n------------------\nAssign the OWID/Ember national average carbon intensity to every PyPSA node in\nthat country. This is the direct spatial mapping approach (Approach 1 in\ndocs/data.md \u00a76A):\n\n    CI_node(n) = CI_national(country(n))\n\nSource: OWID full energy dataset (owid-energy-data.csv), column\n`carbon_intensity_elec`, last available year per ISO 3166-1 alpha-3 country code.\n\nAll nodes in the same country receive the same value. This is a valid first-order\napproximation: at the national level, Ember/OWID is the most accurate and freely\navailable time series for EU27 + Norway.\n\nLimitation: ignores within-country grid heterogeneity. North Germany (wind-surplus)\nhas substantially lower CI than south Germany (coal-dependent) \u2014 intra-national\nvariation of 20\u201330% documented in docs/data.md \u00a76A. For national-level screening\n(Filter 1 in the hierarchical approach) this is sufficient.\n\nFuture Implementation\n---------------------\n[Empty \u2014 to be filled in dedicated planning session]\n\nReal implementation: PyPSA Carbon Flow Tracking (docs/data.md \u00a73B.3). For each\nbus n and simulation hour t, solve the linear system:\n\n    CI_n(t) = [\u03a3 G_g,n(t)\u00b7EF_g + \u03a3 F_mn(t)\u00b7CI_m(t)] / [\u03a3 G_g,n + \u03a3 F_mn]\n\nwhere F_mn(t) = max(0, P_mn(t)) is the import flow from neighbor m. This gives\ntrue consumption-based Scope 2 carbon intensity at hourly nodal resolution,\naccounting for cross-border electricity flows.",
+      "doc_start_line": 1,
+      "doc_end_line": 57
+    },
+    "src/data_normalization/02_energy_price.py": {
+      "path": "src/data_normalization/02_energy_price.py",
+      "module_doc": "ENERGY PRICE \u2014 Locational Marginal Price (LMP)",
+      "imports": [
+        {
+          "module": "os",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 57,
+          "scope": null
+        },
+        {
+          "module": "sys",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 58,
+          "scope": null
+        },
+        {
+          "module": "pandas",
+          "alias": "pd",
+          "kind": "package",
+          "line": 62,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "setup_logger",
+          "kind": "local",
+          "line": 63,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "get_paths",
+          "kind": "local",
+          "line": 63,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "get_pypsa_network",
+          "kind": "local",
+          "line": 63,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "ensure_dirs",
+          "kind": "local",
+          "line": 63,
+          "scope": null
+        }
+      ],
+      "symbols": [
+        {
+          "name": "log",
+          "kind": "variable",
+          "line": 65,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "run",
+          "kind": "function",
+          "line": 68,
+          "signature": "run()",
+          "parent": null,
+          "decorators": []
+        }
+      ],
+      "module_doc_full": "ENERGY PRICE \u2014 Locational Marginal Price (LMP)\n===============================================\nTheory\n------\nEnergy price is the largest single OpEx driver for a data center, accounting for\n50\u201370 % of total operating cost over a 15-year asset life. At 50 MW load and\n8,760 operating hours per year, a 10 \u20ac/MWh price difference equals \u2248 \u20ac4.4 M/year\nin electricity costs \u2014 the dominant variable across siting candidates.\n\nThe Locational Marginal Price (LMP) at a transmission bus is the shadow price of\nthe nodal power balance constraint in the Optimal Power Flow (OPF) solution. It\ndecomposes into three components:\n\n    LMP_n = \u03bb_gen + \u03bb_loss(n) + \u03bb_congestion(n)\n\n  1. \u03bb_gen:         system-wide marginal generation cost (\u20ac/MWh)\n  2. \u03bb_loss(n):     incremental I\u00b2R losses at node n (can be positive or negative)\n  3. \u03bb_congestion(n): premium/discount caused by binding transmission constraints\n\nLMP is therefore the most precise available signal for wholesale electricity cost\nat a specific grid location \u2014 it captures both fuel/carbon market conditions and\nphysical grid constraints (congestion rents, line losses).\n\nMVP Implementation\n------------------\nAnnual mean LMP from the PyPSA OPF simulation, computed as:\n\n    energy_price_eur_mwh(n) = mean(marginal_price(n, t), t = 1 \u2026 8760)\n\nSource: PyPSA `n.buses_t.marginal_price` (shape: 8760 \u00d7 n_buses).\n\nAnnual averaging over 8,760 hourly snapshots is a stable proxy. It smooths\nshort-term price spikes (e.g., gas-price events, calm-wind periods) while\npreserving the structural cross-node differentials driven by persistent congestion\nand regional fuel-mix differences \u2014 the signals that matter for long-horizon\nsiting decisions.\n\nDiagnostic columns also exported (lmp_p05, lmp_p95, lmp_spread_p95p5) for use in\nbattery storage sizing and congestion analysis in downstream modules.\n\nLimitation: The simulation year reflects a historical weather/demand year, not\ncurrent forward market prices. ETS carbon price trajectory and fuel price shocks\nafter the simulation cutoff are not captured. Annual-average LMP from a PyPSA\nsimulation year can diverge from real day-ahead market averages by 10\u201320 %,\nmainly driven by gas price assumptions.\n\nFuture Implementation\n---------------------\n[Empty \u2014 to be filled in dedicated planning session]\n\nReal implementation: pull hourly day-ahead prices from the ENTSO-E Transparency\nPlatform (entsoe.eu) for the last 12 calendar months per bidding zone via the\nentsoe-py library, map bidding zones to PyPSA bus coordinates via spatial join,\nand compute the annual average for each bus.",
+      "doc_start_line": 1,
+      "doc_end_line": 56
+    },
+    "src/data_normalization/03_land_price.py": {
+      "path": "src/data_normalization/03_land_price.py",
+      "module_doc": "LAND PRICE \u2014 Agricultural Land Transaction Prices (Eurostat apri_lprc)",
+      "imports": [
+        {
+          "module": "os",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 61,
+          "scope": null
+        },
+        {
+          "module": "sys",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 62,
+          "scope": null
+        },
+        {
+          "module": "requests",
+          "alias": null,
+          "kind": "package",
+          "line": 66,
+          "scope": null
+        },
+        {
+          "module": "pandas",
+          "alias": "pd",
+          "kind": "package",
+          "line": 67,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "setup_logger",
+          "kind": "local",
+          "line": 68,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "get_paths",
+          "kind": "local",
+          "line": 68,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "ensure_dirs",
+          "kind": "local",
+          "line": 68,
+          "scope": null
+        },
+        {
+          "module": "eurostat",
+          "alias": null,
+          "kind": "package",
+          "line": 91,
+          "scope": "_fetch_package"
+        },
+        {
+          "module": "itertools",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 110,
+          "scope": "_fetch_rest"
+        }
+      ],
+      "symbols": [
+        {
+          "name": "log",
+          "kind": "variable",
+          "line": 70,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "EUROSTAT_REST_URL",
+          "kind": "constant",
+          "line": 72,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "EU27_PREFIXES",
+          "kind": "constant",
+          "line": 77,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "_fetch_package",
+          "kind": "function",
+          "line": 88,
+          "signature": "_fetch_package() -> pd.DataFrame | None",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "_fetch_rest",
+          "kind": "function",
+          "line": 99,
+          "signature": "_fetch_rest() -> pd.DataFrame",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "_normalise_long",
+          "kind": "function",
+          "line": 138,
+          "signature": "_normalise_long(df: pd.DataFrame) -> pd.DataFrame",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "run",
+          "kind": "function",
+          "line": 232,
+          "signature": "run()",
+          "parent": null,
+          "decorators": []
+        }
+      ],
+      "module_doc_full": "LAND PRICE \u2014 Agricultural Land Transaction Prices (Eurostat apri_lprc)\n=======================================================================\nTheory\n------\nLand acquisition cost is a meaningful CapEx component for data center development,\ntypically 5\u201315 % of total project cost depending on site footprint and location.\nA hyperscale DC (100+ MW) requires 20\u2013100 ha of buildable land; site cost at\n\u20ac20,000\u2013\u20ac80,000/ha in rural EU regions adds \u20ac4 M\u2013\u20ac8 M to project CapEx.\n\nAgricultural land price (\u20ac/ha) is used as a DC siting proxy for three reasons:\n\n  1. It is the only freely available EU-wide sub-national land price time series\n     with consistent methodology, available at NUTS2 granularity via Eurostat\n     dataset `apri_lprc` (Agricultural Land Prices and Rents).\n\n  2. Farmland prices are driven by the same structural factors as industrial and\n     commercial land prices: regional GDP per capita, infrastructure quality\n     (proximity to highways, rail, fiber), development pressure, and urban\n     proximity. A NUTS2 region with high farmland prices almost universally also\n     has high industrial/commercial land prices.\n\n  3. The Eurostat dataset records actual land transaction prices, not assessed or\n     tax values \u2014 it reflects true market-clearing land costs in each region.\n\nThe \"last 10 trades\" rule applied here: average of the last 10 non-NaN annual\nEurostat observations per NUTS2 region. Each annual observation in `apri_lprc`\naggregates hundreds or thousands of individual agricultural land sales within the\nNUTS2 region during that calendar year, so this equals averaging 10 annual market\nclearing prices \u2014 a stable, low-volatility signal.\n\nNUTS2 is the finest administrative level at which Eurostat consistently publishes\nland transaction data. NUTS3 is available for some countries (Germany, France)\nbut not EU-wide. We use NUTS2 and assign the NUTS2 value to every PyPSA bus\nwhose centroid falls within that NUTS2 polygon (spatial join in 08_cleanup.py).\n\nMVP Implementation\n------------------\n1. Fetch `apri_lprc` via the `eurostat` Python package (or REST API fallback).\n2. Filter to unit=EUR_HA (price per hectare in euros) and landuse=AG (agricultural\n   land, total arable + permanent grassland combined).\n3. For each NUTS2 region: average of the last 10 non-NaN annual values.\n4. Output NUTS2-level table. Spatial join to PyPSA nodes is in 08_cleanup.py.\n\nLimitation: Farmland price \u2260 industrial/DC land price. Urban NUTS2 regions\n(Amsterdam, Frankfurt, Paris metropolitan) have scarce agricultural land and the\n`apri_lprc` prices there are priced differently from commercial buildable land.\nRural regions near urban corridors may be underpriced in this proxy. This is a\nfirst-order approximation suitable for macro-level regional screening.\n\nFuture Implementation\n---------------------\n[Empty \u2014 to be filled in dedicated planning session]\n\nReal implementation: commercial real estate transaction databases (CoStar, CBRE,\nJLL) or national land registry APIs (Kadaster NL, HM Land Registry UK, German\nKatasteramt) for industrial/logistics land prices at municipality or cadastral\nparcel level. These give true DC-site land costs but require commercial data\nlicenses or complex per-country API integrations.",
+      "doc_start_line": 1,
+      "doc_end_line": 60
+    },
+    "src/data_normalization/04_infrastructure_access.py": {
+      "path": "src/data_normalization/04_infrastructure_access.py",
+      "module_doc": "INFRASTRUCTURE ACCESS \u2014 Grid Connection & Fiber Backhaul Proximity",
+      "imports": [
+        {
+          "module": "os",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 95,
+          "scope": null
+        },
+        {
+          "module": "sys",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 96,
           "scope": null
         },
         {
           "module": "json",
           "alias": null,
           "kind": "stdlib",
-          "line": 3,
+          "line": 100,
           "scope": null
         },
         {
-          "module": "time",
+          "module": "warnings",
           "alias": null,
           "kind": "stdlib",
-          "line": 4,
+          "line": 101,
+          "scope": null
+        },
+        {
+          "module": "numpy",
+          "alias": "np",
+          "kind": "package",
+          "line": 102,
+          "scope": null
+        },
+        {
+          "module": "pandas",
+          "alias": "pd",
+          "kind": "package",
+          "line": 103,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "setup_logger",
+          "kind": "local",
+          "line": 104,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "get_paths",
+          "kind": "local",
+          "line": 104,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "minmax_norm",
+          "kind": "local",
+          "line": 104,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "EU_COUNTRIES_ISO2",
+          "kind": "local",
+          "line": 104,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "OSM_SPARSE_COUNTRIES",
+          "kind": "local",
+          "line": 104,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "ensure_dirs",
+          "kind": "local",
+          "line": 104,
+          "scope": null
+        },
+        {
+          "module": "geopandas",
+          "alias": "gpd",
+          "kind": "package",
+          "line": 191,
+          "scope": "_load_from_cache_or_fetch"
+        },
+        {
+          "module": "osmnx",
+          "alias": "ox",
+          "kind": "package",
+          "line": 207,
+          "scope": "_load_from_cache_or_fetch"
+        },
+        {
+          "module": "shapely.geometry",
+          "alias": "Point",
+          "kind": "package",
+          "line": 248,
+          "scope": "_load_from_cache_or_fetch"
+        },
+        {
+          "module": "pyproj",
+          "alias": "Transformer",
+          "kind": "package",
+          "line": 277,
+          "scope": "_to_epsg3035"
+        },
+        {
+          "module": "scipy.spatial",
+          "alias": "KDTree",
+          "kind": "package",
+          "line": 296,
+          "scope": "_compute_signals"
+        },
+        {
+          "module": "geopandas",
+          "alias": "gpd",
+          "kind": "package",
+          "line": 344,
+          "scope": "run"
+        }
+      ],
+      "symbols": [
+        {
+          "name": "log",
+          "kind": "variable",
+          "line": 113,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "OSM_CACHE_FILE",
+          "kind": "constant",
+          "line": 115,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "_parse_osm_elements",
+          "kind": "function",
+          "line": 121,
+          "signature": "_parse_osm_elements(elements: list) -> tuple[list, list]",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "_max_voltage",
+          "kind": "function",
+          "line": 168,
+          "signature": "_max_voltage(voltage_str: str) -> float | None",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "_load_from_json",
+          "kind": "function",
+          "line": 179,
+          "signature": "_load_from_json(json_path: str) -> tuple[list, list]",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "_load_from_cache_or_fetch",
+          "kind": "function",
+          "line": 189,
+          "signature": "_load_from_cache_or_fetch(cache_path: str) -> tuple[list, list]",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "_to_epsg3035",
+          "kind": "function",
+          "line": 275,
+          "signature": "_to_epsg3035(latlon_list: list) -> np.ndarray",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "_compute_signals",
+          "kind": "function",
+          "line": 289,
+          "signature": "_compute_signals(node_xy3035: np.ndarray, sub_xy3035: np.ndarray, exch_xy3035: np.ndarray, radius_m: float = 50000) -> pd.DataFrame",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "run",
+          "kind": "function",
+          "line": 333,
+          "signature": "run()",
+          "parent": null,
+          "decorators": []
+        }
+      ],
+      "module_doc_full": "INFRASTRUCTURE ACCESS \u2014 Grid Connection & Fiber Backhaul Proximity\n===================================================================\nTheory\n------\nData center infrastructure access captures two distinct non-energy CapEx/OpEx\ndrivers that determine whether a site can be developed at all, and at what cost:\n\n  1. HV grid connection:\n     A DC drawing >10 MW must connect at \u2265110 kV per EU NC DCC Regulation\n     2016/1388. Connection CapEx grows linearly with distance to the nearest HV\n     substation: \u20ac0.5 M\u2013\u20ac1.2 M per km for a 110 kV aerial line, plus \u20ac1\u20133 M for\n     the substation bay works (docs/data.md \u00a72B). A site 5 km from the nearest\n     110 kV substation adds \u20ac2.5\u20139 M to project CapEx before the first server\n     is racked. Beyond ~10 km, grid connection cost dominates site economics.\n\n  2. Fiber / backhaul:\n     Low-latency (<10 ms RTT) fiber connectivity to an Internet Exchange Point\n     (IXP) or major PoP is a hard technical requirement for DC operation. DC\n     tenants pay latency-sensitive premiums; co-location clients need <4 ms to\n     financial market exchanges. Fiber leasing cost (dark fiber IRU or lit service)\n     grows with distance from IXP/PoP and with the number of alternative providers\n     (more IXPs nearby = competitive market = lower prices).\n\nComposite Score\n---------------\nThree OSM sub-signals are combined into a composite 0\u20131 score:\n\n    infra_score = 0.5 \u00d7 (1 \u2212 norm(dist_to_hv_substation_km))\n                + 0.3 \u00d7 norm(ixp_count_50km)\n                + 0.2 \u00d7 (1 \u2212 norm(dist_to_nearest_ixp_km))\n\nSub-signal 1 \u2014 dist_to_hv_substation_km (weight 0.5)\n  Minimum distance (km) from the PyPSA bus centroid to any OSM\n  `power=substation` node or way with parsed voltage \u2265 110,000 V (110 kV).\n  Justification: direct physical CapEx driver (see above). Highest weight\n  because grid connection is the single largest infrastructure variable in\n  DC siting and is unambiguously measurable from OSM.\n\nSub-signal 2 \u2014 ixp_count_50km (weight 0.3)\n  Count of OSM `telecom=exchange` nodes within 50 km radius of the bus centroid.\n  Justification: OSM has no dedicated fiber backbone tag (`telecom=fiber` does not\n  exist as a standard tag). `telecom=exchange` marks Internet Exchange Points and\n  Points of Presence \u2014 the physical locations where fiber backbone strands converge\n  (documented in docs/independent-variables.md \u00a72, \"Note on fiber proxy\"). A higher\n  count within 50 km means multiple fiber providers, competitive dark fiber pricing,\n  and structural network redundancy. 50 km is the practical metropolitan fiber\n  leasing radius in EU.\n\nSub-signal 3 \u2014 dist_to_nearest_ixp_km (weight 0.2)\n  Distance (km) to the closest `telecom=exchange` node.\n  Justification: Even if regional density is adequate, a site far from any IXP\n  faces high last-mile fiber cost and latency risk. This signal is a sanity check\n  complementing the count: a node could have 0 IXPs in 50 km but one at 51 km \u2014\n  the distance signal captures this.\n\nOSM Data Coverage Note\n----------------------\n`telecom=exchange` tag density is positively correlated with OSM contributor\nactivity, not just actual fiber infrastructure. Western EU (NL, DE, FR, BE, UK)\nhas 5\u201310\u00d7 higher `telecom=exchange` tagging density than Eastern EU (EE, LV, LT,\nBG, RO). Nodes in the following countries receive an `infra_data_quality='sparse'`\nflag: EE, LV, LT, BG, RO, HR, SI, SK, HU. These nodes should not be excluded\nfrom candidate lists based solely on ixp_count_50km.\n\nOSM Fetch Strategy\n------------------\nThe script checks for an EU-wide pre-fetched cache before hitting the API:\n  1. OSM_DATA_PATH env var (GeoJSON/GeoPackage with substations and exchanges)\n  2. Existing data/osm_power_infrastructure.json (Luxembourg pilot \u2014 warns if used)\n  3. Live fetch via osmnx per-country for all EU27 + Norway (slow, ~20\u201340 min)\n     Results cached to data/raw/osm_eu_cache.gpkg for reuse.\n\nMVP Implementation\n------------------\nComposite 0\u20131 score from three OSM sub-signals (see above). Normalization via\nmin-max across all EU nodes so the score reflects relative standing within Europe.\n\nLimitation: OSM is a crowd-sourced dataset. Substation and IXP coverage is complete\nfor major transmission nodes and urban IXPs, but sparse for distribution substations\nand rural telecom infrastructure. Scores in low-OSM-contributor regions (Eastern EU)\nmay systematically understate actual infrastructure quality.\n\nFuture Implementation\n---------------------\n[Empty \u2014 to be filled in dedicated planning session]\n\nReal implementation would layer commercial data:\n  - HV substation positions: TSO GIS layers (ENTSO-E, national TSOs) or the\n    GridKit dataset (more complete than OSM for transmission-level substations)\n  - Fiber: PeeringDB IXP database (complete, authoritative) + NLNOG Ring + Submarine\n    Cable Map (TeleGeography) for long-haul routes + national dark fiber registry\n    APIs where available (e.g., AMS-IX, DE-CIX, LINX public PoP lists)",
+      "doc_start_line": 1,
+      "doc_end_line": 94
+    },
+    "src/data_normalization/05_congestion.py": {
+      "path": "src/data_normalization/05_congestion.py",
+      "module_doc": "CONGESTION \u2014 Grid Line Loading Fraction",
+      "imports": [
+        {
+          "module": "os",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 63,
+          "scope": null
+        },
+        {
+          "module": "sys",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 64,
+          "scope": null
+        },
+        {
+          "module": "numpy",
+          "alias": "np",
+          "kind": "package",
+          "line": 68,
+          "scope": null
+        },
+        {
+          "module": "pandas",
+          "alias": "pd",
+          "kind": "package",
+          "line": 69,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "setup_logger",
+          "kind": "local",
+          "line": 70,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "get_paths",
+          "kind": "local",
+          "line": 70,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "get_pypsa_network",
+          "kind": "local",
+          "line": 70,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "ensure_dirs",
+          "kind": "local",
+          "line": 70,
           "scope": null
         }
       ],
       "symbols": [
         {
-          "name": "create_folders",
-          "kind": "function",
-          "line": 6,
-          "signature": "create_folders()",
+          "name": "log",
+          "kind": "variable",
+          "line": 72,
+          "signature": null,
           "parent": null,
           "decorators": []
         },
         {
-          "name": "download_file",
-          "kind": "function",
-          "line": 12,
-          "signature": "download_file(url, destination_path)",
+          "name": "CONGESTION_THRESHOLD",
+          "kind": "constant",
+          "line": 74,
+          "signature": null,
           "parent": null,
           "decorators": []
         },
         {
-          "name": "fetch_osm_power_grid",
+          "name": "run",
           "kind": "function",
-          "line": 47,
-          "signature": "fetch_osm_power_grid()",
-          "parent": null,
-          "decorators": []
-        },
-        {
-          "name": "create_iea_ai_reference",
-          "kind": "function",
-          "line": 83,
-          "signature": "create_iea_ai_reference()",
+          "line": 77,
+          "signature": "run()",
           "parent": null,
           "decorators": []
         }
       ],
+      "module_doc_full": "CONGESTION \u2014 Grid Line Loading Fraction\n========================================\nTheory\n------\nGrid congestion measures how often a node's adjacent transmission lines are\nnear-saturated. It is the primary proxy for **connection queue risk** \u2014 the\nprobability that connecting a new large load at this node will require structural\ngrid reinforcement and face a multi-year queue at the TSO.\n\nThe load rate (loading fraction) of a transmission line at time t is:\n\n    LoadRate(l, t) = |P(l, t)| / S_nom(l)\n\nwhere P(l, t) is the active power flow on line l (MW) and S_nom(l) is its thermal\ncapacity (MVA, approximately equal to MW for EU HV lines at unity power factor).\n\nWhen LoadRate > 0.80 (80 % of thermal capacity), TSOs apply operational redispatch\nand typically refuse new connection applications at adjacent nodes. This 80 %\nthreshold is the standard N-1 operational margin: the line must retain 20 %\nheadroom to absorb flow rerouting following the loss of a neighboring line.\n\nReal-world connection queue evidence (docs/independent-variables.md \u00a73c):\n  - Netherlands: zero hosting capacity at multiple substations (Mar 2026)\n  - Denmark: new HV connections paused (60 GW queued vs 7.3 GW peak, Mar 2026)\n  - Germany: 270 GW in connection queue, 717 applications (Q3 2025)\n  - Ireland: >100 MW requires 80 % new renewable generation on-site (EirGrid 2026)\n\nA DC connecting to a node with congestion_frac > 0.25 (lines >80 % loaded for\n>25 % of the year) faces a realistic 5\u201310 year connection queue.\n\nMVP Implementation\n------------------\ncongestion_frac(n) = fraction of 8,760 annual simulation hours during which\nany adjacent line of bus n exceeds 80 % of its nominal thermal capacity:\n\n    adj(n) = {l : bus0(l) == n OR bus1(l) == n}\n\n    congestion_frac(n) = mean_t [ max_{l \u2208 adj(n)} (LoadRate(l, t) > 0.80) ]\n\nSource: PyPSA `n.lines_t.p0` and `n.lines.s_nom`.\nFormula follows docs/independent-variables.md \u00a73b `build_grid_zone_dataset()`.\n\nBuses with no adjacent AC lines: congestion_frac = NaN (e.g., isolated island buses,\nor buses connected only via HVDC links). HVDC links are not included in this metric\nbecause their flow is directly controlled and does not exhibit passive congestion.\n\nLimitation: Adjacent-line proxy is a linear approximation. Real OPF redistributes\npower flows network-wide via Kirchhoff's laws \u2014 actual congestion risk at a bus can\nbe affected by lines several nodes away. Treat congestion_frac as a first-order\nscreening signal; for top candidates, re-solve OPF with the new DC load added.\n\nFuture Implementation\n---------------------\n[Empty \u2014 to be filled in dedicated planning session]\n\nReal implementation: N-1 security assessment. For each bus, simulate the loss of\neach adjacent line one at a time and re-solve OPF, recording whether any post-\ncontingency line loading exceeds 100 %. Count the fraction of N-1 scenarios that\nresult in constraint violations. This is the standard TSO capacity assessment\nmethodology.",
+      "doc_start_line": 1,
+      "doc_end_line": 62
+    },
+    "src/data_normalization/06_headroom.py": {
+      "path": "src/data_normalization/06_headroom.py",
+      "module_doc": "HEADROOM \u2014 Available Grid Capacity at Node (P5 Spare MW)",
+      "imports": [
+        {
+          "module": "os",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 65,
+          "scope": null
+        },
+        {
+          "module": "sys",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 66,
+          "scope": null
+        },
+        {
+          "module": "numpy",
+          "alias": "np",
+          "kind": "package",
+          "line": 70,
+          "scope": null
+        },
+        {
+          "module": "pandas",
+          "alias": "pd",
+          "kind": "package",
+          "line": 71,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "setup_logger",
+          "kind": "local",
+          "line": 72,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "get_paths",
+          "kind": "local",
+          "line": 72,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "get_pypsa_network",
+          "kind": "local",
+          "line": 72,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "ensure_dirs",
+          "kind": "local",
+          "line": 72,
+          "scope": null
+        }
+      ],
+      "symbols": [
+        {
+          "name": "log",
+          "kind": "variable",
+          "line": 74,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "run",
+          "kind": "function",
+          "line": 77,
+          "signature": "run()",
+          "parent": null,
+          "decorators": []
+        }
+      ],
+      "module_doc_full": "HEADROOM \u2014 Available Grid Capacity at Node (P5 Spare MW)\n=========================================================\nTheory\n------\nHeadroom is the spare MW capacity available at a transmission node \u2014 the maximum\nload increment that can be connected without triggering structural grid\nreinforcement (new lines, transformer upgrades, substation works costing\n\u20ac0.5\u20131.2 M/km and requiring 2\u20137 years of permitting and construction).\n\nFor a DC developer, headroom directly answers: \"Can a 50 MW DC connect here\ntoday?\" A node with insufficient headroom requires either:\n  (a) A grid extension agreement with the TSO, adding years and millions to CapEx, or\n  (b) A phased connection: connect at reduced power initially, then expand later\n      as grid upgrades complete.\n\nHeadroom at bus n at time t is the minimum spare thermal capacity across all\nadjacent AC transmission lines:\n\n    Headroom(n, t) = min_{l \u2208 adj(n)} [ S_nom(l) \u2212 |P(l, t)| ]   (MW)\n\nwhere S_nom(l) is the thermal rating of line l (MVA) and P(l, t) its flow (MW).\n\nUsing the P5 (5th percentile) over 8,760 annual hours is a conservative design\nchoice: it means the reported headroom is available for 95 % of the year (8,322h),\nwhile only the most extreme 438 hours (e.g., winter peak demand + calm wind events)\nmight exceed it. This is appropriate for a 20-year DC asset that will draw power\ncontinuously, 24/7.\n\nRegulatory thresholds (docs/independent-variables.md \u00a73b scoring table):\n  - headroom_mw_p05 \u2265 100 MW \u2192 GREEN  (can host a large DC without reinforcement)\n  - headroom_mw_p05  20\u2013100 MW \u2192 AMBER (possible, but reinforcement likely needed)\n  - headroom_mw_p05 < 20 MW \u2192 RED    (connection requires major grid works)\n\nMVP Implementation\n------------------\nheadroom_mw_p05(n) = P5 of the minimum spare MW across all adjacent lines:\n\n    spare_mw(l, t) = S_nom(l) \u2212 |P(l, t)|\n\n    headroom_mw_p05(n) = quantile_0.05 [ min_{l \u2208 adj(n)} spare_mw(l, t) ]\n\nSource: PyPSA `n.lines_t.p0` and `n.lines.s_nom`.\nFormula follows docs/independent-variables.md \u00a73b `build_grid_zone_dataset()`.\n\nBuses with no adjacent AC lines: headroom_mw_p05 = NaN.\nNegative headroom values indicate line overloading \u2014 valid OPF results should\nnot produce these (OPF enforces line limits), but they can appear in unoptimized\nnetworks; they are preserved as-is with a warning.\n\nLimitation: Bottleneck-line proxy uses only the immediately adjacent lines.\nReal OPF headroom is a function of the full network topology and can be higher\nor lower than this estimate. For the top-5 candidates, re-solve OPF with the DC\nload added to get a precise headroom estimate.\n\nFuture Implementation\n---------------------\n[Empty \u2014 to be filled in dedicated planning session]\n\nReal implementation: DC sensitivity analysis. Inject a test load \u0394P at each bus\nand solve the DC power flow (linearised), recording which lines become binding.\nThe maximum \u0394P before any line reaches its thermal limit is the true headroom.\nThis is computationally tractable with PyPSA's linearised DC flow model.",
+      "doc_start_line": 1,
+      "doc_end_line": 64
+    },
+    "src/data_normalization/07_node_geometry.py": {
+      "path": "src/data_normalization/07_node_geometry.py",
+      "module_doc": "NODE GEOMETRY \u2014 PyPSA Bus Voronoi Catchment Areas",
+      "imports": [
+        {
+          "module": "os",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 56,
+          "scope": null
+        },
+        {
+          "module": "sys",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 57,
+          "scope": null
+        },
+        {
+          "module": "geopandas",
+          "alias": "gpd",
+          "kind": "package",
+          "line": 61,
+          "scope": null
+        },
+        {
+          "module": "pandas",
+          "alias": "pd",
+          "kind": "package",
+          "line": 62,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "setup_logger",
+          "kind": "local",
+          "line": 63,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "get_paths",
+          "kind": "local",
+          "line": 63,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "get_regions_onshore",
+          "kind": "local",
+          "line": 63,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "ensure_dirs",
+          "kind": "local",
+          "line": 63,
+          "scope": null
+        }
+      ],
+      "symbols": [
+        {
+          "name": "log",
+          "kind": "variable",
+          "line": 65,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "run",
+          "kind": "function",
+          "line": 68,
+          "signature": "run()",
+          "parent": null,
+          "decorators": []
+        }
+      ],
+      "module_doc_full": "NODE GEOMETRY \u2014 PyPSA Bus Voronoi Catchment Areas\n===================================================\nTheory\n------\nThe atomic spatial unit for all grid scoring is the PyPSA bus catchment area \u2014\nthe geographic region whose electricity grid conditions are modeled by that bus\nin the PyPSA simulation. It represents a cluster of physical HV substations\nwhose transmission behaviour is aggregated into a single network node.\n\nThese catchment areas are defined as Voronoi tessellations of bus point\ncoordinates, clipped to national country borders. The Voronoi construction\nensures that any geographic location within the EU belongs to exactly one grid\nnode \u2014 the node of the nearest substation cluster.\n\nMetadata columns:\n  - node_id: join key to all other pipeline tables\n  - x, y: centroid coordinates (REQUIRED \u2014 used by 04_infrastructure_access.py\n    for spatial queries and by 08_cleanup.py for NUTS spatial join)\n  - country: ISO alpha-2 \u2014 used to join carbon emissions (country-level) and\n    for regulatory constraint flags\n  - area_km2: Voronoi cell area in km\u00b2 (EPSG:3035 equal-area projection),\n    represents the geographic land mass associated with this grid node; larger\n    cells correspond to sparser grid regions (Scandinavia, Eastern EU)\n  - geometry: Voronoi polygon for spatial visualisation and downstream joins\n\nSource: `resources/regions_onshore.geojson` from PyPSA-Eur Snakemake output.\nSchema: name (bus id), x (longitude), y (latitude), country (ISO alpha-2),\ngeometry (Polygon, EPSG:4326).\n\nNode count: ~3,000\u201310,000 depending on `clusters: all` network configuration.\nAt 256-node clustering, each zone spans ~4,000 km\u00b2 (median) \u2014 too coarse for\nsub-national siting. Full resolution (`clusters: all`) provides individual\nsubstation-level nodes.\n\nMVP Implementation\n------------------\nLoad regions_onshore.geojson, compute area_km2 via EPSG:3035 reprojection,\nrename and export. x, y centroids are explicitly preserved \u2014 they are mandatory\nfor all downstream spatial operations.\n\nLimitation: Voronoi catchments are geometric approximations. Real substation\ncatchment areas depend on network topology and load distribution, not pure\nEuclidean proximity. Voronoi cells in densely-meshed networks (Belgium, NL,\nGermany Ruhr) may under- or over-represent actual grid influence zones.\n\nFuture Implementation\n---------------------\n[Empty \u2014 to be filled in dedicated planning session]\n\nReal implementation: compute influence zones via power transfer distribution\nfactors (PTDF) or sensitivity analysis \u2014 each bus's catchment is the set of\ngrid points where injection from that bus most strongly determines the LMP.\nThis is mathematically correct but computationally intensive.",
+      "doc_start_line": 1,
+      "doc_end_line": 55
+    },
+    "src/data_normalization/08_cleanup.py": {
+      "path": "src/data_normalization/08_cleanup.py",
+      "module_doc": "CLEANUP \u2014 Validation, Spatial Join, and Processed Dataset Export",
+      "imports": [
+        {
+          "module": "os",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 13,
+          "scope": null
+        },
+        {
+          "module": "sys",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 14,
+          "scope": null
+        },
+        {
+          "module": "numpy",
+          "alias": "np",
+          "kind": "package",
+          "line": 18,
+          "scope": null
+        },
+        {
+          "module": "pandas",
+          "alias": "pd",
+          "kind": "package",
+          "line": 19,
+          "scope": null
+        },
+        {
+          "module": "geopandas",
+          "alias": "gpd",
+          "kind": "package",
+          "line": 20,
+          "scope": null
+        },
+        {
+          "module": "shapely.geometry",
+          "alias": "Point",
+          "kind": "package",
+          "line": 21,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "setup_logger",
+          "kind": "local",
+          "line": 22,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "get_paths",
+          "kind": "local",
+          "line": 22,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "ensure_dirs",
+          "kind": "local",
+          "line": 22,
+          "scope": null
+        }
+      ],
+      "symbols": [
+        {
+          "name": "log",
+          "kind": "variable",
+          "line": 24,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "_check_range",
+          "kind": "function",
+          "line": 31,
+          "signature": "_check_range(df: pd.DataFrame, col: str, lo: float, hi: float, action: str = 'nan') -> pd.DataFrame",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "_log_nan_frac",
+          "kind": "function",
+          "line": 47,
+          "signature": "_log_nan_frac(df: pd.DataFrame, label: str) -> None",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "_spatial_join_land_price",
+          "kind": "function",
+          "line": 60,
+          "signature": "_spatial_join_land_price(nodes: gpd.GeoDataFrame, land_df: pd.DataFrame, nuts3_path: str) -> pd.Series",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "run",
+          "kind": "function",
+          "line": 137,
+          "signature": "run()",
+          "parent": null,
+          "decorators": []
+        }
+      ],
+      "module_doc_full": "CLEANUP \u2014 Validation, Spatial Join, and Processed Dataset Export\n=================================================================\nThis script:\n  1. Loads all raw parquet files from data/raw/\n  2. Performs the NUTS2 spatial join to assign land_price_eur_ha to each node\n  3. Validates all scoring columns for schema correctness and value ranges\n  4. Saves cleaned tables to data/processed/\n\nNo normalization happens here \u2014 raw values are preserved.\nThe final assembly into grid_nodes.parquet is performed by 09_build_table.py.",
+      "doc_start_line": 1,
+      "doc_end_line": 12
+    },
+    "src/data_normalization/09_build_table.py": {
+      "path": "src/data_normalization/09_build_table.py",
+      "module_doc": "BUILD TABLE \u2014 Final Dataset Assembly",
+      "imports": [
+        {
+          "module": "os",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 28,
+          "scope": null
+        },
+        {
+          "module": "sys",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 29,
+          "scope": null
+        },
+        {
+          "module": "pandas",
+          "alias": "pd",
+          "kind": "package",
+          "line": 33,
+          "scope": null
+        },
+        {
+          "module": "geopandas",
+          "alias": "gpd",
+          "kind": "package",
+          "line": 34,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "setup_logger",
+          "kind": "local",
+          "line": 35,
+          "scope": null
+        },
+        {
+          "module": "_utils",
+          "alias": "get_paths",
+          "kind": "local",
+          "line": 35,
+          "scope": null
+        }
+      ],
+      "symbols": [
+        {
+          "name": "log",
+          "kind": "variable",
+          "line": 37,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "METADATA_COLS",
+          "kind": "constant",
+          "line": 39,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "SCORING_COLS",
+          "kind": "constant",
+          "line": 40,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "_load_processed",
+          "kind": "function",
+          "line": 50,
+          "signature": "_load_processed(paths: dict, name: str, key: str = 'node_id') -> pd.DataFrame | None",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "run",
+          "kind": "function",
+          "line": 59,
+          "signature": "run()",
+          "parent": null,
+          "decorators": []
+        }
+      ],
+      "module_doc_full": "BUILD TABLE \u2014 Final Dataset Assembly\n======================================\nImports all processed parquet files from data/processed/, merges them on node_id,\nand writes the final analysis-ready dataset to data/grid_nodes.parquet.\n\nOutput schema:\n\n  Metadata columns (not scored):\n    node_id             str       PyPSA bus index\n    x                   float     Centroid longitude (EPSG:4326)\n    y                   float     Centroid latitude  (EPSG:4326)\n    country             str       ISO alpha-2\n    area_km2            float     Voronoi cell area  (EPSG:3035, km\u00b2)\n    geometry            Polygon   Voronoi cell polygon (EPSG:4326)\n\n  Scoring columns (raw values):\n    energy_price_eur_mwh    float   Annual mean LMP (\u20ac/MWh) \u2014 PyPSA\n    land_price_eur_ha       float   Avg of last 10 annual values (\u20ac/ha) \u2014 Eurostat\n    carbon_intensity_elec   float   National carbon intensity (gCO\u2082/kWh) \u2014 OWID\n    infrastructure_access   float   Composite OSM score 0\u20131\n    congestion_frac         float   Fraction of hours >80% loading (0\u20131) \u2014 PyPSA\n    headroom_mw_p05         float   P5 spare capacity on adj lines (MW) \u2014 PyPSA\n\nAll scoring columns may be NaN where the upstream source is unavailable\n(PyPSA-dependent columns are NaN if no network file was provided).",
+      "doc_start_line": 1,
+      "doc_end_line": 27
+    },
+    "src/data_normalization/_utils.py": {
+      "path": "src/data_normalization/_utils.py",
+      "module_doc": "Shared utilities for the data_normalization pipeline.",
+      "imports": [
+        {
+          "module": "os",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 2,
+          "scope": null
+        },
+        {
+          "module": "logging",
+          "alias": null,
+          "kind": "stdlib",
+          "line": 3,
+          "scope": null
+        },
+        {
+          "module": "numpy",
+          "alias": "np",
+          "kind": "package",
+          "line": 4,
+          "scope": null
+        },
+        {
+          "module": "pandas",
+          "alias": "pd",
+          "kind": "package",
+          "line": 5,
+          "scope": null
+        },
+        {
+          "module": "pypsa",
+          "alias": null,
+          "kind": "package",
+          "line": 71,
+          "scope": "get_pypsa_network"
+        },
+        {
+          "module": "geopandas",
+          "alias": "gpd",
+          "kind": "package",
+          "line": 101,
+          "scope": "get_regions_onshore"
+        }
+      ],
+      "symbols": [
+        {
+          "name": "ISO3_TO_ISO2",
+          "kind": "constant",
+          "line": 11,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "EU_COUNTRIES_ISO3",
+          "kind": "constant",
+          "line": 21,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "EU_COUNTRIES_ISO2",
+          "kind": "constant",
+          "line": 22,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "OSM_SPARSE_COUNTRIES",
+          "kind": "constant",
+          "line": 25,
+          "signature": null,
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "minmax_norm",
+          "kind": "function",
+          "line": 28,
+          "signature": "minmax_norm(series: pd.Series) -> pd.Series",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "get_paths",
+          "kind": "function",
+          "line": 37,
+          "signature": "get_paths() -> dict",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "ensure_dirs",
+          "kind": "function",
+          "line": 57,
+          "signature": "ensure_dirs() -> None",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "get_pypsa_network",
+          "kind": "function",
+          "line": 64,
+          "signature": "get_pypsa_network()",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "get_regions_onshore",
+          "kind": "function",
+          "line": 95,
+          "signature": "get_regions_onshore()",
+          "parent": null,
+          "decorators": []
+        },
+        {
+          "name": "setup_logger",
+          "kind": "function",
+          "line": 117,
+          "signature": "setup_logger(name: str) -> logging.Logger",
+          "parent": null,
+          "decorators": []
+        }
+      ],
+      "module_doc_full": "Shared utilities for the data_normalization pipeline.",
+      "doc_start_line": 1,
+      "doc_end_line": 1
+    },
+    "src/data_normalization/__init__.py": {
+      "path": "src/data_normalization/__init__.py",
+      "module_doc": null,
+      "imports": [],
+      "symbols": [],
       "module_doc_full": null,
       "doc_start_line": null,
       "doc_end_line": null

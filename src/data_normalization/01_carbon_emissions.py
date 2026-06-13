@@ -74,7 +74,7 @@ def run():
     if not os.path.exists(owid_path):
         raise FileNotFoundError(
             f"OWID energy CSV not found at '{owid_path}'.\n"
-            "Run: python src/data_ingestion/download_datasets.py"
+            "Download from https://ourworldindata.org/energy and place at data/owid-energy-data.csv"
         )
 
     log.info("Loading OWID energy CSV...")
