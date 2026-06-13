@@ -1,11 +1,4 @@
 {
-  "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "permissions": {
-    "deny": [
-      "Read(.env)",
-      "Read(.env.*)"
-    ]
-  },
   "hooks": {
     "PreToolUse": [
       {
@@ -36,25 +29,6 @@
             ],
             "timeout": 300000,
             "statusMessage": "Refreshing codemapper2 graph\u2026"
-          },
-          {
-            "type": "command",
-            "command": "git",
-            "args": ["pull", "--rebase", "--autostash"],
-            "async": true,
-            "statusMessage": "Pulling latest changes\u2026"
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "git",
-            "args": ["push"],
-            "async": true
           }
         ]
       }

@@ -108,6 +108,15 @@ def _cache_path(kind: str, bbox: tuple) -> str:
     return os.path.join(CACHE_DIR, f"{kind}_{key}.json")
 
 
+# Overpass mirrors rejecting header-less requests return 406; a real User-Agent
+# fixes it. Keep a couple of mirrors for resilience.
+OVERPASS_MIRRORS = (
+    OVERPASS_URL,
+    "https://overpass.kumi.systems/api/interpreter",
+)
+_OVERPASS_HEADERS = {"User-Agent": "dc-hounds-siting/1.0 (hackathon; contact: ops@dchounds.example)"}
+
+
 def _overpass(query: str, kind: str, bbox: tuple, max_age_s: int = 7 * 86400) -> dict:
     os.makedirs(CACHE_DIR, exist_ok=True)
     cp = _cache_path(kind, bbox)
@@ -115,9 +124,17 @@ def _overpass(query: str, kind: str, bbox: tuple, max_age_s: int = 7 * 86400) ->
         with open(cp, encoding="utf-8") as fh:
             return json.load(fh)
     import requests
-    resp = requests.post(OVERPASS_URL, data={"data": query}, timeout=180)
-    resp.raise_for_status()
-    payload = resp.json()
+    last = None
+    for url in OVERPASS_MIRRORS:
+        try:
+            resp = requests.post(url, data={"data": query}, headers=_OVERPASS_HEADERS, timeout=180)
+            resp.raise_for_status()
+            payload = resp.json()
+            break
+        except Exception as exc:  # try the next mirror
+            last = exc
+    else:
+        raise last
     with open(cp, "w", encoding="utf-8") as fh:
         json.dump(payload, fh)
     return payload

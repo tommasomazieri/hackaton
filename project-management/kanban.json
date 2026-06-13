@@ -1,7 +1,0 @@
-{
-  "columns": ["backlog", "todo", "in_progress", "in_review", "done"],
-  "wip_limits": {
-    "in_progress": 3,
-    "in_review": 2
-  }
-}

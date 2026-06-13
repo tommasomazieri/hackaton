@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
-  <link rel="stylesheet" href="style.css?v=31">
+  <link rel="stylesheet" href="style.css?v=38">
 </head>
 <body>
 
@@ -77,6 +77,14 @@
 
         <!-- results UI (after first run) -->
         <div id="results-ui" style="display:none;">
+          <div class="export-bar">
+            <button id="btn-export" class="btn-export" title="Open the shareable report">
+              <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Export
+            </button>
+          </div>
           <div class="results-head">
             <h2 class="rh-title">Ranked sites</h2>
           </div>
@@ -89,9 +97,19 @@
         </div>
       </section>
     </main>
+
+    <!-- ===== Export report modal (slides in from right) ===== -->
+    <div id="report-modal" class="report-modal" aria-hidden="true">
+      <button id="report-close" class="report-close" title="Close report">&gt;</button>
+      <div class="report-scroll" id="report-scroll"></div>
+      <button id="report-download" class="report-download" title="Print / save as PDF">Download PDF</button>
+    </div>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-  <script src="app.js?v=32"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="app.js?v=38"></script>
 </body>
 </html>

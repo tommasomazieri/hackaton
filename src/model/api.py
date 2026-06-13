@@ -1,11 +1,13 @@
 from __future__ import annotations
 
 import math
+import os
 from typing import Any
 
 import pandas as pd
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from src.model import rank, site_stage
@@ -22,6 +24,15 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Stage-4 (CNN) writes per-node JSON + rendered PNGs here. Serve the PNGs at
+# /site-images/<node_id>.png so the report can <img>-load them directly.
+SITE_IMG_DIR = (
+    site_stage.OUT_DIR if site_stage is not None
+    else os.path.join(os.path.dirname(__file__), "..", "..", "data", "site_analysis")
+)
+os.makedirs(SITE_IMG_DIR, exist_ok=True)
+app.mount("/site-images", StaticFiles(directory=SITE_IMG_DIR), name="site-images")
 
 _results: dict[str, pd.DataFrame] | None = None
 _metadata: pd.DataFrame | None = None
@@ -51,11 +62,11 @@ class RankRequest(BaseModel):
     weights: dict[str, float] | None = None
 
 
-class SiteAnalysisRequest(BaseModel):
-    node_ids: list[str] | None = None
-    top_n: int | None = None
+class ReportImagesRequest(BaseModel):
+    weights: dict[str, float] | None = None     # rank the same way the table does
+    node_ids: list[str] | None = None           # or pass explicit ids
+    top_n: int = 10
     aoi_km: float = 10.0
-    dates: str = "2023-05-01/2023-09-30"
 
 
 @app.post("/run")
@@ -145,23 +156,43 @@ def get_ranked(req: RankRequest) -> list[dict[str, Any]]:
     return _df_to_records(gross)
 
 
-@app.post("/site-analysis")
-def post_site_analysis(req: SiteAnalysisRequest) -> list[dict[str, Any]]:
-    """Post-Pareto CNN land analysis for selected nodes (Google Dynamic World).
+@app.post("/report/site-images")
+def post_report_images(req: ReportImagesRequest) -> list[dict[str, Any]]:
+    """Lazy, cached CNN site imagery for the report. Computed only when called
+    (report open), once per node — cached PNGs/JSON are reused on later calls.
 
-    Provide explicit `node_ids`, or `top_n` to pull the best nodes from the cached
-    ranking (requires a prior POST /run). Returns per-node bbox + inscribed circle
-    + score breakdown.
-
-    Heavy / on-demand: fetches Sentinel-2 + DEM and runs the CNN per node — this is
-    minutes-scale, NOT bound by the 30 s ranking SLA.
+    Returns one record per node, in rank order:
+        { node_id, status, image_url, buildable_area_ha, dominant_buildable_class }
+    `image_url` is None when the CNN produced no image (deps absent, no buildable
+    land, or an error) — the frontend then shows a placeholder.
     """
+    _require_run()
+    if site_stage is None:
+        from src.model import site_stage_error
+        raise HTTPException(
+            status_code=503,
+            detail=f"Site-analysis stage unavailable: {site_stage_error}",
+        )
+
     if req.node_ids:
         ids = req.node_ids
-    elif req.top_n:
-        _require_run()
-        ids = list(rank_by_weights({}, top_n=req.top_n))
     else:
-        raise HTTPException(status_code=400, detail="Provide either node_ids or top_n")
+        weights = req.weights or {}
+        unknown = set(weights) - set(SCORE_COLS)
+        if unknown:
+            raise HTTPException(status_code=400, detail=f"Unknown weight keys: {sorted(unknown)}")
+        ids = list(rank_by_weights(weights, top_n=req.top_n))
 
-    return site_stage.run(ids, size_km=req.aoi_km, date_range=req.dates, write=True)
+    results = site_stage.run(ids, size_km=req.aoi_km, write=True, cache=True)
+
+    out: list[dict[str, Any]] = []
+    for res in results:
+        img = res.get("image")
+        out.append({
+            "node_id": res.get("node_id"),
+            "status": res.get("status", "error"),
+            "image_url": f"/site-images/{img}" if img else None,
+            "buildable_area_ha": res.get("buildable_area_ha"),
+            "dominant_buildable_class": res.get("dominant_buildable_class"),
+        })
+    return out

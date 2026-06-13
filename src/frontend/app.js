@@ -37,6 +37,8 @@ let hasRun = false;
 let hoverTimer = null;
 let activeTooltipMarker = null;
 let mapMoving = false;
+let reportMaps = [];         // Leaflet instances built for the report modal
+let reportCharts = [];       // Chart.js instances built for the report modal
 
 const GREY = { fillColor: '#475569', color: '#64748b', weight: 1, radius: 5, fillOpacity: 0.55, opacity: 0.6 };
 const HOT  = { fillColor: '#f59e0b', color: '#fbbf24', weight: 3, radius: 9, fillOpacity: 0.95, opacity: 1 };
@@ -130,6 +132,7 @@ async function fetchRanked(weights) {
     rankedNodes = await res.json();
     console.debug('[rank] applied', weights, '→ top:', rankedNodes.map(r => r.node_id));
     render();
+    prewarmSiteImages(weights);   // start CNN imagery in the background while user reads the table
   } catch (err) {
     alert(err.message || 'Could not compute ranking.');
   }
@@ -245,6 +248,17 @@ function initControls() {
   // click outside an open weight popover closes it
   document.addEventListener('mousedown', e => {
     if (!e.target.closest('.weight-pop') && !e.target.closest('.col-head')) closeWeightInput();
+  });
+
+  // report modal
+  document.getElementById('btn-export').addEventListener('click', openReport);
+  document.getElementById('report-download').addEventListener('click', downloadReportPDF);
+  // close via delegation so nothing (print, re-render) can orphan the handler
+  document.addEventListener('click', e => {
+    if (e.target.closest('#report-close')) closeReport();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && document.getElementById('report-modal').classList.contains('open')) closeReport();
   });
 }
 
@@ -373,6 +387,314 @@ function render() {
   updateMapHighlights(rankedNodes.map(r => r.node_id));
   const legend = document.getElementById('legend-tab');
   if (legend) legend.textContent = 'weighted';
+}
+
+// ---------- export report ----------
+function median(arr) {
+  const a = arr.filter(v => v != null && !isNaN(v)).sort((x, y) => x - y);
+  if (!a.length) return null;
+  const m = Math.floor(a.length / 2);
+  return a.length % 2 ? a[m] : (a[m - 1] + a[m]) / 2;
+}
+
+function openReport() {
+  if (!hasRun || !rankedNodes.length) return;
+  const modal = document.getElementById('report-modal');
+  document.getElementById('report-scroll').innerHTML = buildReport();
+  modal.style.display = 'block';
+  // let display:block apply, then add .open so the transform animates in
+  requestAnimationFrame(() => {
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    // mount maps/charts only once the panel is laid out (Leaflet needs size)
+    requestAnimationFrame(() => {
+      buildReportMap();
+      buildReportCharts();
+      loadReportSiteImages();
+    });
+  });
+}
+
+function closeReport() {
+  const modal = document.getElementById('report-modal');
+  modal.classList.remove('open');                 // slides out (transform 0.35s)
+  modal.setAttribute('aria-hidden', 'true');
+  reportImgToken++;                               // stop any in-flight image loop
+  setTimeout(() => {                               // after the slide, tear down
+    modal.style.display = 'none';
+    reportMaps.forEach(m => { try { m.remove(); } catch (e) {} });
+    reportMaps = [];
+    reportCharts.forEach(c => { try { c.destroy(); } catch (e) {} });
+    reportCharts = [];
+    document.getElementById('report-scroll').innerHTML = '';
+  }, 360);
+}
+
+function buildReport() {
+  return reportTablePage() + reportMapPage() + reportAnalysisPage() + reportSitesPage();
+}
+
+// Render the report straight to a downloaded PDF (no print dialog). Each
+// .report-page is rasterised, then sliced across A4 pages.
+async function downloadReportPDF() {
+  const btn = document.getElementById('report-download');
+  if (!window.jspdf || !window.html2canvas) { alert('PDF libraries failed to load.'); return; }
+  const orig = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Building PDF…';
+  try {
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF('p', 'pt', 'a4');
+    const pw = pdf.internal.pageSize.getWidth();
+    const ph = pdf.internal.pageSize.getHeight();
+    const pages = [...document.querySelectorAll('#report-scroll .report-page')];
+    let first = true;
+    for (const page of pages) {
+      const canvas = await html2canvas(page, { useCORS: true, scale: 2, backgroundColor: '#0b1020', logging: false });
+      const imgData = canvas.toDataURL('image/jpeg', 0.92);
+      const imgW = pw;
+      const imgH = canvas.height * (imgW / canvas.width);
+      if (!first) pdf.addPage();
+      first = false;
+      let heightLeft = imgH;
+      let position = 0;
+      pdf.addImage(imgData, 'JPEG', 0, position, imgW, imgH);
+      heightLeft -= ph;
+      while (heightLeft > 0) {           // slice a tall page across multiple A4 sheets
+        position -= ph;
+        pdf.addPage();
+        pdf.addImage(imgData, 'JPEG', 0, position, imgW, imgH);
+        heightLeft -= ph;
+      }
+    }
+    pdf.save('dc-siting-report.pdf');
+  } catch (e) {
+    alert('PDF build failed: ' + (e.message || e));
+  } finally {
+    btn.disabled = false;
+    btn.textContent = orig;
+  }
+}
+
+function reportTablePage() {
+  const cap = document.getElementById('in-capacity').value;
+  const foot = document.getElementById('in-surface').value;
+  const date = new Date().toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
+
+  const thead = `<div class="rp-row rp-thead"><span>#</span><span>Node</span>` +
+    METRIC_COLS.map(col => `<span>${COLUMNS[col].label}</span>`).join('') + `</div>`;
+
+  const rows = rankedNodes.map((r, i) => {
+    const c = coordsById[r.node_id] || {};
+    const country = r.country || c.country || '—';
+    const cells = METRIC_COLS.map(col =>
+      `<span class="rp-cell">${r[col] != null ? COLUMNS[col].fmt(r[col]) : '—'}</span>`).join('');
+    return `<div class="rp-row"><span class="rp-rank">${i + 1}</span>` +
+      `<span class="rp-node"><b>${r.node_id}</b><i>${country}</i></span>${cells}</div>`;
+  }).join('');
+
+  const assumptions = METRIC_COLS.map(col =>
+    `<li><span>${COLUMNS[col].label}</span><b>${Math.round((appliedWeights[col] || 0) * 100)}%</b></li>`).join('');
+
+  return `
+    <div class="report-page">
+      <div class="rp-header">
+        <div>
+          <div class="rp-title">DC Siting Report</div>
+          <div class="rp-meta">Top ${rankedNodes.length} ranked European grid sites</div>
+        </div>
+        <div class="rp-meta rp-meta-right">${cap} MW · ${(+foot).toLocaleString('en-US')} m²<br>${date}</div>
+      </div>
+      <div class="rp-table">${thead}${rows}</div>
+      <div class="assumptions">
+        <div class="as-title">Assumptions — ranking weights</div>
+        <ul>${assumptions}</ul>
+        <div class="as-note">Sites ranked by a weighted average of normalised congestion, carbon, cost and connectivity scores (lower is better).</div>
+      </div>
+    </div>`;
+}
+
+function reportMapPage() {
+  return `
+    <div class="report-page">
+      <div class="rp-title">Geographic distribution</div>
+      <div class="rp-map" id="report-map"></div>
+      <div class="rp-cap">All viable grid nodes (grey) with the top ${rankedNodes.length} ranked sites highlighted in amber.</div>
+    </div>`;
+}
+
+function reportAnalysisPage() {
+  const w = rankedNodes[0];
+  const wc = coordsById[w.node_id] || {};
+  const cards = METRIC_COLS.map(col => {
+    const val = w[col] != null ? COLUMNS[col].fmt(w[col]) : '—';
+    const med = median(allNodes.map(n => n[col]));
+    let delta = '';
+    if (med != null && med !== 0 && w[col] != null) {
+      const pct = (w[col] - med) / Math.abs(med) * 100;
+      const good = pct < 0;  // lower = better for all four metrics
+      delta = `<span class="sc-delta ${good ? 'good' : 'bad'}">${pct >= 0 ? '+' : ''}${pct.toFixed(0)}% vs median</span>`;
+    }
+    return `<div class="stat-card"><div class="sc-label">${COLUMNS[col].label}</div><div class="sc-val">${val}</div>${delta}</div>`;
+  }).join('');
+
+  return `
+    <div class="report-page">
+      <div class="rp-title">Analysis</div>
+      <div class="rp-sub">#1 pick — ${w.node_id} · ${w.country || wc.country || ''}</div>
+      <div class="stat-cards">${cards}</div>
+      <div class="rp-sub">Cost composition (energy vs land)</div>
+      <div class="chart-wrap"><canvas id="chart-cost"></canvas></div>
+      <div class="rp-sub">Cost vs CO₂ trade-off</div>
+      <div class="chart-wrap"><canvas id="chart-scatter"></canvas></div>
+    </div>`;
+}
+
+function reportSitesPage() {
+  const blocks = rankedNodes.map((r, i) => {
+    const country = r.country || (coordsById[r.node_id] || {}).country || '';
+    return `
+      <div class="site-block">
+        <div class="site-title">#${i + 1} ${r.node_id} · ${country}</div>
+        <div class="site-img" id="site-img-${r.node_id}"><div class="site-pending">Generating site imagery…</div></div>
+        <div class="site-cap" id="site-cap-${r.node_id}"></div>
+      </div>`;
+  }).join('');
+  return `
+    <div class="report-page report-sites">
+      <div class="rp-title">Recommended build sites</div>
+      <div class="rp-cap">CNN land analysis — true-colour satellite with the chosen buildable footprint (amber box) and largest inscribed pad (yellow circle).</div>
+      ${blocks}
+    </div>`;
+}
+
+function buildReportMap() {
+  const el = document.getElementById('report-map');
+  if (!el || !window.L) return;
+  const rmap = L.map(el, { zoomControl: false, scrollWheelZoom: false, attributionControl: true });
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; OpenStreetMap &copy; CARTO', subdomains: 'abcd', maxZoom: 9,
+    crossOrigin: true,  // let html2canvas capture tiles into the PDF
+  }).addTo(rmap);
+
+  const topIds = new Set(rankedNodes.map(r => r.node_id));
+  const bounds = [];
+  allNodes.forEach(n => {
+    const c = coordsById[n.node_id];
+    if (!c || c.lat == null) return;
+    const hot = topIds.has(n.node_id);
+    L.circleMarker([c.lat, c.lng], hot ? HOT : GREY).addTo(rmap);
+    if (hot) bounds.push([c.lat, c.lng]);
+  });
+  if (bounds.length) rmap.fitBounds(bounds, { padding: [30, 30], maxZoom: 6 });
+  else rmap.setView([54, 12], 4);
+  reportMaps.push(rmap);
+  setTimeout(() => rmap.invalidateSize(), 80);
+}
+
+function buildReportCharts() {
+  if (!window.Chart) return;
+  const labels = rankedNodes.map(r => r.node_id);
+
+  // Fixed-size, non-responsive canvases: print's media-query relayout otherwise
+  // sends responsive Chart.js into a resize loop that freezes the page.
+  const sizeCanvas = el => { el.width = el.parentElement.clientWidth || 700; el.height = 280; };
+
+  const ctxCost = document.getElementById('chart-cost');
+  if (ctxCost) {
+    sizeCanvas(ctxCost);
+    const energy = rankedNodes.map(r => (detailById[r.node_id] || {}).energy_cost_eur || 0);
+    const land = rankedNodes.map(r => (detailById[r.node_id] || {}).land_cost_eur || 0);
+    reportCharts.push(new Chart(ctxCost, {
+      type: 'bar',
+      data: { labels, datasets: [
+        { label: 'Energy', data: energy, backgroundColor: '#f59e0b' },
+        { label: 'Land', data: land, backgroundColor: '#3b82f6' },
+      ] },
+      options: {
+        responsive: false, maintainAspectRatio: false, animation: false,
+        scales: {
+          x: { stacked: true, ticks: { color: '#8a98b5', maxRotation: 60, minRotation: 60 }, grid: { display: false } },
+          y: { stacked: true, ticks: { color: '#8a98b5', callback: v => fmtEur(v) }, grid: { color: 'rgba(255,255,255,0.06)' } },
+        },
+        plugins: {
+          legend: { labels: { color: '#f5f7fb' } },
+          tooltip: { callbacks: { label: c => `${c.dataset.label}: ${fmtEur(c.parsed.y)}` } },
+        },
+      },
+    }));
+  }
+
+  const ctxSc = document.getElementById('chart-scatter');
+  if (ctxSc) {
+    sizeCanvas(ctxSc);
+    const all = allNodes.map(n => ({ x: n.total_cost_eur, y: n.dc_carbon_tco2_yr }))
+      .filter(p => p.x != null && p.y != null);
+    const top = rankedNodes.map(n => ({ x: n.total_cost_eur, y: n.dc_carbon_tco2_yr }))
+      .filter(p => p.x != null && p.y != null);
+    reportCharts.push(new Chart(ctxSc, {
+      type: 'scatter',
+      data: { datasets: [
+        { label: 'All viable nodes', data: all, backgroundColor: 'rgba(100,116,139,0.4)', pointRadius: 2 },
+        { label: 'Top 10', data: top, backgroundColor: '#f59e0b', pointRadius: 5 },
+      ] },
+      options: {
+        responsive: false, maintainAspectRatio: false, animation: false,
+        scales: {
+          x: { title: { display: true, text: 'Total cost', color: '#8a98b5' }, ticks: { color: '#8a98b5', callback: v => fmtEur(v) }, grid: { color: 'rgba(255,255,255,0.06)' } },
+          y: { title: { display: true, text: 'CO₂ (tCO₂/yr)', color: '#8a98b5' }, ticks: { color: '#8a98b5', callback: v => fmtNum(v) }, grid: { color: 'rgba(255,255,255,0.06)' } },
+        },
+        plugins: { legend: { labels: { color: '#f5f7fb' } } },
+      },
+    }));
+  }
+}
+
+// Kick off CNN imagery for the applied roster in the background (fire-and-forget).
+// Backend caches per node, so by export time many/all are ready and instant.
+const AOI_KM = 5.0;
+function prewarmSiteImages(weights) {
+  fetch(`${API}/report/site-images`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ weights, top_n: 10, aoi_km: AOI_KM }),
+  }).catch(() => {});
+}
+
+// Load site images progressively — one node per request — so each box fills as
+// the CNN finishes it instead of blocking on the whole batch. The backend caches
+// per node, so re-opening the report is instant.
+let reportImgToken = 0;
+async function loadReportSiteImages() {
+  const token = ++reportImgToken;  // invalidated if the modal is reopened
+  const fill = (id, html) => { const s = document.getElementById(`site-img-${id}`); if (s) s.innerHTML = html; };
+  const cap = (id, html) => { const s = document.getElementById(`site-cap-${id}`); if (s) s.innerHTML = html; };
+
+  for (let i = 0; i < rankedNodes.length; i++) {
+    if (token !== reportImgToken) return;  // a newer open superseded this run
+    const r = rankedNodes[i];
+    fill(r.node_id, `<div class="site-pending"><span class="site-spin"></span>Analysing land around ${r.node_id}…</div>`);
+    try {
+      const res = await fetch(`${API}/report/site-images`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ node_ids: [r.node_id], aoi_km: AOI_KM }),
+      });
+      if (token !== reportImgToken) return;
+      if (!res.ok) throw new Error(`site-images ${res.status}`);
+      const rec = (await res.json())[0] || {};
+      if (rec.image_url) {
+        fill(r.node_id, `<img src="${API}${rec.image_url}?t=${Date.now()}" alt="${r.node_id} site" crossorigin="anonymous">`);
+        const ha = rec.buildable_area_ha != null ? ` · ${fmtNum(rec.buildable_area_ha)} ha buildable` : '';
+        cap(r.node_id, `${rec.dominant_buildable_class || 'site'}${ha}`);
+      } else {
+        fill(r.node_id, `<div class="site-pending">No buildable land / imagery for this node.</div>`);
+      }
+    } catch (e) {
+      if (token !== reportImgToken) return;
+      fill(r.node_id, `<div class="site-pending">Site imagery unavailable (analysis stage offline).</div>`);
+    }
+  }
 }
 
 // ---------- boot ----------

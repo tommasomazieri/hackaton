@@ -23,6 +23,12 @@ GridSFM/
 *.h5
 *.nc
 
+# Vendored pretrained model (Google Dynamic World SavedModel — fetch, don't commit)
+vendor/
+
+# Generated site-analysis overlay
+graphify-out/site_analysis.geojson
+
 # Claude local overrides
 .claude/settings.local.json
 

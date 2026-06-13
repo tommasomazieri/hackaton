@@ -27,6 +27,11 @@ DEM_COLLECTION = "cop-dem-glo-30"
 RES_M = 10.0
 BOA_OFFSET = 1000  # re-add the post-baseline-4.0 BOA_ADD_OFFSET (-1000) to align scenes
 
+# DW band order (B2,B3,…) -> Planetary Computer sentinel-2-l2a asset keys, which
+# are zero-padded (B02,B03,…); B11/B12 are not padded. Used only for STAC loading;
+# model input order stays S2_BANDS.
+PC_ASSET = {b: (f"B{int(b[1:]):02d}" if int(b[1:]) < 10 else b) for b in S2_BANDS}
+
 
 def aoi_bbox(lat: float, lon: float, size_km: float = 10.0) -> tuple:
     """Square AOI around (lat, lon). Returns (min_lon, min_lat, max_lon, max_lat)."""
@@ -79,13 +84,14 @@ def fetch_composite(
     if not items:
         raise RuntimeError(f"No Sentinel-2 scenes for bbox={bbox} cloud<60%")
 
+    pc_bands = [PC_ASSET[b] for b in S2_BANDS]
     ds = odc.stac.load(
-        items, bands=S2_BANDS, bbox=bbox, crs=f"EPSG:{epsg}",
+        items, bands=pc_bands, bbox=bbox, crs=f"EPSG:{epsg}",
         resolution=RES_M, chunks={}, groupby="solar_day",
     )
     med = ds.median(dim="time", skipna=True)
     band_stack = np.stack(
-        [med[b].values.astype(np.float32) + BOA_OFFSET for b in S2_BANDS], axis=-1
+        [med[PC_ASSET[b]].values.astype(np.float32) + BOA_OFFSET for b in S2_BANDS], axis=-1
     )
     band_stack = np.clip(band_stack, 0, None)
 
@@ -112,7 +118,7 @@ def _fetch_slope(bbox, epsg, geobox) -> np.ndarray:
     if not items:
         return np.zeros(geobox.shape, dtype=np.float32)
 
-    dem = odc.stac.load(items, bbox=bbox, like=geobox, chunks={})
+    dem = odc.stac.load(items, like=geobox, chunks={})  # `like` defines grid+extent; bbox would conflict
     var = "data" if "data" in dem else list(dem.data_vars)[0]
     elev = dem[var]
     if "time" in elev.dims:
