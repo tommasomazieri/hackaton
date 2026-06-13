@@ -7,9 +7,9 @@ Usage:
     from src.model.pipeline import run
 
     results, metadata = run(dc_capacity_mw=100, dc_surface_m2=50_000)
-    # results["balance"]  — ranked table (best first)
-    # results["pareto"]   — normalised scores
+    # results["pareto"]   — normalised scores (feeds rank.rank_by_weights)
     # results["gross"]    — raw scores
+    # results["detail"]   — raw inputs + cost split (popup view)
     # metadata            — x / y / country for surviving nodes
 
 Surface units:
@@ -36,7 +36,7 @@ def run(
 
     Returns:
         (results_dict, metadata_df)
-        results_dict keys: "gross", "pareto", "balance", "metadata"
+        results_dict keys: "gross", "detail", "pareto", "metadata"
     """
     scores, metadata = load_filter.run(
         dc_capacity_mw=dc_capacity_mw,

@@ -9,12 +9,11 @@ const COLUMNS = {
   dc_carbon_tco2_yr:  { label: 'CO₂',          short: 'CO₂',          fmt: v => fmtNum(v) + ' tCO₂' },
   total_cost_eur:     { label: 'Cost',         short: 'cost',         fmt: v => fmtEur(v) },
   connectivity_score: { label: 'Connectivity', short: 'connectivity', fmt: v => v.toFixed(3) },
-  balance_score:      { label: 'Aggregate',    short: 'aggregate',    fmt: v => v.toFixed(3) },
 };
-const RAW_TABS = ['congestion_alpha', 'dc_carbon_tco2_yr', 'total_cost_eur', 'connectivity_score'];
-const RANKED_TABS = [...RAW_TABS, 'balance_score'];
+// The 4 scored metrics — these are the table's weight-editable columns.
+const METRIC_COLS = ['congestion_alpha', 'dc_carbon_tco2_yr', 'total_cost_eur', 'connectivity_score'];
 
-// Extra fields shown ONLY in the map hover popup (not in raw/ranked tables).
+// Extra fields shown ONLY in the map hover popup (not in the ranked table).
 // Cost split + consumption stats — sourced from /results/detail.
 const DETAIL_ROWS = [
   { key: 'area_km2',            label: 'Area (proxy)',    fmt: v => fmtNum(v) + ' km²' },
@@ -24,26 +23,20 @@ const DETAIL_ROWS = [
   { key: 'consumption_std_mw',  label: 'Consumption σ',   fmt: v => (+v).toFixed(1) + ' MW' },
 ];
 
-// prioritize dropdown -> default view after a run
-const PRIO_MAP = {
-  balanced:   { mode: 'ranked', tab: 'balance_score' },
-  cost:       { mode: 'raw',    tab: 'total_cost_eur' },
-  co2:        { mode: 'raw',    tab: 'dc_carbon_tco2_yr' },
-  congestion: { mode: 'raw',    tab: 'congestion_alpha' },
-};
-
 // State
 let map = null;
 let markerLayer = null;      // Leaflet LayerGroup holding all node dots
 let markerMap = {};          // node_id -> circleMarker
 let coordsById = {};         // node_id -> { lat, lng, country }
-let allNodes = [];           // /results/raw  (scores + country, NO coords)
+let allNodes = [];           // /results/raw  (scores + country, NO coords) — drives markers
 let detailById = {};         // node_id -> /results/detail row (full breakdown for popup)
-let balanceNodes = [];       // /results/balance (top10 normalized + balance_score + country)
-let activeMode = 'raw';
-let activeTab = 'congestion_alpha';
-let activePrio = 'balanced';
+let rankedNodes = [];        // POST /results/ranked (top10 raw rows, best-first)
+let appliedWeights = {};     // weights last sent to backend (default 1/n each)
+let pendingWeights = {};     // working copy edited via the column headers
 let hasRun = false;
+let hoverTimer = null;
+let activeTooltipMarker = null;
+let mapMoving = false;
 
 const GREY = { fillColor: '#475569', color: '#64748b', weight: 1, radius: 5, fillOpacity: 0.55, opacity: 0.6 };
 const HOT  = { fillColor: '#f59e0b', color: '#fbbf24', weight: 3, radius: 9, fillOpacity: 0.95, opacity: 1 };
@@ -61,6 +54,16 @@ function showLoading(show, sub) {
   document.getElementById('loading-overlay').style.display = show ? 'flex' : 'none';
   if (sub) document.getElementById('loader-sub').textContent = sub;
 }
+
+// ---------- weights ----------
+function initWeights() {
+  const w = 1 / METRIC_COLS.length;
+  appliedWeights = {};
+  pendingWeights = {};
+  METRIC_COLS.forEach(c => { appliedWeights[c] = w; pendingWeights[c] = w; });
+}
+function weightsSum(w) { return METRIC_COLS.reduce((s, c) => s + (w[c] || 0), 0); }
+function isDirty() { return METRIC_COLS.some(c => Math.abs(pendingWeights[c] - appliedWeights[c]) > 1e-9); }
 
 // ---------- run flow ----------
 async function runModel() {
@@ -84,11 +87,10 @@ async function runModel() {
     }
     showLoading(true, 'Scoring surviving nodes');
 
-    const [coords, raw, detail, balance] = await Promise.all([
+    const [coords, raw, detail] = await Promise.all([
       fetch(`${API}/nodes`).then(r => r.json()),
       fetch(`${API}/results/raw`).then(r => r.json()),
       fetch(`${API}/results/detail`).then(r => r.json()),
-      fetch(`${API}/results/balance`).then(r => r.json()),
     ]);
 
     coordsById = {};
@@ -96,13 +98,6 @@ async function runModel() {
     allNodes = raw;
     detailById = {};
     detail.forEach(n => { detailById[n.node_id] = n; });
-    balanceNodes = balance;
-
-    // apply prioritize selection -> default view
-    const prio = PRIO_MAP[activePrio] || PRIO_MAP.balanced;
-    activeMode = prio.mode;
-    activeTab = prio.tab;
-    document.querySelectorAll('.mode-btn').forEach(b => b.classList.toggle('active', b.dataset.mode === activeMode));
 
     populateMarkers(!hasRun);   // fit bounds only on first run
     hasRun = true;
@@ -111,12 +106,32 @@ async function runModel() {
     document.getElementById('results-ui').style.display = 'flex';
     document.getElementById('map-legend').style.display = 'flex';
 
-    renderTabs();
-    render();
+    renderHeader();
+    await fetchRanked(appliedWeights);   // populates rankedNodes -> render()
   } catch (err) {
     alert(err.message || 'Could not reach the model server. Is it running on :8000?');
   } finally {
     showLoading(false);
+  }
+}
+
+// POST current weights, store the top-10 ranked rows, re-render the table.
+async function fetchRanked(weights) {
+  try {
+    const res = await fetch(`${API}/results/ranked`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ weights }),
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.detail || `Ranking failed (${res.status})`);
+    }
+    rankedNodes = await res.json();
+    console.debug('[rank] applied', weights, '→ top:', rankedNodes.map(r => r.node_id));
+    render();
+  } catch (err) {
+    alert(err.message || 'Could not compute ranking.');
   }
 }
 
@@ -125,6 +140,7 @@ function createMap() {
   map = L.map('europe-map', {
     zoomControl: true, minZoom: 4, maxZoom: 9,
     maxBounds: [[33, -28], [72, 45]], maxBoundsViscosity: 1.0,
+    inertia: false,
   }).setView([54, 12], 4);
 
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
@@ -133,7 +149,16 @@ function createMap() {
   }).addTo(map);
 
   markerLayer = L.layerGroup().addTo(map);
-  map.on('moveend zoomend', refreshTipDirections);
+  map.on('dragstart', () => { mapMoving = true; clearHoverTimer(); closeActiveTooltip(); });
+  map.on('dragend', () => { map.panInsideBounds([[33, -28], [72, 45]], { animate: false }); });
+  map.on('moveend zoomend', () => { mapMoving = false; refreshTipDirections(); });
+}
+
+function clearHoverTimer() {
+  if (hoverTimer) { clearTimeout(hoverTimer); hoverTimer = null; }
+}
+function closeActiveTooltip() {
+  if (activeTooltipMarker) { activeTooltipMarker.closeTooltip(); activeTooltipMarker = null; }
 }
 
 function populateMarkers(fit) {
@@ -144,7 +169,18 @@ function populateMarkers(fit) {
     const c = coordsById[n.node_id];
     if (!c || c.lat == null || c.lng == null) return;
     const m = L.circleMarker([c.lat, c.lng], GREY);
-    m.bindTooltip(nodeTooltip(n, c), { direction: tipDirection(c.lat, c.lng), className: 'node-tip', sticky: true });
+    m.bindTooltip(nodeTooltip(n, c), { direction: tipDirection(c.lat, c.lng), className: 'node-tip' });
+    m.on('mouseover', () => {
+      if (mapMoving) return;
+      clearHoverTimer();
+      hoverTimer = setTimeout(() => {
+        if (mapMoving) return;
+        closeActiveTooltip();
+        activeTooltipMarker = m;
+        m.openTooltip();
+      }, 1000);
+    });
+    m.on('mouseout', () => { clearHoverTimer(); closeActiveTooltip(); });
     markerLayer.addLayer(m);
     markerMap[n.node_id] = m;
     bounds.push([c.lat, c.lng]);
@@ -174,7 +210,7 @@ function refreshTipDirections() {
 
 // hover popup — raw scores PLUS the detail breakdown (cost split + consumption)
 function nodeTooltip(n, c) {
-  const rows = RAW_TABS.map(col =>
+  const rows = METRIC_COLS.map(col =>
     `<div class="tt-row"><span>${COLUMNS[col].label}</span><b>${n[col] != null ? COLUMNS[col].fmt(n[col]) : '—'}</b></div>`
   ).join('');
 
@@ -191,17 +227,12 @@ function nodeTooltip(n, c) {
   return `<div class="tt-head">${n.node_id}<span>${(c && c.country) || n.country || ''}</span></div>${rows}${extra}`;
 }
 
-function updateMapHighlights(top10Ids) {
-  const top = new Set(top10Ids);
+function updateMapHighlights(topIds) {
+  const top = new Set(topIds);
   Object.entries(markerMap).forEach(([id, m]) => {
     m.setStyle(top.has(id) ? HOT : GREY);
     if (top.has(id)) m.bringToFront();
   });
-}
-
-// ---------- ranking ----------
-function sortedByCol(rows, col) {
-  return [...rows].filter(r => r[col] != null).sort((a, b) => a[col] - b[col]);
 }
 
 // ---------- controls ----------
@@ -211,86 +242,117 @@ function initControls() {
     document.getElementById(id).addEventListener('keydown', e => { if (e.key === 'Enter') runModel(); });
   });
 
-  // prioritize dropdown
-  const trigger = document.getElementById('prio-trigger');
-  const menu = document.getElementById('prio-menu');
-  const text = document.getElementById('prio-text');
-  trigger.addEventListener('click', e => {
-    e.stopPropagation();
-    const open = menu.style.display === 'flex';
-    menu.style.display = open ? 'none' : 'flex';
-    trigger.classList.toggle('open', !open);
-  });
-  document.addEventListener('click', () => { menu.style.display = 'none'; trigger.classList.remove('open'); });
-  menu.querySelectorAll('.sb-dd-item').forEach(item => {
-    item.addEventListener('click', e => {
-      e.stopPropagation();
-      activePrio = item.dataset.prio;
-      text.textContent = item.textContent;
-      menu.querySelectorAll('.sb-dd-item').forEach(i => i.classList.toggle('active', i === item));
-      menu.style.display = 'none';
-      trigger.classList.remove('open');
-    });
-  });
-
-  // mode toggle
-  document.querySelectorAll('.mode-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const mode = btn.dataset.mode;
-      if (mode === activeMode) return;
-      activeMode = mode;
-      document.querySelectorAll('.mode-btn').forEach(b => b.classList.toggle('active', b.dataset.mode === mode));
-      if (activeMode === 'raw' && activeTab === 'balance_score') activeTab = 'congestion_alpha';
-      renderTabs();
-      render();
-    });
+  // click outside an open weight popover closes it
+  document.addEventListener('mousedown', e => {
+    if (!e.target.closest('.weight-pop') && !e.target.closest('.col-head')) closeWeightInput();
   });
 }
 
-function currentTabs() { return activeMode === 'ranked' ? RANKED_TABS : RAW_TABS; }
+// ---------- column headers + weight editing ----------
+function renderHeader() {
+  const head = document.getElementById('panel-head');
+  const dirty = isDirty();
+  const sum = weightsSum(pendingWeights);
+  const ok = Math.abs(sum - 1) < 0.005;             // global apply only at 100%
+  const applyTitle = ok ? 'Apply weights' : `Weights total ${Math.round(sum * 100)}% — must be 100%`;
 
-function renderTabs() {
-  const bar = document.getElementById('tabs-bar');
-  bar.innerHTML = currentTabs().map(col =>
-    `<button class="tab-btn${col === activeTab ? ' active' : ''}" data-col="${col}">${COLUMNS[col].label}</button>`
-  ).join('');
-  bar.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      activeTab = btn.dataset.col;
-      bar.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.col === activeTab));
-      render();
-    });
+  head.innerHTML =
+    `<span class="ph-rank">#</span><span class="ph-node">Node</span>` +
+    METRIC_COLS.map(col => {
+      const w = pendingWeights[col];
+      const cdirty = Math.abs(w - appliedWeights[col]) > 1e-9;
+      return `<span class="col-head${cdirty ? ' pending' : ''}" data-col="${col}" title="Double-click to set weight">
+        <span class="ch-label">${COLUMNS[col].label}</span>
+        <span class="weight-badge">${Math.round(w * 100)}%</span>
+      </span>`;
+    }).join('') +
+    // global apply/discard — last grid cell, right of the whole header row
+    `<span class="weight-actions" id="weight-actions" style="display:${dirty ? 'flex' : 'none'};">
+      <button class="wa-btn wa-apply" id="wa-apply"${ok ? '' : ' disabled'} title="${applyTitle}">✓</button>
+      <button class="wa-btn wa-discard" id="wa-discard" title="Discard">✗</button>
+    </span>`;
+
+  head.querySelectorAll('.col-head').forEach(cell => {
+    cell.addEventListener('dblclick', () => openWeightInput(cell.dataset.col));
   });
-  document.getElementById('mode-hint').textContent = activeMode === 'raw'
-    ? 'All viable nodes, sorted best-first on the selected metric. Top 10 highlighted on map.'
-    : 'Top 10 nodes per metric. Aggregate ranks the best all-round balance.';
+  const applyBtn = document.getElementById('wa-apply');
+  const discardBtn = document.getElementById('wa-discard');
+  if (applyBtn) applyBtn.addEventListener('click', applyWeights);
+  if (discardBtn) discardBtn.addEventListener('click', discardWeights);
+}
+
+// commit all staged weights (only valid when they total 100%)
+function applyWeights() {
+  if (Math.abs(weightsSum(pendingWeights) - 1) >= 0.005) return;
+  appliedWeights = { ...pendingWeights };
+  closeWeightInput();
+  renderHeader();
+  fetchRanked(appliedWeights);
+}
+
+// throw away staged edits, revert to last-applied weights
+function discardWeights() {
+  pendingWeights = { ...appliedWeights };
+  closeWeightInput();
+  renderHeader();
+}
+
+function closeWeightInput() {
+  document.querySelectorAll('.weight-pop').forEach(p => p.remove());
+}
+
+function openWeightInput(col) {
+  closeWeightInput();  // one at a time
+  const cell = document.querySelector(`.col-head[data-col="${col}"]`);
+  if (!cell) return;
+
+  const pop = document.createElement('div');
+  pop.className = 'weight-pop';
+  pop.innerHTML = `
+    <input type="number" min="0" max="100" step="1" class="wp-input" value="${Math.round(pendingWeights[col] * 100)}">
+    <span class="wp-pct">%</span>
+    <button class="wp-ok" title="Confirm">✓</button>
+    <button class="wp-x" title="Close">✗</button>`;
+  cell.appendChild(pop);
+
+  const input = pop.querySelector('.wp-input');
+  input.focus();
+  input.select();
+
+  const confirm = () => {
+    const val = parseFloat(input.value);
+    if (isNaN(val) || val < 0 || val > 100) { input.classList.add('err'); return; }
+    // No sum check here — staging a single weight is free; the running total may
+    // sit off 100% while editing. The global ✓ enforces 100% before applying.
+    pendingWeights[col] = val / 100;
+    closeWeightInput();
+    renderHeader();
+  };
+
+  pop.querySelector('.wp-ok').addEventListener('click', confirm);
+  pop.querySelector('.wp-x').addEventListener('click', closeWeightInput);
+  input.addEventListener('input', () => input.classList.remove('err'));
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter') confirm();
+    if (e.key === 'Escape') closeWeightInput();
+  });
 }
 
 // ---------- render ----------
 function render() {
-  const col = activeTab;
-  const isAggregate = (col === 'balance_score');
-  const source = isAggregate ? balanceNodes : allNodes;
-  const sorted = sortedByCol(source, col);
-  const rows = (activeMode === 'ranked' || isAggregate) ? sorted.slice(0, 10) : sorted;
-
-  const top10Ids = sorted.slice(0, 10).map(r => r.node_id);
-  updateMapHighlights(top10Ids);
-
-  document.getElementById('legend-tab').textContent = COLUMNS[col].short;
-  document.getElementById('ph-val-label').textContent = COLUMNS[col].label;
-
-  const top10Set = new Set(top10Ids);
+  // Build the table FIRST so nothing downstream (map/legend) can block it.
   const list = document.getElementById('node-list');
-  list.innerHTML = rows.map((r, i) => {
+  list.innerHTML = rankedNodes.map((r, i) => {
     const c = coordsById[r.node_id] || {};
     const country = r.country || c.country || '—';
-    const hot = top10Set.has(r.node_id);
+    const cells = METRIC_COLS.map(col =>
+      `<span class="nr-cell">${r[col] != null ? COLUMNS[col].fmt(r[col]) : '—'}</span>`
+    ).join('');
     return `
-      <div class="node-row${hot ? ' highlight' : ''}" data-node="${r.node_id}">
+      <div class="node-row" data-node="${r.node_id}">
         <span class="nr-rank">${i + 1}</span>
         <span class="nr-id"><span class="nr-name">${r.node_id}</span><span class="nr-country">${country}</span></span>
-        <span class="nr-val">${COLUMNS[col].fmt(r[col])}</span>
+        ${cells}
       </div>`;
   }).join('');
 
@@ -306,10 +368,16 @@ function render() {
       m.openTooltip();
     });
   });
+
+  // map highlights + legend after the table is committed
+  updateMapHighlights(rankedNodes.map(r => r.node_id));
+  const legend = document.getElementById('legend-tab');
+  if (legend) legend.textContent = 'weighted';
 }
 
 // ---------- boot ----------
 window.addEventListener('DOMContentLoaded', () => {
+  initWeights();
   createMap();
   initControls();
 });

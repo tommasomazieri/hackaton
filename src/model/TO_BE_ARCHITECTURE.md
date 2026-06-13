@@ -149,6 +149,17 @@ cost_at_risk, carbon_source, land_price_source
 
 ## 3. CNN Satellite Land Analysis Layer
 
+> **STATUS — IMPLEMENTED (Stage 4).** Realized in `src/model/04_site_analysis.py` +
+> the `src/model/site_analysis/` package, using the **pretrained Google Dynamic
+> World CNN** (`google/dynamicworld` TF SavedModel, local inference) instead of the
+> MobileNet/CORINE design sketched below. Imagery + DEM are fetched on-the-go from
+> Microsoft Planetary Computer; the DW `built` class is refined into industrial/
+> commercial/residential via OSM landuse; environmental exclusions use EEA Natura
+> 2000 + CDDA. Scoring follows the client spec
+> (`final = 0.35·land + 0.25·grid + 0.15·road + 0.10·slope + 0.15·area`) and the
+> output is the bounding box + largest inscribed circle per node. Exposed via
+> `POST /site-analysis`. The original sketch below is retained for context.
+
 After ranking, the model has `(lat, lon)` for top-N nodes. The CNN layer answers: *"What does the actual buildable land around this node look like, and where exactly should the client acquire land?"*
 
 ### Input

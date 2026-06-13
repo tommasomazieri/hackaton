@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
-  <link rel="stylesheet" href="style.css?v=28">
+  <link rel="stylesheet" href="style.css?v=31">
 </head>
 <body>
 
@@ -34,20 +34,6 @@
         <div class="sb-slot">
           <label for="in-surface">Footprint</label>
           <div class="sb-input"><input type="number" id="in-surface" min="100" max="2000000" value="15000"><span class="sb-unit">m²</span></div>
-        </div>
-        <div class="sb-divider"></div>
-        <div class="sb-slot sb-dropdown" id="prio-trigger">
-          <label>Prioritize</label>
-          <div class="sb-dd-value">
-            <span id="prio-text">Balanced</span>
-            <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5" fill="none" class="dd-chev"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </div>
-          <div class="sb-dd-menu" id="prio-menu" style="display:none;">
-            <div class="sb-dd-item active" data-prio="balanced">Balanced</div>
-            <div class="sb-dd-item" data-prio="cost">Cost</div>
-            <div class="sb-dd-item" data-prio="co2">CO₂ Efficiency</div>
-            <div class="sb-dd-item" data-prio="congestion">Low Congestion</div>
-          </div>
         </div>
         <button class="sb-go" id="btn-go" title="Run model">
           <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -91,20 +77,13 @@
 
         <!-- results UI (after first run) -->
         <div id="results-ui" style="display:none;">
-          <div class="mode-toggle" id="mode-toggle">
-            <button class="mode-btn active" data-mode="raw">Raw</button>
-            <button class="mode-btn" data-mode="ranked">Ranked</button>
+          <div class="results-head">
+            <h2 class="rh-title">Ranked sites</h2>
           </div>
-          <p class="mode-hint" id="mode-hint"></p>
-
-          <div class="tabs-bar" id="tabs-bar"></div>
+          <p class="mode-hint">Double-click a column to weight it. Weights must total 100%.</p>
 
           <div class="tab-panel">
-            <div class="panel-head">
-              <span class="ph-rank">#</span>
-              <span class="ph-node">Node</span>
-              <span class="ph-val" id="ph-val-label">Value</span>
-            </div>
+            <div class="panel-head" id="panel-head"></div>
             <div class="node-list" id="node-list"></div>
           </div>
         </div>
@@ -113,6 +92,6 @@
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-  <script src="app.js?v=28"></script>
+  <script src="app.js?v=32"></script>
 </body>
 </html>

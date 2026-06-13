@@ -1,13 +1,15 @@
 """
 RANK — Stage 3
 ==============
-Takes the 4-score DataFrame from 02_compute and produces three in-memory tables:
+Takes the 4-score DataFrame from 02_compute and produces in-memory tables:
 
   _RESULTS["gross"]    raw scores as-is (indexed by node_id)
   _RESULTS["detail"]   gross + every raw input & cost sub-component (popup view)
   _RESULTS["pareto"]   each score max-normalised to [0, 1]  (higher = worse)
-  _RESULTS["balance"]  pareto table + balance_score = L2 norm of the 4 scores,
-                       sorted ascending (rank 0 = best overall node)
+
+There is no aggregate/balance table.  Ranking is computed on demand from the
+pareto table via `rank_by_weights()` — a weighted average of the normalised
+scores, with caller-supplied weights (default 1/n per column).
 
 All tables are indexed by node_id.  Metadata (x/y/country) is never merged in
 here — callers join on index.
@@ -48,6 +50,32 @@ def _max_normalise(df: pd.DataFrame, cols: list[str]) -> pd.DataFrame:
     return out
 
 
+def rank_by_weights(weights: dict[str, float] | None = None, top_n: int = 10) -> pd.Index:
+    """Rank nodes by a weighted average of the normalised pareto scores.
+
+    Args:
+        weights  per-column weights keyed by SCORE_COLS. Keys outside SCORE_COLS
+                 are ignored; missing keys count as 0. Empty / all-zero falls
+                 back to equal weights (1/n). Weights are normalised to sum 1.0.
+        top_n    number of best nodes to return.
+
+    Returns:
+        Ordered node_id Index (best first). No score is returned — the aggregate
+        is never exposed.
+    """
+    pareto = _RESULTS.get("pareto")
+    if pareto is None:
+        raise RuntimeError("Pareto table not built — call run() first")
+
+    w = pd.Series(weights or {}, dtype=float).reindex(SCORE_COLS).fillna(0.0)
+    if w.sum() <= 0:
+        w[:] = 1.0 / len(SCORE_COLS)
+    w = w / w.sum()
+
+    score = (pareto[SCORE_COLS] * w).sum(axis=1)
+    return score.sort_values().head(top_n).index
+
+
 def run(df: pd.DataFrame, metadata: pd.DataFrame) -> dict[str, pd.DataFrame]:
     """
     Args:
@@ -56,7 +84,7 @@ def run(df: pd.DataFrame, metadata: pd.DataFrame) -> dict[str, pd.DataFrame]:
                   Stored on _RESULTS["metadata"] for caller convenience.
 
     Returns:
-        _RESULTS dict with keys "gross", "pareto", "balance", "metadata".
+        _RESULTS dict with keys "gross", "detail", "pareto", "metadata".
     """
     present_scores = [c for c in SCORE_COLS if c in df.columns]
     missing = set(SCORE_COLS) - set(present_scores)
@@ -89,23 +117,7 @@ def run(df: pd.DataFrame, metadata: pd.DataFrame) -> dict[str, pd.DataFrame]:
     )
 
     # -------------------------------------------------------------------------
-    # 3. Balance score — L2 norm in normalised 4-D space
-    #    sqrt(Σ score_i²) ∈ [0, 2] (max = sqrt(4) when all scores = 1)
-    #    Lower = better balanced across all dimensions.
-    # -------------------------------------------------------------------------
-    balance = pareto.copy()
-    balance["balance_score"] = np.sqrt(
-        (balance[SCORE_COLS].to_numpy(dtype=float) ** 2).sum(axis=1)
-    )
-    balance = balance.sort_values("balance_score")
-    _RESULTS["balance"] = balance
-    log.info(
-        f"Balance table stored. Top node: {balance.index[0]}  "
-        f"score={balance['balance_score'].iloc[0]:.4f}"
-    )
-
-    # -------------------------------------------------------------------------
-    # 4. Metadata pass-through (kept separate, aligned with surviving nodes)
+    # 3. Metadata pass-through (kept separate, aligned with surviving nodes)
     # -------------------------------------------------------------------------
     _RESULTS["metadata"] = metadata.loc[df.index]
 
