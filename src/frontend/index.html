@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DC Hounds — DC Siting Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="style.css?v=27">
+</head>
+<body>
+
+  <!-- ===== Loading Overlay ===== -->
+  <div id="loading-overlay" style="display:none;">
+    <div class="loader-ring"></div>
+    <div class="loader-text">Solving grid topology…</div>
+    <div class="loader-sub" id="loader-sub">Filtering nodes by capacity constraint</div>
+  </div>
+
+  <!-- ===== App ===== -->
+  <div id="app">
+    <header>
+      <div class="logo">DC HOUNDS</div>
+
+      <!-- input bar (search header) -->
+      <div class="search-bar">
+        <div class="sb-slot">
+          <label for="in-capacity">Capacity</label>
+          <div class="sb-input"><input type="number" id="in-capacity" min="1" max="2000" value="50"><span class="sb-unit">MW</span></div>
+        </div>
+        <div class="sb-divider"></div>
+        <div class="sb-slot">
+          <label for="in-surface">Footprint</label>
+          <div class="sb-input"><input type="number" id="in-surface" min="100" max="2000000" value="15000"><span class="sb-unit">m²</span></div>
+        </div>
+        <div class="sb-divider"></div>
+        <div class="sb-slot sb-dropdown" id="prio-trigger">
+          <label>Prioritize</label>
+          <div class="sb-dd-value">
+            <span id="prio-text">Balanced</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5" fill="none" class="dd-chev"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+          <div class="sb-dd-menu" id="prio-menu" style="display:none;">
+            <div class="sb-dd-item active" data-prio="balanced">Balanced</div>
+            <div class="sb-dd-item" data-prio="cost">Cost</div>
+            <div class="sb-dd-item" data-prio="co2">CO₂ Efficiency</div>
+            <div class="sb-dd-item" data-prio="congestion">Low Congestion</div>
+          </div>
+        </div>
+        <button class="sb-go" id="btn-go" title="Run model">
+          <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <!-- node key + info -->
+      <div class="node-key">
+        <i class="nk-dot"></i>
+        <span class="nk-label">Substation</span>
+        <span class="nk-info" tabindex="0">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span class="nk-pop">
+            <b>What is a substation?</b>
+            Each dot is a high-voltage <b>substation</b> on the European transmission grid — a junction where power lines meet and where a data center can physically connect. We score every one of these connection points on congestion, carbon, cost and connectivity to rank where you should build.
+          </span>
+        </span>
+      </div>
+    </header>
+
+    <main class="split-layout">
+      <section class="map-container">
+        <div id="europe-map"></div>
+        <div class="map-legend" id="map-legend" style="display:none;">
+          <span class="lg-item"><i class="lg-dot grey"></i> all nodes</span>
+          <span class="lg-item"><i class="lg-dot hot"></i> top 10 — <b id="legend-tab">congestion</b></span>
+        </div>
+      </section>
+
+      <section class="sidebar-results">
+        <!-- empty state (before first run) -->
+        <div id="empty-state">
+          <div class="es-icon">⌖</div>
+          <h2>No query yet</h2>
+          <p>Set capacity and footprint above, then press <span class="es-arrow">→</span> to rank every viable European grid node.</p>
+        </div>
+
+        <!-- results UI (after first run) -->
+        <div id="results-ui" style="display:none;">
+          <div class="mode-toggle" id="mode-toggle">
+            <button class="mode-btn active" data-mode="raw">Raw</button>
+            <button class="mode-btn" data-mode="ranked">Ranked</button>
+          </div>
+          <p class="mode-hint" id="mode-hint"></p>
+
+          <div class="tabs-bar" id="tabs-bar"></div>
+
+          <div class="tab-panel">
+            <div class="panel-head">
+              <span class="ph-rank">#</span>
+              <span class="ph-node">Node</span>
+              <span class="ph-val" id="ph-val-label">Value</span>
+            </div>
+            <div class="node-list" id="node-list"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="app.js?v=24"></script>
+</body>
+</html>

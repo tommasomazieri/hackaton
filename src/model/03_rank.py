@@ -88,7 +88,7 @@ def run(df: pd.DataFrame, metadata: pd.DataFrame) -> dict[str, pd.DataFrame]:
     # -------------------------------------------------------------------------
     balance = pareto.copy()
     balance["balance_score"] = np.sqrt(
-        (balance[SCORE_COLS].to_numpy() ** 2).sum(axis=1)
+        (balance[SCORE_COLS].to_numpy(dtype=float) ** 2).sum(axis=1)
     )
     balance = balance.sort_values("balance_score")
     _RESULTS["balance"] = balance

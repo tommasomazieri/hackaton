@@ -128,8 +128,11 @@ def run(
     drop_existing = [c for c in _DROP_COLS if c in df.columns]
     df = df.drop(columns=drop_existing)
 
-    # Ensure only SCORE_COLS remain (plus any diagnostic columns already present)
-    # Keep diagnostic pass-throughs (e.g. grid_access_score) if they exist
+    # Cast integer-valued score columns
+    for col in ("dc_carbon_tco2_yr", "total_cost_eur"):
+        if col in df.columns:
+            df[col] = df[col].round().astype("Int32")
+
     log.info(
         f"Output: {len(df)} nodes, columns={list(df.columns)}"
     )
