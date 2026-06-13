@@ -8,8 +8,10 @@ Transforms raw grid-node metrics into four comparable risk/cost scores:
   total_cost_eur     float  Annualised OpEx (energy) + CapEx/CoE (land) in €/yr
   connectivity_score float  Passed through unchanged (already [0-1], lower=better)
 
-capacity_mw is used internally for the congestion z-score and dropped here.
-All intermediate raw columns are dropped before returning.
+It ALSO keeps every intermediate / raw column it touches (consumption mean & std,
+prices, carbon intensity, capacity) plus the two cost sub-components
+(energy_cost_eur, land_cost_eur) so the map popup can show a full breakdown.
+Nothing is dropped — downstream ranking slices SCORE_COLS itself.
 """
 import os
 import sys
@@ -28,18 +30,8 @@ log = setup_logger("02_compute")
 HOURS_IN_YEAR: int = 8_760
 COST_OF_EQUITY: float = 0.08
 
-# Columns consumed by this stage — dropped before returning
-_DROP_COLS = [
-    "capacity_mw",
-    "congestion_frac",
-    "consumption_mean_mw",
-    "consumption_std_mw",
-    "energy_price_eur_mwh",
-    "land_price_eur_ha",
-    "carbon_intensity_elec",
-]
-
-# Output score columns (exactly 4)
+# Score columns used by the ranking stage (exactly 4). Everything else this
+# stage produces or passes through is detail for the popup — nothing is dropped.
 SCORE_COLS = [
     "congestion_alpha",
     "dc_carbon_tco2_yr",
@@ -106,30 +98,26 @@ def run(
     #    Energy: OpEx    = energy_price [€/MWh] × capacity [MW] × hours [h/yr]
     #    Land:   CapEx/CoE = land_price [€/ha] × surface [ha] ÷ cost_of_equity
     # -------------------------------------------------------------------------
-    energy_cost = pd.Series(np.nan, index=df.index)
-    land_capex = pd.Series(np.nan, index=df.index)
-
     if "energy_price_eur_mwh" in df.columns:
-        energy_cost = df["energy_price_eur_mwh"] * dc_capacity_mw * HOURS_IN_YEAR
+        df["energy_cost_eur"] = df["energy_price_eur_mwh"] * dc_capacity_mw * HOURS_IN_YEAR
     else:
         log.warning("energy_price_eur_mwh missing — energy cost contribution is NaN")
+        df["energy_cost_eur"] = np.nan
 
     if "land_price_eur_ha" in df.columns:
-        land_capex = df["land_price_eur_ha"] * dc_surface_ha / COST_OF_EQUITY
+        df["land_cost_eur"] = df["land_price_eur_ha"] * dc_surface_ha / COST_OF_EQUITY
     else:
         log.warning("land_price_eur_ha missing — land cost contribution is NaN")
+        df["land_cost_eur"] = np.nan
 
-    df["total_cost_eur"] = energy_cost + land_capex
+    df["total_cost_eur"] = df["energy_cost_eur"] + df["land_cost_eur"]
     log.info(f"total_cost_eur: mean={df['total_cost_eur'].mean():.0f} €/yr")
 
     # -------------------------------------------------------------------------
-    # 4. Drop all consumed intermediate columns
+    # 4. Keep every column (raw inputs + both cost sub-components stay for the
+    #    popup breakdown). Cast integer-valued €/tonne columns for clean display.
     # -------------------------------------------------------------------------
-    drop_existing = [c for c in _DROP_COLS if c in df.columns]
-    df = df.drop(columns=drop_existing)
-
-    # Cast integer-valued score columns
-    for col in ("dc_carbon_tco2_yr", "total_cost_eur"):
+    for col in ("dc_carbon_tco2_yr", "total_cost_eur", "energy_cost_eur", "land_cost_eur"):
         if col in df.columns:
             df[col] = df[col].round().astype("Int32")
 
