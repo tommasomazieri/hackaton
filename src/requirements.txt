@@ -20,3 +20,17 @@ odc-stac>=0.3             # load STAC items into xarray at a fixed grid/resoluti
 rasterio>=1.3             # raster IO + affine transforms + reprojection
 rioxarray>=0.15           # xarray <-> rasterio bridge (CRS, transform, reproject)
 Pillow>=10.0              # render the site PNG (true-colour S2 + patch overlay)
+
+# --- GPU inference (run DW on NVIDIA via ONNX Runtime CUDA) ---
+# tensorflow-cpu can't use the GPU on native Windows; we convert the DW SavedModel
+# to ONNX (tf2onnx) once and run it on the RTX via onnxruntime-gpu's CUDA EP.
+onnxruntime-gpu>=1.19     # CUDA execution provider for DW inference
+tf2onnx>=1.16            # one-time SavedModel -> ONNX conversion
+onnx>=1.16
+nvidia-cuda-runtime-cu12  # CUDA 12 runtime DLLs (cudart) for onnxruntime-gpu
+nvidia-cudnn-cu12         # cuDNN 9 DLLs
+nvidia-cublas-cu12
+nvidia-cufft-cu12
+nvidia-curand-cu12
+nvidia-cusparse-cu12
+nvidia-cuda-nvrtc-cu12
