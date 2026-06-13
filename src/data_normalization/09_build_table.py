@@ -57,9 +57,29 @@ def _load_processed(paths: dict, name: str, key: str = "node_id") -> pd.DataFram
     return pd.read_parquet(fpath)
 
 
+def _run_fallbacks(paths: dict) -> None:
+    """Auto-run fallback + cleanup if PyPSA-dependent processed files are missing."""
+    pypsa_files = ["energy_price", "congestion", "capacity"]
+    missing = [
+        f for f in pypsa_files
+        if not os.path.exists(os.path.join(paths["data_processed"], f"{f}.parquet"))
+    ]
+    if missing:
+        log.info(f"Missing processed files {missing} — running 10_pypsa_fallback.py")
+        import importlib.util, pathlib
+        here = pathlib.Path(__file__).parent
+        for script in ("10_pypsa_fallback", "08_cleanup"):
+            spec = importlib.util.spec_from_file_location(script, here / f"{script}.py")
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            mod.run()
+
+
 def run():
     paths = get_paths()
     out_path = os.path.join(paths["data"], "grid_nodes.parquet")
+
+    _run_fallbacks(paths)
 
     # -----------------------------------------------------------------------
     # 1. Spine: node geometry (GeoDataFrame)
