@@ -1,0 +1,25 @@
+{
+  "source": "IEA - Energy and AI Report 2025/2026",
+  "last_updated": "2026-06-12",
+  "data_center_electricity_projections": {
+    "2026_global_consumption_est_twh": 945.0,
+    "annual_growth_rate_pct": 17.0,
+    "target_growth_2030": "double"
+  },
+  "typical_power_distribution_pct": {
+    "servers_it_load": 60.0,
+    "cooling_systems": 30.0,
+    "storage": 5.0,
+    "networking": 5.0
+  },
+  "reference_pue_benchmarks": {
+    "state_of_the_art": 1.1,
+    "global_average_2025": 1.5,
+    "legacy": 2.0
+  },
+  "gpu_power_characteristics": {
+    "nvidia_h100_tdp_w": 700.0,
+    "nvidia_b200_tdp_w": 1000.0,
+    "estimated_pue_overhead": 0.3
+  }
+}
