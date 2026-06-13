@@ -45,12 +45,36 @@ the future implementation.
 
 Future Implementation
 ---------------------
-[Empty — to be filled in dedicated planning session]
+Step 1 — Firm capacity disaggregated by fuel type.
+Rather than summing all p_nom (which conflates 500 MW nuclear with 500 MW wind),
+compute fuel-type-aware firm capacity:
 
-Real implementation: use p_nom × capacity_factor per generator type, or use
-actual dispatch output from `n.generators_t.p` (time-resolved generation) to
-compute the P10 annual generation (firm capacity proxy). Disaggregate by fuel
-type to distinguish firm (gas/nuclear/hydro) from variable (wind/solar) capacity.
+    firm_capacity_mw(n)     = Σ_{g: dispatchable} p_nom(g)         # gas, nuclear, hydro
+    variable_capacity_mw(n) = Σ_{g: variable}     p_nom(g) × CF_g  # wind×0.25, solar×0.13
+
+where CF_g = n.generators_t.p[g].mean() / p_nom(g) — actual annual capacity
+factor from the solved dispatch. New columns: firm_capacity_mw,
+variable_capacity_mw, renewable_fraction.
+For DC siting: firm_capacity_mw drives dispatchable backup signal;
+renewable_fraction drives PPA opportunity and Scope 2 carbon quality.
+
+Step 2 — Time-resolved P10 generation (conservative firm capacity proxy).
+
+    p10_annual_mw(n) = quantile(n.generators_t.p.T.groupby(bus).sum().T, 0.10)
+
+P10 = generation available for 90 % of all hours — a robust floor for
+continuous 24/7 load like a data center. New column: p10_generation_mw.
+
+Step 3 — ENTSO-E installed capacity cross-validation.
+Compare PyPSA p_nom per bus against ENTSO-E Installed Generation Capacity per
+Production Type (14.1.A) at bidding-zone granularity. Flags nodes where PyPSA
+significantly understates or overstates actual capacity (common in network
+simplification). Freshness: annual. New diagnostic column: entso_capacity_mw.
+
+Step 4 — Storage capacity signal.
+    storage_capacity_mwh(n) = Σ_{s ∈ storage_units(n)} p_nom(s) × max_hours(s)
+High storage → node can absorb surplus renewables and support DC battery
+arbitrage strategy. New column: storage_capacity_mwh.
 """
 import os
 import sys

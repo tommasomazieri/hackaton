@@ -47,12 +47,39 @@ mainly driven by gas price assumptions.
 
 Future Implementation
 ---------------------
-[Empty — to be filled in dedicated planning session]
+Step 1 — ENTSO-E day-ahead market prices (real market, not simulation).
+Library: entsoe-py. Query DocumentType.PRICE_DAY_AHEAD per bidding zone for
+trailing 365 calendar days. Each zone returns 8,760 hourly prices in €/MWh.
+Map bidding zones to PyPSA buses via spatial join (ENTSO-E bidding zone GeoJSON
+available at transparency.entsoe.eu/api?documentType=A09).
+Aggregates per bus: mean, P05, P50, P95, spread(P95−P05).
+Freshness: 24 h TTL. Fallback: cached parquet if API unavailable.
 
-Real implementation: pull hourly day-ahead prices from the ENTSO-E Transparency
-Platform (entsoe.eu) for the last 12 calendar months per bidding zone via the
-entsoe-py library, map bidding zones to PyPSA bus coordinates via spatial join,
-and compute the annual average for each bus.
+Step 2 — Carbon credit cost adder (EU ETS).
+Add carbon_cost_eur_mwh from 01_carbon_emissions (future impl) to the raw LMP:
+
+    all_in_price_eur_mwh(n) = energy_price_eur_mwh(n) + carbon_cost_eur_mwh(n)
+
+This is the true all-in electricity cost for a DC with no carbon coverage:
+ETS-obligated generation cost + wholesale energy. At ETS €70/tCO₂ and
+CI 350 gCO₂/kWh, adds ≈ €24.5/MWh to nominal LMP — material for low-LMP nodes.
+New column: all_in_price_eur_mwh. Use this as primary cost signal in 02_compute.
+
+Step 3 — PPA discount signal.
+Fraction of hours with LMP ≤ 0 at each node = renewable curtailment fraction.
+High curtailment → generator desperate for revenue → PPA discount negotiable.
+
+    ppa_discount_proxy(n) = P(LMP_n ≤ 0)
+
+New column: ppa_discount_proxy [0–1]. Higher = better PPA opportunity.
+
+Step 4 — Battery arbitrage value.
+
+    arbitrage_eur_mwh(n) = lmp_p95(n) − lmp_p05(n)
+
+Proxy for revenue available to a co-located BESS doing peak-shaving / trading.
+DCs with on-site storage can reduce effective energy cost by buying at P05 hours
+and avoiding P95 hours. New column: arbitrage_eur_mwh.
 """
 import os
 import sys

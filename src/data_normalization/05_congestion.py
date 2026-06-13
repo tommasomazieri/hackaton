@@ -58,13 +58,30 @@ Buses with no attached loads: consumption stats = 0.
 
 Future Implementation
 ---------------------
-[Empty — to be filled in dedicated planning session]
+Step 1 — ENTSO-E observed redispatch volumes.
+Query ENTSO-E Transparency Platform DocumentType.REDISPATCH (14.1.C) per TSO
+zone for trailing 12 months. High redispatch volume = persistent structural
+congestion validated by actual TSO operational data, independent of simulation.
 
-Real implementation: N-1 security assessment. For each bus, simulate the loss of
-each adjacent line one at a time and re-solve OPF, recording whether any post-
-contingency line loading exceeds 100 %. Count the fraction of N-1 scenarios that
-result in constraint violations. This is the standard TSO capacity assessment
-methodology.
+    redispatch_intensity(n) = annual_redispatch_gwh(zone(n)) / zone_peak_load_gw(n)
+
+New column: redispatch_intensity_gwh_per_gw. Cross-validates PyPSA congestion_frac
+with real market evidence. Freshness: 30-day TTL.
+
+Step 2 — GridSFM real-time congestion inference.
+Use microsoft/gridsfm (HuggingFace) to predict line loadings at each bus in
+milliseconds from network topology and load features — no full OPF solve needed.
+Apply as a fast screening layer: run GridSFM for all nodes, flag suspected
+congestion hotspots, then run full PyPSA lopf only for the top-50 candidates.
+Reduces full OPF runtime from ~hours to ~minutes for candidate-set evaluation.
+
+Step 3 — Connection queue proxy from TSO hosting capacity maps.
+Several TSOs publish digital hosting capacity maps (NL: Netbeheer Nederland,
+DE: various DSOs, IE: EirGrid). Scrape or API-fetch available capacity per
+substation. Map to nearest PyPSA bus.
+New column: tso_hosting_capacity_mw (NaN where not published).
+Hard filter: if tso_hosting_capacity_mw < dc_capacity_mw and not NaN →
+exclude node regardless of congestion_frac.
 """
 import os
 import sys

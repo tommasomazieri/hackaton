@@ -75,20 +75,18 @@ def get_nodes() -> list[dict[str, Any]]:
 @app.get("/nodes/{node_id}")
 def get_node(node_id: str) -> dict[str, Any]:
     _require_run()
-    if node_id not in _results["gross"].index:
+    if node_id not in _results["detail"].index:
         raise HTTPException(status_code=404, detail=f"Node '{node_id}' not found")
-    gross_row = _results["gross"].loc[node_id]
     meta_row = _metadata.loc[node_id]
-    return {
+    rec: dict[str, Any] = {
         "node_id": node_id,
         "country": meta_row["country"],
         "lat": meta_row["y"],
         "lng": meta_row["x"],
-        "congestion_alpha": gross_row["congestion_alpha"],
-        "carbon_tco2_yr": gross_row["dc_carbon_tco2_yr"],
-        "total_cost_eur_yr": gross_row["total_cost_eur"],
-        "connectivity_score": gross_row["connectivity_score"],
     }
+    for k, v in _results["detail"].loc[node_id].items():
+        rec[k] = None if (isinstance(v, float) and math.isnan(v)) else v
+    return rec
 
 
 @app.get("/results/raw")
@@ -97,6 +95,16 @@ def get_raw() -> list[dict[str, Any]]:
     gross = _results["gross"].copy()
     gross = gross.join(_metadata[["country"]])
     return _df_to_records(gross)
+
+
+@app.get("/results/detail")
+def get_detail() -> list[dict[str, Any]]:
+    """Full per-node breakdown (raw inputs + cost split + size proxy) for the popup."""
+    _require_run()
+    detail = _results["detail"].copy()
+    meta_cols = [c for c in ["country", "area_km2", "radius_km"] if c in _metadata.columns]
+    detail = detail.join(_metadata[meta_cols])
+    return _df_to_records(detail)
 
 
 @app.get("/results/pareto")

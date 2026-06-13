@@ -64,12 +64,39 @@ merged 50/50 into connectivity_score [0–1].
 
 Future Implementation
 ---------------------
-[Empty — to be filled in dedicated planning session]
+Step 1 — Grid layer: ENTSO-E TYNDP GIS dataset + GridKit.
+Replace OSM power=substation with:
+  a) ENTSO-E Ten-Year Network Development Plan (TYNDP) substation GIS layer —
+     authoritative, TSO-reported, available as GeoJSON/KML from entsoe.eu.
+     Covers all ≥110 kV substations EU-wide with voltage level, operator, capacity.
+  b) GridKit (github.com/bdollma/gridkit) — topologically consistent HV network
+     derived from OSM with automatic error correction. Better than raw OSM for
+     substation identification in complex urban areas.
+New fields: substation_voltage_kv (from TYNDP); dist_to_220kv_substation_km and
+dist_to_400kv_substation_km as separate signals — 400 kV preferred for
+hyperscale (>100 MW) DCs.
 
-Real implementation:
-  Grid: TSO GIS layers (ENTSO-E) or GridKit dataset (more complete than OSM)
-  Fiber: PeeringDB IXP database + TeleGeography submarine/terrestrial cable maps
-         + national dark fiber registry APIs (AMS-IX, DE-CIX, LINX public PoP lists)
+Step 2 — Fiber layer: PeeringDB + TeleGeography.
+  a) PeeringDB REST API (peeringdb.com/api/ixlan) — authoritative IXP database,
+     open and free. Returns IXP name, city, lat/lon, member count, policy.
+     Replace OSM telecom=exchange with PeeringDB geometries.
+     New field: ixp_member_count (proxy for fiber provider competition).
+  b) TeleGeography Submarine Cable Map — cable landing stations as ultra-low-
+     latency fiber anchors. Coastal nodes near landings get <1 ms RTT to
+     transatlantic routes. New field: dist_to_cable_landing_km.
+  c) AMS-IX, DE-CIX, LINX public PoP lists — major IXP remote PoPs beyond HQ.
+
+Step 3 — Latency estimation.
+    latency_to_nearest_ixp_ms(n) ≈ dist_to_nearest_ixp_km(n) × 0.005
+    (fiber propagation: ~5 µs/km ≈ 200 km/ms)
+Hard filter: nodes where latency_to_nearest_ixp_ms > 10 are ineligible for
+latency-sensitive workloads. New column: latency_to_nearest_ixp_ms.
+
+Step 4 — Existing DC proximity.
+Fetch OSM building=data_center + man_made=data_center tags via Overpass.
+Count existing DCs within 20 km: colocation_dcs_20km(n).
+High count → established DC corridor → fiber-dense, power-zoned environment.
+New column: colocation_dcs_20km.
 """
 import os
 import sys

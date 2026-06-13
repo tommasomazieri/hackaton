@@ -29,11 +29,34 @@ No polygon geometry stored — not needed for any downstream operation.
 
 Future Implementation
 ---------------------
-[Empty — to be filled in dedicated planning session]
+Step 1 — True substation geometry from PyPSA-Eur Voronoi catchments.
+Source: PyPSA-Eur resources/regions_onshore.geojson — Voronoi polygons from the
+solved full-resolution network, one polygon per bus, covering EU landmass with
+no gaps or overlaps. This is the actual electrical service territory of each node.
 
-Real implementation: use PyPSA-Eur `resources/regions_onshore.geojson` (Voronoi
-catchment areas from solved full-resolution network) for true substation-level
-node geometry and accurate catchment area computation.
+Load and reproject to equal-area CRS for accurate area computation:
+    regions    = gpd.read_file('resources/regions_onshore.geojson')
+    regions_ea = regions.to_crs('EPSG:3035')        # ETRS89-LAEA equal-area
+    area_km2   = regions_ea.geometry.area / 1e6
+    centroid   = regions_ea.geometry.centroid       # then back-project to WGS84
+
+New columns exported: node_id, x, y, country, area_km2, geometry (WKT polygon).
+area_km2 propagates to 03_land_price.py (land market depth) and replaces the
+circular radius approximation in dc_surface_ha estimation in 02_compute.py.
+
+Step 2 — High-resolution Voronoi from ENTSO-E TYNDP substations.
+Use ENTSO-E TYNDP substation coordinates (lat/lon per physical substation) as
+Voronoi seed points instead of PyPSA bus approximations. Compute tessellation
+via scipy.spatial.Voronoi, clip to national borders (Natural Earth polygons).
+Yields ~3,000 nodes EU-wide vs PyPSA-Eur's ~500 simplified buses — much finer
+spatial resolution for land-use, infrastructure, and area scoring.
+
+Step 3 — Geometry source quality flag.
+Tag each node with geometry_source:
+    "pypsa_voronoi"  — best; from solved PyPSA-Eur network
+    "entso_voronoi"  — high; from TYNDP substations + clipped Voronoi
+    "nuts3_centroid" — fallback; current MVP, point only, no area
+Downstream modules use geometry_source to propagate confidence level.
 """
 import os
 import sys

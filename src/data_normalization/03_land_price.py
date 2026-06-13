@@ -50,13 +50,39 @@ first-order approximation suitable for macro-level regional screening.
 
 Future Implementation
 ---------------------
-[Empty — to be filled in dedicated planning session]
+Step 1 — Correct node area from Voronoi catchment polygons (not radius).
+MVP cost computation uses a user-supplied dc_surface_m2 (DC footprint). But for
+regional land cost estimation, the "area belonging to each node" must be derived
+from the actual grid topology, not a circular radius approximation.
 
-Real implementation: commercial real estate transaction databases (CoStar, CBRE,
-JLL) or national land registry APIs (Kadaster NL, HM Land Registry UK, German
-Katasteramt) for industrial/logistics land prices at municipality or cadastral
-parcel level. These give true DC-site land costs but require commercial data
-licenses or complex per-country API integrations.
+Source: PyPSA-Eur resources/regions_onshore.geojson — Voronoi catchment polygons,
+one polygon per PyPSA bus, tiling the EU landmass with no overlap. Each polygon
+is the geographic territory electrically served by that bus.
+
+Computation (reproject to equal-area CRS for accurate area):
+    regions = gpd.read_file('resources/regions_onshore.geojson')
+    regions_ea = regions.to_crs('EPSG:3035')   # ETRS89-LAEA equal-area
+    area_km2(n) = regions_ea.geometry.area / 1e6
+
+New column: node_area_km2 (exported from 07_node_geometry, consumed here).
+Land market depth signal (not DC land cost):
+    land_cost_potential_eur(n) = land_price_eur_ha(n) × node_area_km2(n) × 100
+Large cheap polygons signal better siting environments than small expensive ones.
+
+Step 2 — Industrial land fraction via OSM land-use polygons.
+For each node's Voronoi polygon, clip to OSM landuse=industrial polygons via
+Overpass API: [out:json]; (way[landuse=industrial](bbox); relation[...]);
+Compute: industrial_area_km2(n), industrial_fraction(n).
+Nodes with industrial_fraction > 0.05 are in established industrial zones —
+land is already zoned, permitted, and serviced. Price premium applies but
+permitting risk is near zero. New column: industrial_fraction.
+
+Step 3 — Commercial real estate APIs (requires license).
+CoStar API or JLL Data & Analytics: industrial/logistics land price per NUTS3.
+Use as direct replacement for apri_lprc when a license is available. Granularity:
+municipality or cadastral parcel. License cost: ~€15,000–€40,000/year.
+Fallback (free): HM Land Registry (UK), Kadaster (NL), German Bodenrichtwert
+(WMS service) where national open registries are available.
 """
 import os
 import sys

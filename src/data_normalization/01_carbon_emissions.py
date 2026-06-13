@@ -44,16 +44,39 @@ variation of 20–30% documented in docs/data.md §6A. For national-level screen
 
 Future Implementation
 ---------------------
-[Empty — to be filled in dedicated planning session]
+Step 1 — Hourly nodal carbon intensity via PyPSA carbon flow tracing.
+For each bus n and simulation hour t, distribute carbon causally through the
+network using Kirchhoff's power flow:
 
-Real implementation: PyPSA Carbon Flow Tracking (docs/data.md §3B.3). For each
-bus n and simulation hour t, solve the linear system:
+    CI_n(t) = [Σ_{g ∈ gen(n)} P_g(t)·EF_g  +  Σ_{m: F_mn>0} F_mn(t)·CI_m(t)]
+              ──────────────────────────────────────────────────────────────────
+              [Σ_{g ∈ gen(n)} P_g(t)  +  Σ_{m: F_mn>0} F_mn(t)]
 
-    CI_n(t) = [Σ G_g,n(t)·EF_g + Σ F_mn(t)·CI_m(t)] / [Σ G_g,n + Σ F_mn]
+where F_mn(t) = max(0, P_mn(t)) is the net import from neighbor m and EF_g is
+the lifecycle emission factor of generator g (gCO₂/kWh).
+Source: n.generators_t.p (dispatch), n.lines_t.p0 (flows), IPCC lifecycle EFs.
 
-where F_mn(t) = max(0, P_mn(t)) is the import flow from neighbor m. This gives
-true consumption-based Scope 2 carbon intensity at hourly nodal resolution,
-accounting for cross-border electricity flows.
+Result: CI_n(t) — hourly, consumption-based Scope 2 carbon intensity at nodal
+resolution. Collapse to annual P50 for siting score; retain hourly series for
+Scope 2 reporting and PPA matching.
+
+Step 2 — ENTSO-E Transparency Platform as live alternative to PyPSA.
+Library: entsoe-py (pip install entsoe-py). Pull actual generation-per-technology
+(16.1.B&C) and cross-border flows (12.1.G) per bidding zone for the trailing 12
+calendar months. Compute consumption-based CI via the same flow-tracing equations,
+aggregated at bidding-zone granularity. Map bidding zones to PyPSA buses via
+spatial join on ENTSO-E bidding zone GeoJSON.
+Freshness: 24 h TTL (ENTSO-E updates D+1).
+
+Step 3 — EU ETS carbon cost adder.
+Multiply CI_n by the current EU ETS allowance price (€/tCO₂) to produce:
+
+    carbon_cost_eur_mwh(n) = CI_n [gCO₂/kWh] × ETS_price [€/tCO₂] / 1e6
+
+At ETS = €70/tCO₂ and CI = 350 gCO₂/kWh: carbon cost ≈ €24.5/MWh — a material
+fraction of total energy cost. Source: EEX EUA spot price via REST API or
+ember-climate.org ETS price series.
+New column: carbon_cost_eur_mwh. Propagates to 02_energy_price all-in cost.
 """
 import os
 import sys
