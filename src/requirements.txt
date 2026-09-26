@@ -5,12 +5,11 @@ geopandas>=0.14
 shapely>=2.0
 pyproj>=3.5
 scipy>=1.10
-osmnx>=1.9
-eurostat>=0.2
-pypsa>=0.26
 pyarrow>=14.0
 fastapi>=0.111
 uvicorn[standard]>=0.29
+
+# ingest (src/ingest.py) uses requests + geopandas + scipy + pyproj above; no API keys.
 
 # --- Post-Pareto CNN site analysis (src/model/site_analysis) ---
 tensorflow-cpu>=2.13      # runs the pretrained Google Dynamic World SavedModel
