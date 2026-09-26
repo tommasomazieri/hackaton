@@ -43,3 +43,7 @@ Thumbs.db
 # Agent skills
 .agents/skills/frontend-manager/
 
+
+# Local design-review output (headless Chrome profiles, screenshots)
+.chrome-prof/
+.impeccable/review/

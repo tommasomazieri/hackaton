@@ -1,4 +1,7 @@
 {
+  "enabledPlugins": {
+    "impeccable@impeccable": true
+  },
   "hooks": {
     "PreToolUse": [
       {
